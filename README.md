@@ -13,10 +13,12 @@ Four ESP32-S3 nodes (one FTM responder, three initiators) each drive a 50 ms pul
 | `timesync-2026-09-09/new-acquisition/` | Common-firmware campaign (9 Sep 2026). Raw transitions (`digital.csv`), native Saleae captures (`.sal`), commands, node health, firmware identities, and failed-acquisition logs |
 | `timesync-2026-09-09/historical-evidence/` | Earlier 8 Sep 2026 records (live-FTM H1–H3, the 25-s backend comparison, the camera-load record), with original repo-relative paths kept |
 | `timesync-2026-09-09/analysis/` | `offsets.csv` (every matched follower-minus-reference offset), `per_run_node.csv`, classifications, and raw-input hashes |
-| `timesync-2026-09-09/firmware/3939b066398cec36/` | Source snapshot, compiled image and ELF of the measured campaign build (runtime ID `507f8d74b8d34447`) |
+| `timesync-2026-09-09/firmware/3939b066398cec36/` | Compiled image and ELF of the measured campaign (C1/C2) build (ELF SHA-256 `507f8d74b8d34447…`), plus a partial source excerpt (`simple_ntp.c`, `strobe_gpio.c` and headers only; not a buildable tree) |
 | `timesync-2026-09-09/*.md`, `*.pdf` | Full experimental report, method notes, evidence and noise reviews |
-| `sync-matrix/sync-matrix.csv` | Triggered frame-capture spread and yield for 3 cameras (QVGA/VGA, 10–60 frames/s) |
-| `paper/make_figures.py` | Regenerates every figure, table row and number in the letter, and asserts the headline statistics |
+| `sync-matrix/sync-matrix.csv` | Summary (not per-slot observations) of triggered frame-capture spread and yield for 3 cameras (QVGA/VGA, 10–60 frames/s) |
+| `paper/make_figures.py` | Regenerates every figure and table in the letter from `offsets.csv` and `sync-matrix.csv`, and asserts the headline statistics. Hardware, configuration and fault-history numbers quoted in the letter are not derived here |
+| `wrap-run/` | 40-min all-node run (6 Oct 2026) with no logic analyzer: every node captures FREX-triggered QVGA frames at 10 frames/s; per-frame trigger tick and capture timestamp in the shared clock, node health every 5 s. `wrap_run.py` (logger), `analyze_wrap.py` → `wrap-40min.jsonl.stats.json` |
+| `tracking/` | IR tracking recordings (6 Oct 2026, MCAP of on-node centroids, VGA 35 frames/s, 3–4 cameras), the calibration files used, host-replay logs, and `analyze_tracking.py` → `TRACKING_RESULTS.md` / `stats.json` |
 
 ## Reproduce
 
@@ -36,7 +38,8 @@ Rules used by the analysis: a pulse counts when its HIGH width is 40–65 ms; fo
 - `acquire.py` and `check_signal.py` drive physical hardware and are kept for provenance only.
 - Some JSON logs contain private-subnet node addresses (192.168.137.x) from an isolated laptop hotspot.
 
-Firmware and host software: <https://github.com/IEatCodeDaily/wireless-ir-mocap>.
+- Raw logic-analyzer captures (`digital.csv`) exist for every GPIO record in `offsets.csv`. Firmware images are archived only for the campaign build; the other measured builds are identified by ELF SHA-256 prefix only: `33a74b5c18b078e9` (H1, H2), `e0ac899e423e2d93` (H3), `34e1a3df22c26af8` (backend comparison). Complete buildable firmware source is not part of this dataset.
+- The free-running throughput record quoted in the letter is not included.
 
 ## License
 

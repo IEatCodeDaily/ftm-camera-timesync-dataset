@@ -1,0 +1,4 @@
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+REPLAY E:\Projects\ftm-camera-timesync-dataset\tracking\recordings\tracking-1791273844728263000.mcap: packets 41473 flushes 10374 quorum_yield 0.999 late 8346 groups_with_3d 10372
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 169 filtered out; finished in 16.36s

@@ -1,0 +1,1 @@
+wireless-ir-mocap b99f753 (mocap/studio/server + crates clean in git status); cmd: cargo test -p studio-server replay_live_recording -- --ignored --nocapture, MOCAP_STUDIO_DIR=<this dir>, MOCAP_REPLAY=recordings/<file>
