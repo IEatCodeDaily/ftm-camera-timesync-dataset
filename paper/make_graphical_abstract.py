@@ -17,12 +17,15 @@ worst = {k: max(abs(float(r["offset_us"])) for r in rows if CAMPAIGN in r["run"]
 assert [round(v, 1) for v in worst.values()] == [55503.1, 182.2, 1.7], worst
 
 R4 = next(r for r in json.load((DATA / "tracking/stats.json").open())["recordings"] if r["file"].startswith("tracking-1791273844728"))
-WR = json.load((DATA / "wrap-run/wrap-40min.jsonl.stats.json").open())
-cap = {"capture-stamp jitter\n(tracking, med.)": R4["B_capture_spread_after_fixed_offset_us"]["median"],
-       "capture-stamp jitter\n(40-min run, med.)": WR["jitter_spread_us"]["median"],
+AB = json.load((DATA / "tracking/ab/tracking_ab.stats.json").open())   # same-session A/B, 4 cameras VGA 35 frames/s, 600 s each
+WH = json.load((DATA / "wrap-run/wrap-40min-hw.jsonl.stats.json").open())
+cap = {"software path\ncross-cam. spread, med.": AB["sw"]["spread_us"]["median"],
+       "software path\nspread, p95": AB["sw"]["spread_us"]["p95"],
+       "hardware timing\ncross-cam. spread, med.": AB["hw"]["spread_us"]["median"],
+       "hardware timing\nspread, p95": AB["hw"]["spread_us"]["p95"],
        "rolling-shutter row\noffset (med.)": R4["C_marker_row_time_us"]["median"]}
-assert [round(v) for v in cap.values()] == [33, 67, 4986], cap
-assert WR["ftm_wraps_crossed"] == 8 and WR["sync_lost_checks"] == 0 and R4["duration_s"] > 296
+assert [round(v) for v in cap.values()] == [48, 243, 9, 12, 4986], cap
+assert WH["ftm_wraps_crossed"] == 8 and WH["late_frames"] == 0 and R4["duration_s"] > 296
 
 plt.rcParams.update({"font.family": "serif", "font.serif": ["STIXGeneral", "DejaVu Serif"], "mathtext.fontset": "stix", "pdf.fonttype": 42})
 fig = plt.figure(figsize=(6, 3), dpi=200)
@@ -39,7 +42,7 @@ def panel(x0, title, note, items, hi, color):
     ax.set_xscale("log"); ax.set_xlim(.5, 3e6); ax.set_yticks(range(len(vals)), names, fontsize=7)
     ax.tick_params(axis="x", labelsize=6.5); ax.spines[["top", "right"]].set_visible(False)
     for y, v in enumerate(vals):
-        lab = f"{v / 1000:,.1f} ms" if v >= 1000 else (f"{v:.0f} µs" if v > 10 else f"{v:.1f} µs")
+        lab = f"{v / 1000:,.1f} ms" if v >= 1000 else (f"{v:.0f} µs" if v > 10 or v == int(v) else f"{v:.1f} µs")
         ax.text(v * 1.9, y, lab, va="center", fontsize=8, weight="bold" if y == hi else "normal")
     ax.set_xlabel("µs (log scale)", fontsize=7)
     fig.text(x0 + .22, .06, note, ha="center", va="center", fontsize=6.8, style="italic")
@@ -49,7 +52,7 @@ panel(0, "1  Clock layer (GPIO, logic analyzer)",
       "largest observed follower-to-reference GPIO offset,\n60-s records, cameras idle; not exposure timing",
       worst, 2, "#1f77b4")
 panel(.5, "2  Capture layer (4-camera tracking)",
-      "software capture timestamps, fixed per-camera delay removed;\nnot optical exposure. 40-min: 8 counter wraps, 0 sync losses",
+      "frame-start (VSYNC) edge timestamps, not optical exposure;\nspread = max$-$min across 4 cameras per slot, VGA 35 frames/s",
       cap, 2, "#d62728")
 out = Path(__file__).parent / "figures"
 fig.savefig(out / "graphical_abstract.png"); fig.savefig(out / "graphical_abstract.pdf")

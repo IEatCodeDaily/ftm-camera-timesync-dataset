@@ -247,14 +247,75 @@ assert (N["JitOverClkLo"], N["JitOverClkHi"], N["ZeroLive"], N["ZeroHold"]) == (
 assert WR["duration_s"] < WR["mac_wrap_s"] and WR["period_us"] == 100000 and WR["nodes"] == [0, 1, 2, 3]   # MAC wrap NOT crossed; QVGA 10 frames/s, 4 nodes
 assert all(c["paced_at_P"] for c in R4["per_camera"].values())
 assert abs(TS["C_vs_F_clock_err_ratio_median"] - xrow["median"] / mc[1]) < 1e-6      # same ratio as analyze_tracking.py
+# ---- Revision 6: software vs hardware capture path (MCPWM-latched VSYNC stamp + GPTimer-started FREX write) ----
+import re
+AB = json.load((DATA / "tracking/ab/tracking_ab.stats.json").open())
+ABHW = json.load((DATA / "tracking/ab/tracking-hw.json").open())
+ABSW = json.load((DATA / "tracking/ab/tracking-sw.json").open())
+WH = json.load((DATA / "wrap-run/wrap-40min-hw.jsonl.stats.json").open())
+assert (ABSW["hw"], ABHW["hw"], ABSW["dur"], ABHW["dur"], ABSW["status"]["resolution"]) == ("off", "on", 600.0, 600.0, "vga")
+assert all(AB[p]["cameras"] == [0, 1, 2, 3] and all(round(f) == 35 for f in AB[p]["per_camera_fps"].values()) for p in ("sw", "hw"))
+def kv(s, key):   # "key=a..b mean=m" / "key=n" fields of the node counter lines
+    m = re.search(rf"\b{key}=(-?\d+)(?:\.\.(-?\d+))?", s); return tuple(int(g) for g in m.groups() if g is not None)
+hs = [l for v in ABHW["node_stats"].values() for l in v if l.startswith("hwstamp")]
+ht = [l for v in ABHW["node_stats"].values() for l in v if l.startswith("hwtrig")]
+assert len(hs) == len(ht) == 4 and all(kv(l, "on") == (1,) for l in hs + ht)
+lag = [kv(l, "sw_lag_us") for l in hs]; lagm = [kv(l, "mean")[0] for l in hs]
+ok = [kv(l, "ok")[0] for l in ht]; lt = [kv(l, "late")[0] for l in ht]; done = [kv(l, "done_us") for l in ht]
+assert sum(kv(l, "misses")[0] for l in hs) == 0 and sum(kv(l, k)[0] for l in ht for k in ("nack", "timeout")) == 0
+# node-2 delay per 5-min bin while it reported transient FTM sync gaps (hardware 40-min run)
+import collections
+by5 = collections.defaultdict(list)
+WL = [json.loads(l) for l in (DATA / "wrap-run/wrap-40min-hw.jsonl").open()]
+F = [x for x in WL if x["kind"] == "f"]; tt0 = min(x["tick"] for x in F)
+for x in F:
+    if x["node"] == 2 and x["cap"] - x["tick"] < 10_000: by5[(x["tick"] - tt0) // 300_000_000].append(x["cap"] - x["tick"])
+n2 = [st.median(v) for v in by5.values()]
+def g(x): return f"{x:.0f}" if x >= 10 or x == int(x) else f"{x:.1f}"
+s, h = AB["sw"], AB["hw"]
+N.update({
+    "AbDur": f"{ABHW['dur']:.0f}", "AbFps": f"{round(st.mean(h['per_camera_fps'].values()))}",
+    "SwDelayLo": g(min(s["per_camera_offset_from_slot_us"].values())), "SwDelayHi": g(max(s["per_camera_offset_from_slot_us"].values())),
+    "HwDelayLo": g(min(h["per_camera_offset_from_slot_us"].values())), "HwDelayHi": g(max(h["per_camera_offset_from_slot_us"].values())),
+    "SwSpMed": g(s["spread_us"]["median"]), "SwSpPn": g(s["spread_us"]["p95"]), "SwSpMax": g(s["spread_us"]["max"]),
+    "HwSpMed": g(h["spread_us"]["median"]), "HwSpPn": g(h["spread_us"]["p95"]), "HwSpPnn": g(h["spread_us"]["p99"]), "HwSpMax": g(h["spread_us"]["max"]),
+    "SwJitMed": g(s["jitter_fixed_removed_us"]["median"]), "SwJitPn": g(s["jitter_fixed_removed_us"]["p95"]),
+    "HwJitMed": g(h["jitter_fixed_removed_us"]["median"]), "HwJitPn": g(h["jitter_fixed_removed_us"]["p95"]), "HwJitPnn": g(h["jitter_fixed_removed_us"]["p99"]),
+    "SwYield": f"{100 * s['full_yield']:.1f}", "HwYield": f"{100 * h['full_yield']:.1f}",
+    "LagLo": f"{min(a for a, _ in lag)}", "LagHi": f"{max(b for _, b in lag)}", "LagMeanLo": f"{min(lagm)}", "LagMeanHi": f"{max(lagm)}",
+    "TrigOkLo": f"{min(ok):,}".replace(",", "{,}"), "TrigOkHi": f"{max(ok):,}".replace(",", "{,}"), "TrigLateLo": f"{min(lt)}", "TrigLateHi": f"{max(lt)}",
+    "TrigDoneLo": f"{min(a for a, _ in done)}", "TrigDoneHi": f"{max(b for _, b in done)}",
+    "WhDelayLo": g(min(WH["per_node_median_delay_us"].values())), "WhDelayHi": g(max(WH["per_node_median_delay_us"].values())),
+    "WhSpMed": g(WH["spread_us"]["median"]), "WhSpPn": g(WH["spread_us"]["p95"]), "WhSpPnn": g(WH["spread_us"]["p99"]), "WhSpMax": g(WH["spread_us"]["max"]),
+    "WhJitMed": g(WH["jitter_spread_us"]["median"]), "WhJitPn": g(WH["jitter_spread_us"]["p95"]),
+    "WhStepLo": g(min(WH["per_node_1min_median_range_us"].values())), "WhStepHi": g(max(WH["per_node_1min_median_range_us"].values())),
+    "WhMin": f"{WH['duration_s'] / 60:.0f}", "WhWraps": f"{WH['ftm_wraps_crossed']}", "WhLate": f"{WH['late_frames']}", "WhFrames": f"{WH['frames']:,}".replace(",", "{,}"),
+    "WhLost": f"{WH['sync_lost_checks']}", "WhLostTwo": f"{WH['sync_lost_by_node']['2']}", "WhChecks": f"{WH['sync_checks']:,}".replace(",", "{,}"),
+    "WhAgeS": f"{WH['max_sync_age_ms'] / 1000:.1f}", "WhNtwoLo": g(min(n2)), "WhNtwoHi": g(max(n2)),
+    "WhYield": f"{100 * WH['full_slot_yield']:.0f}", "WhYieldLogged": f"{100 * WH['full_yield_of_logged']:.0f}", "WhErr": f"{WH['logger_errors']}",
+})
+# Regression guard: values quoted in the revision-6 brief must be what the files say.
+assert [N[k] for k in ("AbDur", "AbFps", "SwDelayLo", "SwDelayHi", "HwDelayLo", "HwDelayHi", "SwSpMed", "SwSpPn", "SwSpMax", "HwSpMed", "HwSpPn", "HwSpMax",
+                       "SwJitMed", "SwJitPn", "HwJitMed", "HwJitPn", "HwJitPnn", "SwYield", "HwYield")] == [
+    "600", "35", "1815", "1837", "1178", "1187", "48", "243", "556", "9", "12", "75", "41", "236", "2.1", "4.1", "5.4", "99.9", "99.6"], N
+assert [N[k] for k in ("LagLo", "LagHi", "LagMeanLo", "LagMeanHi", "TrigLateLo", "TrigLateHi")] == ["101", "489", "178", "211", "11", "26"], N
+assert all(20_900 < x < 21_100 for x in ok)                                     # "~21,000 per node"
+assert [N[k] for k in ("WhDelayLo", "WhDelayHi", "WhSpMed", "WhSpPn", "WhSpPnn", "WhSpMax", "WhJitMed", "WhJitPn", "WhStepLo", "WhStepHi",
+                       "WhWraps", "WhLate", "WhFrames", "WhLost", "WhLostTwo", "WhChecks", "WhAgeS", "WhNtwoLo", "WhNtwoHi")] == [
+    "1600", "1629", "35", "69", "148", "342", "30", "68", "6.5", "15", "8", "0", "84{,}315", "12", "11", "1{,}335", "6.8", "1599", "1602"], N
+assert N["WhMin"] == N["WrMin"] == "40"
+assert h["spread_us"]["median"] - LIVE < 10 and h["jitter_fixed_removed_us"]["p95"] - LIVE < 5   # "within a few us of the clock error"
+assert xrow["median"] > 10 * h["spread_us"]["p95"] and s["jitter_fixed_removed_us"]["median"] > 20 * LIVE   # "far above"
+assert WH["sync_lost_by_node"] == {"1": 0, "2": 11, "3": 1} and WH["period_us"] == 100000 and WH["nodes"] == [0, 1, 2, 3] and len(n2) == 8
+assert h["spread_us"]["p95"] < s["spread_us"]["median"] and WH["jitter_spread_us"]["median"] < WR["jitter_spread_us"]["median"]   # direction of every claim
 (OUT / "numbers.tex").write_text("".join(f"\\newcommand{{\\{k}}}{{{v}}}\n" for k, v in N.items()))
-cap = [  # Table 3 rows: quantity | tracking (VGA) | 40-min run (QVGA)
-    (r"Trigger-to-stamp delay, per cam. (\textmu s)", f"{N['DelayLo']}--{N['DelayHi']}", f"{N['WrDelayLo']}--{N['WrDelayHi']}"),
-    (r"Cross-cam. spread: med./p95 (\textmu s)", f"{N['RawMed']}/{N['RawPn']}", f"{N['WrSpMed']}/{N['WrSpPn']}"),
-    (r"\quad fixed delay removed (\textmu s)", f"{N['JitMed']}/{N['JitPn']}", f"{N['WrJitMed']}/{N['WrJitPn']}"),
-    (r"Slots from all cameras (\%)", N["TrkSlots"], f"{N['WrYieldLogged']}$^a$"),
-    (r"Row offset $y\,t_\text{row}$: med./p95 (ms)", f"{N['RowMedMs']}/{N['RowPnMs']}", "--"),
-    (r"Cross-cam. row-time diff. (\textmu s)", f"{N['XrowMed']}/{N['XrowPn']}", "--"),
+cap = [  # Table 3 rows: quantity | tracking SW | tracking HW | 40-min SW | 40-min HW
+    (r"Delay", f"{N['SwDelayLo']}--{N['SwDelayHi']}", f"{N['HwDelayLo']}--{N['HwDelayHi']}",
+     f"{N['WrDelayLo']}--{N['WrDelayHi']}", f"{N['WhDelayLo']}--{N['WhDelayHi']}"),
+    (r"Spread, med./p95", f"{N['SwSpMed']}/{N['SwSpPn']}", f"{N['HwSpMed']}/{N['HwSpPn']}", f"{N['WrSpMed']}/{N['WrSpPn']}", f"{N['WhSpMed']}/{N['WhSpPn']}"),
+    (r"\quad delay removed", f"{N['SwJitMed']}/{N['SwJitPn']}", f"{N['HwJitMed']}/{N['HwJitPn']}", f"{N['WrJitMed']}/{N['WrJitPn']}", f"{N['WhJitMed']}/{N['WhJitPn']}"),
+    (r"Full slots (\%)", N["SwYield"], N["HwYield"], f"{N['WrYieldLogged']}$^a$", f"{N['WhYieldLogged']}$^a$"),
+    (r"Late frames", "--", "--", N["WrLate"], N["WhLate"]),
 ]
 (OUT / "table_capture.tex").write_text("\n".join(" & ".join(r) + r" \\" for r in cap) + "\n")
 json.dump({"offset_stats": stats, "capture_numbers": N, "follower_means": {f"{k[0]}|{k[1]}": v for k, v in fmeans.items()},
