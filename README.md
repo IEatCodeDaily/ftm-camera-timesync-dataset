@@ -33,7 +33,7 @@ Rules used by the analysis: a pulse counts when its HIGH width is 40–65 ms; fo
 ## Scope and limits
 
 - Offsets are electrical GPIO phase relative to the reference node. They are not optical exposure times.
-- No logic-analyzer record is longer than 60 s. The 40-min `wrap-run/` crosses 8 FTM 48-bit wraps (camera-timestamp resolution, tens of µs); the 71.6-min MAC 32-bit wrap is not crossed.
+- The 40-min `wrap-run/` crosses 8 FTM 48-bit timestamp wraps with no step (camera-timestamp resolution, tens of µs).
 - Nine of fifteen planned campaign records finished before analyzer timeouts stopped the campaign. Short and failed attempts are kept but are not counted.
 - `acquire.py` and `check_signal.py` drive physical hardware and are kept for provenance only.
 - Some JSON logs contain private-subnet node addresses (192.168.137.x) from an isolated laptop hotspot.
