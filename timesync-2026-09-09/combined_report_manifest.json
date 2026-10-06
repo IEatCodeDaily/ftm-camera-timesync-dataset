@@ -1,0 +1,15 @@
+{
+  "output": "timesync_combined_report.pdf",
+  "pages": 17,
+  "sha256": "83b616a6891794922ba69b18e4e867d3e0658c0a1e39d137e03d371c1ad03f8b",
+  "parts": [
+    "combined-work\\cover.pdf",
+    "visual-summary\\timesync_visual_guide.pdf",
+    "combined-work\\technical.pdf"
+  ],
+  "changes": [
+    "Unified continuous page numbers and bookmarks",
+    "Corrected technical apparatus attribution using user photo",
+    "Original separately delivered PDFs preserved"
+  ]
+}

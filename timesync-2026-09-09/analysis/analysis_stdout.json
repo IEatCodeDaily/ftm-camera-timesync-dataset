@@ -1,0 +1,1526 @@
+[
+  {
+    "run": "new-acquisition/20260909-063251-campaign/00-00-mcpwm-ftm",
+    "method": "mcpwm:ftm",
+    "status": "insufficient/full-fleet inconclusive",
+    "counts": {
+      "0": {
+        "raw": 1562,
+        "qualified": 5,
+        "rejected": 1557,
+        "cadence_bad_intervals": 0,
+        "intervals_over_1_5_s": 0,
+        "period_min_s": 0.9999691260000003,
+        "period_max_s": 0.999970187,
+        "unclosed_observed_rises": 0
+      },
+      "1": {
+        "raw": 7,
+        "qualified": 5,
+        "rejected": 2,
+        "cadence_bad_intervals": 0,
+        "intervals_over_1_5_s": 0,
+        "period_min_s": 0.9999691239999999,
+        "period_max_s": 0.9999701250000004,
+        "unclosed_observed_rises": 0
+      },
+      "2": {
+        "raw": 3178,
+        "qualified": 5,
+        "rejected": 3173,
+        "cadence_bad_intervals": 0,
+        "intervals_over_1_5_s": 0,
+        "period_min_s": 0.9999697489999999,
+        "period_max_s": 0.9999700009999999,
+        "unclosed_observed_rises": 0
+      },
+      "3": {
+        "raw": 3681,
+        "qualified": 5,
+        "rejected": 3676,
+        "cadence_bad_intervals": 0,
+        "intervals_over_1_5_s": 0,
+        "period_min_s": 0.9999689379999999,
+        "period_max_s": 0.9999699999999999,
+        "unclosed_observed_rises": 0
+      }
+    },
+    "pairs": {
+      "0": {
+        "n": 5,
+        "mean_us": 0.4999999999366622,
+        "sd_us": 0.21974530702551076,
+        "rms_us": 0.5461574863502269,
+        "p95_abs_us": 0.8750000000112834,
+        "max_abs_us": 0.8750000000112834,
+        "min_us": 0.25100000033972947,
+        "max_us": 0.8750000000112834,
+        "trend_us_per_s": 0.02500075815037344,
+        "unmatched_reference": 0,
+        "unmatched_follower": 0
+      },
+      "1": {
+        "n": 5,
+        "mean_us": 0.4376000001027336,
+        "sd_us": 0.23722360759652555,
+        "rms_us": 0.49776379949833915,
+        "p95_abs_us": 0.6250000001983835,
+        "max_abs_us": 0.6250000001983835,
+        "min_us": 0.0,
+        "max_us": 0.6250000001983835,
+        "trend_us_per_s": -0.012600381432290267,
+        "unmatched_reference": 0,
+        "unmatched_follower": 0
+      },
+      "3": {
+        "n": 5,
+        "mean_us": 0.30019999994745916,
+        "sd_us": 0.33136891826988457,
+        "rms_us": 0.44713018234492724,
+        "p95_abs_us": 0.6879999999709341,
+        "max_abs_us": 0.6879999999709341,
+        "min_us": -0.12400000004575418,
+        "max_us": 0.6879999999709341,
+        "trend_us_per_s": -0.1626049089069682,
+        "unmatched_reference": 0,
+        "unmatched_follower": 0
+      }
+    }
+  },
+  {
+    "run": "new-acquisition/20260909-063455-campaign/00-00-mcpwm-mac",
+    "method": "mcpwm:mac",
+    "status": "provisional glitches",
+    "counts": {
+      "0": {
+        "raw": 10302,
+        "qualified": 60,
+        "rejected": 10242,
+        "cadence_bad_intervals": 0,
+        "intervals_over_1_5_s": 0,
+        "period_min_s": 0.9999700009999941,
+        "period_max_s": 0.9999701880000007,
+        "unclosed_observed_rises": 0
+      },
+      "1": {
+        "raw": 1343,
+        "qualified": 60,
+        "rejected": 1283,
+        "cadence_bad_intervals": 0,
+        "intervals_over_1_5_s": 0,
+        "period_min_s": 0.9999629369999994,
+        "period_max_s": 0.9999651259999993,
+        "unclosed_observed_rises": 0
+      },
+      "2": {
+        "raw": 36017,
+        "qualified": 60,
+        "rejected": 35957,
+        "cadence_bad_intervals": 0,
+        "intervals_over_1_5_s": 0,
+        "period_min_s": 0.999968312,
+        "period_max_s": 0.9999706879999977,
+        "unclosed_observed_rises": 0
+      },
+      "3": {
+        "raw": 240080,
+        "qualified": 50,
+        "rejected": 240030,
+        "cadence_bad_intervals": 3,
+        "intervals_over_1_5_s": 3,
+        "period_min_s": 0.9999629999999999,
+        "period_max_s": 5.999784687,
+        "unclosed_observed_rises": 0
+      }
+    },
+    "pairs": {
+      "0": {
+        "n": 60,
+        "mean_us": -449503.42189999967,
+        "sd_us": 6.903047645073583,
+        "rms_us": 449503.4219530049,
+        "p95_abs_us": 449513.6249999998,
+        "max_abs_us": 449514.75,
+        "min_us": -449514.75,
+        "max_us": -449491.3130000029,
+        "trend_us_per_s": 0.3982529108436854,
+        "unmatched_reference": 0,
+        "unmatched_follower": 0
+      },
+      "1": {
+        "n": 60,
+        "mean_us": 269427.08849999966,
+        "sd_us": 97.7437933544477,
+        "rms_us": 269427.1062299333,
+        "p95_abs_us": 269576.93800000014,
+        "max_abs_us": 269593.93700000003,
+        "min_us": 269259.9989999991,
+        "max_us": 269593.93700000003,
+        "trend_us_per_s": -5.644141615254997,
+        "unmatched_reference": 0,
+        "unmatched_follower": 0
+      },
+      "3": {
+        "n": 50,
+        "mean_us": -427894.1575599997,
+        "sd_us": 93.81243891492483,
+        "rms_us": 427894.16784382047,
+        "p95_abs_us": 428028.1870000024,
+        "max_abs_us": 428039.4380000061,
+        "min_us": -428039.4380000061,
+        "max_us": -427702.68700000003,
+        "trend_us_per_s": -5.679113899570989,
+        "unmatched_reference": 10,
+        "unmatched_follower": 0
+      }
+    }
+  },
+  {
+    "run": "new-acquisition/20260909-063455-campaign/00-01-mcpwm-tsf",
+    "method": "mcpwm:tsf",
+    "status": "provisional glitches",
+    "counts": {
+      "0": {
+        "raw": 189061,
+        "qualified": 54,
+        "rejected": 189006,
+        "cadence_bad_intervals": 0,
+        "intervals_over_1_5_s": 0,
+        "period_min_s": 0.999952062000002,
+        "period_max_s": 1.0000730000000004,
+        "unclosed_observed_rises": 1
+      },
+      "1": {
+        "raw": 126512,
+        "qualified": 56,
+        "rejected": 126455,
+        "cadence_bad_intervals": 1,
+        "intervals_over_1_5_s": 1,
+        "period_min_s": 0.9999975629999938,
+        "period_max_s": 2.000018874000002,
+        "unclosed_observed_rises": 1
+      },
+      "2": {
+        "raw": 117050,
+        "qualified": 59,
+        "rejected": 116990,
+        "cadence_bad_intervals": 0,
+        "intervals_over_1_5_s": 0,
+        "period_min_s": 0.9999036249999995,
+        "period_max_s": 1.0001075630000003,
+        "unclosed_observed_rises": 1
+      },
+      "3": {
+        "raw": 108000,
+        "qualified": 59,
+        "rejected": 107940,
+        "cadence_bad_intervals": 0,
+        "intervals_over_1_5_s": 0,
+        "period_min_s": 0.9999988750000028,
+        "period_max_s": 1.0000248750000011,
+        "unclosed_observed_rises": 1
+      }
+    },
+    "pairs": {
+      "0": {
+        "n": 54,
+        "mean_us": -5.079777777573954,
+        "sd_us": 18.230246881349895,
+        "rms_us": 18.92474685760689,
+        "p95_abs_us": 15.875000000775685,
+        "max_abs_us": 94.37599999984059,
+        "min_us": -67.37500000042473,
+        "max_us": 94.37599999984059,
+        "trend_us_per_s": -0.34398517241068644,
+        "unmatched_reference": 5,
+        "unmatched_follower": 0
+      },
+      "1": {
+        "n": 56,
+        "mean_us": -8.388357142811975,
+        "sd_us": 16.461475805779944,
+        "rms_us": 18.475516806293758,
+        "p95_abs_us": 19.43700000062165,
+        "max_abs_us": 97.31300000037635,
+        "min_us": -57.06299999985731,
+        "max_us": 97.31300000037635,
+        "trend_us_per_s": -0.2520532252307018,
+        "unmatched_reference": 3,
+        "unmatched_follower": 0
+      },
+      "3": {
+        "n": 59,
+        "mean_us": -8.433186440444757,
+        "sd_us": 14.976336618909654,
+        "rms_us": 17.18747485997276,
+        "p95_abs_us": 17.49899999836657,
+        "max_abs_us": 85.93800000067375,
+        "min_us": -63.06299999891962,
+        "max_us": 85.93800000067375,
+        "trend_us_per_s": -0.17585054031288938,
+        "unmatched_reference": 0,
+        "unmatched_follower": 0
+      }
+    }
+  },
+  {
+    "run": "new-acquisition/20260909-063455-campaign/00-02-mcpwm-ftm",
+    "method": "mcpwm:ftm",
+    "status": "provisional glitches",
+    "counts": {
+      "0": {
+        "raw": 182832,
+        "qualified": 51,
+        "rejected": 182781,
+        "cadence_bad_intervals": 2,
+        "intervals_over_1_5_s": 2,
+        "period_min_s": 0.9999689369999984,
+        "period_max_s": 8.999726875,
+        "unclosed_observed_rises": 0
+      },
+      "1": {
+        "raw": 113709,
+        "qualified": 56,
+        "rejected": 113653,
+        "cadence_bad_intervals": 1,
+        "intervals_over_1_5_s": 1,
+        "period_min_s": 0.999968750999999,
+        "period_max_s": 4.999848188,
+        "unclosed_observed_rises": 0
+      },
+      "2": {
+        "raw": 139928,
+        "qualified": 54,
+        "rejected": 139874,
+        "cadence_bad_intervals": 2,
+        "intervals_over_1_5_s": 2,
+        "period_min_s": 0.9999685619999994,
+        "period_max_s": 5.9998183130000005,
+        "unclosed_observed_rises": 0
+      },
+      "3": {
+        "raw": 462046,
+        "qualified": 42,
+        "rejected": 462004,
+        "cadence_bad_intervals": 2,
+        "intervals_over_1_5_s": 2,
+        "period_min_s": 0.999967937000001,
+        "period_max_s": 5.999816624999994,
+        "unclosed_observed_rises": 0
+      }
+    },
+    "pairs": {
+      "0": {
+        "n": 47,
+        "mean_us": 0.5212127664903773,
+        "sd_us": 0.42146966533229385,
+        "rms_us": 0.6702980133849932,
+        "p95_abs_us": 1.0630000062405998,
+        "max_abs_us": 1.312999998503983,
+        "min_us": -0.8750000048962647,
+        "max_us": 1.312999998503983,
+        "trend_us_per_s": -0.0007667223887514121,
+        "unmatched_reference": 7,
+        "unmatched_follower": 4
+      },
+      "1": {
+        "n": 52,
+        "mean_us": 0.08169230773577776,
+        "sd_us": 0.491453047155549,
+        "rms_us": 0.4981964780101032,
+        "p95_abs_us": 0.8129999997663617,
+        "max_abs_us": 1.3120000019739564,
+        "min_us": -1.3120000019739564,
+        "max_us": 1.000000000139778,
+        "trend_us_per_s": -0.003419798633488296,
+        "unmatched_reference": 2,
+        "unmatched_follower": 4
+      },
+      "3": {
+        "n": 42,
+        "mean_us": 0.2841666667054353,
+        "sd_us": 0.5822513333587042,
+        "rms_us": 0.6478945204772663,
+        "p95_abs_us": 1.3750000000811724,
+        "max_abs_us": 1.687999997557199,
+        "min_us": -0.8119999961309077,
+        "max_us": 1.687999997557199,
+        "trend_us_per_s": -0.0051258259199229925,
+        "unmatched_reference": 12,
+        "unmatched_follower": 0
+      }
+    }
+  },
+  {
+    "run": "new-acquisition/20260909-063455-campaign/00-03-mcpwm-frozen",
+    "method": "mcpwm:frozen",
+    "status": "INVALID: firmware changed during campaign",
+    "counts": {
+      "0": {
+        "raw": 60,
+        "qualified": 60,
+        "rejected": 0,
+        "cadence_bad_intervals": 0,
+        "intervals_over_1_5_s": 0,
+        "period_min_s": 0.9999680009999992,
+        "period_max_s": 0.9999708749999954,
+        "unclosed_observed_rises": 0
+      },
+      "1": {
+        "raw": 13,
+        "qualified": 11,
+        "rejected": 2,
+        "cadence_bad_intervals": 0,
+        "intervals_over_1_5_s": 0,
+        "period_min_s": 0.9999687499999999,
+        "period_max_s": 0.9999698130000008,
+        "unclosed_observed_rises": 0
+      },
+      "2": {
+        "raw": 254097,
+        "qualified": 46,
+        "rejected": 254051,
+        "cadence_bad_intervals": 7,
+        "intervals_over_1_5_s": 7,
+        "period_min_s": 0.9927553119999999,
+        "period_max_s": 4.999847375000002,
+        "unclosed_observed_rises": 0
+      },
+      "3": {
+        "raw": 146724,
+        "qualified": 54,
+        "rejected": 146670,
+        "cadence_bad_intervals": 2,
+        "intervals_over_1_5_s": 2,
+        "period_min_s": 0.9999678120000013,
+        "period_max_s": 5.999816813000001,
+        "unclosed_observed_rises": 0
+      }
+    },
+    "pairs": {
+      "0": {
+        "n": 46,
+        "mean_us": -155.3858913041012,
+        "sd_us": 1052.1432005784065,
+        "rms_us": 1063.5554004092796,
+        "p95_abs_us": 2.3749999940037014,
+        "max_abs_us": 7213.376000001048,
+        "min_us": -7213.376000001048,
+        "max_us": 2.375000001109129,
+        "trend_us_per_s": 10.073379089804078,
+        "unmatched_reference": 0,
+        "unmatched_follower": 14
+      },
+      "1": {
+        "n": 6,
+        "mean_us": 0.1980000002843596,
+        "sd_us": 0.36356063204037686,
+        "rms_us": 0.41398107841084325,
+        "p95_abs_us": 0.8129999999884063,
+        "max_abs_us": 0.8129999999884063,
+        "min_us": -0.24999999936881068,
+        "max_us": 0.8129999999884063,
+        "trend_us_per_s": -0.07640687498293279,
+        "unmatched_reference": 40,
+        "unmatched_follower": 5
+      },
+      "3": {
+        "n": 43,
+        "mean_us": -167.88079069732035,
+        "sd_us": 1087.2498782922642,
+        "rms_us": 1100.1346543635925,
+        "p95_abs_us": 2.126000005375772,
+        "max_abs_us": 7214.063000001048,
+        "min_us": -7214.063000001048,
+        "max_us": 1.123999999741443,
+        "trend_us_per_s": 12.731192497560471,
+        "unmatched_reference": 3,
+        "unmatched_follower": 11
+      }
+    }
+  },
+  {
+    "run": "new-acquisition/20260909-064935-campaign/00-00-mcpwm-ntp",
+    "method": "mcpwm:ntp",
+    "status": "insufficient/full-fleet inconclusive",
+    "counts": {
+      "0": {
+        "raw": 5,
+        "qualified": 5,
+        "rejected": 0,
+        "cadence_bad_intervals": 0,
+        "intervals_over_1_5_s": 0,
+        "period_min_s": 0.99732425,
+        "period_max_s": 1.0017155619999998,
+        "unclosed_observed_rises": 0
+      },
+      "1": {
+        "raw": 5,
+        "qualified": 5,
+        "rejected": 0,
+        "cadence_bad_intervals": 0,
+        "intervals_over_1_5_s": 0,
+        "period_min_s": 0.9940320630000001,
+        "period_max_s": 1.00954825,
+        "unclosed_observed_rises": 0
+      },
+      "2": {
+        "raw": 5,
+        "qualified": 5,
+        "rejected": 0,
+        "cadence_bad_intervals": 0,
+        "intervals_over_1_5_s": 0,
+        "period_min_s": 0.999967625,
+        "period_max_s": 0.9999692489999998,
+        "unclosed_observed_rises": 0
+      },
+      "3": {
+        "raw": 5,
+        "qualified": 5,
+        "rejected": 0,
+        "cadence_bad_intervals": 0,
+        "intervals_over_1_5_s": 0,
+        "period_min_s": 0.9937835619999997,
+        "period_max_s": 1.006006063,
+        "unclosed_observed_rises": 0
+      }
+    },
+    "pairs": {
+      "0": {
+        "n": 5,
+        "mean_us": 763.4500000000877,
+        "sd_us": 850.6221043156305,
+        "rms_us": 1142.9846310648647,
+        "p95_abs_us": 1952.1250000000823,
+        "max_abs_us": 1952.1250000000823,
+        "min_us": -692.6249999998912,
+        "max_us": 1952.1250000000823,
+        "trend_us_per_s": -95.55280468153853,
+        "unmatched_reference": 0,
+        "unmatched_follower": 0
+      },
+      "1": {
+        "n": 5,
+        "mean_us": -1156.4877999999944,
+        "sd_us": 3479.9014185077735,
+        "rms_us": 3667.039393581864,
+        "p95_abs_us": 4813.936999999991,
+        "max_abs_us": 4813.936999999991,
+        "min_us": -4765.312999999937,
+        "max_us": 4813.936999999991,
+        "trend_us_per_s": -446.807235119327,
+        "unmatched_reference": 0,
+        "unmatched_follower": 0
+      },
+      "3": {
+        "n": 5,
+        "mean_us": 1023.1127999999811,
+        "sd_us": 2350.4275155932896,
+        "rms_us": 2563.448713663264,
+        "p95_abs_us": 5698.0630000000865,
+        "max_abs_us": 5698.0630000000865,
+        "min_us": -487.3130000002668,
+        "max_us": 5698.0630000000865,
+        "trend_us_per_s": -459.83296427998704,
+        "unmatched_reference": 0,
+        "unmatched_follower": 0
+      }
+    }
+  },
+  {
+    "run": "new-acquisition/20260909-064935-campaign/00-01-mcpwm-ftm",
+    "method": "mcpwm:ftm",
+    "status": "insufficient/full-fleet inconclusive",
+    "counts": {
+      "0": {
+        "raw": 6,
+        "qualified": 5,
+        "rejected": 0,
+        "cadence_bad_intervals": 0,
+        "intervals_over_1_5_s": 0,
+        "period_min_s": 0.9999686239999999,
+        "period_max_s": 0.9999696260000001,
+        "unclosed_observed_rises": 1
+      },
+      "1": {
+        "raw": 6,
+        "qualified": 5,
+        "rejected": 0,
+        "cadence_bad_intervals": 0,
+        "intervals_over_1_5_s": 0,
+        "period_min_s": 0.9999688739999999,
+        "period_max_s": 0.9999688759999996,
+        "unclosed_observed_rises": 1
+      },
+      "2": {
+        "raw": 6,
+        "qualified": 5,
+        "rejected": 0,
+        "cadence_bad_intervals": 0,
+        "intervals_over_1_5_s": 0,
+        "period_min_s": 0.9999679999999999,
+        "period_max_s": 0.9999705000000003,
+        "unclosed_observed_rises": 1
+      },
+      "3": {
+        "raw": 6,
+        "qualified": 5,
+        "rejected": 0,
+        "cadence_bad_intervals": 0,
+        "intervals_over_1_5_s": 0,
+        "period_min_s": 0.9999683119999996,
+        "period_max_s": 0.9999703120000001,
+        "unclosed_observed_rises": 1
+      }
+    },
+    "pairs": {
+      "0": {
+        "n": 5,
+        "mean_us": -0.32459999989853383,
+        "sd_us": 0.8078815756415931,
+        "rms_us": 0.8706536625979767,
+        "p95_abs_us": 1.1250000002682725,
+        "max_abs_us": 1.1250000002682725,
+        "min_us": -1.1250000002682725,
+        "max_us": 0.7510000001875738,
+        "trend_us_per_s": 0.118803478268564,
+        "unmatched_reference": 0,
+        "unmatched_follower": 0
+      },
+      "1": {
+        "n": 5,
+        "mean_us": -0.07459999998848943,
+        "sd_us": 0.5666549568311513,
+        "rms_us": 0.5715443990623971,
+        "p95_abs_us": 0.8750000000112834,
+        "max_abs_us": 0.8750000000112834,
+        "min_us": -0.8750000000112834,
+        "max_us": 0.7510000001875738,
+        "trend_us_per_s": -0.031601142141304446,
+        "unmatched_reference": 0,
+        "unmatched_follower": 0
+      },
+      "3": {
+        "n": 5,
+        "mean_us": -0.037000000002729294,
+        "sd_us": 0.7357564814996912,
+        "rms_us": 0.7366862290480307,
+        "p95_abs_us": 1.1880000001518454,
+        "max_abs_us": 1.1880000001518454,
+        "min_us": -1.1239999999912431,
+        "max_us": 1.1880000001518454,
+        "trend_us_per_s": 0.08730259642283678,
+        "unmatched_reference": 0,
+        "unmatched_follower": 0
+      }
+    }
+  },
+  {
+    "run": "new-acquisition/20260909-065110-campaign/00-00-mcpwm-ftm",
+    "method": "mcpwm:ftm",
+    "status": "clean descriptive",
+    "counts": {
+      "0": {
+        "raw": 60,
+        "qualified": 60,
+        "rejected": 0,
+        "cadence_bad_intervals": 0,
+        "intervals_over_1_5_s": 0,
+        "period_min_s": 0.9999681239999987,
+        "period_max_s": 0.9999698759999998,
+        "unclosed_observed_rises": 0
+      },
+      "1": {
+        "raw": 60,
+        "qualified": 60,
+        "rejected": 0,
+        "cadence_bad_intervals": 0,
+        "intervals_over_1_5_s": 0,
+        "period_min_s": 0.9999676870000016,
+        "period_max_s": 0.9999698120000002,
+        "unclosed_observed_rises": 0
+      },
+      "2": {
+        "raw": 60,
+        "qualified": 60,
+        "rejected": 0,
+        "cadence_bad_intervals": 0,
+        "intervals_over_1_5_s": 0,
+        "period_min_s": 0.9999676870000016,
+        "period_max_s": 0.999969937000003,
+        "unclosed_observed_rises": 0
+      },
+      "3": {
+        "raw": 60,
+        "qualified": 60,
+        "rejected": 0,
+        "cadence_bad_intervals": 0,
+        "intervals_over_1_5_s": 0,
+        "period_min_s": 0.9999670620000032,
+        "period_max_s": 0.999970187,
+        "unclosed_observed_rises": 0
+      }
+    },
+    "pairs": {
+      "0": {
+        "n": 60,
+        "mean_us": 0.08118333303201257,
+        "sd_us": 0.6065331399507139,
+        "rms_us": 0.6119421405824729,
+        "p95_abs_us": 0.9380000003389455,
+        "max_abs_us": 1.250000000396767,
+        "min_us": -0.999000000945216,
+        "max_us": 1.250000000396767,
+        "trend_us_per_s": -0.0013960155816999233,
+        "unmatched_reference": 0,
+        "unmatched_follower": 0
+      },
+      "1": {
+        "n": 60,
+        "mean_us": 0.3019833329861073,
+        "sd_us": 0.6351551122731002,
+        "rms_us": 0.7032893785974963,
+        "p95_abs_us": 1.1879999988195777,
+        "max_abs_us": 1.6259999995327235,
+        "min_us": -1.6259999995327235,
+        "max_us": 1.1879999988195777,
+        "trend_us_per_s": 0.0031880676274141976,
+        "unmatched_reference": 0,
+        "unmatched_follower": 0
+      },
+      "3": {
+        "n": 60,
+        "mean_us": 0.21556666615629716,
+        "sd_us": 0.7486477444691195,
+        "rms_us": 0.7790651018088544,
+        "p95_abs_us": 1.5629999978727938,
+        "max_abs_us": 1.687999997557199,
+        "min_us": -1.31300000028034,
+        "max_us": 1.687999997557199,
+        "trend_us_per_s": 0.007034172746005503,
+        "unmatched_reference": 0,
+        "unmatched_follower": 0
+      }
+    }
+  },
+  {
+    "run": "new-acquisition/20260909-065110-campaign/00-01-mcpwm-ntp",
+    "method": "mcpwm:ntp",
+    "status": "clean signal; cadence/completeness criterion failed",
+    "counts": {
+      "0": {
+        "raw": 59,
+        "qualified": 59,
+        "rejected": 0,
+        "cadence_bad_intervals": 1,
+        "intervals_over_1_5_s": 1,
+        "period_min_s": 0.9915835630000007,
+        "period_max_s": 1.9997035620000005,
+        "unclosed_observed_rises": 0
+      },
+      "1": {
+        "raw": 60,
+        "qualified": 60,
+        "rejected": 0,
+        "cadence_bad_intervals": 8,
+        "intervals_over_1_5_s": 0,
+        "period_min_s": 0.9709066250000014,
+        "period_max_s": 1.0624453129999978,
+        "unclosed_observed_rises": 0
+      },
+      "2": {
+        "raw": 60,
+        "qualified": 60,
+        "rejected": 0,
+        "cadence_bad_intervals": 0,
+        "intervals_over_1_5_s": 0,
+        "period_min_s": 0.9999676239999999,
+        "period_max_s": 0.9999696880000002,
+        "unclosed_observed_rises": 0
+      },
+      "3": {
+        "raw": 60,
+        "qualified": 60,
+        "rejected": 0,
+        "cadence_bad_intervals": 4,
+        "intervals_over_1_5_s": 0,
+        "period_min_s": 0.9868423750000019,
+        "period_max_s": 1.012860437999997,
+        "unclosed_observed_rises": 0
+      }
+    },
+    "pairs": {
+      "0": {
+        "n": 59,
+        "mean_us": 47.13569491569409,
+        "sd_us": 2322.8450716541934,
+        "rms_us": 2323.3232664963693,
+        "p95_abs_us": 4858.437000000215,
+        "max_abs_us": 7504.686999999954,
+        "min_us": -6940.875000001512,
+        "max_us": 7504.686999999954,
+        "trend_us_per_s": -8.767816855723032,
+        "unmatched_reference": 1,
+        "unmatched_follower": 0
+      },
+      "1": {
+        "n": 60,
+        "mean_us": -2946.786399999428,
+        "sd_us": 7602.696973018303,
+        "rms_us": 8153.805942672615,
+        "p95_abs_us": 15239.06299999922,
+        "max_abs_us": 39774.1879999991,
+        "min_us": -39774.1879999991,
+        "max_us": 22702.43699999952,
+        "trend_us_per_s": -54.95282399928289,
+        "unmatched_reference": 0,
+        "unmatched_follower": 0
+      },
+      "3": {
+        "n": 60,
+        "mean_us": -361.5832499993624,
+        "sd_us": 2844.3751434471774,
+        "rms_us": 2867.2656666831995,
+        "p95_abs_us": 5996.312000000615,
+        "max_abs_us": 12695.374999999842,
+        "min_us": -12695.374999999842,
+        "max_us": 8337.000000000038,
+        "trend_us_per_s": -20.788137308685158,
+        "unmatched_reference": 0,
+        "unmatched_follower": 0
+      }
+    }
+  },
+  {
+    "run": "new-acquisition/20260909-065110-campaign/00-02-mcpwm-mac",
+    "method": "mcpwm:mac",
+    "status": "clean signal; cadence/completeness criterion failed",
+    "counts": {
+      "0": {
+        "raw": 60,
+        "qualified": 60,
+        "rejected": 0,
+        "cadence_bad_intervals": 0,
+        "intervals_over_1_5_s": 0,
+        "period_min_s": 0.9999671879999994,
+        "period_max_s": 0.9999691879999979,
+        "unclosed_observed_rises": 0
+      },
+      "1": {
+        "raw": 60,
+        "qualified": 60,
+        "rejected": 0,
+        "cadence_bad_intervals": 0,
+        "intervals_over_1_5_s": 0,
+        "period_min_s": 0.9999614379999997,
+        "period_max_s": 0.9999641249999982,
+        "unclosed_observed_rises": 0
+      },
+      "2": {
+        "raw": 60,
+        "qualified": 60,
+        "rejected": 0,
+        "cadence_bad_intervals": 0,
+        "intervals_over_1_5_s": 0,
+        "period_min_s": 0.9999674999999968,
+        "period_max_s": 0.9999696249999985,
+        "unclosed_observed_rises": 0
+      },
+      "3": {
+        "raw": 59,
+        "qualified": 59,
+        "rejected": 0,
+        "cadence_bad_intervals": 1,
+        "intervals_over_1_5_s": 1,
+        "period_min_s": 0.9999615000000048,
+        "period_max_s": 1.9999256259999996,
+        "unclosed_observed_rises": 0
+      }
+    },
+    "pairs": {
+      "0": {
+        "n": 60,
+        "mean_us": -7087.211516666706,
+        "sd_us": 6.776053968553001,
+        "rms_us": 7087.214755944719,
+        "p95_abs_us": 7097.688000001767,
+        "max_abs_us": 7098.31200000366,
+        "min_us": -7098.31200000366,
+        "max_us": -7075.812999999931,
+        "trend_us_per_s": -0.39007730976029664,
+        "unmatched_reference": 0,
+        "unmatched_follower": 0
+      },
+      "1": {
+        "n": 60,
+        "mean_us": -185055.5385833335,
+        "sd_us": 104.77871473782065,
+        "rms_us": 185055.56824626133,
+        "p95_abs_us": 185215.687000003,
+        "max_abs_us": 185233.8119999999,
+        "min_us": -185233.8119999999,
+        "max_us": -184878.31300000002,
+        "trend_us_per_s": -6.050304600288418,
+        "unmatched_reference": 0,
+        "unmatched_follower": 0
+      },
+      "3": {
+        "n": 59,
+        "mean_us": -32986.59215254203,
+        "sd_us": 98.56014987397884,
+        "rms_us": 32986.73939541904,
+        "p95_abs_us": 33135.87600000289,
+        "max_abs_us": 33158.24899999598,
+        "min_us": -33158.24899999598,
+        "max_us": -32819.374999999985,
+        "trend_us_per_s": -5.768187013471666,
+        "unmatched_reference": 1,
+        "unmatched_follower": 0
+      }
+    }
+  },
+  {
+    "run": "new-acquisition/20260909-065110-campaign/00-03-mcpwm-tsf",
+    "method": "mcpwm:tsf",
+    "status": "clean signal; cadence/completeness criterion failed",
+    "counts": {
+      "0": {
+        "raw": 60,
+        "qualified": 60,
+        "rejected": 0,
+        "cadence_bad_intervals": 0,
+        "intervals_over_1_5_s": 0,
+        "period_min_s": 0.9998400620000041,
+        "period_max_s": 1.000063124999997,
+        "unclosed_observed_rises": 0
+      },
+      "1": {
+        "raw": 59,
+        "qualified": 59,
+        "rejected": 0,
+        "cadence_bad_intervals": 1,
+        "intervals_over_1_5_s": 1,
+        "period_min_s": 0.9999754999999997,
+        "period_max_s": 2.000016875,
+        "unclosed_observed_rises": 0
+      },
+      "2": {
+        "raw": 60,
+        "qualified": 60,
+        "rejected": 0,
+        "cadence_bad_intervals": 0,
+        "intervals_over_1_5_s": 0,
+        "period_min_s": 0.9999254999999998,
+        "period_max_s": 1.0001036879999994,
+        "unclosed_observed_rises": 0
+      },
+      "3": {
+        "raw": 60,
+        "qualified": 60,
+        "rejected": 0,
+        "cadence_bad_intervals": 0,
+        "intervals_over_1_5_s": 0,
+        "period_min_s": 0.9999356880000008,
+        "period_max_s": 1.0000966869999957,
+        "unclosed_observed_rises": 0
+      }
+    },
+    "pairs": {
+      "0": {
+        "n": 60,
+        "mean_us": -8.589400000053038,
+        "sd_us": 28.740394691408255,
+        "rms_us": 29.99646778170455,
+        "p95_abs_us": 60.18699999543742,
+        "max_abs_us": 176.18799999752355,
+        "min_us": -176.18799999752355,
+        "max_us": 84.68799999761245,
+        "trend_us_per_s": -0.23906085474057254,
+        "unmatched_reference": 0,
+        "unmatched_follower": 0
+      },
+      "1": {
+        "n": 59,
+        "mean_us": -7.385491525098454,
+        "sd_us": 18.620201928339586,
+        "rms_us": 20.03141045756495,
+        "p95_abs_us": 20.06200000437275,
+        "max_abs_us": 85.75000000377031,
+        "min_us": -52.24999999953184,
+        "max_us": 85.75000000377031,
+        "trend_us_per_s": 0.05055044689348584,
+        "unmatched_reference": 1,
+        "unmatched_follower": 0
+      },
+      "3": {
+        "n": 60,
+        "mean_us": -9.005133333330381,
+        "sd_us": 19.324423245758755,
+        "rms_us": 21.319609755628253,
+        "p95_abs_us": 23.499000000981596,
+        "max_abs_us": 74.5000000001994,
+        "min_us": -23.499000000981596,
+        "max_us": 74.5000000001994,
+        "trend_us_per_s": 0.19177913434616167,
+        "unmatched_reference": 0,
+        "unmatched_follower": 0
+      }
+    }
+  },
+  {
+    "run": "new-acquisition/20260909-065110-campaign/00-04-mcpwm-frozen",
+    "method": "mcpwm:frozen",
+    "status": "clean signal; cadence/completeness criterion failed",
+    "counts": {
+      "0": {
+        "raw": 59,
+        "qualified": 59,
+        "rejected": 0,
+        "cadence_bad_intervals": 1,
+        "intervals_over_1_5_s": 1,
+        "period_min_s": 0.9999670629999997,
+        "period_max_s": 1.9999361260000015,
+        "unclosed_observed_rises": 0
+      },
+      "1": {
+        "raw": 60,
+        "qualified": 60,
+        "rejected": 0,
+        "cadence_bad_intervals": 0,
+        "intervals_over_1_5_s": 0,
+        "period_min_s": 0.999967250000001,
+        "period_max_s": 0.9999703740000001,
+        "unclosed_observed_rises": 0
+      },
+      "2": {
+        "raw": 60,
+        "qualified": 60,
+        "rejected": 0,
+        "cadence_bad_intervals": 0,
+        "intervals_over_1_5_s": 0,
+        "period_min_s": 0.9999674369999987,
+        "period_max_s": 0.9999695000000006,
+        "unclosed_observed_rises": 0
+      },
+      "3": {
+        "raw": 59,
+        "qualified": 59,
+        "rejected": 0,
+        "cadence_bad_intervals": 1,
+        "intervals_over_1_5_s": 1,
+        "period_min_s": 0.999966624999999,
+        "period_max_s": 1.999937249999995,
+        "unclosed_observed_rises": 0
+      }
+    },
+    "pairs": {
+      "0": {
+        "n": 59,
+        "mean_us": -0.1186949150059403,
+        "sd_us": 0.5386656534963158,
+        "rms_us": 0.5515878616366393,
+        "p95_abs_us": 1.0629999991351724,
+        "max_abs_us": 1.250000000396767,
+        "min_us": -1.250000000396767,
+        "max_us": 1.1879999988195777,
+        "trend_us_per_s": 0.00211500584981648,
+        "unmatched_reference": 1,
+        "unmatched_follower": 0
+      },
+      "1": {
+        "n": 60,
+        "mean_us": -0.05624999985243129,
+        "sd_us": 0.6551619550114335,
+        "rms_us": 0.6575722392085923,
+        "p95_abs_us": 1.312999998503983,
+        "max_abs_us": 1.6239999993672427,
+        "min_us": -1.6239999993672427,
+        "max_us": 1.312999998503983,
+        "trend_us_per_s": -0.0013423325536139129,
+        "unmatched_reference": 0,
+        "unmatched_follower": 0
+      },
+      "3": {
+        "n": 59,
+        "mean_us": 0.005305084546799586,
+        "sd_us": 0.6700446796371932,
+        "rms_us": 0.6700656808344667,
+        "p95_abs_us": 1.1869999951841237,
+        "max_abs_us": 1.5620000000104994,
+        "min_us": -1.3750000000811724,
+        "max_us": 1.5620000000104994,
+        "trend_us_per_s": -0.005463587311275419,
+        "unmatched_reference": 1,
+        "unmatched_follower": 0
+      }
+    }
+  },
+  {
+    "run": "new-acquisition/20260909-065110-campaign/01-00-mcpwm-ntp",
+    "method": "mcpwm:ntp",
+    "status": "clean signal; cadence/completeness criterion failed",
+    "counts": {
+      "0": {
+        "raw": 60,
+        "qualified": 60,
+        "rejected": 0,
+        "cadence_bad_intervals": 4,
+        "intervals_over_1_5_s": 0,
+        "period_min_s": 0.9491176869999975,
+        "period_max_s": 1.038448437999996,
+        "unclosed_observed_rises": 0
+      },
+      "1": {
+        "raw": 60,
+        "qualified": 60,
+        "rejected": 0,
+        "cadence_bad_intervals": 5,
+        "intervals_over_1_5_s": 0,
+        "period_min_s": 0.9442976249999973,
+        "period_max_s": 1.0460515000000044,
+        "unclosed_observed_rises": 0
+      },
+      "2": {
+        "raw": 60,
+        "qualified": 60,
+        "rejected": 0,
+        "cadence_bad_intervals": 0,
+        "intervals_over_1_5_s": 0,
+        "period_min_s": 0.9999673120000026,
+        "period_max_s": 0.9999695009999954,
+        "unclosed_observed_rises": 0
+      },
+      "3": {
+        "raw": 60,
+        "qualified": 60,
+        "rejected": 0,
+        "cadence_bad_intervals": 3,
+        "intervals_over_1_5_s": 0,
+        "period_min_s": 0.9813422499999973,
+        "period_max_s": 1.0194208750000016,
+        "unclosed_observed_rises": 0
+      }
+    },
+    "pairs": {
+      "0": {
+        "n": 60,
+        "mean_us": 92.24796666648841,
+        "sd_us": 5319.592387742874,
+        "rms_us": 5320.392171549578,
+        "p95_abs_us": 9663.624999994625,
+        "max_abs_us": 28816.436999996142,
+        "min_us": -22034.25100000089,
+        "max_us": 28816.436999996142,
+        "trend_us_per_s": 8.48571019276519,
+        "unmatched_reference": 0,
+        "unmatched_follower": 0
+      },
+      "1": {
+        "n": 60,
+        "mean_us": -41.57493333379054,
+        "sd_us": 8163.658209169511,
+        "rms_us": 8163.764072486567,
+        "p95_abs_us": 9419.938000000628,
+        "max_abs_us": 55503.061999999656,
+        "min_us": -20313.249999993845,
+        "max_us": 55503.061999999656,
+        "trend_us_per_s": 96.09898766467833,
+        "unmatched_reference": 0,
+        "unmatched_follower": 0
+      },
+      "3": {
+        "n": 60,
+        "mean_us": -173.48423333390184,
+        "sd_us": 3213.144913901573,
+        "rms_us": 3217.824889105527,
+        "p95_abs_us": 4963.81300000337,
+        "max_abs_us": 19614.87500000203,
+        "min_us": -19614.87500000203,
+        "max_us": 7100.4999999999545,
+        "trend_us_per_s": -37.572168608167296,
+        "unmatched_reference": 0,
+        "unmatched_follower": 0
+      }
+    }
+  },
+  {
+    "run": "new-acquisition/20260909-065110-campaign/01-01-mcpwm-mac",
+    "method": "mcpwm:mac",
+    "status": "clean signal; cadence/completeness criterion failed",
+    "counts": {
+      "0": {
+        "raw": 60,
+        "qualified": 60,
+        "rejected": 0,
+        "cadence_bad_intervals": 0,
+        "intervals_over_1_5_s": 0,
+        "period_min_s": 0.9999669990000015,
+        "period_max_s": 0.9999691249999998,
+        "unclosed_observed_rises": 0
+      },
+      "1": {
+        "raw": 59,
+        "qualified": 59,
+        "rejected": 0,
+        "cadence_bad_intervals": 1,
+        "intervals_over_1_5_s": 1,
+        "period_min_s": 0.9999613119999999,
+        "period_max_s": 1.9999250629999992,
+        "unclosed_observed_rises": 0
+      },
+      "2": {
+        "raw": 60,
+        "qualified": 60,
+        "rejected": 0,
+        "cadence_bad_intervals": 0,
+        "intervals_over_1_5_s": 0,
+        "period_min_s": 0.9999672499999974,
+        "period_max_s": 0.9999696250000021,
+        "unclosed_observed_rises": 0
+      },
+      "3": {
+        "raw": 60,
+        "qualified": 60,
+        "rejected": 0,
+        "cadence_bad_intervals": 0,
+        "intervals_over_1_5_s": 0,
+        "period_min_s": 0.9999608749999993,
+        "period_max_s": 0.9999641869999998,
+        "unclosed_observed_rises": 0
+      }
+    },
+    "pairs": {
+      "0": {
+        "n": 60,
+        "mean_us": -7191.002049999992,
+        "sd_us": 6.588999765955549,
+        "rms_us": 7191.005068696726,
+        "p95_abs_us": 7200.8120000006675,
+        "max_abs_us": 7202.31199999688,
+        "min_us": -7202.31199999688,
+        "max_us": -7178.936999999996,
+        "trend_us_per_s": -0.37932312736333795,
+        "unmatched_reference": 0,
+        "unmatched_follower": 0
+      },
+      "1": {
+        "n": 59,
+        "mean_us": -186718.40784745783,
+        "sd_us": 105.09436425737032,
+        "rms_us": 186718.4374236112,
+        "p95_abs_us": 186878.18799999435,
+        "max_abs_us": 186896.24999999665,
+        "min_us": -186896.24999999665,
+        "max_us": -186539.93699999998,
+        "trend_us_per_s": -6.019834743868156,
+        "unmatched_reference": 1,
+        "unmatched_follower": 0
+      },
+      "3": {
+        "n": 60,
+        "mean_us": -34588.10933333348,
+        "sd_us": 100.53416644106248,
+        "rms_us": 34588.25543986358,
+        "p95_abs_us": 34741.93699999972,
+        "max_abs_us": 34759.56199999786,
+        "min_us": -34759.56199999786,
+        "max_us": -34415.81199999999,
+        "trend_us_per_s": -5.805163545167494,
+        "unmatched_reference": 0,
+        "unmatched_follower": 0
+      }
+    }
+  },
+  {
+    "run": "new-acquisition/20260909-065110-campaign/01-02-mcpwm-tsf",
+    "method": "mcpwm:tsf",
+    "status": "clean signal; cadence/completeness criterion failed",
+    "counts": {
+      "0": {
+        "raw": 60,
+        "qualified": 60,
+        "rejected": 0,
+        "cadence_bad_intervals": 0,
+        "intervals_over_1_5_s": 0,
+        "period_min_s": 0.9999451869999945,
+        "period_max_s": 1.0000751250000022,
+        "unclosed_observed_rises": 0
+      },
+      "1": {
+        "raw": 60,
+        "qualified": 60,
+        "rejected": 0,
+        "cadence_bad_intervals": 0,
+        "intervals_over_1_5_s": 0,
+        "period_min_s": 0.9997904999999996,
+        "period_max_s": 1.0002305000000007,
+        "unclosed_observed_rises": 0
+      },
+      "2": {
+        "raw": 60,
+        "qualified": 60,
+        "rejected": 0,
+        "cadence_bad_intervals": 0,
+        "intervals_over_1_5_s": 0,
+        "period_min_s": 0.999943499999997,
+        "period_max_s": 1.000080563000001,
+        "unclosed_observed_rises": 0
+      },
+      "3": {
+        "raw": 59,
+        "qualified": 59,
+        "rejected": 0,
+        "cadence_bad_intervals": 1,
+        "intervals_over_1_5_s": 1,
+        "period_min_s": 0.9999506880000002,
+        "period_max_s": 2.0000224370000055,
+        "unclosed_observed_rises": 0
+      }
+    },
+    "pairs": {
+      "0": {
+        "n": 60,
+        "mean_us": -10.184433333449798,
+        "sd_us": 13.968025752710327,
+        "rms_us": 17.286654556387198,
+        "p95_abs_us": 31.43700000052263,
+        "max_abs_us": 77.31200000193894,
+        "min_us": -77.31200000193894,
+        "max_us": 2.375000001109129,
+        "trend_us_per_s": -0.0617474682337598,
+        "unmatched_reference": 0,
+        "unmatched_follower": 0
+      },
+      "1": {
+        "n": 60,
+        "mean_us": -10.680316666600298,
+        "sd_us": 27.293905306519513,
+        "rms_us": 29.309152682739125,
+        "p95_abs_us": 21.93799999972157,
+        "max_abs_us": 182.18800000013857,
+        "min_us": -75.06300000059696,
+        "max_us": 182.18800000013857,
+        "trend_us_per_s": -0.17877241985439674,
+        "unmatched_reference": 0,
+        "unmatched_follower": 0
+      },
+      "3": {
+        "n": 59,
+        "mean_us": -15.387745762912292,
+        "sd_us": 13.835181942382741,
+        "rms_us": 20.692872662896725,
+        "p95_abs_us": 39.31200000195645,
+        "max_abs_us": 83.06200000163244,
+        "min_us": -83.06200000163244,
+        "max_us": 47.31199999952196,
+        "trend_us_per_s": -0.05819105244101928,
+        "unmatched_reference": 1,
+        "unmatched_follower": 0
+      }
+    }
+  },
+  {
+    "run": "new-acquisition/20260909-065110-campaign/01-03-mcpwm-frozen",
+    "method": "mcpwm:frozen",
+    "status": "clean signal; cadence/completeness criterion failed",
+    "counts": {
+      "0": {
+        "raw": 60,
+        "qualified": 60,
+        "rejected": 0,
+        "cadence_bad_intervals": 0,
+        "intervals_over_1_5_s": 0,
+        "period_min_s": 0.9999671870000029,
+        "period_max_s": 0.9999701240000007,
+        "unclosed_observed_rises": 0
+      },
+      "1": {
+        "raw": 59,
+        "qualified": 59,
+        "rejected": 0,
+        "cadence_bad_intervals": 1,
+        "intervals_over_1_5_s": 1,
+        "period_min_s": 0.9999674999999968,
+        "period_max_s": 1.9999380000000002,
+        "unclosed_observed_rises": 0
+      },
+      "2": {
+        "raw": 60,
+        "qualified": 60,
+        "rejected": 0,
+        "cadence_bad_intervals": 0,
+        "intervals_over_1_5_s": 0,
+        "period_min_s": 0.9999674380000059,
+        "period_max_s": 0.9999695630000005,
+        "unclosed_observed_rises": 0
+      },
+      "3": {
+        "raw": 60,
+        "qualified": 60,
+        "rejected": 0,
+        "cadence_bad_intervals": 0,
+        "intervals_over_1_5_s": 0,
+        "period_min_s": 0.9999666869999997,
+        "period_max_s": 0.9999697500000018,
+        "unclosed_observed_rises": 0
+      }
+    },
+    "pairs": {
+      "0": {
+        "n": 60,
+        "mean_us": 0.1853500005782882,
+        "sd_us": 0.732850344455083,
+        "rms_us": 0.7559260877111632,
+        "p95_abs_us": 1.4379999981883884,
+        "max_abs_us": 1.937000000395983,
+        "min_us": -1.2490000003140267,
+        "max_us": 1.937000000395983,
+        "trend_us_per_s": 0.018859748417096044,
+        "unmatched_reference": 0,
+        "unmatched_follower": 0
+      },
+      "1": {
+        "n": 59,
+        "mean_us": -0.12079661023292657,
+        "sd_us": 0.7997453996251328,
+        "rms_us": 0.8088167439323503,
+        "p95_abs_us": 1.5009999998483181,
+        "max_abs_us": 1.5629999978727938,
+        "min_us": -1.312999998503983,
+        "max_us": 1.5629999978727938,
+        "trend_us_per_s": 0.018813877057459995,
+        "unmatched_reference": 1,
+        "unmatched_follower": 0
+      },
+      "3": {
+        "n": 60,
+        "mean_us": -0.01665000043162464,
+        "sd_us": 0.73786369140028,
+        "rms_us": 0.7380515223215929,
+        "p95_abs_us": 1.311999994868529,
+        "max_abs_us": 1.6249999958972694,
+        "min_us": -1.2500000039494807,
+        "max_us": 1.6249999958972694,
+        "trend_us_per_s": 0.00016991301741807872,
+        "unmatched_reference": 0,
+        "unmatched_follower": 0
+      }
+    }
+  },
+  {
+    "run": "new-acquisition/20260909-065110-campaign/01-04-mcpwm-ftm",
+    "method": "mcpwm:ftm",
+    "status": "acquisition failed / no raw CSV",
+    "counts": {},
+    "pairs": {}
+  },
+  {
+    "run": "new-acquisition/20260909-070546-campaign/00-00-mcpwm-ftm",
+    "method": "mcpwm:ftm",
+    "status": "insufficient/full-fleet inconclusive",
+    "counts": {
+      "0": {
+        "raw": 5,
+        "qualified": 5,
+        "rejected": 0,
+        "cadence_bad_intervals": 0,
+        "intervals_over_1_5_s": 0,
+        "period_min_s": 0.9999681870000001,
+        "period_max_s": 0.9999694380000002,
+        "unclosed_observed_rises": 0
+      },
+      "1": {
+        "raw": 5,
+        "qualified": 5,
+        "rejected": 0,
+        "cadence_bad_intervals": 0,
+        "intervals_over_1_5_s": 0,
+        "period_min_s": 0.9999677489999999,
+        "period_max_s": 0.9999688130000001,
+        "unclosed_observed_rises": 0
+      },
+      "2": {
+        "raw": 5,
+        "qualified": 5,
+        "rejected": 0,
+        "cadence_bad_intervals": 0,
+        "intervals_over_1_5_s": 0,
+        "period_min_s": 0.9999686869999995,
+        "period_max_s": 0.99996975,
+        "unclosed_observed_rises": 0
+      },
+      "3": {
+        "raw": 5,
+        "qualified": 5,
+        "rejected": 0,
+        "cadence_bad_intervals": 0,
+        "intervals_over_1_5_s": 0,
+        "period_min_s": 0.9999679369999996,
+        "period_max_s": 0.9999689370000001,
+        "unclosed_observed_rises": 0
+      }
+    },
+    "pairs": {
+      "0": {
+        "n": 5,
+        "mean_us": -0.16239999989231535,
+        "sd_us": 0.5487099779343799,
+        "rms_us": 0.5722380622169165,
+        "p95_abs_us": 0.8129999999884063,
+        "max_abs_us": 0.8129999999884063,
+        "min_us": -0.7499999998827889,
+        "max_us": 0.8129999999884063,
+        "trend_us_per_s": -0.23130724279183515,
+        "unmatched_reference": 0,
+        "unmatched_follower": 0
+      },
+      "1": {
+        "n": 5,
+        "mean_us": -0.05019999996802582,
+        "sd_us": 0.7412779236135371,
+        "rms_us": 0.7429757735172706,
+        "p95_abs_us": 1.250000000008189,
+        "max_abs_us": 1.250000000008189,
+        "min_us": -0.6260000002811239,
+        "max_us": 1.250000000008189,
+        "trend_us_per_s": -0.45631422218308254,
+        "unmatched_reference": 0,
+        "unmatched_follower": 0
+      },
+      "3": {
+        "n": 5,
+        "mean_us": 0.17480000008562868,
+        "sd_us": 0.5054033636076373,
+        "rms_us": 0.5347780847939165,
+        "p95_abs_us": 0.9999999999732445,
+        "max_abs_us": 0.9999999999732445,
+        "min_us": -0.4380000002690565,
+        "max_us": 0.9999999999732445,
+        "trend_us_per_s": -0.31250973499057655,
+        "unmatched_reference": 0,
+        "unmatched_follower": 0
+      }
+    }
+  },
+  {
+    "run": "new-acquisition/20260909-070610-campaign/00-00-mcpwm-ftm",
+    "method": "mcpwm:ftm",
+    "status": "acquisition failed / no raw CSV",
+    "counts": {},
+    "pairs": {}
+  },
+  {
+    "run": "new-acquisition/20260909-070748-campaign/00-00-mcpwm-ftm",
+    "method": "mcpwm:ftm",
+    "status": "acquisition failed / no raw CSV",
+    "counts": {},
+    "pairs": {}
+  },
+  {
+    "run": "new-acquisition/20260909-070851-campaign/00-00-mcpwm-ftm",
+    "method": "mcpwm:ftm",
+    "status": "acquisition failed / no raw CSV",
+    "counts": {},
+    "pairs": {}
+  }
+]

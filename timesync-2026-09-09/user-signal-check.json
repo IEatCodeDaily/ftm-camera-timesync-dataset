@@ -1,0 +1,20 @@
+{
+  "configured": {
+    "0": "via Wi-Fi 192.168.137.112\ntiming backend=mcpwm source=ftm recorded=66",
+    "1": "via Wi-Fi 192.168.137.204\nERROR mode must be OFF",
+    "2": "via Wi-Fi 192.168.137.177\ntiming backend=mcpwm source=ftm recorded=66",
+    "3": "via Wi-Fi 192.168.137.136\ntiming backend=mcpwm source=ftm recorded=66"
+  },
+  "armed": {
+    "0": "via Wi-Fi 192.168.137.112\nI (450299) strobe_gpio: mode: OFF -> 1HZ\nI (450300) mode_ctrl: applied mode 1HZ (value=0)",
+    "1": "via Wi-Fi 192.168.137.204\nI (60254) live_track: stopped (frames=0 markers=0)\nI (60255) strobe_gpio: mode: LIVE_TRACK -> 1HZ\nI (60256) mode_ctrl: applied mode 1HZ (value=0)",
+    "2": "via Wi-Fi 192.168.137.177\nI (434929) strobe_gpio: mode: OFF -> 1HZ\nI (434931) mode_ctrl: applied mode 1HZ (value=0)",
+    "3": "via Wi-Fi 192.168.137.136\nI (404529) strobe_gpio: mode: OFF -> 1HZ\nI (404531) mode_ctrl: applied mode 1HZ (value=0)"
+  },
+  "mode": {
+    "0": "via Wi-Fi 192.168.137.112\nmode: 1HZ (threshold=220 width=10us gpio=41 identify_gpio=2)\nclock_source=wifi_mac clock_ready=1 reference=0 mac_us=450676243 esp_us=449802717 mac_minus_esp_us=873526 read_span_us=0",
+    "1": "via Wi-Fi 192.168.137.204\nmode: 1HZ (threshold=220 width=10us gpio=41 identify_gpio=2)\nclock_source=wifi_mac clock_ready=1 reference=0 mac_us=60377139 esp_us=59481086 mac_minus_esp_us=896053 read_span_us=1",
+    "2": "via Wi-Fi 192.168.137.177\nmode: 1HZ (threshold=220 width=10us gpio=41 identify_gpio=2)\nclock_source=wifi_mac clock_ready=1 reference=1 mac_us=435303937 esp_us=434430229 mac_minus_esp_us=873708 read_span_us=1",
+    "3": "via Wi-Fi 192.168.137.136\nmode: 1HZ (threshold=220 width=10us gpio=41 identify_gpio=2)\nclock_source=wifi_mac clock_ready=1 reference=0 mac_us=404793878 esp_us=403919881 mac_minus_esp_us=873997 read_span_us=1"
+  }
+}

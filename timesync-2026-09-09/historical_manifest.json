@@ -1,0 +1,962 @@
+[
+  {
+    "original": "E:\\Projects\\wireless-ir-mocap\\docs\\PIPELINE_TIMESYNC_2026-09-08.md",
+    "copy": "historical-evidence/docs/PIPELINE_TIMESYNC_2026-09-08.md",
+    "sha256": "d358e678a06f1fc09bf073ab4768808d250113a2385dfd14c61325c13e2e2340"
+  },
+  {
+    "original": "E:\\Projects\\wireless-ir-mocap\\docs\\TIMESYNC_EXPERIMENT_LOG_2026-09-08.md",
+    "copy": "historical-evidence/docs/TIMESYNC_EXPERIMENT_LOG_2026-09-08.md",
+    "sha256": "23da009f70201425cfd0902cbf4f64f7392c7651e608710a94bc6d8ec6ab997b"
+  },
+  {
+    "original": "E:\\Projects\\wireless-ir-mocap\\docs\\TIMESYNC_MEASUREMENT_2026-09-08.md",
+    "copy": "historical-evidence/docs/TIMESYNC_MEASUREMENT_2026-09-08.md",
+    "sha256": "687564c3eb08255742883c3b8aa9d7a88ba928fa0d4eb80a716b7dbb38965078"
+  },
+  {
+    "original": "E:\\Projects\\wireless-ir-mocap\\docs\\TIMESYNC_METHOD_RESULTS_2026-09-08.md",
+    "copy": "historical-evidence/docs/TIMESYNC_METHOD_RESULTS_2026-09-08.md",
+    "sha256": "ce519852c46797d740e3e69a5055bcdd734534650cc2a224777d1ba792e69185"
+  },
+  {
+    "original": "E:\\Projects\\wireless-ir-mocap\\test-output\\ota-fleet\\1788910716585756100\\node1\\verified.json",
+    "copy": "historical-evidence/test-output/ota-fleet/1788910716585756100/node1/verified.json",
+    "sha256": "885feacae46eead6990c4f9f504a0ffe4da1fcf98d669356e3b8837f180538e0"
+  },
+  {
+    "original": "E:\\Projects\\wireless-ir-mocap\\test-output\\ota-fleet\\1788911291048392600\\node0\\verified.json",
+    "copy": "historical-evidence/test-output/ota-fleet/1788911291048392600/node0/verified.json",
+    "sha256": "a96ded776d7743202096ad19f56c4a77d1a75e9a819d1a5f5cb504812b514dbc"
+  },
+  {
+    "original": "E:\\Projects\\wireless-ir-mocap\\test-output\\ota-fleet\\1788911291048392600\\node2\\verified.json",
+    "copy": "historical-evidence/test-output/ota-fleet/1788911291048392600/node2/verified.json",
+    "sha256": "1acaeb872ff2860f9adab433242b4b19b77013bcbf1c3872a342c44d7d9b4625"
+  },
+  {
+    "original": "E:\\Projects\\wireless-ir-mocap\\test-output\\ota-fleet\\1788911291048392600\\node3\\verified.json",
+    "copy": "historical-evidence/test-output/ota-fleet/1788911291048392600/node3/verified.json",
+    "sha256": "2b2404ff06fca99ca630781da84f2c00ab29dfd3f06b6659abd49c5dcc234ad2"
+  },
+  {
+    "original": "E:\\Projects\\wireless-ir-mocap\\test-output\\pipeline\\20260908-175800-tracking\\capture.sal",
+    "copy": "historical-evidence/test-output/pipeline/20260908-175800-tracking/capture.sal",
+    "sha256": "b3bf9e4c1b254037c9d624b1eda8f020a9bb3609cfd74cc18227d57f66546d73"
+  },
+  {
+    "original": "E:\\Projects\\wireless-ir-mocap\\test-output\\pipeline\\20260908-175800-tracking\\digital.csv",
+    "copy": "historical-evidence/test-output/pipeline/20260908-175800-tracking/digital.csv",
+    "sha256": "f11a67a66e6e85dbeb8e07d9939d73874a203cc33437631b0123633cdd893be0"
+  },
+  {
+    "original": "E:\\Projects\\wireless-ir-mocap\\test-output\\pipeline\\20260908-175800-tracking\\extra-edges.json",
+    "copy": "historical-evidence/test-output/pipeline/20260908-175800-tracking/extra-edges.json",
+    "sha256": "46c0d8afe6b04f362450dc3cf3d26bf81e87b2579d8826a670dc4d017e756e06"
+  },
+  {
+    "original": "E:\\Projects\\wireless-ir-mocap\\test-output\\pipeline\\20260908-175800-tracking\\result.json",
+    "copy": "historical-evidence/test-output/pipeline/20260908-175800-tracking/result.json",
+    "sha256": "5aaffa1d0f484f5c2081ddd6226794d7e0324a2ecb03b6e9c73af2b496ff78e5"
+  },
+  {
+    "original": "E:\\Projects\\wireless-ir-mocap\\test-output\\pipeline\\20260908-175800-tracking\\summary.json",
+    "copy": "historical-evidence/test-output/pipeline/20260908-175800-tracking/summary.json",
+    "sha256": "b834a105c681abf66dc900489a726c7e6f19661224f5c5da027e66cfc906ac98"
+  },
+  {
+    "original": "E:\\Projects\\wireless-ir-mocap\\test-output\\timing-methods\\20260908-170100\\00-task-ftm\\armed.json",
+    "copy": "historical-evidence/test-output/timing-methods/20260908-170100/00-task-ftm/armed.json",
+    "sha256": "b2e1929ec30aca4a1bdd3abf3f19d96e1640811374fcdb55dd3d8305456a2f58"
+  },
+  {
+    "original": "E:\\Projects\\wireless-ir-mocap\\test-output\\timing-methods\\20260908-170100\\00-task-ftm\\configured.json",
+    "copy": "historical-evidence/test-output/timing-methods/20260908-170100/00-task-ftm/configured.json",
+    "sha256": "4bd68b20e907cd09c42c42bb3ebc546fa6351b1c16b31310ae13e39f2cd150c3"
+  },
+  {
+    "original": "E:\\Projects\\wireless-ir-mocap\\test-output\\timing-methods\\20260908-170100\\00-task-ftm\\result.json",
+    "copy": "historical-evidence/test-output/timing-methods/20260908-170100/00-task-ftm/result.json",
+    "sha256": "8b0d23a01bae20a20e258873e412fbfdcbf919cebace8c5eaa9f58819324401e"
+  },
+  {
+    "original": "E:\\Projects\\wireless-ir-mocap\\test-output\\timing-methods\\20260908-170100\\00-task-ftm\\telemetry.json",
+    "copy": "historical-evidence/test-output/timing-methods/20260908-170100/00-task-ftm/telemetry.json",
+    "sha256": "1742f106d0b7c81447b15d58f4386e92f4809bbd2265dc1cda6f8f9b37fa01d8"
+  },
+  {
+    "original": "E:\\Projects\\wireless-ir-mocap\\test-output\\timing-methods\\20260908-170100\\settings.json",
+    "copy": "historical-evidence/test-output/timing-methods/20260908-170100/settings.json",
+    "sha256": "52bea5558519d11f5687088e7139f4bb2787052d52b304cd919025e54184d89a"
+  },
+  {
+    "original": "E:\\Projects\\wireless-ir-mocap\\test-output\\timing-methods\\20260908-170133\\00-task-ftm\\armed.json",
+    "copy": "historical-evidence/test-output/timing-methods/20260908-170133/00-task-ftm/armed.json",
+    "sha256": "a771d71b156400f9eed295a1cc8f6fde094c6b1b8e5d4dd0143b6684bcc7a567"
+  },
+  {
+    "original": "E:\\Projects\\wireless-ir-mocap\\test-output\\timing-methods\\20260908-170133\\00-task-ftm\\capture.sal",
+    "copy": "historical-evidence/test-output/timing-methods/20260908-170133/00-task-ftm/capture.sal",
+    "sha256": "768ac94e0f4427f9b410c3e94b85d035f61ee4ce1614054539964a7ac7b9d16a"
+  },
+  {
+    "original": "E:\\Projects\\wireless-ir-mocap\\test-output\\timing-methods\\20260908-170133\\00-task-ftm\\configured.json",
+    "copy": "historical-evidence/test-output/timing-methods/20260908-170133/00-task-ftm/configured.json",
+    "sha256": "d0705a6c30c6302cd4fe44ae2cc48f79508d7748c3f89dc4c5ebda3759aaae66"
+  },
+  {
+    "original": "E:\\Projects\\wireless-ir-mocap\\test-output\\timing-methods\\20260908-170133\\00-task-ftm\\digital.csv",
+    "copy": "historical-evidence/test-output/timing-methods/20260908-170133/00-task-ftm/digital.csv",
+    "sha256": "8faa109dcbcc5f32845fa022ae2ea3cdda3109cae06e55a0215e075304a10bf5"
+  },
+  {
+    "original": "E:\\Projects\\wireless-ir-mocap\\test-output\\timing-methods\\20260908-170133\\00-task-ftm\\result.json",
+    "copy": "historical-evidence/test-output/timing-methods/20260908-170133/00-task-ftm/result.json",
+    "sha256": "025559eddaf8cb640a9d6c0c2269a93e248d9a50e7d6201f3738d59243bce2ba"
+  },
+  {
+    "original": "E:\\Projects\\wireless-ir-mocap\\test-output\\timing-methods\\20260908-170133\\00-task-ftm\\telemetry.json",
+    "copy": "historical-evidence/test-output/timing-methods/20260908-170133/00-task-ftm/telemetry.json",
+    "sha256": "2f34373b692a926799ea70316b430cdfd8e342f9aebcbf139dc266c6831ae7ee"
+  },
+  {
+    "original": "E:\\Projects\\wireless-ir-mocap\\test-output\\timing-methods\\20260908-170133\\settings.json",
+    "copy": "historical-evidence/test-output/timing-methods/20260908-170133/settings.json",
+    "sha256": "52bea5558519d11f5687088e7139f4bb2787052d52b304cd919025e54184d89a"
+  },
+  {
+    "original": "E:\\Projects\\wireless-ir-mocap\\test-output\\timing-methods\\20260908-170156\\00-esp-ftm\\armed.json",
+    "copy": "historical-evidence/test-output/timing-methods/20260908-170156/00-esp-ftm/armed.json",
+    "sha256": "07e1d5f2edcb6b9c80b22602efb5aa245448ea2803d5b1bdaf38cfdc85d226dc"
+  },
+  {
+    "original": "E:\\Projects\\wireless-ir-mocap\\test-output\\timing-methods\\20260908-170156\\00-esp-ftm\\capture.sal",
+    "copy": "historical-evidence/test-output/timing-methods/20260908-170156/00-esp-ftm/capture.sal",
+    "sha256": "1650651235103177cab429918c3bec970af63c0889ca146655ec5a6821be3ef6"
+  },
+  {
+    "original": "E:\\Projects\\wireless-ir-mocap\\test-output\\timing-methods\\20260908-170156\\00-esp-ftm\\configured.json",
+    "copy": "historical-evidence/test-output/timing-methods/20260908-170156/00-esp-ftm/configured.json",
+    "sha256": "3ab1dd07cb5a6af92ce49fecbb882d37244cb99ad32b1423942e853a22d912ca"
+  },
+  {
+    "original": "E:\\Projects\\wireless-ir-mocap\\test-output\\timing-methods\\20260908-170156\\00-esp-ftm\\digital.csv",
+    "copy": "historical-evidence/test-output/timing-methods/20260908-170156/00-esp-ftm/digital.csv",
+    "sha256": "113902e13bc4215539020bc8ae5a64fbbb508a2e62b39578cadfbb65ef399bb6"
+  },
+  {
+    "original": "E:\\Projects\\wireless-ir-mocap\\test-output\\timing-methods\\20260908-170156\\00-esp-ftm\\result.json",
+    "copy": "historical-evidence/test-output/timing-methods/20260908-170156/00-esp-ftm/result.json",
+    "sha256": "57f6523b4cecc344e0373a37ffbbc2d2af79ce2b60d15ac52eb57594628337ac"
+  },
+  {
+    "original": "E:\\Projects\\wireless-ir-mocap\\test-output\\timing-methods\\20260908-170156\\00-esp-ftm\\telemetry.json",
+    "copy": "historical-evidence/test-output/timing-methods/20260908-170156/00-esp-ftm/telemetry.json",
+    "sha256": "1133edd02c7cb07ae1000c8f6ffc56f317252e8ff03fbae3eabbab6cb91ba21b"
+  },
+  {
+    "original": "E:\\Projects\\wireless-ir-mocap\\test-output\\timing-methods\\20260908-170156\\00-gpt-frozen\\armed.json",
+    "copy": "historical-evidence/test-output/timing-methods/20260908-170156/00-gpt-frozen/armed.json",
+    "sha256": "a14c51835463b592fd083890faf5d9d39ae2451ed3defed2256207b3d67d0ad1"
+  },
+  {
+    "original": "E:\\Projects\\wireless-ir-mocap\\test-output\\timing-methods\\20260908-170156\\00-gpt-frozen\\capture.sal",
+    "copy": "historical-evidence/test-output/timing-methods/20260908-170156/00-gpt-frozen/capture.sal",
+    "sha256": "e163fa66f064d8160f95432254b2187b23eed84fd2005c9e8e1609d40683eb9e"
+  },
+  {
+    "original": "E:\\Projects\\wireless-ir-mocap\\test-output\\timing-methods\\20260908-170156\\00-gpt-frozen\\configured.json",
+    "copy": "historical-evidence/test-output/timing-methods/20260908-170156/00-gpt-frozen/configured.json",
+    "sha256": "6d61f016c0fb9c47e5fb9c0cb84a401faab25c86c0b764fcfa7aef31f89e6004"
+  },
+  {
+    "original": "E:\\Projects\\wireless-ir-mocap\\test-output\\timing-methods\\20260908-170156\\00-gpt-frozen\\digital.csv",
+    "copy": "historical-evidence/test-output/timing-methods/20260908-170156/00-gpt-frozen/digital.csv",
+    "sha256": "5f1dceca5bf2d5d486de3be961e78957b997b3ca968d80bd82a00febad7478f5"
+  },
+  {
+    "original": "E:\\Projects\\wireless-ir-mocap\\test-output\\timing-methods\\20260908-170156\\00-gpt-frozen\\result.json",
+    "copy": "historical-evidence/test-output/timing-methods/20260908-170156/00-gpt-frozen/result.json",
+    "sha256": "743f255e9bab673bb3bb7cd1703a521970858357dd87555d11ff5cb3c934cac4"
+  },
+  {
+    "original": "E:\\Projects\\wireless-ir-mocap\\test-output\\timing-methods\\20260908-170156\\00-gpt-frozen\\telemetry.json",
+    "copy": "historical-evidence/test-output/timing-methods/20260908-170156/00-gpt-frozen/telemetry.json",
+    "sha256": "92b15530ee7ebfbc18631851ff974001941c9731495671eb22524a27005cb99b"
+  },
+  {
+    "original": "E:\\Projects\\wireless-ir-mocap\\test-output\\timing-methods\\20260908-170156\\00-gpt-ftm\\armed.json",
+    "copy": "historical-evidence/test-output/timing-methods/20260908-170156/00-gpt-ftm/armed.json",
+    "sha256": "0bbf5d264dfe0e39969a1209cdbbe1fa253cbecc83462096a0223a119dbc3326"
+  },
+  {
+    "original": "E:\\Projects\\wireless-ir-mocap\\test-output\\timing-methods\\20260908-170156\\00-gpt-ftm\\capture.sal",
+    "copy": "historical-evidence/test-output/timing-methods/20260908-170156/00-gpt-ftm/capture.sal",
+    "sha256": "d02d2e47c4d70d95edf010772a77c664f4302dd71e8a18803cd05bf523a18672"
+  },
+  {
+    "original": "E:\\Projects\\wireless-ir-mocap\\test-output\\timing-methods\\20260908-170156\\00-gpt-ftm\\configured.json",
+    "copy": "historical-evidence/test-output/timing-methods/20260908-170156/00-gpt-ftm/configured.json",
+    "sha256": "30362f375adbefad025edc4dea02a70d071dc9a99ca0a835835c47645a38f7f2"
+  },
+  {
+    "original": "E:\\Projects\\wireless-ir-mocap\\test-output\\timing-methods\\20260908-170156\\00-gpt-ftm\\digital.csv",
+    "copy": "historical-evidence/test-output/timing-methods/20260908-170156/00-gpt-ftm/digital.csv",
+    "sha256": "35b4881b82253d9b671ba722fc6da56bb063656bd8024b90e1c1094c8d6c2630"
+  },
+  {
+    "original": "E:\\Projects\\wireless-ir-mocap\\test-output\\timing-methods\\20260908-170156\\00-gpt-ftm\\result.json",
+    "copy": "historical-evidence/test-output/timing-methods/20260908-170156/00-gpt-ftm/result.json",
+    "sha256": "1548988459b330efef786f63a9f44a128077ae2143240e127b0bd05f7d8fe9ca"
+  },
+  {
+    "original": "E:\\Projects\\wireless-ir-mocap\\test-output\\timing-methods\\20260908-170156\\00-gpt-ftm\\telemetry.json",
+    "copy": "historical-evidence/test-output/timing-methods/20260908-170156/00-gpt-ftm/telemetry.json",
+    "sha256": "f613eecefbb799d28bd2f54a38c3a0d75b13371488f52e1344799129c8dfcc75"
+  },
+  {
+    "original": "E:\\Projects\\wireless-ir-mocap\\test-output\\timing-methods\\20260908-170156\\00-gpt-tsf\\armed.json",
+    "copy": "historical-evidence/test-output/timing-methods/20260908-170156/00-gpt-tsf/armed.json",
+    "sha256": "b437ee6d297e70506fd8da4ad39d247165de8b672a4c2678731e0ea7df5f449b"
+  },
+  {
+    "original": "E:\\Projects\\wireless-ir-mocap\\test-output\\timing-methods\\20260908-170156\\00-gpt-tsf\\capture.sal",
+    "copy": "historical-evidence/test-output/timing-methods/20260908-170156/00-gpt-tsf/capture.sal",
+    "sha256": "bcb15709d43ed55fda67ba2148c8a10a624f8692884c9da1fdb86a445bad9cad"
+  },
+  {
+    "original": "E:\\Projects\\wireless-ir-mocap\\test-output\\timing-methods\\20260908-170156\\00-gpt-tsf\\configured.json",
+    "copy": "historical-evidence/test-output/timing-methods/20260908-170156/00-gpt-tsf/configured.json",
+    "sha256": "8ff6c46f2413afd889a658f05f95405cf44d7641bd74040fe4578bc5d7b7b9e9"
+  },
+  {
+    "original": "E:\\Projects\\wireless-ir-mocap\\test-output\\timing-methods\\20260908-170156\\00-gpt-tsf\\digital.csv",
+    "copy": "historical-evidence/test-output/timing-methods/20260908-170156/00-gpt-tsf/digital.csv",
+    "sha256": "157cbda42a0b8182fc706db1fcf0eadfd1a27edf000682ddbaf9e7a63a9a2ddf"
+  },
+  {
+    "original": "E:\\Projects\\wireless-ir-mocap\\test-output\\timing-methods\\20260908-170156\\00-gpt-tsf\\result.json",
+    "copy": "historical-evidence/test-output/timing-methods/20260908-170156/00-gpt-tsf/result.json",
+    "sha256": "d5dac51703754f29d82882a33a51a0ce289c4fc5b08aa506fd417d1eedfb311e"
+  },
+  {
+    "original": "E:\\Projects\\wireless-ir-mocap\\test-output\\timing-methods\\20260908-170156\\00-gpt-tsf\\telemetry.json",
+    "copy": "historical-evidence/test-output/timing-methods/20260908-170156/00-gpt-tsf/telemetry.json",
+    "sha256": "6c686e8eadd3b6fc2e3e818cd1cee6e0aa66baf52657849b16ec81f3cb6eef4a"
+  },
+  {
+    "original": "E:\\Projects\\wireless-ir-mocap\\test-output\\timing-methods\\20260908-170156\\00-high-ftm\\armed.json",
+    "copy": "historical-evidence/test-output/timing-methods/20260908-170156/00-high-ftm/armed.json",
+    "sha256": "76a1bd5ba8a805d665d48c0d7e226cba37458b2471033cf96c60f048b14bb668"
+  },
+  {
+    "original": "E:\\Projects\\wireless-ir-mocap\\test-output\\timing-methods\\20260908-170156\\00-high-ftm\\configured.json",
+    "copy": "historical-evidence/test-output/timing-methods/20260908-170156/00-high-ftm/configured.json",
+    "sha256": "5aa39b95062940fcfd9e1f86da7a4e8f2452e41cb1cf838ef62f73c9ea837ddc"
+  },
+  {
+    "original": "E:\\Projects\\wireless-ir-mocap\\test-output\\timing-methods\\20260908-170156\\00-high-ftm\\result.json",
+    "copy": "historical-evidence/test-output/timing-methods/20260908-170156/00-high-ftm/result.json",
+    "sha256": "d234b0fb1f2ed7e3120e5889b91efa797ae63d9379d76b6a006eff389d6e2f82"
+  },
+  {
+    "original": "E:\\Projects\\wireless-ir-mocap\\test-output\\timing-methods\\20260908-170156\\00-high-ftm\\telemetry.json",
+    "copy": "historical-evidence/test-output/timing-methods/20260908-170156/00-high-ftm/telemetry.json",
+    "sha256": "bbd7b8faefbf16480638fe9b5dcfabf51266c062c2f45b137743fbc1110a3f58"
+  },
+  {
+    "original": "E:\\Projects\\wireless-ir-mocap\\test-output\\timing-methods\\20260908-170156\\00-task-ftm\\armed.json",
+    "copy": "historical-evidence/test-output/timing-methods/20260908-170156/00-task-ftm/armed.json",
+    "sha256": "f4f6206d9fd38c321f9d8d3c272d7e3cab3f45adf5433c0e0ab68f01f4cb7ceb"
+  },
+  {
+    "original": "E:\\Projects\\wireless-ir-mocap\\test-output\\timing-methods\\20260908-170156\\00-task-ftm\\capture.sal",
+    "copy": "historical-evidence/test-output/timing-methods/20260908-170156/00-task-ftm/capture.sal",
+    "sha256": "980380769f307c61dc69bd0ad266d6799b4978351b5d7934967fcaf5a4212444"
+  },
+  {
+    "original": "E:\\Projects\\wireless-ir-mocap\\test-output\\timing-methods\\20260908-170156\\00-task-ftm\\configured.json",
+    "copy": "historical-evidence/test-output/timing-methods/20260908-170156/00-task-ftm/configured.json",
+    "sha256": "d0705a6c30c6302cd4fe44ae2cc48f79508d7748c3f89dc4c5ebda3759aaae66"
+  },
+  {
+    "original": "E:\\Projects\\wireless-ir-mocap\\test-output\\timing-methods\\20260908-170156\\00-task-ftm\\digital.csv",
+    "copy": "historical-evidence/test-output/timing-methods/20260908-170156/00-task-ftm/digital.csv",
+    "sha256": "6d9eaa7d9430c8f7d03855d705d48e0137ccfa7e46bb902d56551ec0bbe5c02e"
+  },
+  {
+    "original": "E:\\Projects\\wireless-ir-mocap\\test-output\\timing-methods\\20260908-170156\\00-task-ftm\\result.json",
+    "copy": "historical-evidence/test-output/timing-methods/20260908-170156/00-task-ftm/result.json",
+    "sha256": "374fbcb90dc5df973005a665f8ca89ac69f84029e74ca3343ba39cc17cc671d0"
+  },
+  {
+    "original": "E:\\Projects\\wireless-ir-mocap\\test-output\\timing-methods\\20260908-170156\\00-task-ftm\\telemetry.json",
+    "copy": "historical-evidence/test-output/timing-methods/20260908-170156/00-task-ftm/telemetry.json",
+    "sha256": "37ecfe7ba2e516511fb3c9ad2a7304aec24e44d9fbb9c3a385d2fa92fa317689"
+  },
+  {
+    "original": "E:\\Projects\\wireless-ir-mocap\\test-output\\timing-methods\\20260908-170156\\settings.json",
+    "copy": "historical-evidence/test-output/timing-methods/20260908-170156/settings.json",
+    "sha256": "f3b2aafefd725253f40edc46d8da7b53100aa2f77cbd8aad9ecd2daa49380206"
+  },
+  {
+    "original": "E:\\Projects\\wireless-ir-mocap\\test-output\\timing-methods\\20260908-171055\\00-gptpair-ftm\\armed.json",
+    "copy": "historical-evidence/test-output/timing-methods/20260908-171055/00-gptpair-ftm/armed.json",
+    "sha256": "440f4d0451027eeb8a0215c442f41269fec81887b1d16f40d2b50b0ee0a319bb"
+  },
+  {
+    "original": "E:\\Projects\\wireless-ir-mocap\\test-output\\timing-methods\\20260908-171055\\00-gptpair-ftm\\capture.sal",
+    "copy": "historical-evidence/test-output/timing-methods/20260908-171055/00-gptpair-ftm/capture.sal",
+    "sha256": "f95dbe0358d52960d7ac572f3ced1ba111bedbb608ced4d647e3114a77ef8b11"
+  },
+  {
+    "original": "E:\\Projects\\wireless-ir-mocap\\test-output\\timing-methods\\20260908-171055\\00-gptpair-ftm\\configured.json",
+    "copy": "historical-evidence/test-output/timing-methods/20260908-171055/00-gptpair-ftm/configured.json",
+    "sha256": "c0e57c6001e29dfdfe326a4d608136c0725abe7e090e4b083e47fc8fd40f0060"
+  },
+  {
+    "original": "E:\\Projects\\wireless-ir-mocap\\test-output\\timing-methods\\20260908-171055\\00-gptpair-ftm\\digital.csv",
+    "copy": "historical-evidence/test-output/timing-methods/20260908-171055/00-gptpair-ftm/digital.csv",
+    "sha256": "1b6fab6c8c195e458542a7dd171de263424d01ebdc8209b7ac12eb7758279914"
+  },
+  {
+    "original": "E:\\Projects\\wireless-ir-mocap\\test-output\\timing-methods\\20260908-171055\\00-gptpair-ftm\\result.json",
+    "copy": "historical-evidence/test-output/timing-methods/20260908-171055/00-gptpair-ftm/result.json",
+    "sha256": "3a6c833c1402f9be11f99762fe66e2c3caf5586a1e83362441a569dfd26fa002"
+  },
+  {
+    "original": "E:\\Projects\\wireless-ir-mocap\\test-output\\timing-methods\\20260908-171055\\00-gptpair-ftm\\telemetry.json",
+    "copy": "historical-evidence/test-output/timing-methods/20260908-171055/00-gptpair-ftm/telemetry.json",
+    "sha256": "2653e0057844271f0971bdbbacf48bba3c111f375aec6ed291971f87c4adea43"
+  },
+  {
+    "original": "E:\\Projects\\wireless-ir-mocap\\test-output\\timing-methods\\20260908-171055\\00-high-ftm\\armed.json",
+    "copy": "historical-evidence/test-output/timing-methods/20260908-171055/00-high-ftm/armed.json",
+    "sha256": "bef199f90894c9cefefb209bde17033768d5f58712792d40b0622d3f3c218920"
+  },
+  {
+    "original": "E:\\Projects\\wireless-ir-mocap\\test-output\\timing-methods\\20260908-171055\\00-high-ftm\\capture.sal",
+    "copy": "historical-evidence/test-output/timing-methods/20260908-171055/00-high-ftm/capture.sal",
+    "sha256": "3e243fbafef1e88cf7f870016d1a42e752205ab5c9e006c2fda83d6b2bf77c53"
+  },
+  {
+    "original": "E:\\Projects\\wireless-ir-mocap\\test-output\\timing-methods\\20260908-171055\\00-high-ftm\\configured.json",
+    "copy": "historical-evidence/test-output/timing-methods/20260908-171055/00-high-ftm/configured.json",
+    "sha256": "f3ea4e8da408807d1ce4992849e127a9cd11da5da7cb3f1183e1a59755a3382f"
+  },
+  {
+    "original": "E:\\Projects\\wireless-ir-mocap\\test-output\\timing-methods\\20260908-171055\\00-high-ftm\\digital.csv",
+    "copy": "historical-evidence/test-output/timing-methods/20260908-171055/00-high-ftm/digital.csv",
+    "sha256": "581b4c6a31541abe5edd814b1293eeff76083e5de44696e92b0c73ecca5eb94d"
+  },
+  {
+    "original": "E:\\Projects\\wireless-ir-mocap\\test-output\\timing-methods\\20260908-171055\\00-high-ftm\\result.json",
+    "copy": "historical-evidence/test-output/timing-methods/20260908-171055/00-high-ftm/result.json",
+    "sha256": "bbaa2690c70afd04a1c2f3d0c2bbee8599a91a9ca4242cfe0463f22d4bdc4a86"
+  },
+  {
+    "original": "E:\\Projects\\wireless-ir-mocap\\test-output\\timing-methods\\20260908-171055\\00-high-ftm\\telemetry.json",
+    "copy": "historical-evidence/test-output/timing-methods/20260908-171055/00-high-ftm/telemetry.json",
+    "sha256": "ef2707641ae60de2e4e280df6fdbcdaf7556a0d4ce0ac283443a4b4adc1655ae"
+  },
+  {
+    "original": "E:\\Projects\\wireless-ir-mocap\\test-output\\timing-methods\\20260908-171055\\00-mcpwm-ftm\\armed.json",
+    "copy": "historical-evidence/test-output/timing-methods/20260908-171055/00-mcpwm-ftm/armed.json",
+    "sha256": "e909c9d163c720d0ad2348b01cb57e97d4b3de56be2c34c4ff50b6b9b1de3e51"
+  },
+  {
+    "original": "E:\\Projects\\wireless-ir-mocap\\test-output\\timing-methods\\20260908-171055\\00-mcpwm-ftm\\capture.sal",
+    "copy": "historical-evidence/test-output/timing-methods/20260908-171055/00-mcpwm-ftm/capture.sal",
+    "sha256": "a55ea13c39c386ac0a8cccbc2a212e1199faf815a8fc954bce17cdaa9f0424ef"
+  },
+  {
+    "original": "E:\\Projects\\wireless-ir-mocap\\test-output\\timing-methods\\20260908-171055\\00-mcpwm-ftm\\configured.json",
+    "copy": "historical-evidence/test-output/timing-methods/20260908-171055/00-mcpwm-ftm/configured.json",
+    "sha256": "861142353c9dacb553aedcd32a2ac4eaf5a514035e3e822b14c2f11338007a85"
+  },
+  {
+    "original": "E:\\Projects\\wireless-ir-mocap\\test-output\\timing-methods\\20260908-171055\\00-mcpwm-ftm\\digital.csv",
+    "copy": "historical-evidence/test-output/timing-methods/20260908-171055/00-mcpwm-ftm/digital.csv",
+    "sha256": "a75556fc48648bc80878dc4ed3658aca5753314e9466a06dd24afd9c707446d0"
+  },
+  {
+    "original": "E:\\Projects\\wireless-ir-mocap\\test-output\\timing-methods\\20260908-171055\\00-mcpwm-ftm\\result.json",
+    "copy": "historical-evidence/test-output/timing-methods/20260908-171055/00-mcpwm-ftm/result.json",
+    "sha256": "d6a8b8246e930a6f060c6d2bc633e320f95bf71df7eb45db6a63fc88e312ba5d"
+  },
+  {
+    "original": "E:\\Projects\\wireless-ir-mocap\\test-output\\timing-methods\\20260908-171055\\00-mcpwm-ftm\\telemetry.json",
+    "copy": "historical-evidence/test-output/timing-methods/20260908-171055/00-mcpwm-ftm/telemetry.json",
+    "sha256": "0f3bc84c55b7c1b210c32b6e65b149abdf9610a4d33b42144d7d0366ce9a44fd"
+  },
+  {
+    "original": "E:\\Projects\\wireless-ir-mocap\\test-output\\timing-methods\\20260908-171055\\01-gptpair-ftm\\armed.json",
+    "copy": "historical-evidence/test-output/timing-methods/20260908-171055/01-gptpair-ftm/armed.json",
+    "sha256": "910a824a92e8385b959ba8fd09e0d23b79acbc32141e294a6dcdfd00de23e1fd"
+  },
+  {
+    "original": "E:\\Projects\\wireless-ir-mocap\\test-output\\timing-methods\\20260908-171055\\01-gptpair-ftm\\capture.sal",
+    "copy": "historical-evidence/test-output/timing-methods/20260908-171055/01-gptpair-ftm/capture.sal",
+    "sha256": "5bd8d724a42abccbeaa4f488ba7e71ce0a2ac7ff3795fa433a84ffac96c8b874"
+  },
+  {
+    "original": "E:\\Projects\\wireless-ir-mocap\\test-output\\timing-methods\\20260908-171055\\01-gptpair-ftm\\configured.json",
+    "copy": "historical-evidence/test-output/timing-methods/20260908-171055/01-gptpair-ftm/configured.json",
+    "sha256": "c0e57c6001e29dfdfe326a4d608136c0725abe7e090e4b083e47fc8fd40f0060"
+  },
+  {
+    "original": "E:\\Projects\\wireless-ir-mocap\\test-output\\timing-methods\\20260908-171055\\01-gptpair-ftm\\digital.csv",
+    "copy": "historical-evidence/test-output/timing-methods/20260908-171055/01-gptpair-ftm/digital.csv",
+    "sha256": "36baf9f5d6c9105fa306c748544839faf755042f576f55b8085c004e8b86f071"
+  },
+  {
+    "original": "E:\\Projects\\wireless-ir-mocap\\test-output\\timing-methods\\20260908-171055\\01-gptpair-ftm\\result.json",
+    "copy": "historical-evidence/test-output/timing-methods/20260908-171055/01-gptpair-ftm/result.json",
+    "sha256": "62b530b68fd328ad87f6d599d866fc515267a9b4c7c1534ebc3ea61428143ce6"
+  },
+  {
+    "original": "E:\\Projects\\wireless-ir-mocap\\test-output\\timing-methods\\20260908-171055\\01-gptpair-ftm\\telemetry.json",
+    "copy": "historical-evidence/test-output/timing-methods/20260908-171055/01-gptpair-ftm/telemetry.json",
+    "sha256": "2cb85b44d4f7f6a38e423a4e7f82f460d01d69ed43372f77e667fdaee66fefab"
+  },
+  {
+    "original": "E:\\Projects\\wireless-ir-mocap\\test-output\\timing-methods\\20260908-171055\\01-high-ftm\\armed.json",
+    "copy": "historical-evidence/test-output/timing-methods/20260908-171055/01-high-ftm/armed.json",
+    "sha256": "972efff261662e235835938a0c11ccd2521cfe3975ce993eeb304d38be2e3622"
+  },
+  {
+    "original": "E:\\Projects\\wireless-ir-mocap\\test-output\\timing-methods\\20260908-171055\\01-high-ftm\\capture.sal",
+    "copy": "historical-evidence/test-output/timing-methods/20260908-171055/01-high-ftm/capture.sal",
+    "sha256": "e9f3d3b738e6eb48df8e620b6ff8c9d52e983fd402d0f585e16bf7b15e7bbf9b"
+  },
+  {
+    "original": "E:\\Projects\\wireless-ir-mocap\\test-output\\timing-methods\\20260908-171055\\01-high-ftm\\configured.json",
+    "copy": "historical-evidence/test-output/timing-methods/20260908-171055/01-high-ftm/configured.json",
+    "sha256": "a3d9a9ed2fe36e547f93a56be5543d9f8bbef8c3520689ed96708b39ba71f7da"
+  },
+  {
+    "original": "E:\\Projects\\wireless-ir-mocap\\test-output\\timing-methods\\20260908-171055\\01-high-ftm\\digital.csv",
+    "copy": "historical-evidence/test-output/timing-methods/20260908-171055/01-high-ftm/digital.csv",
+    "sha256": "1dad146478d84519641966149f5bc6ad6263e3c1389f5a313669e840faf366a2"
+  },
+  {
+    "original": "E:\\Projects\\wireless-ir-mocap\\test-output\\timing-methods\\20260908-171055\\01-high-ftm\\result.json",
+    "copy": "historical-evidence/test-output/timing-methods/20260908-171055/01-high-ftm/result.json",
+    "sha256": "ebc00d8ae8899774461167791e4e32f6e6a57ede7fbda1fc05becc22ba21ff7b"
+  },
+  {
+    "original": "E:\\Projects\\wireless-ir-mocap\\test-output\\timing-methods\\20260908-171055\\01-high-ftm\\telemetry.json",
+    "copy": "historical-evidence/test-output/timing-methods/20260908-171055/01-high-ftm/telemetry.json",
+    "sha256": "d2d837e77ba2a081a5f32628cc56a05d303f8c230b72cd01d9f9a0e3f6304844"
+  },
+  {
+    "original": "E:\\Projects\\wireless-ir-mocap\\test-output\\timing-methods\\20260908-171055\\01-mcpwm-ftm\\armed.json",
+    "copy": "historical-evidence/test-output/timing-methods/20260908-171055/01-mcpwm-ftm/armed.json",
+    "sha256": "ea63ba9c613bb5e5068effc38c0242d73345ffa2ff6e2c1aa0189b49f89d459e"
+  },
+  {
+    "original": "E:\\Projects\\wireless-ir-mocap\\test-output\\timing-methods\\20260908-171055\\01-mcpwm-ftm\\capture.sal",
+    "copy": "historical-evidence/test-output/timing-methods/20260908-171055/01-mcpwm-ftm/capture.sal",
+    "sha256": "31b2f3398ce3b364947550921a8891e9ed4ee8525853a89a35b6b27e6371da60"
+  },
+  {
+    "original": "E:\\Projects\\wireless-ir-mocap\\test-output\\timing-methods\\20260908-171055\\01-mcpwm-ftm\\configured.json",
+    "copy": "historical-evidence/test-output/timing-methods/20260908-171055/01-mcpwm-ftm/configured.json",
+    "sha256": "861142353c9dacb553aedcd32a2ac4eaf5a514035e3e822b14c2f11338007a85"
+  },
+  {
+    "original": "E:\\Projects\\wireless-ir-mocap\\test-output\\timing-methods\\20260908-171055\\01-mcpwm-ftm\\digital.csv",
+    "copy": "historical-evidence/test-output/timing-methods/20260908-171055/01-mcpwm-ftm/digital.csv",
+    "sha256": "23ce8a2ae05f58c30e70a3c21d2fc71e43fd799b5963713e1e7ff01c314ee900"
+  },
+  {
+    "original": "E:\\Projects\\wireless-ir-mocap\\test-output\\timing-methods\\20260908-171055\\01-mcpwm-ftm\\result.json",
+    "copy": "historical-evidence/test-output/timing-methods/20260908-171055/01-mcpwm-ftm/result.json",
+    "sha256": "21d01657d15a8b3c2bde3e0d532da5949c0962b0a268cdc5f0fce958fd5a1bc6"
+  },
+  {
+    "original": "E:\\Projects\\wireless-ir-mocap\\test-output\\timing-methods\\20260908-171055\\01-mcpwm-ftm\\telemetry.json",
+    "copy": "historical-evidence/test-output/timing-methods/20260908-171055/01-mcpwm-ftm/telemetry.json",
+    "sha256": "cc6e50e4e6c9e07ac2aea6f1f74a77d8d06def54a64244bf15aed30a2933999c"
+  },
+  {
+    "original": "E:\\Projects\\wireless-ir-mocap\\test-output\\timing-methods\\20260908-171055\\settings.json",
+    "copy": "historical-evidence/test-output/timing-methods/20260908-171055/settings.json",
+    "sha256": "133dddd5dad5661b5e7578554b78fae2a85b3bb6b38c5d0bf3c7881c4711eec7"
+  },
+  {
+    "original": "E:\\Projects\\wireless-ir-mocap\\test-output\\timing-methods\\20260908-171431\\00-gptpair-ftm\\armed.json",
+    "copy": "historical-evidence/test-output/timing-methods/20260908-171431/00-gptpair-ftm/armed.json",
+    "sha256": "db4e22710aaf27adf58bbfb68dd7c64dea33da524e6ca4ff10f348ea7989c647"
+  },
+  {
+    "original": "E:\\Projects\\wireless-ir-mocap\\test-output\\timing-methods\\20260908-171431\\00-gptpair-ftm\\capture.sal",
+    "copy": "historical-evidence/test-output/timing-methods/20260908-171431/00-gptpair-ftm/capture.sal",
+    "sha256": "62136bfcccdfcc6766fb8c7e3392732e366cdbdb1c1bff8356338e9794aa57ac"
+  },
+  {
+    "original": "E:\\Projects\\wireless-ir-mocap\\test-output\\timing-methods\\20260908-171431\\00-gptpair-ftm\\configured.json",
+    "copy": "historical-evidence/test-output/timing-methods/20260908-171431/00-gptpair-ftm/configured.json",
+    "sha256": "1025e652c3d7e5dfed93059b72f48bb60cea10a810e0852ea5c730c0d021d4ce"
+  },
+  {
+    "original": "E:\\Projects\\wireless-ir-mocap\\test-output\\timing-methods\\20260908-171431\\00-gptpair-ftm\\digital.csv",
+    "copy": "historical-evidence/test-output/timing-methods/20260908-171431/00-gptpair-ftm/digital.csv",
+    "sha256": "6b04ff7b5ddf669d92ab2b23305aa6869c500ec5b00470b59e83b49d44ed7e5d"
+  },
+  {
+    "original": "E:\\Projects\\wireless-ir-mocap\\test-output\\timing-methods\\20260908-171431\\00-gptpair-ftm\\result.json",
+    "copy": "historical-evidence/test-output/timing-methods/20260908-171431/00-gptpair-ftm/result.json",
+    "sha256": "801161603f7df42d601bf6b3c7d81b39875b53993854b77bbc2dd8b39203fecf"
+  },
+  {
+    "original": "E:\\Projects\\wireless-ir-mocap\\test-output\\timing-methods\\20260908-171431\\00-gptpair-ftm\\telemetry.json",
+    "copy": "historical-evidence/test-output/timing-methods/20260908-171431/00-gptpair-ftm/telemetry.json",
+    "sha256": "f618fcd674f5c6bb70271fbecaaa9e4a9387432fcfbc237fb2153ec09ed1d15d"
+  },
+  {
+    "original": "E:\\Projects\\wireless-ir-mocap\\test-output\\timing-methods\\20260908-171431\\00-high-ftm\\armed.json",
+    "copy": "historical-evidence/test-output/timing-methods/20260908-171431/00-high-ftm/armed.json",
+    "sha256": "177a3350323e7e7fbc1ca053cad4c5ef68cf34aa5be87a31f069361a991b414d"
+  },
+  {
+    "original": "E:\\Projects\\wireless-ir-mocap\\test-output\\timing-methods\\20260908-171431\\00-high-ftm\\capture.sal",
+    "copy": "historical-evidence/test-output/timing-methods/20260908-171431/00-high-ftm/capture.sal",
+    "sha256": "51ffa35f71fa2b35da389fce580c600fd740b66f1c8908413a66e41e869d3cec"
+  },
+  {
+    "original": "E:\\Projects\\wireless-ir-mocap\\test-output\\timing-methods\\20260908-171431\\00-high-ftm\\configured.json",
+    "copy": "historical-evidence/test-output/timing-methods/20260908-171431/00-high-ftm/configured.json",
+    "sha256": "755830bca4cb9bc7e74483bef7181d3134d56fb65205e6df27800d3d750b16f0"
+  },
+  {
+    "original": "E:\\Projects\\wireless-ir-mocap\\test-output\\timing-methods\\20260908-171431\\00-high-ftm\\digital.csv",
+    "copy": "historical-evidence/test-output/timing-methods/20260908-171431/00-high-ftm/digital.csv",
+    "sha256": "eb3ffc1b43a1e6121c88f941cbeb5fb07e4c67d652a200928df270ca0722db85"
+  },
+  {
+    "original": "E:\\Projects\\wireless-ir-mocap\\test-output\\timing-methods\\20260908-171431\\00-high-ftm\\result.json",
+    "copy": "historical-evidence/test-output/timing-methods/20260908-171431/00-high-ftm/result.json",
+    "sha256": "9a97888cbcdc023ec16e8856a4ceaf277df69d45d7c42f26fa28da233556ba3a"
+  },
+  {
+    "original": "E:\\Projects\\wireless-ir-mocap\\test-output\\timing-methods\\20260908-171431\\00-high-ftm\\telemetry.json",
+    "copy": "historical-evidence/test-output/timing-methods/20260908-171431/00-high-ftm/telemetry.json",
+    "sha256": "195aaf070743bdf2ad474f77b4cc00252e0804e56587dcae601e82172adf2839"
+  },
+  {
+    "original": "E:\\Projects\\wireless-ir-mocap\\test-output\\timing-methods\\20260908-171431\\00-mcpwm-ftm\\armed.json",
+    "copy": "historical-evidence/test-output/timing-methods/20260908-171431/00-mcpwm-ftm/armed.json",
+    "sha256": "9dfe701fd4e8d33f86c326a0485c27ac3e4b3a63c724ee3e965bfa1390623fce"
+  },
+  {
+    "original": "E:\\Projects\\wireless-ir-mocap\\test-output\\timing-methods\\20260908-171431\\00-mcpwm-ftm\\capture.sal",
+    "copy": "historical-evidence/test-output/timing-methods/20260908-171431/00-mcpwm-ftm/capture.sal",
+    "sha256": "5ec48b5a4407e72bd8fe25db629d2994d30dbdc15e3bf0934ba073b674731583"
+  },
+  {
+    "original": "E:\\Projects\\wireless-ir-mocap\\test-output\\timing-methods\\20260908-171431\\00-mcpwm-ftm\\configured.json",
+    "copy": "historical-evidence/test-output/timing-methods/20260908-171431/00-mcpwm-ftm/configured.json",
+    "sha256": "49b0a5f3f1d50dd8afce34affcd156daa9e11618f761cb9f9afbe285704d1c07"
+  },
+  {
+    "original": "E:\\Projects\\wireless-ir-mocap\\test-output\\timing-methods\\20260908-171431\\00-mcpwm-ftm\\digital.csv",
+    "copy": "historical-evidence/test-output/timing-methods/20260908-171431/00-mcpwm-ftm/digital.csv",
+    "sha256": "df421ce1f9f627bebaef566e8123b805a2124221c0094e59bbb05537383d7f45"
+  },
+  {
+    "original": "E:\\Projects\\wireless-ir-mocap\\test-output\\timing-methods\\20260908-171431\\00-mcpwm-ftm\\result.json",
+    "copy": "historical-evidence/test-output/timing-methods/20260908-171431/00-mcpwm-ftm/result.json",
+    "sha256": "b6304485b1daabfde83511883acf096abca8bbd4298c285e20f7db70040f8659"
+  },
+  {
+    "original": "E:\\Projects\\wireless-ir-mocap\\test-output\\timing-methods\\20260908-171431\\00-mcpwm-ftm\\telemetry.json",
+    "copy": "historical-evidence/test-output/timing-methods/20260908-171431/00-mcpwm-ftm/telemetry.json",
+    "sha256": "fa978bb46a7899d98533f8a164db822e5f65870af0ff59b5594cc10a1ce8aa70"
+  },
+  {
+    "original": "E:\\Projects\\wireless-ir-mocap\\test-output\\timing-methods\\20260908-171431\\00-task-ftm\\armed.json",
+    "copy": "historical-evidence/test-output/timing-methods/20260908-171431/00-task-ftm/armed.json",
+    "sha256": "007092f52fec0abcd44aa16993848b047bdce7e757fbedf6becad8fad843e67d"
+  },
+  {
+    "original": "E:\\Projects\\wireless-ir-mocap\\test-output\\timing-methods\\20260908-171431\\00-task-ftm\\capture.sal",
+    "copy": "historical-evidence/test-output/timing-methods/20260908-171431/00-task-ftm/capture.sal",
+    "sha256": "0b448ccc63a93c194ccabd12c30196dde97b36391863208c74ab0c18414e4d4f"
+  },
+  {
+    "original": "E:\\Projects\\wireless-ir-mocap\\test-output\\timing-methods\\20260908-171431\\00-task-ftm\\configured.json",
+    "copy": "historical-evidence/test-output/timing-methods/20260908-171431/00-task-ftm/configured.json",
+    "sha256": "421ea45bc0cdfaea36b1e6c0544ef0f0c639418c529e4cd492d024a985ae5850"
+  },
+  {
+    "original": "E:\\Projects\\wireless-ir-mocap\\test-output\\timing-methods\\20260908-171431\\00-task-ftm\\digital.csv",
+    "copy": "historical-evidence/test-output/timing-methods/20260908-171431/00-task-ftm/digital.csv",
+    "sha256": "9027e7e997c2caefba57c969a41744176ac19edd798037fc3c1bcb5cfda96426"
+  },
+  {
+    "original": "E:\\Projects\\wireless-ir-mocap\\test-output\\timing-methods\\20260908-171431\\00-task-ftm\\result.json",
+    "copy": "historical-evidence/test-output/timing-methods/20260908-171431/00-task-ftm/result.json",
+    "sha256": "dbbb3f73e14d0f1b4aced18c547f31ae514a2faa567a2267510511fb5202b596"
+  },
+  {
+    "original": "E:\\Projects\\wireless-ir-mocap\\test-output\\timing-methods\\20260908-171431\\00-task-ftm\\telemetry.json",
+    "copy": "historical-evidence/test-output/timing-methods/20260908-171431/00-task-ftm/telemetry.json",
+    "sha256": "5a224c1c546af78dbfa4f08f5f2317e3ee072df440bbf9d17b8a2c5df8790fc5"
+  },
+  {
+    "original": "E:\\Projects\\wireless-ir-mocap\\test-output\\timing-methods\\20260908-171431\\settings.json",
+    "copy": "historical-evidence/test-output/timing-methods/20260908-171431/settings.json",
+    "sha256": "1ddfc1a53872836d97fa32adbdc88e7c7e46ce9e3871b5c6a0b126e4c5e810ee"
+  },
+  {
+    "original": "E:\\Projects\\wireless-ir-mocap\\test-output\\timing-methods\\20260908-172251\\00-gptpair-ftm\\armed.json",
+    "copy": "historical-evidence/test-output/timing-methods/20260908-172251/00-gptpair-ftm/armed.json",
+    "sha256": "8eba300cd22824c7aa8528c283ea876cd517f42c1e01a04f9fddde49a898b336"
+  },
+  {
+    "original": "E:\\Projects\\wireless-ir-mocap\\test-output\\timing-methods\\20260908-172251\\00-gptpair-ftm\\capture.sal",
+    "copy": "historical-evidence/test-output/timing-methods/20260908-172251/00-gptpair-ftm/capture.sal",
+    "sha256": "b4d212483b844c68ea53a1976e0ea6f6e38184e88155541fe135d2ded25278f6"
+  },
+  {
+    "original": "E:\\Projects\\wireless-ir-mocap\\test-output\\timing-methods\\20260908-172251\\00-gptpair-ftm\\configured.json",
+    "copy": "historical-evidence/test-output/timing-methods/20260908-172251/00-gptpair-ftm/configured.json",
+    "sha256": "ed2ec274e10fb9b18e8443ef08eb04f0f3810f943e0c84363251e628ca8d0f99"
+  },
+  {
+    "original": "E:\\Projects\\wireless-ir-mocap\\test-output\\timing-methods\\20260908-172251\\00-gptpair-ftm\\digital.csv",
+    "copy": "historical-evidence/test-output/timing-methods/20260908-172251/00-gptpair-ftm/digital.csv",
+    "sha256": "fe1a9f76ba551002f710d0b46540bf5ac73609651f7eec0c73bed4a67c1e2815"
+  },
+  {
+    "original": "E:\\Projects\\wireless-ir-mocap\\test-output\\timing-methods\\20260908-172251\\00-gptpair-ftm\\result.json",
+    "copy": "historical-evidence/test-output/timing-methods/20260908-172251/00-gptpair-ftm/result.json",
+    "sha256": "b9e14e550327ea6b41cf162816a084c6a1a46991fa242ede8f137bc31a372cb7"
+  },
+  {
+    "original": "E:\\Projects\\wireless-ir-mocap\\test-output\\timing-methods\\20260908-172251\\00-gptpair-ftm\\telemetry.json",
+    "copy": "historical-evidence/test-output/timing-methods/20260908-172251/00-gptpair-ftm/telemetry.json",
+    "sha256": "cb5602b97421f9ee14f97ac5432afabdd29a6d563bb0f8064f8695e39db4f2e8"
+  },
+  {
+    "original": "E:\\Projects\\wireless-ir-mocap\\test-output\\timing-methods\\20260908-172251\\00-mcpwm-ftm\\armed.json",
+    "copy": "historical-evidence/test-output/timing-methods/20260908-172251/00-mcpwm-ftm/armed.json",
+    "sha256": "05ef9a82407efa3b7e02bcadbb9cf44a0657678de0ccc13ea413dea46bd3e581"
+  },
+  {
+    "original": "E:\\Projects\\wireless-ir-mocap\\test-output\\timing-methods\\20260908-172251\\00-mcpwm-ftm\\capture.sal",
+    "copy": "historical-evidence/test-output/timing-methods/20260908-172251/00-mcpwm-ftm/capture.sal",
+    "sha256": "3c1644199da8b5ffb7efff005ad233bd994c8322a6f9672f2fc6847fb3ff072f"
+  },
+  {
+    "original": "E:\\Projects\\wireless-ir-mocap\\test-output\\timing-methods\\20260908-172251\\00-mcpwm-ftm\\configured.json",
+    "copy": "historical-evidence/test-output/timing-methods/20260908-172251/00-mcpwm-ftm/configured.json",
+    "sha256": "38b5526d2913d9d8933049b17bd118db3cd3769072b885d4b188370736f36731"
+  },
+  {
+    "original": "E:\\Projects\\wireless-ir-mocap\\test-output\\timing-methods\\20260908-172251\\00-mcpwm-ftm\\digital.csv",
+    "copy": "historical-evidence/test-output/timing-methods/20260908-172251/00-mcpwm-ftm/digital.csv",
+    "sha256": "6af6f5e42c5353b7fccdf09c8626b39c13475b8a6def0088ca4a951ba12a23b3"
+  },
+  {
+    "original": "E:\\Projects\\wireless-ir-mocap\\test-output\\timing-methods\\20260908-172251\\00-mcpwm-ftm\\result.json",
+    "copy": "historical-evidence/test-output/timing-methods/20260908-172251/00-mcpwm-ftm/result.json",
+    "sha256": "935ac447fb34fefd281c3bb74d2aabacb936793b494038497240308be1c3e62e"
+  },
+  {
+    "original": "E:\\Projects\\wireless-ir-mocap\\test-output\\timing-methods\\20260908-172251\\00-mcpwm-ftm\\telemetry.json",
+    "copy": "historical-evidence/test-output/timing-methods/20260908-172251/00-mcpwm-ftm/telemetry.json",
+    "sha256": "753ceabe0dede801ba3096d283cf11ed61e6432b4384ee2a8d03ca123730a4bc"
+  },
+  {
+    "original": "E:\\Projects\\wireless-ir-mocap\\test-output\\timing-methods\\20260908-172251\\01-gptpair-ftm\\armed.json",
+    "copy": "historical-evidence/test-output/timing-methods/20260908-172251/01-gptpair-ftm/armed.json",
+    "sha256": "5dae321f29f915c3f1dffc8bf956f54c2787cc60a57d6b709111170ada9bafd6"
+  },
+  {
+    "original": "E:\\Projects\\wireless-ir-mocap\\test-output\\timing-methods\\20260908-172251\\01-gptpair-ftm\\capture.sal",
+    "copy": "historical-evidence/test-output/timing-methods/20260908-172251/01-gptpair-ftm/capture.sal",
+    "sha256": "a1f011492278d825ec41109993e256672bc85b2eb700893ecca8c1ef15c6825f"
+  },
+  {
+    "original": "E:\\Projects\\wireless-ir-mocap\\test-output\\timing-methods\\20260908-172251\\01-gptpair-ftm\\configured.json",
+    "copy": "historical-evidence/test-output/timing-methods/20260908-172251/01-gptpair-ftm/configured.json",
+    "sha256": "1025e652c3d7e5dfed93059b72f48bb60cea10a810e0852ea5c730c0d021d4ce"
+  },
+  {
+    "original": "E:\\Projects\\wireless-ir-mocap\\test-output\\timing-methods\\20260908-172251\\01-gptpair-ftm\\digital.csv",
+    "copy": "historical-evidence/test-output/timing-methods/20260908-172251/01-gptpair-ftm/digital.csv",
+    "sha256": "24f94acc09681f3f23130ea41c20c3e8e1dadc8c808554496818189505633a68"
+  },
+  {
+    "original": "E:\\Projects\\wireless-ir-mocap\\test-output\\timing-methods\\20260908-172251\\01-gptpair-ftm\\result.json",
+    "copy": "historical-evidence/test-output/timing-methods/20260908-172251/01-gptpair-ftm/result.json",
+    "sha256": "933208cdbbbd739732129f6506d01c49d3cf5bf991a82ff47147bf0813047746"
+  },
+  {
+    "original": "E:\\Projects\\wireless-ir-mocap\\test-output\\timing-methods\\20260908-172251\\01-gptpair-ftm\\telemetry.json",
+    "copy": "historical-evidence/test-output/timing-methods/20260908-172251/01-gptpair-ftm/telemetry.json",
+    "sha256": "ae292ed2b4acab77c26b4fdd20ec794145a9dc17fef23a1011e06e7ac995c8c4"
+  },
+  {
+    "original": "E:\\Projects\\wireless-ir-mocap\\test-output\\timing-methods\\20260908-172251\\01-mcpwm-ftm\\armed.json",
+    "copy": "historical-evidence/test-output/timing-methods/20260908-172251/01-mcpwm-ftm/armed.json",
+    "sha256": "b75d3c53f48e8986cf2a0186031db3c17f7185f785f4c82634641cc56aa85ea8"
+  },
+  {
+    "original": "E:\\Projects\\wireless-ir-mocap\\test-output\\timing-methods\\20260908-172251\\01-mcpwm-ftm\\capture.sal",
+    "copy": "historical-evidence/test-output/timing-methods/20260908-172251/01-mcpwm-ftm/capture.sal",
+    "sha256": "caddde92d00ff39a67e2bea5f308293b5b1f1763bcd4d3cfd2574b02e142d5f0"
+  },
+  {
+    "original": "E:\\Projects\\wireless-ir-mocap\\test-output\\timing-methods\\20260908-172251\\01-mcpwm-ftm\\configured.json",
+    "copy": "historical-evidence/test-output/timing-methods/20260908-172251/01-mcpwm-ftm/configured.json",
+    "sha256": "38b5526d2913d9d8933049b17bd118db3cd3769072b885d4b188370736f36731"
+  },
+  {
+    "original": "E:\\Projects\\wireless-ir-mocap\\test-output\\timing-methods\\20260908-172251\\01-mcpwm-ftm\\digital.csv",
+    "copy": "historical-evidence/test-output/timing-methods/20260908-172251/01-mcpwm-ftm/digital.csv",
+    "sha256": "f08e384bc33cea214422503c259cbf11de30feb0a0a3eb2920737555c5810e6f"
+  },
+  {
+    "original": "E:\\Projects\\wireless-ir-mocap\\test-output\\timing-methods\\20260908-172251\\01-mcpwm-ftm\\result.json",
+    "copy": "historical-evidence/test-output/timing-methods/20260908-172251/01-mcpwm-ftm/result.json",
+    "sha256": "0eb2043c2ab6969dcadb2cb4e2bd4b1e9272463e1e769699c793248714ff20e2"
+  },
+  {
+    "original": "E:\\Projects\\wireless-ir-mocap\\test-output\\timing-methods\\20260908-172251\\01-mcpwm-ftm\\telemetry.json",
+    "copy": "historical-evidence/test-output/timing-methods/20260908-172251/01-mcpwm-ftm/telemetry.json",
+    "sha256": "2f7d06c474c9d20e30d042c7c6448fc43ce007827782d73cd8aab79b460a6b2b"
+  },
+  {
+    "original": "E:\\Projects\\wireless-ir-mocap\\test-output\\timing-methods\\20260908-172251\\02-gptpair-ftm\\armed.json",
+    "copy": "historical-evidence/test-output/timing-methods/20260908-172251/02-gptpair-ftm/armed.json",
+    "sha256": "b6183214db1ab0325f7e17ed5603f90cbe23746a0fec1e7de7d05f4c14adce2f"
+  },
+  {
+    "original": "E:\\Projects\\wireless-ir-mocap\\test-output\\timing-methods\\20260908-172251\\02-gptpair-ftm\\capture.sal",
+    "copy": "historical-evidence/test-output/timing-methods/20260908-172251/02-gptpair-ftm/capture.sal",
+    "sha256": "23bcf3ab7ff61a58291b0cc374598ce853a23d3b39f7697902b7c1643cc1cb21"
+  },
+  {
+    "original": "E:\\Projects\\wireless-ir-mocap\\test-output\\timing-methods\\20260908-172251\\02-gptpair-ftm\\configured.json",
+    "copy": "historical-evidence/test-output/timing-methods/20260908-172251/02-gptpair-ftm/configured.json",
+    "sha256": "a1607689570dd14fedf9d9f95346ea7564479322cb5e513d466561b53b89cd0c"
+  },
+  {
+    "original": "E:\\Projects\\wireless-ir-mocap\\test-output\\timing-methods\\20260908-172251\\02-gptpair-ftm\\digital.csv",
+    "copy": "historical-evidence/test-output/timing-methods/20260908-172251/02-gptpair-ftm/digital.csv",
+    "sha256": "c86fc4aff95760f417b6e5494d18137bc94efa515849ba08e951e9e82c473967"
+  },
+  {
+    "original": "E:\\Projects\\wireless-ir-mocap\\test-output\\timing-methods\\20260908-172251\\02-gptpair-ftm\\result.json",
+    "copy": "historical-evidence/test-output/timing-methods/20260908-172251/02-gptpair-ftm/result.json",
+    "sha256": "5d3d688e0cec3c52cfef7716a884b067f5223a548e6ff61e8d3758699102db97"
+  },
+  {
+    "original": "E:\\Projects\\wireless-ir-mocap\\test-output\\timing-methods\\20260908-172251\\02-gptpair-ftm\\telemetry.json",
+    "copy": "historical-evidence/test-output/timing-methods/20260908-172251/02-gptpair-ftm/telemetry.json",
+    "sha256": "c523afb6d7cd0573f470a89f04693dc961528d439c4376d61e57c1ca4fcdea21"
+  },
+  {
+    "original": "E:\\Projects\\wireless-ir-mocap\\test-output\\timing-methods\\20260908-172251\\02-mcpwm-ftm\\armed.json",
+    "copy": "historical-evidence/test-output/timing-methods/20260908-172251/02-mcpwm-ftm/armed.json",
+    "sha256": "6109b132a137ec8d044400e98098f2c1b938daf71e014b6500a07f0120b59c48"
+  },
+  {
+    "original": "E:\\Projects\\wireless-ir-mocap\\test-output\\timing-methods\\20260908-172251\\02-mcpwm-ftm\\capture.sal",
+    "copy": "historical-evidence/test-output/timing-methods/20260908-172251/02-mcpwm-ftm/capture.sal",
+    "sha256": "1cef50e771bdd0ce9f06cde0552ed254a86a62e25e0cf193e65ca34ec374d728"
+  },
+  {
+    "original": "E:\\Projects\\wireless-ir-mocap\\test-output\\timing-methods\\20260908-172251\\02-mcpwm-ftm\\configured.json",
+    "copy": "historical-evidence/test-output/timing-methods/20260908-172251/02-mcpwm-ftm/configured.json",
+    "sha256": "38b5526d2913d9d8933049b17bd118db3cd3769072b885d4b188370736f36731"
+  },
+  {
+    "original": "E:\\Projects\\wireless-ir-mocap\\test-output\\timing-methods\\20260908-172251\\02-mcpwm-ftm\\digital.csv",
+    "copy": "historical-evidence/test-output/timing-methods/20260908-172251/02-mcpwm-ftm/digital.csv",
+    "sha256": "8030bebc593bc5cbe533ed29e258d4d84bf757f1a3cb0f93fc12cbda2b7aaeb9"
+  },
+  {
+    "original": "E:\\Projects\\wireless-ir-mocap\\test-output\\timing-methods\\20260908-172251\\02-mcpwm-ftm\\result.json",
+    "copy": "historical-evidence/test-output/timing-methods/20260908-172251/02-mcpwm-ftm/result.json",
+    "sha256": "403843c293ce8b3bcdd463111481a3ceae47fa893553cb3091906dd840a77d1a"
+  },
+  {
+    "original": "E:\\Projects\\wireless-ir-mocap\\test-output\\timing-methods\\20260908-172251\\02-mcpwm-ftm\\telemetry.json",
+    "copy": "historical-evidence/test-output/timing-methods/20260908-172251/02-mcpwm-ftm/telemetry.json",
+    "sha256": "a44e4efd9b6c8c652eff7712debfc2acec4ac820a8aa979c6f37c43697b0a15e"
+  },
+  {
+    "original": "E:\\Projects\\wireless-ir-mocap\\test-output\\timing-methods\\20260908-172251\\settings.json",
+    "copy": "historical-evidence/test-output/timing-methods/20260908-172251/settings.json",
+    "sha256": "76ad6f24f4ee854c87cfe4e4ad648adbc4bd35d170831eb7a48a687d3d868f5b"
+  },
+  {
+    "original": "E:\\Projects\\wireless-ir-mocap\\test-output\\timing-methods\\20260908-173016\\00-gptpair-ftm\\armed.json",
+    "copy": "historical-evidence/test-output/timing-methods/20260908-173016/00-gptpair-ftm/armed.json",
+    "sha256": "196e3299c99df4b273f06543a8d46c2f9cf464a444a18f13e70a022edc60fbdb"
+  },
+  {
+    "original": "E:\\Projects\\wireless-ir-mocap\\test-output\\timing-methods\\20260908-173016\\00-gptpair-ftm\\configured.json",
+    "copy": "historical-evidence/test-output/timing-methods/20260908-173016/00-gptpair-ftm/configured.json",
+    "sha256": "6349ec91f496d0706f2b8c0e398cab03af0cf5c386c2990102f2f02a035882e2"
+  },
+  {
+    "original": "E:\\Projects\\wireless-ir-mocap\\test-output\\timing-methods\\20260908-173016\\00-gptpair-ftm\\result.json",
+    "copy": "historical-evidence/test-output/timing-methods/20260908-173016/00-gptpair-ftm/result.json",
+    "sha256": "2b38e21dceaf7214dccc2b29bf2717d5b81b401975c3df88d349c66878a13f1a"
+  },
+  {
+    "original": "E:\\Projects\\wireless-ir-mocap\\test-output\\timing-methods\\20260908-173016\\00-gptpair-ftm\\telemetry.json",
+    "copy": "historical-evidence/test-output/timing-methods/20260908-173016/00-gptpair-ftm/telemetry.json",
+    "sha256": "9733635e91e8f865bbd7a83da73f22db09c01c71bb50d00402de1ed274577741"
+  },
+  {
+    "original": "E:\\Projects\\wireless-ir-mocap\\test-output\\timing-methods\\20260908-173016\\00-mcpwm-ftm\\armed.json",
+    "copy": "historical-evidence/test-output/timing-methods/20260908-173016/00-mcpwm-ftm/armed.json",
+    "sha256": "b18232b9cf3dabbb71f0828ad5e67b87b6870719700d73b078c076b2d14bd769"
+  },
+  {
+    "original": "E:\\Projects\\wireless-ir-mocap\\test-output\\timing-methods\\20260908-173016\\00-mcpwm-ftm\\capture.sal",
+    "copy": "historical-evidence/test-output/timing-methods/20260908-173016/00-mcpwm-ftm/capture.sal",
+    "sha256": "2c33646074f291627f7bf856dd92151a33d5cebacaa5a1c515c75ed4b140da02"
+  },
+  {
+    "original": "E:\\Projects\\wireless-ir-mocap\\test-output\\timing-methods\\20260908-173016\\00-mcpwm-ftm\\configured.json",
+    "copy": "historical-evidence/test-output/timing-methods/20260908-173016/00-mcpwm-ftm/configured.json",
+    "sha256": "a900aa896c392bf117fe6a5998b5b331696f3149156cff116b44c43fc1cbfb0b"
+  },
+  {
+    "original": "E:\\Projects\\wireless-ir-mocap\\test-output\\timing-methods\\20260908-173016\\00-mcpwm-ftm\\digital.csv",
+    "copy": "historical-evidence/test-output/timing-methods/20260908-173016/00-mcpwm-ftm/digital.csv",
+    "sha256": "43de7106c6f84bf416bc6f6ac4cfd38d19ba2161f5933bebb48d8bd7a9e31c2f"
+  },
+  {
+    "original": "E:\\Projects\\wireless-ir-mocap\\test-output\\timing-methods\\20260908-173016\\00-mcpwm-ftm\\result.json",
+    "copy": "historical-evidence/test-output/timing-methods/20260908-173016/00-mcpwm-ftm/result.json",
+    "sha256": "5f8c9cecfbf35be6057d09177d6cc2dcc67499a9dbc6133fdb258e9bf170b813"
+  },
+  {
+    "original": "E:\\Projects\\wireless-ir-mocap\\test-output\\timing-methods\\20260908-173016\\00-mcpwm-ftm\\telemetry.json",
+    "copy": "historical-evidence/test-output/timing-methods/20260908-173016/00-mcpwm-ftm/telemetry.json",
+    "sha256": "3266206bcd2acd22645f768669cf2c2483881554bf97fa4f1ba9c6bd5dcd1093"
+  },
+  {
+    "original": "E:\\Projects\\wireless-ir-mocap\\test-output\\timing-methods\\20260908-173016\\01-gptpair-ftm\\armed.json",
+    "copy": "historical-evidence/test-output/timing-methods/20260908-173016/01-gptpair-ftm/armed.json",
+    "sha256": "773b87a31953af35c64719d3d7dce61c32661313138ade1aa8b527785f7b0252"
+  },
+  {
+    "original": "E:\\Projects\\wireless-ir-mocap\\test-output\\timing-methods\\20260908-173016\\01-gptpair-ftm\\configured.json",
+    "copy": "historical-evidence/test-output/timing-methods/20260908-173016/01-gptpair-ftm/configured.json",
+    "sha256": "a1607689570dd14fedf9d9f95346ea7564479322cb5e513d466561b53b89cd0c"
+  },
+  {
+    "original": "E:\\Projects\\wireless-ir-mocap\\test-output\\timing-methods\\20260908-173016\\01-gptpair-ftm\\result.json",
+    "copy": "historical-evidence/test-output/timing-methods/20260908-173016/01-gptpair-ftm/result.json",
+    "sha256": "61d65cc497c297bffa1cb0dd3e929554c0651bbb7a2a720900eb3c316881a727"
+  },
+  {
+    "original": "E:\\Projects\\wireless-ir-mocap\\test-output\\timing-methods\\20260908-173016\\01-gptpair-ftm\\telemetry.json",
+    "copy": "historical-evidence/test-output/timing-methods/20260908-173016/01-gptpair-ftm/telemetry.json",
+    "sha256": "f7d8a4e13ec0c7aab3cc0dea2ea54dc5664a5594370dd55750dd0aef8e4e2c7e"
+  },
+  {
+    "original": "E:\\Projects\\wireless-ir-mocap\\test-output\\timing-methods\\20260908-173016\\01-mcpwm-ftm\\armed.json",
+    "copy": "historical-evidence/test-output/timing-methods/20260908-173016/01-mcpwm-ftm/armed.json",
+    "sha256": "67f67767913e6baf134c98b5f6f5511c088c6907f3ac1ed22cd400be576d5906"
+  },
+  {
+    "original": "E:\\Projects\\wireless-ir-mocap\\test-output\\timing-methods\\20260908-173016\\01-mcpwm-ftm\\capture.sal",
+    "copy": "historical-evidence/test-output/timing-methods/20260908-173016/01-mcpwm-ftm/capture.sal",
+    "sha256": "43dd53e6108e595bf180f5274dc3f56ed6ed8281c2f4e008b50c28d99a86b570"
+  },
+  {
+    "original": "E:\\Projects\\wireless-ir-mocap\\test-output\\timing-methods\\20260908-173016\\01-mcpwm-ftm\\configured.json",
+    "copy": "historical-evidence/test-output/timing-methods/20260908-173016/01-mcpwm-ftm/configured.json",
+    "sha256": "972f35f57839c16a57374f2bf5a70fcb5ca5e39630f234ccff45a9ecfc06f817"
+  },
+  {
+    "original": "E:\\Projects\\wireless-ir-mocap\\test-output\\timing-methods\\20260908-173016\\01-mcpwm-ftm\\digital.csv",
+    "copy": "historical-evidence/test-output/timing-methods/20260908-173016/01-mcpwm-ftm/digital.csv",
+    "sha256": "ac143e593510f97c5009c82e40f0c4263e74cbac1a9ebbedeb9dddf9ba98f172"
+  },
+  {
+    "original": "E:\\Projects\\wireless-ir-mocap\\test-output\\timing-methods\\20260908-173016\\01-mcpwm-ftm\\result.json",
+    "copy": "historical-evidence/test-output/timing-methods/20260908-173016/01-mcpwm-ftm/result.json",
+    "sha256": "2f30b2ce484d2e14dffea9d558e436b572631fa45aba700cef75cfe646d22101"
+  },
+  {
+    "original": "E:\\Projects\\wireless-ir-mocap\\test-output\\timing-methods\\20260908-173016\\01-mcpwm-ftm\\telemetry.json",
+    "copy": "historical-evidence/test-output/timing-methods/20260908-173016/01-mcpwm-ftm/telemetry.json",
+    "sha256": "11982de070ff5e07cb9eedd69a9e6308e65636efc7e904262ba1c431640a6975"
+  },
+  {
+    "original": "E:\\Projects\\wireless-ir-mocap\\test-output\\timing-methods\\20260908-173016\\settings.json",
+    "copy": "historical-evidence/test-output/timing-methods/20260908-173016/settings.json",
+    "sha256": "f53fa51470194a5d942ff4a32bc5035a0775f21c48f5f5ed47ab40ec82fcb742"
+  },
+  {
+    "original": "E:\\Projects\\wireless-ir-mocap\\test-output\\timing-methods\\20260908-174044\\00-mcpwm-ftm\\armed.json",
+    "copy": "historical-evidence/test-output/timing-methods/20260908-174044/00-mcpwm-ftm/armed.json",
+    "sha256": "1f48264a391b66c536a42eef1b856ee78e128531738aa60d03825ab77e99a201"
+  },
+  {
+    "original": "E:\\Projects\\wireless-ir-mocap\\test-output\\timing-methods\\20260908-174044\\00-mcpwm-ftm\\configured.json",
+    "copy": "historical-evidence/test-output/timing-methods/20260908-174044/00-mcpwm-ftm/configured.json",
+    "sha256": "6ee28cc443dc88f108b70d3529ee9c4738d8bf1d907a1899b6b59a349cf98e9b"
+  },
+  {
+    "original": "E:\\Projects\\wireless-ir-mocap\\test-output\\timing-methods\\20260908-174044\\00-mcpwm-ftm\\result.json",
+    "copy": "historical-evidence/test-output/timing-methods/20260908-174044/00-mcpwm-ftm/result.json",
+    "sha256": "681a62b242a939c6b66f11a8108b96e2d9d04abeb08b8f0d350f74fe3493ad2a"
+  },
+  {
+    "original": "E:\\Projects\\wireless-ir-mocap\\test-output\\timing-methods\\20260908-174044\\00-mcpwm-ftm\\telemetry.json",
+    "copy": "historical-evidence/test-output/timing-methods/20260908-174044/00-mcpwm-ftm/telemetry.json",
+    "sha256": "c6ed894cd1a5b2b71fb2909b9b72f33f7d2b1e20f09b437a18235771257e969f"
+  },
+  {
+    "original": "E:\\Projects\\wireless-ir-mocap\\test-output\\timing-methods\\20260908-174044\\settings.json",
+    "copy": "historical-evidence/test-output/timing-methods/20260908-174044/settings.json",
+    "sha256": "93ca483f067816161c280f0c06cebfa32bcc41d8f4c2cb4215a191c7b606fdba"
+  },
+  {
+    "original": "E:\\Projects\\wireless-ir-mocap\\test-output\\timing-methods\\20260908-174159\\00-mcpwm-ftm\\armed.json",
+    "copy": "historical-evidence/test-output/timing-methods/20260908-174159/00-mcpwm-ftm/armed.json",
+    "sha256": "c1ff31a8be3517e6c3629deb8928d716c9e4d108f4772786cbaa19b9f32c14fc"
+  },
+  {
+    "original": "E:\\Projects\\wireless-ir-mocap\\test-output\\timing-methods\\20260908-174159\\00-mcpwm-ftm\\capture.sal",
+    "copy": "historical-evidence/test-output/timing-methods/20260908-174159/00-mcpwm-ftm/capture.sal",
+    "sha256": "1307eef3612de52dff98f53d3b5f6ffafd496eeccf0489328686c5f3c29aa8e3"
+  },
+  {
+    "original": "E:\\Projects\\wireless-ir-mocap\\test-output\\timing-methods\\20260908-174159\\00-mcpwm-ftm\\configured.json",
+    "copy": "historical-evidence/test-output/timing-methods/20260908-174159/00-mcpwm-ftm/configured.json",
+    "sha256": "b735d145482df84759f919ec7fcdf652639a8a22111ea8973124562d258b2167"
+  },
+  {
+    "original": "E:\\Projects\\wireless-ir-mocap\\test-output\\timing-methods\\20260908-174159\\00-mcpwm-ftm\\digital.csv",
+    "copy": "historical-evidence/test-output/timing-methods/20260908-174159/00-mcpwm-ftm/digital.csv",
+    "sha256": "bc19f26d2a1e7910ae3c3d923760367b33ff73ab27ae9fc41d570c461f842650"
+  },
+  {
+    "original": "E:\\Projects\\wireless-ir-mocap\\test-output\\timing-methods\\20260908-174159\\00-mcpwm-ftm\\result.json",
+    "copy": "historical-evidence/test-output/timing-methods/20260908-174159/00-mcpwm-ftm/result.json",
+    "sha256": "dfcec89e82c4286c8b9494587810424f96a007ff37b7090638e738f08011e44b"
+  },
+  {
+    "original": "E:\\Projects\\wireless-ir-mocap\\test-output\\timing-methods\\20260908-174159\\00-mcpwm-ftm\\telemetry.json",
+    "copy": "historical-evidence/test-output/timing-methods/20260908-174159/00-mcpwm-ftm/telemetry.json",
+    "sha256": "d609dec21db626e7386e88ff1848a1c47fefa573fa88880ccb4bc40f60bb4b1a"
+  },
+  {
+    "original": "E:\\Projects\\wireless-ir-mocap\\test-output\\timing-methods\\20260908-174159\\settings.json",
+    "copy": "historical-evidence/test-output/timing-methods/20260908-174159/settings.json",
+    "sha256": "93ca483f067816161c280f0c06cebfa32bcc41d8f4c2cb4215a191c7b606fdba"
+  }
+]

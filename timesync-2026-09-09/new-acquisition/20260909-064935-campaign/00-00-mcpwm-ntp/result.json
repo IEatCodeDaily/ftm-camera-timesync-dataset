@@ -1,0 +1,9 @@
+{
+  "method": "mcpwm:ntp",
+  "repeat": 0,
+  "duration": 5.0,
+  "sample_rate": 16000000,
+  "build": "507f8d74b8d34447",
+  "network_load": "no deliberate health polling during capture",
+  "acquisition": "completed"
+}

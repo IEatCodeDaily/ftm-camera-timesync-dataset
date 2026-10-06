@@ -1,0 +1,42 @@
+{
+  "date": "2026-09-09",
+  "timezone": "Asia/Jakarta",
+  "user_events": [
+    "User confirmed wiring unchanged and connected.",
+    "User requested analyzer remain running for inspection; GUI Session 73 confirmed Recording and all four 1Hz outputs armed.",
+    "User stated all nodes reset and requested another attempt.",
+    "User asked whether GPIO41 was shared on actual camera module; manufacturer unknown, description ESP32-S3 CAM with microSD behind ESP module."
+  ],
+  "concurrent_control": {
+    "other_task": "Prepare timesync test setup",
+    "node1_ota": "1788910716585756100",
+    "invalidated_trial": "20260909-063455-campaign/00-03-mcpwm-frozen",
+    "exclusive_hardware_window_confirmed": true
+  },
+  "comparison_runtime_build": "507f8d74b8d34447",
+  "fleet_ota_nodes_0_2_3": "1788911291048392600",
+  "static_before_reset": "20260909-063944-static",
+  "static_after_reset": "20260909-064741-static",
+  "controlled_campaign": "20260909-065110-campaign",
+  "acquisition_completion": {
+    "target_60s_trials": 15,
+    "successful_60s_trials": 9,
+    "successful_per_source": {
+      "ftm": 1,
+      "ntp": 2,
+      "mac": 2,
+      "tsf": 2,
+      "frozen": 2
+    },
+    "first_failed": "20260909-065110-campaign/01-04-mcpwm-ftm",
+    "retry_failures": [
+      "20260909-070610-campaign:60s16MS",
+      "20260909-070748-campaign:30s16MS",
+      "20260909-070851-campaign:60s8MS"
+    ],
+    "short_retry_success": "20260909-070546-campaign:5s16MS",
+    "final_static_clean": "20260909-070956-static",
+    "hardware_released_to": "Prepare timesync test setup",
+    "release_state": "all nodes build507f8d74b8d34447; commanded OFF/MCPWM-FTM/GPIO41LOW; Logic idle"
+  }
+}

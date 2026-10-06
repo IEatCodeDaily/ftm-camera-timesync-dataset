@@ -1,0 +1,13 @@
+{
+  "seconds": 60.0,
+  "methods": [
+    "mac",
+    "tsf",
+    "ftm",
+    "frozen"
+  ],
+  "repeats": 1,
+  "restart": false,
+  "build": "fdb0d3b4ab514a2d",
+  "rate": 16000000
+}

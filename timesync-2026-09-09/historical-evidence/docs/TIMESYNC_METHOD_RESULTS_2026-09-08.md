@@ -1,0 +1,36 @@
+# Timing method results — 8 September 2026
+
+Generated from retained result JSON. SD and worst offsets include all observed rising edges; width qualification is reported separately in each diagnostic JSON. Offsets are follower minus node 2. These are relative GPIO measurements, not calibrated absolute accuracy.
+
+| Run / method | Build | Capture | SD node 0 / 1 / 3 (us) | Worst absolute offset (us) | Evidence |
+|---|---|---|---|---:|---|
+| 20260908-170100/00-task-ftm | 34e1a3df22c26af8 | ERROR: Failed to export data: Failed to create directory test-output\timing-methods\20260908-170100\00-task-ftm: create_directories: Access is denied.: "test-output\timing-methods\20260908-170100\00-task-ftm" | — | — | [test-output/timing-methods/20260908-170100/00-task-ftm](../test-output/timing-methods/20260908-170100/00-task-ftm/result.json) |
+| 20260908-170133/00-task-ftm | 34e1a3df22c26af8 | 4s, 16 MS/s; edges 0/0/4/0 | — / — / — | 0.000 | [raw + telemetry](../test-output/timing-methods/20260908-170133/00-task-ftm/result.json) |
+| 20260908-170156/00-esp-ftm | 34e1a3df22c26af8 | 25s, 16 MS/s; edges 25/25/25/25 | 23.434 / 28.741 / 22.136 | 110.062 | [raw + telemetry](../test-output/timing-methods/20260908-170156/00-esp-ftm/result.json) |
+| 20260908-170156/00-gpt-frozen | 34e1a3df22c26af8 | 25s, 16 MS/s; edges 25/25/25/25 | 1.132 / 13.675 / 41.390 | 211.501 | [raw + telemetry](../test-output/timing-methods/20260908-170156/00-gpt-frozen/result.json) |
+| 20260908-170156/00-gpt-ftm | 34e1a3df22c26af8 | 25s, 16 MS/s; edges 25/25/25/25 | 0.452 / 0.581 / 0.388 | 1.500 | [raw + telemetry](../test-output/timing-methods/20260908-170156/00-gpt-ftm/result.json) |
+| 20260908-170156/00-gpt-tsf | 34e1a3df22c26af8 | 25s, 16 MS/s; edges 25/25/25/25 | 5.851 / 4.958 / 6.478 | 35.125 | [raw + telemetry](../test-output/timing-methods/20260908-170156/00-gpt-tsf/result.json) |
+| 20260908-170156/00-high-ftm | 34e1a3df22c26af8 | ERROR: Error interacting with device during capture: ReadTimeout. | — | — | [test-output/timing-methods/20260908-170156/00-high-ftm](../test-output/timing-methods/20260908-170156/00-high-ftm/result.json) |
+| 20260908-170156/00-task-ftm | 34e1a3df22c26af8 | 25s, 16 MS/s; edges 25/25/25/25 | 0.687 / 1.581 / 0.530 | 5.375 | [raw + telemetry](../test-output/timing-methods/20260908-170156/00-task-ftm/result.json) |
+| 20260908-171055/00-gptpair-ftm | 8dc05893b49ecfab | 25s, 16 MS/s; edges 26/26/26/26 | 0.663 / 0.958 / 0.759 | 1.937 | [raw + telemetry](../test-output/timing-methods/20260908-171055/00-gptpair-ftm/result.json) |
+| 20260908-171055/00-high-ftm | 8dc05893b49ecfab | 25s, 16 MS/s; edges 25/25/25/25 | 4.137 / 1.228 / 0.476 | 19.125 | [raw + telemetry](../test-output/timing-methods/20260908-171055/00-high-ftm/result.json) |
+| 20260908-171055/00-mcpwm-ftm | 8dc05893b49ecfab | 25s, 16 MS/s; edges 26/26/26/26 | 0.531 / 0.539 / 0.499 | 2.375 | [raw + telemetry](../test-output/timing-methods/20260908-171055/00-mcpwm-ftm/result.json) |
+| 20260908-171055/01-gptpair-ftm | 8dc05893b49ecfab | 25s, 16 MS/s; edges 25/25/25/25 | 0.575 / 0.753 / 0.573 | 2.124 | [raw + telemetry](../test-output/timing-methods/20260908-171055/01-gptpair-ftm/result.json) |
+| 20260908-171055/01-high-ftm | 8dc05893b49ecfab | 25s, 16 MS/s; edges 25/25/25/25 | 0.604 / 0.905 / 0.884 | 3.875 | [raw + telemetry](../test-output/timing-methods/20260908-171055/01-high-ftm/result.json) |
+| 20260908-171055/01-mcpwm-ftm | 8dc05893b49ecfab | 25s, 16 MS/s; edges 25/25/25/25 | 0.583 / 0.714 / 0.503 | 2.313 | [raw + telemetry](../test-output/timing-methods/20260908-171055/01-mcpwm-ftm/result.json) |
+| 20260908-171431/00-gptpair-ftm | 8dc05893b49ecfab | 60s, 16 MS/s; edges 60/60/60/60 | 3.572 / 2.880 / 3.288 | 474975.250 | [raw + telemetry](../test-output/timing-methods/20260908-171431/00-gptpair-ftm/result.json) |
+| 20260908-171431/00-high-ftm | 8dc05893b49ecfab | 60s, 16 MS/s; edges 60/60/60/60 | 1.892 / 5.451 / 3.697 | 474984.124 | [raw + telemetry](../test-output/timing-methods/20260908-171431/00-high-ftm/result.json) |
+| 20260908-171431/00-mcpwm-ftm | 8dc05893b49ecfab | 60s, 16 MS/s; edges 60/60/61/60 | 1245.978 / 1246.015 / 1246.030 | 474963.125 | [raw + telemetry](../test-output/timing-methods/20260908-171431/00-mcpwm-ftm/result.json) |
+| 20260908-171431/00-task-ftm | 8dc05893b49ecfab | 60s, 16 MS/s; edges 57/53/60/57 | 234597.017 / 236501.067 / 231313.601 | 477719.813 | [raw + telemetry](../test-output/timing-methods/20260908-171431/00-task-ftm/result.json) |
+| 20260908-172251/00-gptpair-ftm | 33a74b5c18b078e9 | INCONCLUSIVE: complete pulses [60, 60, 60, 0] | — | — | [raw + telemetry](../test-output/timing-methods/20260908-172251/00-gptpair-ftm/result.json) |
+| 20260908-172251/00-mcpwm-ftm | 33a74b5c18b078e9 | INCONCLUSIVE: complete pulses [60, 60, 60, 0] | — | — | [raw + telemetry](../test-output/timing-methods/20260908-172251/00-mcpwm-ftm/result.json) |
+| 20260908-172251/01-gptpair-ftm | 33a74b5c18b078e9 | INCONCLUSIVE: complete pulses [59, 60, 60, 0] | — | — | [raw + telemetry](../test-output/timing-methods/20260908-172251/01-gptpair-ftm/result.json) |
+| 20260908-172251/01-mcpwm-ftm | 33a74b5c18b078e9 | INCONCLUSIVE: complete pulses [59, 60, 60, 0] | — | — | [raw + telemetry](../test-output/timing-methods/20260908-172251/01-mcpwm-ftm/result.json) |
+| 20260908-172251/02-gptpair-ftm | 33a74b5c18b078e9 | INCONCLUSIVE: complete pulses [60, 60, 60, 0] | — | — | [raw + telemetry](../test-output/timing-methods/20260908-172251/02-gptpair-ftm/result.json) |
+| 20260908-172251/02-mcpwm-ftm | 33a74b5c18b078e9 | 60s, 16 MS/s; edges 60/60/60/249; INCONCLUSIVE: user reconnected D3 during this capture | 0.608 / 0.609 / 57984.872 | 141532.188 | [raw + telemetry](../test-output/timing-methods/20260908-172251/02-mcpwm-ftm/result.json) |
+| 20260908-173016/00-gptpair-ftm | 33a74b5c18b078e9 | ERROR: Error interacting with device during capture: ReadTimeout. | — | — | [test-output/timing-methods/20260908-173016/00-gptpair-ftm](../test-output/timing-methods/20260908-173016/00-gptpair-ftm/result.json) |
+| 20260908-173016/00-mcpwm-ftm | 33a74b5c18b078e9 | 60s, 16 MS/s; edges 60/60/60/60 | 0.704 / 0.611 / 0.522 | 1.562 | [raw + telemetry](../test-output/timing-methods/20260908-173016/00-mcpwm-ftm/result.json) |
+| 20260908-173016/01-gptpair-ftm | 33a74b5c18b078e9 | ERROR: Error interacting with device during capture: ReadTimeout. | — | — | [test-output/timing-methods/20260908-173016/01-gptpair-ftm](../test-output/timing-methods/20260908-173016/01-gptpair-ftm/result.json) |
+| 20260908-173016/01-mcpwm-ftm | 33a74b5c18b078e9 | 60s, 16 MS/s; edges 60/60/60/60 | 0.608 / 0.635 / 0.481 | 1.625 | [raw + telemetry](../test-output/timing-methods/20260908-173016/01-mcpwm-ftm/result.json) |
+| 20260908-174044/00-mcpwm-ftm | e0ac899e423e2d93 | ERROR: Error interacting with device during capture: ReadTimeout. | — | — | [test-output/timing-methods/20260908-174044/00-mcpwm-ftm](../test-output/timing-methods/20260908-174044/00-mcpwm-ftm/result.json) |
+| 20260908-174159/00-mcpwm-ftm | e0ac899e423e2d93 | 60s, 16 MS/s; edges 60/60/60/60 | 0.578 / 0.582 / 0.563 | 1.937 | [raw + telemetry](../test-output/timing-methods/20260908-174159/00-mcpwm-ftm/result.json) |

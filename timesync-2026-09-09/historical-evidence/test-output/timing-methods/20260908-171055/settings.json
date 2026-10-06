@@ -1,0 +1,11 @@
+{
+  "methods": [
+    "high:ftm",
+    "gptpair:ftm",
+    "mcpwm:ftm"
+  ],
+  "seconds": 25.0,
+  "repeats": 2,
+  "build": "8dc05893b49ecfab",
+  "only_node": null
+}

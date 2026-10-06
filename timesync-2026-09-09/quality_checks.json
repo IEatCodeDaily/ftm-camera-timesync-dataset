@@ -1,0 +1,15 @@
+{
+  "pages": 10,
+  "visual_review": "All pages reviewed in final contact sheet; dense comparison and inventory inspected at full-page resolution. Table4 caption grouped with complete table; no clipped text or broken numeric range observed.",
+  "primary_count": 9,
+  "source_counts": {
+    "ftm": 1,
+    "ntp": 2,
+    "mac": 2,
+    "tsf": 2,
+    "frozen": 2
+  },
+  "numerical_review": "Independent bounded review in final_review.md; aggregate extrema and gap counts verified.",
+  "failed_acquisitions_retained": 4,
+  "hardware": "Released; no subsequent hardware changes by this report task."
+}

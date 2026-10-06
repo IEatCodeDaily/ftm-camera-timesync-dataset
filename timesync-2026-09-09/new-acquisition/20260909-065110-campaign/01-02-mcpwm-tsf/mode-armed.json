@@ -1,0 +1,6 @@
+{
+  "0": "via Wi-Fi 192.168.137.112\nmode: 1HZ (threshold=220 width=10us gpio=41 identify_gpio=2)\nclock_source=wifi_mac clock_ready=1 reference=0 mac_us=623662531 esp_us=622764739 mac_minus_esp_us=897792 read_span_us=0",
+  "1": "via Wi-Fi 192.168.137.204\nmode: 1HZ (threshold=220 width=10us gpio=41 identify_gpio=2)\nclock_source=wifi_mac clock_ready=1 reference=0 mac_us=911923718 esp_us=911054078 mac_minus_esp_us=869640 read_span_us=0",
+  "2": "via Wi-Fi 192.168.137.177\nmode: 1HZ (threshold=220 width=10us gpio=41 identify_gpio=2)\nclock_source=wifi_mac clock_ready=1 reference=1 mac_us=623869001 esp_us=622973396 mac_minus_esp_us=895605 read_span_us=1",
+  "3": "via Wi-Fi 192.168.137.136\nmode: 1HZ (threshold=220 width=10us gpio=41 identify_gpio=2)\nclock_source=wifi_mac clock_ready=1 reference=0 mac_us=623834259 esp_us=622945602 mac_minus_esp_us=888657 read_span_us=1"
+}

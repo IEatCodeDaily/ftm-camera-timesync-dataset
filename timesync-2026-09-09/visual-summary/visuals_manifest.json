@@ -1,0 +1,82 @@
+[
+  {
+    "path": "backend_comparison.png",
+    "sha256": "b4e758cdc9968425d9940daae8bd1e4f0f6b6add9860c030c1d8d83160983608",
+    "bytes": 130728
+  },
+  {
+    "path": "backend_comparison.svg",
+    "sha256": "fb72ca709b79d72eee87a5f3670d258402ec74bb474ab2d96eeeae324fcbe959",
+    "bytes": 93433
+  },
+  {
+    "path": "figure_data.json",
+    "sha256": "558c8de450c571f7d0fd3f57539562f13140b8333bc391b11f10caac69c09407",
+    "bytes": 3804
+  },
+  {
+    "path": "ftm_overview.png",
+    "sha256": "18bab6bdad66af66494065a31d3813a9f2d0a75b045e3e5bc73aa6fb817f3f1f",
+    "bytes": 99968
+  },
+  {
+    "path": "ftm_overview.svg",
+    "sha256": "6c195b386838e2d846dc2157aacdf7e6fcab389ab097262592c06a5c4fb2ac65",
+    "bytes": 49413
+  },
+  {
+    "path": "logic-capture.png",
+    "sha256": "29676480e991d48bbdeb24c6d9fe3352480a613697a6da41108ac9831ec3a930",
+    "bytes": 251353
+  },
+  {
+    "path": "make_visuals.py",
+    "sha256": "0fba44e810c7c3376abfe73d06fca829b8e9db33b621654bfa5506a41ad9bc4c",
+    "bytes": 15768
+  },
+  {
+    "path": "method_comparison.png",
+    "sha256": "a2359e697fc5bddb8eb285ff64c19d95e16e425f2bbe76bf66a695b51e9ab72d",
+    "bytes": 139404
+  },
+  {
+    "path": "method_comparison.svg",
+    "sha256": "6cdc18980c305f45c7d7f2f2eebd65cd044ee213f1e8bfd80d884448b63bf7e3",
+    "bytes": 100408
+  },
+  {
+    "path": "README.md",
+    "sha256": "60335bd1c55c9cef9bb1d327de601c52411d1549b5bad84b484d04eab4a700fd",
+    "bytes": 4531
+  },
+  {
+    "path": "recorded_edge_zoom.png",
+    "sha256": "755f92befc4812d5d848679043af30f1fa2e2b6aaff6149c81eb205ad735dff2",
+    "bytes": 66073
+  },
+  {
+    "path": "recorded_edge_zoom.svg",
+    "sha256": "92a6cf78af9ac300902cf0e7354bb113cd03406c85f754dd96a8d8b1764d226d",
+    "bytes": 38247
+  },
+  {
+    "path": "setup.jpg",
+    "sha256": "f6658c2a269c1a46659f2f22bfda26a76a8ebfcbf9033dfd5b6404926fc9bc86",
+    "bytes": 994780
+  },
+  {
+    "path": "timestamp_exchange.png",
+    "sha256": "ba0398935e07459a1603de174efdc4179ebfb2cd240a3dbdfe3c09e736dcfd9d",
+    "bytes": 95615
+  },
+  {
+    "path": "timestamp_exchange.svg",
+    "sha256": "ac3e7e2db47910f00f2da1f456d08d5028ae6ed1cedd839e480d68630a5a1df2",
+    "bytes": 52992
+  },
+  {
+    "path": "timesync_visual_guide.pdf",
+    "sha256": "7cc0dda6dbdd220750567174f5de4c26a19062f1beb7223fe410a6f4e62c9464",
+    "bytes": 2091267
+  }
+]

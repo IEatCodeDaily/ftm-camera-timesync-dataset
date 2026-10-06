@@ -1,0 +1,13 @@
+{
+  "method": "high:ftm",
+  "repeat": 0,
+  "sample_rate": 16000000,
+  "duration": 25.0,
+  "error": "Error interacting with device during capture: ReadTimeout.",
+  "stopped": {
+    "0": "via Wi-Fi 192.168.137.177\nI (134187) strobe_gpio: mode: 1HZ -> OFF\nI (134188) mode_ctrl: applied mode OFF (value=0)",
+    "1": "via Wi-Fi 192.168.137.94\nI (134262) strobe_gpio: mode: 1HZ -> OFF\nI (134263) mode_ctrl: applied mode OFF (value=0)",
+    "2": "via Wi-Fi 192.168.137.243\nI (134330) strobe_gpio: mode: 1HZ -> OFF\nI (134331) mode_ctrl: applied mode OFF (value=0)",
+    "3": "via Wi-Fi 192.168.137.228\nI (134478) strobe_gpio: mode: 1HZ -> OFF\nI (134479) mode_ctrl: applied mode OFF (value=0)"
+  }
+}

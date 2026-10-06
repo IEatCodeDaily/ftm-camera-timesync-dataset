@@ -1,0 +1,24 @@
+{
+  "0": {
+    "short_count": 0,
+    "short_width_us_histogram": {}
+  },
+  "3": {
+    "short_count": 25,
+    "short_width_us_histogram": {
+      "0.063": 9,
+      "0.062": 16
+    }
+  },
+  "1": {
+    "short_count": 0,
+    "short_width_us_histogram": {}
+  },
+  "2": {
+    "short_count": 97,
+    "short_width_us_histogram": {
+      "0.062": 46,
+      "0.063": 51
+    }
+  }
+}

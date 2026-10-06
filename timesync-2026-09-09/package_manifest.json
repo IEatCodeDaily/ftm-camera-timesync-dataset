@@ -1,0 +1,2972 @@
+[
+  {
+    "path": "acquire.py",
+    "bytes": 6065,
+    "sha256": "ce6d6668656be09d422b5825bff6f403fc78941123e1d24aebae2a2047a71c40"
+  },
+  {
+    "path": "analysis/historical_ftm.png",
+    "bytes": 284021,
+    "sha256": "0b8f1296cf097346884c3b938bb305998523925830a6ab2c1bc1ea4bacef75b8"
+  },
+  {
+    "path": "analysis/historical_ftm.svg",
+    "bytes": 129527,
+    "sha256": "4739489bfc8d1ea6211dc01298fcf6c6c717863293cdace8e9517cd887dcf78b"
+  },
+  {
+    "path": "analysis/latest-console.json",
+    "bytes": 41049,
+    "sha256": "f48e35e4f123fd7ac891193ab88a19842d1f6658621e78df9975082cd48ad091"
+  },
+  {
+    "path": "analysis/manifest.json",
+    "bytes": 43119,
+    "sha256": "e5c8c5b3d26781d3e2c60d98c8c70927a00cd88865a9bb46a9a48478b96486e9"
+  },
+  {
+    "path": "analysis/new_comparison.png",
+    "bytes": 100287,
+    "sha256": "e41492c50c50c4992341856fb170c17e90ffb0706555928ad2bae8f3d84f0507"
+  },
+  {
+    "path": "analysis/new_comparison.svg",
+    "bytes": 85210,
+    "sha256": "141dde72b9c0f000408f727ef3782499f311a326ddcf99b7522c1c7876876b6d"
+  },
+  {
+    "path": "analysis/offsets.csv",
+    "bytes": 531987,
+    "sha256": "a6c5bf4a9b2f34fddb18d60fa88081c0930979b31072cef8cc9ff8dc9cb59986"
+  },
+  {
+    "path": "analysis/per_run_node.csv",
+    "bytes": 31068,
+    "sha256": "a138980e5eb5ca66f7c550a31286d00d22d71030dc32d79c0942c93dda465eab"
+  },
+  {
+    "path": "analysis/run_metrics.json",
+    "bytes": 129083,
+    "sha256": "b36f1e64d844fcac488b8837d2d685a872849c8735c5b70c21d1dbaeb5dcafdb"
+  },
+  {
+    "path": "analyze.py",
+    "bytes": 9638,
+    "sha256": "b054435bf82843f6673c5fc550b0ba9df6cdb876a764a58e3b15f1f60336dcc3"
+  },
+  {
+    "path": "archive_evidence.py",
+    "bytes": 1553,
+    "sha256": "cffd0e357b21141b1829cfb9e40cd606e88e0c4a16669970c68c8213b66f5433"
+  },
+  {
+    "path": "build_report.py",
+    "bytes": 39252,
+    "sha256": "bddc091f32b910b5fe3cc45554a751aa182d144f27c37e365907b16fbf9b89df"
+  },
+  {
+    "path": "check_signal.py",
+    "bytes": 2127,
+    "sha256": "97dc25ad0f4231178044885d22ca383d53fccb3db0893a3ab1b2af2dc6d1ce7c"
+  },
+  {
+    "path": "environment_versions.json",
+    "bytes": 320,
+    "sha256": "264f5bc738034c40a422da8d3117f4d15f3e84918fc25d5a87a559fb9bd64dbc"
+  },
+  {
+    "path": "evidence_review.md",
+    "bytes": 7685,
+    "sha256": "6ecee6e000faf656351ae96e3d7a9c08a23c30603ad972b309ed7ccc874ba21c"
+  },
+  {
+    "path": "final_review.md",
+    "bytes": 8546,
+    "sha256": "a810e54beefcdae204f4f93a6a2c6a46a468ab7a7c810c6ccdb89616657e3898"
+  },
+  {
+    "path": "firmware/3939b066398cec36/ftm_clocksync.bin",
+    "bytes": 1070704,
+    "sha256": "80a9b87dfc7aee92c5f3e9ccb707feaaf9616df7a31d161c8ce31ca010f592a1"
+  },
+  {
+    "path": "firmware/3939b066398cec36/ftm_clocksync.elf",
+    "bytes": 13008388,
+    "sha256": "507f8d74b8d34447070eb8e3cb3adc42ff55c9ffcbdf6a9f936fcac2bfae5773"
+  },
+  {
+    "path": "firmware/3939b066398cec36/host-tests.txt",
+    "bytes": 140,
+    "sha256": "750a22a43abd6d1cb7701be6f9b75a43d1f2851b3a895d63f99580c784283a95"
+  },
+  {
+    "path": "firmware/3939b066398cec36/image-info.txt",
+    "bytes": 1569,
+    "sha256": "1271f7aaa164d9b71e70cd6f44bccb3633253fa5db389d1ea8b1746198d5b56f"
+  },
+  {
+    "path": "firmware/3939b066398cec36/main/CMakeLists.txt",
+    "bytes": 1857,
+    "sha256": "0a2c901b6831880a77d9817734fe121270525e6554abd4c2d0fed36427c2a238"
+  },
+  {
+    "path": "firmware/3939b066398cec36/main/simple_ntp.c",
+    "bytes": 4583,
+    "sha256": "0a7ed57658162a7cadbef91d69e8804d7ad7a76b0cd09f8cc7354508c0a9bffa"
+  },
+  {
+    "path": "firmware/3939b066398cec36/main/simple_ntp.h",
+    "bytes": 760,
+    "sha256": "9fd44e43f720017fad73dc0f13ce6dba658dc30eac87f19485564c4d94198281"
+  },
+  {
+    "path": "firmware/3939b066398cec36/main/strobe_clock.h",
+    "bytes": 1070,
+    "sha256": "a7094a95d092b48689a225e5f03a73f8d6cbe4115c35e772c87a004f9972c071"
+  },
+  {
+    "path": "firmware/3939b066398cec36/main/strobe_gpio.c",
+    "bytes": 21105,
+    "sha256": "35f39e051ca7af980d2247e552ba926c2cfda436f46e26f682228d41623ba0b4"
+  },
+  {
+    "path": "firmware/3939b066398cec36/main/task_cores.h",
+    "bytes": 535,
+    "sha256": "40f3807e2b3139c06cc919d344ccf27d8e35ba1f87c84a449b59580ceca99dea"
+  },
+  {
+    "path": "firmware/3939b066398cec36/ntp-baseline-build.log",
+    "bytes": 21089,
+    "sha256": "0714689b888be5f1b823b7f259c731fb31747e37c4fb2faa81e9231c470e1893"
+  },
+  {
+    "path": "firmware/3939b066398cec36/sha256.json",
+    "bytes": 1656,
+    "sha256": "6e8dd7823a3d0895d7b3f2e74e678ad75d970d23132560e7f6057ffb544f793c"
+  },
+  {
+    "path": "firmware/3939b066398cec36/tools/test_simple_ntp.c",
+    "bytes": 1114,
+    "sha256": "011267281c5c28adf2a1b07401d16857a82886f7d7e7ecd5d39290d71e5f890a"
+  },
+  {
+    "path": "firmware/3939b066398cec36/tools/test_strobe_clock.c",
+    "bytes": 1159,
+    "sha256": "8f095964809fbc8dfc8253a1585a3c0a65c0b366873b566b3b325d4ee240e3c6"
+  },
+  {
+    "path": "gpio41_audit.md",
+    "bytes": 3629,
+    "sha256": "77d89a6946dcf1a136487c3a6e8670ef47ab80b393d9abb2f5c37ffec5f0573f"
+  },
+  {
+    "path": "hardware-release.json",
+    "bytes": 2795,
+    "sha256": "28d579be02705f8200eda059991fe768ebb577cc7f890a21b0747d1fb6bce0ff"
+  },
+  {
+    "path": "historical-evidence/docs/PIPELINE_TIMESYNC_2026-09-08.md",
+    "bytes": 15611,
+    "sha256": "d358e678a06f1fc09bf073ab4768808d250113a2385dfd14c61325c13e2e2340"
+  },
+  {
+    "path": "historical-evidence/docs/TIMESYNC_EXPERIMENT_LOG_2026-09-08.md",
+    "bytes": 17977,
+    "sha256": "23da009f70201425cfd0902cbf4f64f7392c7651e608710a94bc6d8ec6ab997b"
+  },
+  {
+    "path": "historical-evidence/docs/TIMESYNC_MEASUREMENT_2026-09-08.md",
+    "bytes": 16384,
+    "sha256": "687564c3eb08255742883c3b8aa9d7a88ba928fa0d4eb80a716b7dbb38965078"
+  },
+  {
+    "path": "historical-evidence/docs/TIMESYNC_METHOD_RESULTS_2026-09-08.md",
+    "bytes": 7278,
+    "sha256": "ce519852c46797d740e3e69a5055bcdd734534650cc2a224777d1ba792e69185"
+  },
+  {
+    "path": "historical-evidence/test-output/ota-fleet/1788910716585756100/node1/verified.json",
+    "bytes": 1337,
+    "sha256": "885feacae46eead6990c4f9f504a0ffe4da1fcf98d669356e3b8837f180538e0"
+  },
+  {
+    "path": "historical-evidence/test-output/ota-fleet/1788911291048392600/node0/verified.json",
+    "bytes": 1339,
+    "sha256": "a96ded776d7743202096ad19f56c4a77d1a75e9a819d1a5f5cb504812b514dbc"
+  },
+  {
+    "path": "historical-evidence/test-output/ota-fleet/1788911291048392600/node2/verified.json",
+    "bytes": 1347,
+    "sha256": "1acaeb872ff2860f9adab433242b4b19b77013bcbf1c3872a342c44d7d9b4625"
+  },
+  {
+    "path": "historical-evidence/test-output/ota-fleet/1788911291048392600/node3/verified.json",
+    "bytes": 1335,
+    "sha256": "2b2404ff06fca99ca630781da84f2c00ab29dfd3f06b6659abd49c5dcc234ad2"
+  },
+  {
+    "path": "historical-evidence/test-output/pipeline/20260908-175800-tracking/capture.sal",
+    "bytes": 8532,
+    "sha256": "b3bf9e4c1b254037c9d624b1eda8f020a9bb3609cfd74cc18227d57f66546d73"
+  },
+  {
+    "path": "historical-evidence/test-output/pipeline/20260908-175800-tracking/digital.csv",
+    "bytes": 15109,
+    "sha256": "f11a67a66e6e85dbeb8e07d9939d73874a203cc33437631b0123633cdd893be0"
+  },
+  {
+    "path": "historical-evidence/test-output/pipeline/20260908-175800-tracking/extra-edges.json",
+    "bytes": 394,
+    "sha256": "46c0d8afe6b04f362450dc3cf3d26bf81e87b2579d8826a670dc4d017e756e06"
+  },
+  {
+    "path": "historical-evidence/test-output/pipeline/20260908-175800-tracking/result.json",
+    "bytes": 26735,
+    "sha256": "5aaffa1d0f484f5c2081ddd6226794d7e0324a2ecb03b6e9c73af2b496ff78e5"
+  },
+  {
+    "path": "historical-evidence/test-output/pipeline/20260908-175800-tracking/summary.json",
+    "bytes": 17050,
+    "sha256": "b834a105c681abf66dc900489a726c7e6f19661224f5c5da027e66cfc906ac98"
+  },
+  {
+    "path": "historical-evidence/test-output/timing-methods/20260908-170100/00-task-ftm/armed.json",
+    "bytes": 130,
+    "sha256": "b2e1929ec30aca4a1bdd3abf3f19d96e1640811374fcdb55dd3d8305456a2f58"
+  },
+  {
+    "path": "historical-evidence/test-output/timing-methods/20260908-170100/00-task-ftm/configured.json",
+    "bytes": 322,
+    "sha256": "4bd68b20e907cd09c42c42bb3ebc546fa6351b1c16b31310ae13e39f2cd150c3"
+  },
+  {
+    "path": "historical-evidence/test-output/timing-methods/20260908-170100/00-task-ftm/result.json",
+    "bytes": 589,
+    "sha256": "8b0d23a01bae20a20e258873e412fbfdcbf919cebace8c5eaa9f58819324401e"
+  },
+  {
+    "path": "historical-evidence/test-output/timing-methods/20260908-170100/00-task-ftm/telemetry.json",
+    "bytes": 1214,
+    "sha256": "1742f106d0b7c81447b15d58f4386e92f4809bbd2265dc1cda6f8f9b37fa01d8"
+  },
+  {
+    "path": "historical-evidence/test-output/timing-methods/20260908-170100/settings.json",
+    "bytes": 128,
+    "sha256": "52bea5558519d11f5687088e7139f4bb2787052d52b304cd919025e54184d89a"
+  },
+  {
+    "path": "historical-evidence/test-output/timing-methods/20260908-170133/00-task-ftm/armed.json",
+    "bytes": 130,
+    "sha256": "a771d71b156400f9eed295a1cc8f6fde094c6b1b8e5d4dd0143b6684bcc7a567"
+  },
+  {
+    "path": "historical-evidence/test-output/timing-methods/20260908-170133/00-task-ftm/capture.sal",
+    "bytes": 3103,
+    "sha256": "768ac94e0f4427f9b410c3e94b85d035f61ee4ce1614054539964a7ac7b9d16a"
+  },
+  {
+    "path": "historical-evidence/test-output/timing-methods/20260908-170133/00-task-ftm/configured.json",
+    "bytes": 322,
+    "sha256": "d0705a6c30c6302cd4fe44ae2cc48f79508d7748c3f89dc4c5ebda3759aaae66"
+  },
+  {
+    "path": "historical-evidence/test-output/timing-methods/20260908-170133/00-task-ftm/digital.csv",
+    "bytes": 260,
+    "sha256": "8faa109dcbcc5f32845fa022ae2ea3cdda3109cae06e55a0215e075304a10bf5"
+  },
+  {
+    "path": "historical-evidence/test-output/timing-methods/20260908-170133/00-task-ftm/result.json",
+    "bytes": 4094,
+    "sha256": "025559eddaf8cb640a9d6c0c2269a93e248d9a50e7d6201f3738d59243bce2ba"
+  },
+  {
+    "path": "historical-evidence/test-output/timing-methods/20260908-170133/00-task-ftm/telemetry.json",
+    "bytes": 1208,
+    "sha256": "2f34373b692a926799ea70316b430cdfd8e342f9aebcbf139dc266c6831ae7ee"
+  },
+  {
+    "path": "historical-evidence/test-output/timing-methods/20260908-170133/settings.json",
+    "bytes": 128,
+    "sha256": "52bea5558519d11f5687088e7139f4bb2787052d52b304cd919025e54184d89a"
+  },
+  {
+    "path": "historical-evidence/test-output/timing-methods/20260908-170156/00-esp-ftm/armed.json",
+    "bytes": 518,
+    "sha256": "07e1d5f2edcb6b9c80b22602efb5aa245448ea2803d5b1bdaf38cfdc85d226dc"
+  },
+  {
+    "path": "historical-evidence/test-output/timing-methods/20260908-170156/00-esp-ftm/capture.sal",
+    "bytes": 5052,
+    "sha256": "1650651235103177cab429918c3bec970af63c0889ca146655ec5a6821be3ef6"
+  },
+  {
+    "path": "historical-evidence/test-output/timing-methods/20260908-170156/00-esp-ftm/configured.json",
+    "bytes": 322,
+    "sha256": "3ab1dd07cb5a6af92ce49fecbb882d37244cb99ad32b1423942e853a22d912ca"
+  },
+  {
+    "path": "historical-evidence/test-output/timing-methods/20260908-170156/00-esp-ftm/digital.csv",
+    "bytes": 4413,
+    "sha256": "113902e13bc4215539020bc8ae5a64fbbb508a2e62b39578cadfbb65ef399bb6"
+  },
+  {
+    "path": "historical-evidence/test-output/timing-methods/20260908-170156/00-esp-ftm/result.json",
+    "bytes": 15151,
+    "sha256": "57f6523b4cecc344e0373a37ffbbc2d2af79ce2b60d15ac52eb57594628337ac"
+  },
+  {
+    "path": "historical-evidence/test-output/timing-methods/20260908-170156/00-esp-ftm/telemetry.json",
+    "bytes": 10287,
+    "sha256": "1133edd02c7cb07ae1000c8f6ffc56f317252e8ff03fbae3eabbab6cb91ba21b"
+  },
+  {
+    "path": "historical-evidence/test-output/timing-methods/20260908-170156/00-gpt-frozen/armed.json",
+    "bytes": 518,
+    "sha256": "a14c51835463b592fd083890faf5d9d39ae2451ed3defed2256207b3d67d0ad1"
+  },
+  {
+    "path": "historical-evidence/test-output/timing-methods/20260908-170156/00-gpt-frozen/capture.sal",
+    "bytes": 5072,
+    "sha256": "e163fa66f064d8160f95432254b2187b23eed84fd2005c9e8e1609d40683eb9e"
+  },
+  {
+    "path": "historical-evidence/test-output/timing-methods/20260908-170156/00-gpt-frozen/configured.json",
+    "bytes": 334,
+    "sha256": "6d61f016c0fb9c47e5fb9c0cb84a401faab25c86c0b764fcfa7aef31f89e6004"
+  },
+  {
+    "path": "historical-evidence/test-output/timing-methods/20260908-170156/00-gpt-frozen/digital.csv",
+    "bytes": 4283,
+    "sha256": "5f1dceca5bf2d5d486de3be961e78957b997b3ca968d80bd82a00febad7478f5"
+  },
+  {
+    "path": "historical-evidence/test-output/timing-methods/20260908-170156/00-gpt-frozen/result.json",
+    "bytes": 15152,
+    "sha256": "743f255e9bab673bb3bb7cd1703a521970858357dd87555d11ff5cb3c934cac4"
+  },
+  {
+    "path": "historical-evidence/test-output/timing-methods/20260908-170156/00-gpt-frozen/telemetry.json",
+    "bytes": 10353,
+    "sha256": "92b15530ee7ebfbc18631851ff974001941c9731495671eb22524a27005cb99b"
+  },
+  {
+    "path": "historical-evidence/test-output/timing-methods/20260908-170156/00-gpt-ftm/armed.json",
+    "bytes": 518,
+    "sha256": "0bbf5d264dfe0e39969a1209cdbbe1fa253cbecc83462096a0223a119dbc3326"
+  },
+  {
+    "path": "historical-evidence/test-output/timing-methods/20260908-170156/00-gpt-ftm/capture.sal",
+    "bytes": 5018,
+    "sha256": "d02d2e47c4d70d95edf010772a77c664f4302dd71e8a18803cd05bf523a18672"
+  },
+  {
+    "path": "historical-evidence/test-output/timing-methods/20260908-170156/00-gpt-ftm/configured.json",
+    "bytes": 322,
+    "sha256": "30362f375adbefad025edc4dea02a70d071dc9a99ca0a835835c47645a38f7f2"
+  },
+  {
+    "path": "historical-evidence/test-output/timing-methods/20260908-170156/00-gpt-ftm/digital.csv",
+    "bytes": 4260,
+    "sha256": "35b4881b82253d9b671ba722fc6da56bb063656bd8024b90e1c1094c8d6c2630"
+  },
+  {
+    "path": "historical-evidence/test-output/timing-methods/20260908-170156/00-gpt-ftm/result.json",
+    "bytes": 15184,
+    "sha256": "1548988459b330efef786f63a9f44a128077ae2143240e127b0bd05f7d8fe9ca"
+  },
+  {
+    "path": "historical-evidence/test-output/timing-methods/20260908-170156/00-gpt-ftm/telemetry.json",
+    "bytes": 10432,
+    "sha256": "f613eecefbb799d28bd2f54a38c3a0d75b13371488f52e1344799129c8dfcc75"
+  },
+  {
+    "path": "historical-evidence/test-output/timing-methods/20260908-170156/00-gpt-tsf/armed.json",
+    "bytes": 518,
+    "sha256": "b437ee6d297e70506fd8da4ad39d247165de8b672a4c2678731e0ea7df5f449b"
+  },
+  {
+    "path": "historical-evidence/test-output/timing-methods/20260908-170156/00-gpt-tsf/capture.sal",
+    "bytes": 5165,
+    "sha256": "bcb15709d43ed55fda67ba2148c8a10a624f8692884c9da1fdb86a445bad9cad"
+  },
+  {
+    "path": "historical-evidence/test-output/timing-methods/20260908-170156/00-gpt-tsf/configured.json",
+    "bytes": 322,
+    "sha256": "8ff6c46f2413afd889a658f05f95405cf44d7641bd74040fe4578bc5d7b7b9e9"
+  },
+  {
+    "path": "historical-evidence/test-output/timing-methods/20260908-170156/00-gpt-tsf/digital.csv",
+    "bytes": 4434,
+    "sha256": "157cbda42a0b8182fc706db1fcf0eadfd1a27edf000682ddbaf9e7a63a9a2ddf"
+  },
+  {
+    "path": "historical-evidence/test-output/timing-methods/20260908-170156/00-gpt-tsf/result.json",
+    "bytes": 15142,
+    "sha256": "d5dac51703754f29d82882a33a51a0ce289c4fc5b08aa506fd417d1eedfb311e"
+  },
+  {
+    "path": "historical-evidence/test-output/timing-methods/20260908-170156/00-gpt-tsf/telemetry.json",
+    "bytes": 10626,
+    "sha256": "6c686e8eadd3b6fc2e3e818cd1cee6e0aa66baf52657849b16ec81f3cb6eef4a"
+  },
+  {
+    "path": "historical-evidence/test-output/timing-methods/20260908-170156/00-high-ftm/armed.json",
+    "bytes": 518,
+    "sha256": "76a1bd5ba8a805d665d48c0d7e226cba37458b2471033cf96c60f048b14bb668"
+  },
+  {
+    "path": "historical-evidence/test-output/timing-methods/20260908-170156/00-high-ftm/configured.json",
+    "bytes": 326,
+    "sha256": "5aa39b95062940fcfd9e1f86da7a4e8f2452e41cb1cf838ef62f73c9ea837ddc"
+  },
+  {
+    "path": "historical-evidence/test-output/timing-methods/20260908-170156/00-high-ftm/result.json",
+    "bytes": 711,
+    "sha256": "d234b0fb1f2ed7e3120e5889b91efa797ae63d9379d76b6a006eff389d6e2f82"
+  },
+  {
+    "path": "historical-evidence/test-output/timing-methods/20260908-170156/00-high-ftm/telemetry.json",
+    "bytes": 4949,
+    "sha256": "bbd7b8faefbf16480638fe9b5dcfabf51266c062c2f45b137743fbc1110a3f58"
+  },
+  {
+    "path": "historical-evidence/test-output/timing-methods/20260908-170156/00-task-ftm/armed.json",
+    "bytes": 510,
+    "sha256": "f4f6206d9fd38c321f9d8d3c272d7e3cab3f45adf5433c0e0ab68f01f4cb7ceb"
+  },
+  {
+    "path": "historical-evidence/test-output/timing-methods/20260908-170156/00-task-ftm/capture.sal",
+    "bytes": 5029,
+    "sha256": "980380769f307c61dc69bd0ad266d6799b4978351b5d7934967fcaf5a4212444"
+  },
+  {
+    "path": "historical-evidence/test-output/timing-methods/20260908-170156/00-task-ftm/configured.json",
+    "bytes": 322,
+    "sha256": "d0705a6c30c6302cd4fe44ae2cc48f79508d7748c3f89dc4c5ebda3759aaae66"
+  },
+  {
+    "path": "historical-evidence/test-output/timing-methods/20260908-170156/00-task-ftm/digital.csv",
+    "bytes": 4282,
+    "sha256": "6d9eaa7d9430c8f7d03855d705d48e0137ccfa7e46bb902d56551ec0bbe5c02e"
+  },
+  {
+    "path": "historical-evidence/test-output/timing-methods/20260908-170156/00-task-ftm/result.json",
+    "bytes": 15197,
+    "sha256": "374fbcb90dc5df973005a665f8ca89ac69f84029e74ca3343ba39cc17cc671d0"
+  },
+  {
+    "path": "historical-evidence/test-output/timing-methods/20260908-170156/00-task-ftm/telemetry.json",
+    "bytes": 10016,
+    "sha256": "37ecfe7ba2e516511fb3c9ad2a7304aec24e44d9fbb9c3a385d2fa92fa317689"
+  },
+  {
+    "path": "historical-evidence/test-output/timing-methods/20260908-170156/settings.json",
+    "bytes": 216,
+    "sha256": "f3b2aafefd725253f40edc46d8da7b53100aa2f77cbd8aad9ecd2daa49380206"
+  },
+  {
+    "path": "historical-evidence/test-output/timing-methods/20260908-171055/00-gptpair-ftm/armed.json",
+    "bytes": 510,
+    "sha256": "440f4d0451027eeb8a0215c442f41269fec81887b1d16f40d2b50b0ee0a319bb"
+  },
+  {
+    "path": "historical-evidence/test-output/timing-methods/20260908-171055/00-gptpair-ftm/capture.sal",
+    "bytes": 5081,
+    "sha256": "f95dbe0358d52960d7ac572f3ced1ba111bedbb608ced4d647e3114a77ef8b11"
+  },
+  {
+    "path": "historical-evidence/test-output/timing-methods/20260908-171055/00-gptpair-ftm/configured.json",
+    "bytes": 338,
+    "sha256": "c0e57c6001e29dfdfe326a4d608136c0725abe7e090e4b083e47fc8fd40f0060"
+  },
+  {
+    "path": "historical-evidence/test-output/timing-methods/20260908-171055/00-gptpair-ftm/digital.csv",
+    "bytes": 4413,
+    "sha256": "1b6fab6c8c195e458542a7dd171de263424d01ebdc8209b7ac12eb7758279914"
+  },
+  {
+    "path": "historical-evidence/test-output/timing-methods/20260908-171055/00-gptpair-ftm/result.json",
+    "bytes": 15123,
+    "sha256": "3a6c833c1402f9be11f99762fe66e2c3caf5586a1e83362441a569dfd26fa002"
+  },
+  {
+    "path": "historical-evidence/test-output/timing-methods/20260908-171055/00-gptpair-ftm/telemetry.json",
+    "bytes": 10942,
+    "sha256": "2653e0057844271f0971bdbbacf48bba3c111f375aec6ed291971f87c4adea43"
+  },
+  {
+    "path": "historical-evidence/test-output/timing-methods/20260908-171055/00-high-ftm/armed.json",
+    "bytes": 510,
+    "sha256": "bef199f90894c9cefefb209bde17033768d5f58712792d40b0622d3f3c218920"
+  },
+  {
+    "path": "historical-evidence/test-output/timing-methods/20260908-171055/00-high-ftm/capture.sal",
+    "bytes": 5042,
+    "sha256": "3e243fbafef1e88cf7f870016d1a42e752205ab5c9e006c2fda83d6b2bf77c53"
+  },
+  {
+    "path": "historical-evidence/test-output/timing-methods/20260908-171055/00-high-ftm/configured.json",
+    "bytes": 322,
+    "sha256": "f3ea4e8da408807d1ce4992849e127a9cd11da5da7cb3f1183e1a59755a3382f"
+  },
+  {
+    "path": "historical-evidence/test-output/timing-methods/20260908-171055/00-high-ftm/digital.csv",
+    "bytes": 4283,
+    "sha256": "581b4c6a31541abe5edd814b1293eeff76083e5de44696e92b0c73ecca5eb94d"
+  },
+  {
+    "path": "historical-evidence/test-output/timing-methods/20260908-171055/00-high-ftm/result.json",
+    "bytes": 15108,
+    "sha256": "bbaa2690c70afd04a1c2f3d0c2bbee8599a91a9ca4242cfe0463f22d4bdc4a86"
+  },
+  {
+    "path": "historical-evidence/test-output/timing-methods/20260908-171055/00-high-ftm/telemetry.json",
+    "bytes": 10770,
+    "sha256": "ef2707641ae60de2e4e280df6fdbcdaf7556a0d4ce0ac283443a4b4adc1655ae"
+  },
+  {
+    "path": "historical-evidence/test-output/timing-methods/20260908-171055/00-mcpwm-ftm/armed.json",
+    "bytes": 518,
+    "sha256": "e909c9d163c720d0ad2348b01cb57e97d4b3de56be2c34c4ff50b6b9b1de3e51"
+  },
+  {
+    "path": "historical-evidence/test-output/timing-methods/20260908-171055/00-mcpwm-ftm/capture.sal",
+    "bytes": 4892,
+    "sha256": "a55ea13c39c386ac0a8cccbc2a212e1199faf815a8fc954bce17cdaa9f0424ef"
+  },
+  {
+    "path": "historical-evidence/test-output/timing-methods/20260908-171055/00-mcpwm-ftm/configured.json",
+    "bytes": 330,
+    "sha256": "861142353c9dacb553aedcd32a2ac4eaf5a514035e3e822b14c2f11338007a85"
+  },
+  {
+    "path": "historical-evidence/test-output/timing-methods/20260908-171055/00-mcpwm-ftm/digital.csv",
+    "bytes": 4369,
+    "sha256": "a75556fc48648bc80878dc4ed3658aca5753314e9466a06dd24afd9c707446d0"
+  },
+  {
+    "path": "historical-evidence/test-output/timing-methods/20260908-171055/00-mcpwm-ftm/result.json",
+    "bytes": 15091,
+    "sha256": "d6a8b8246e930a6f060c6d2bc633e320f95bf71df7eb45db6a63fc88e312ba5d"
+  },
+  {
+    "path": "historical-evidence/test-output/timing-methods/20260908-171055/00-mcpwm-ftm/telemetry.json",
+    "bytes": 11414,
+    "sha256": "0f3bc84c55b7c1b210c32b6e65b149abdf9610a4d33b42144d7d0366ce9a44fd"
+  },
+  {
+    "path": "historical-evidence/test-output/timing-methods/20260908-171055/01-gptpair-ftm/armed.json",
+    "bytes": 518,
+    "sha256": "910a824a92e8385b959ba8fd09e0d23b79acbc32141e294a6dcdfd00de23e1fd"
+  },
+  {
+    "path": "historical-evidence/test-output/timing-methods/20260908-171055/01-gptpair-ftm/capture.sal",
+    "bytes": 5035,
+    "sha256": "5bd8d724a42abccbeaa4f488ba7e71ce0a2ac7ff3795fa433a84ffac96c8b874"
+  },
+  {
+    "path": "historical-evidence/test-output/timing-methods/20260908-171055/01-gptpair-ftm/configured.json",
+    "bytes": 338,
+    "sha256": "c0e57c6001e29dfdfe326a4d608136c0725abe7e090e4b083e47fc8fd40f0060"
+  },
+  {
+    "path": "historical-evidence/test-output/timing-methods/20260908-171055/01-gptpair-ftm/digital.csv",
+    "bytes": 4327,
+    "sha256": "36baf9f5d6c9105fa306c748544839faf755042f576f55b8085c004e8b86f071"
+  },
+  {
+    "path": "historical-evidence/test-output/timing-methods/20260908-171055/01-gptpair-ftm/result.json",
+    "bytes": 15090,
+    "sha256": "62b530b68fd328ad87f6d599d866fc515267a9b4c7c1534ebc3ea61428143ce6"
+  },
+  {
+    "path": "historical-evidence/test-output/timing-methods/20260908-171055/01-gptpair-ftm/telemetry.json",
+    "bytes": 11480,
+    "sha256": "2cb85b44d4f7f6a38e423a4e7f82f460d01d69ed43372f77e667fdaee66fefab"
+  },
+  {
+    "path": "historical-evidence/test-output/timing-methods/20260908-171055/01-high-ftm/armed.json",
+    "bytes": 518,
+    "sha256": "972efff261662e235835938a0c11ccd2521cfe3975ce993eeb304d38be2e3622"
+  },
+  {
+    "path": "historical-evidence/test-output/timing-methods/20260908-171055/01-high-ftm/capture.sal",
+    "bytes": 5031,
+    "sha256": "e9f3d3b738e6eb48df8e620b6ff8c9d52e983fd402d0f585e16bf7b15e7bbf9b"
+  },
+  {
+    "path": "historical-evidence/test-output/timing-methods/20260908-171055/01-high-ftm/configured.json",
+    "bytes": 326,
+    "sha256": "a3d9a9ed2fe36e547f93a56be5543d9f8bbef8c3520689ed96708b39ba71f7da"
+  },
+  {
+    "path": "historical-evidence/test-output/timing-methods/20260908-171055/01-high-ftm/digital.csv",
+    "bytes": 4391,
+    "sha256": "1dad146478d84519641966149f5bc6ad6263e3c1389f5a313669e840faf366a2"
+  },
+  {
+    "path": "historical-evidence/test-output/timing-methods/20260908-171055/01-high-ftm/result.json",
+    "bytes": 15116,
+    "sha256": "ebc00d8ae8899774461167791e4e32f6e6a57ede7fbda1fc05becc22ba21ff7b"
+  },
+  {
+    "path": "historical-evidence/test-output/timing-methods/20260908-171055/01-high-ftm/telemetry.json",
+    "bytes": 11410,
+    "sha256": "d2d837e77ba2a081a5f32628cc56a05d303f8c230b72cd01d9f9a0e3f6304844"
+  },
+  {
+    "path": "historical-evidence/test-output/timing-methods/20260908-171055/01-mcpwm-ftm/armed.json",
+    "bytes": 518,
+    "sha256": "ea63ba9c613bb5e5068effc38c0242d73345ffa2ff6e2c1aa0189b49f89d459e"
+  },
+  {
+    "path": "historical-evidence/test-output/timing-methods/20260908-171055/01-mcpwm-ftm/capture.sal",
+    "bytes": 4806,
+    "sha256": "31b2f3398ce3b364947550921a8891e9ed4ee8525853a89a35b6b27e6371da60"
+  },
+  {
+    "path": "historical-evidence/test-output/timing-methods/20260908-171055/01-mcpwm-ftm/configured.json",
+    "bytes": 330,
+    "sha256": "861142353c9dacb553aedcd32a2ac4eaf5a514035e3e822b14c2f11338007a85"
+  },
+  {
+    "path": "historical-evidence/test-output/timing-methods/20260908-171055/01-mcpwm-ftm/digital.csv",
+    "bytes": 4238,
+    "sha256": "23ce8a2ae05f58c30e70a3c21d2fc71e43fd799b5963713e1e7ff01c314ee900"
+  },
+  {
+    "path": "historical-evidence/test-output/timing-methods/20260908-171055/01-mcpwm-ftm/result.json",
+    "bytes": 15119,
+    "sha256": "21d01657d15a8b3c2bde3e0d532da5949c0962b0a268cdc5f0fce958fd5a1bc6"
+  },
+  {
+    "path": "historical-evidence/test-output/timing-methods/20260908-171055/01-mcpwm-ftm/telemetry.json",
+    "bytes": 11512,
+    "sha256": "cc6e50e4e6c9e07ac2aea6f1f74a77d8d06def54a64244bf15aed30a2933999c"
+  },
+  {
+    "path": "historical-evidence/test-output/timing-methods/20260908-171055/settings.json",
+    "bytes": 170,
+    "sha256": "133dddd5dad5661b5e7578554b78fae2a85b3bb6b38c5d0bf3c7881c4711eec7"
+  },
+  {
+    "path": "historical-evidence/test-output/timing-methods/20260908-171431/00-gptpair-ftm/armed.json",
+    "bytes": 518,
+    "sha256": "db4e22710aaf27adf58bbfb68dd7c64dea33da524e6ca4ff10f348ea7989c647"
+  },
+  {
+    "path": "historical-evidence/test-output/timing-methods/20260908-171431/00-gptpair-ftm/capture.sal",
+    "bytes": 7550,
+    "sha256": "62136bfcccdfcc6766fb8c7e3392732e366cdbdb1c1bff8356338e9794aa57ac"
+  },
+  {
+    "path": "historical-evidence/test-output/timing-methods/20260908-171431/00-gptpair-ftm/configured.json",
+    "bytes": 338,
+    "sha256": "1025e652c3d7e5dfed93059b72f48bb60cea10a810e0852ea5c730c0d021d4ce"
+  },
+  {
+    "path": "historical-evidence/test-output/timing-methods/20260908-171431/00-gptpair-ftm/digital.csv",
+    "bytes": 10376,
+    "sha256": "6b04ff7b5ddf669d92ab2b23305aa6869c500ec5b00470b59e83b49d44ed7e5d"
+  },
+  {
+    "path": "historical-evidence/test-output/timing-methods/20260908-171431/00-gptpair-ftm/result.json",
+    "bytes": 12505,
+    "sha256": "801161603f7df42d601bf6b3c7d81b39875b53993854b77bbc2dd8b39203fecf"
+  },
+  {
+    "path": "historical-evidence/test-output/timing-methods/20260908-171431/00-gptpair-ftm/telemetry.json",
+    "bytes": 12107,
+    "sha256": "f618fcd674f5c6bb70271fbecaaa9e4a9387432fcfbc237fb2153ec09ed1d15d"
+  },
+  {
+    "path": "historical-evidence/test-output/timing-methods/20260908-171431/00-high-ftm/armed.json",
+    "bytes": 518,
+    "sha256": "177a3350323e7e7fbc1ca053cad4c5ef68cf34aa5be87a31f069361a991b414d"
+  },
+  {
+    "path": "historical-evidence/test-output/timing-methods/20260908-171431/00-high-ftm/capture.sal",
+    "bytes": 7520,
+    "sha256": "51ffa35f71fa2b35da389fce580c600fd740b66f1c8908413a66e41e869d3cec"
+  },
+  {
+    "path": "historical-evidence/test-output/timing-methods/20260908-171431/00-high-ftm/configured.json",
+    "bytes": 326,
+    "sha256": "755830bca4cb9bc7e74483bef7181d3134d56fb65205e6df27800d3d750b16f0"
+  },
+  {
+    "path": "historical-evidence/test-output/timing-methods/20260908-171431/00-high-ftm/digital.csv",
+    "bytes": 10507,
+    "sha256": "eb3ffc1b43a1e6121c88f941cbeb5fb07e4c67d652a200928df270ca0722db85"
+  },
+  {
+    "path": "historical-evidence/test-output/timing-methods/20260908-171431/00-high-ftm/result.json",
+    "bytes": 12525,
+    "sha256": "9a97888cbcdc023ec16e8856a4ceaf277df69d45d7c42f26fa28da233556ba3a"
+  },
+  {
+    "path": "historical-evidence/test-output/timing-methods/20260908-171431/00-high-ftm/telemetry.json",
+    "bytes": 11939,
+    "sha256": "195aaf070743bdf2ad474f77b4cc00252e0804e56587dcae601e82172adf2839"
+  },
+  {
+    "path": "historical-evidence/test-output/timing-methods/20260908-171431/00-mcpwm-ftm/armed.json",
+    "bytes": 518,
+    "sha256": "9dfe701fd4e8d33f86c326a0485c27ac3e4b3a63c724ee3e965bfa1390623fce"
+  },
+  {
+    "path": "historical-evidence/test-output/timing-methods/20260908-171431/00-mcpwm-ftm/capture.sal",
+    "bytes": 6925,
+    "sha256": "5ec48b5a4407e72bd8fe25db629d2994d30dbdc15e3bf0934ba073b674731583"
+  },
+  {
+    "path": "historical-evidence/test-output/timing-methods/20260908-171431/00-mcpwm-ftm/configured.json",
+    "bytes": 330,
+    "sha256": "49b0a5f3f1d50dd8afce34affcd156daa9e11618f761cb9f9afbe285704d1c07"
+  },
+  {
+    "path": "historical-evidence/test-output/timing-methods/20260908-171431/00-mcpwm-ftm/digital.csv",
+    "bytes": 10353,
+    "sha256": "df421ce1f9f627bebaef566e8123b805a2124221c0094e59bbb05537383d7f45"
+  },
+  {
+    "path": "historical-evidence/test-output/timing-methods/20260908-171431/00-mcpwm-ftm/result.json",
+    "bytes": 12478,
+    "sha256": "b6304485b1daabfde83511883acf096abca8bbd4298c285e20f7db70040f8659"
+  },
+  {
+    "path": "historical-evidence/test-output/timing-methods/20260908-171431/00-mcpwm-ftm/telemetry.json",
+    "bytes": 11994,
+    "sha256": "fa978bb46a7899d98533f8a164db822e5f65870af0ff59b5594cc10a1ce8aa70"
+  },
+  {
+    "path": "historical-evidence/test-output/timing-methods/20260908-171431/00-task-ftm/armed.json",
+    "bytes": 518,
+    "sha256": "007092f52fec0abcd44aa16993848b047bdce7e757fbedf6becad8fad843e67d"
+  },
+  {
+    "path": "historical-evidence/test-output/timing-methods/20260908-171431/00-task-ftm/capture.sal",
+    "bytes": 7360,
+    "sha256": "0b448ccc63a93c194ccabd12c30196dde97b36391863208c74ab0c18414e4d4f"
+  },
+  {
+    "path": "historical-evidence/test-output/timing-methods/20260908-171431/00-task-ftm/configured.json",
+    "bytes": 326,
+    "sha256": "421ea45bc0cdfaea36b1e6c0544ef0f0c639418c529e4cd492d024a985ae5850"
+  },
+  {
+    "path": "historical-evidence/test-output/timing-methods/20260908-171431/00-task-ftm/digital.csv",
+    "bytes": 9936,
+    "sha256": "9027e7e997c2caefba57c969a41744176ac19edd798037fc3c1bcb5cfda96426"
+  },
+  {
+    "path": "historical-evidence/test-output/timing-methods/20260908-171431/00-task-ftm/result.json",
+    "bytes": 15168,
+    "sha256": "dbbb3f73e14d0f1b4aced18c547f31ae514a2faa567a2267510511fb5202b596"
+  },
+  {
+    "path": "historical-evidence/test-output/timing-methods/20260908-171431/00-task-ftm/telemetry.json",
+    "bytes": 11905,
+    "sha256": "5a224c1c546af78dbfa4f08f5f2317e3ee072df440bbf9d17b8a2c5df8790fc5"
+  },
+  {
+    "path": "historical-evidence/test-output/timing-methods/20260908-171431/settings.json",
+    "bytes": 212,
+    "sha256": "1ddfc1a53872836d97fa32adbdc88e7c7e46ce9e3871b5c6a0b126e4c5e810ee"
+  },
+  {
+    "path": "historical-evidence/test-output/timing-methods/20260908-172251/00-gptpair-ftm/armed.json",
+    "bytes": 510,
+    "sha256": "8eba300cd22824c7aa8528c283ea876cd517f42c1e01a04f9fddde49a898b336"
+  },
+  {
+    "path": "historical-evidence/test-output/timing-methods/20260908-172251/00-gptpair-ftm/capture.sal",
+    "bytes": 6409,
+    "sha256": "b4d212483b844c68ea53a1976e0ea6f6e38184e88155541fe135d2ded25278f6"
+  },
+  {
+    "path": "historical-evidence/test-output/timing-methods/20260908-172251/00-gptpair-ftm/configured.json",
+    "bytes": 334,
+    "sha256": "ed2ec274e10fb9b18e8443ef08eb04f0f3810f943e0c84363251e628ca8d0f99"
+  },
+  {
+    "path": "historical-evidence/test-output/timing-methods/20260908-172251/00-gptpair-ftm/digital.csv",
+    "bytes": 7908,
+    "sha256": "fe1a9f76ba551002f710d0b46540bf5ac73609651f7eec0c73bed4a67c1e2815"
+  },
+  {
+    "path": "historical-evidence/test-output/timing-methods/20260908-172251/00-gptpair-ftm/result.json",
+    "bytes": 11301,
+    "sha256": "b9e14e550327ea6b41cf162816a084c6a1a46991fa242ede8f137bc31a372cb7"
+  },
+  {
+    "path": "historical-evidence/test-output/timing-methods/20260908-172251/00-gptpair-ftm/telemetry.json",
+    "bytes": 11248,
+    "sha256": "cb5602b97421f9ee14f97ac5432afabdd29a6d563bb0f8064f8695e39db4f2e8"
+  },
+  {
+    "path": "historical-evidence/test-output/timing-methods/20260908-172251/00-mcpwm-ftm/armed.json",
+    "bytes": 518,
+    "sha256": "05ef9a82407efa3b7e02bcadbb9cf44a0657678de0ccc13ea413dea46bd3e581"
+  },
+  {
+    "path": "historical-evidence/test-output/timing-methods/20260908-172251/00-mcpwm-ftm/capture.sal",
+    "bytes": 5955,
+    "sha256": "3c1644199da8b5ffb7efff005ad233bd994c8322a6f9672f2fc6847fb3ff072f"
+  },
+  {
+    "path": "historical-evidence/test-output/timing-methods/20260908-172251/00-mcpwm-ftm/configured.json",
+    "bytes": 330,
+    "sha256": "38b5526d2913d9d8933049b17bd118db3cd3769072b885d4b188370736f36731"
+  },
+  {
+    "path": "historical-evidence/test-output/timing-methods/20260908-172251/00-mcpwm-ftm/digital.csv",
+    "bytes": 7758,
+    "sha256": "6af6f5e42c5353b7fccdf09c8626b39c13475b8a6def0088ca4a951ba12a23b3"
+  },
+  {
+    "path": "historical-evidence/test-output/timing-methods/20260908-172251/00-mcpwm-ftm/result.json",
+    "bytes": 11309,
+    "sha256": "935ac447fb34fefd281c3bb74d2aabacb936793b494038497240308be1c3e62e"
+  },
+  {
+    "path": "historical-evidence/test-output/timing-methods/20260908-172251/00-mcpwm-ftm/telemetry.json",
+    "bytes": 11452,
+    "sha256": "753ceabe0dede801ba3096d283cf11ed61e6432b4384ee2a8d03ca123730a4bc"
+  },
+  {
+    "path": "historical-evidence/test-output/timing-methods/20260908-172251/01-gptpair-ftm/armed.json",
+    "bytes": 518,
+    "sha256": "5dae321f29f915c3f1dffc8bf956f54c2787cc60a57d6b709111170ada9bafd6"
+  },
+  {
+    "path": "historical-evidence/test-output/timing-methods/20260908-172251/01-gptpair-ftm/capture.sal",
+    "bytes": 6471,
+    "sha256": "a1f011492278d825ec41109993e256672bc85b2eb700893ecca8c1ef15c6825f"
+  },
+  {
+    "path": "historical-evidence/test-output/timing-methods/20260908-172251/01-gptpair-ftm/configured.json",
+    "bytes": 338,
+    "sha256": "1025e652c3d7e5dfed93059b72f48bb60cea10a810e0852ea5c730c0d021d4ce"
+  },
+  {
+    "path": "historical-evidence/test-output/timing-methods/20260908-172251/01-gptpair-ftm/digital.csv",
+    "bytes": 7909,
+    "sha256": "24f94acc09681f3f23130ea41c20c3e8e1dadc8c808554496818189505633a68"
+  },
+  {
+    "path": "historical-evidence/test-output/timing-methods/20260908-172251/01-gptpair-ftm/result.json",
+    "bytes": 11016,
+    "sha256": "933208cdbbbd739732129f6506d01c49d3cf5bf991a82ff47147bf0813047746"
+  },
+  {
+    "path": "historical-evidence/test-output/timing-methods/20260908-172251/01-gptpair-ftm/telemetry.json",
+    "bytes": 11554,
+    "sha256": "ae292ed2b4acab77c26b4fdd20ec794145a9dc17fef23a1011e06e7ac995c8c4"
+  },
+  {
+    "path": "historical-evidence/test-output/timing-methods/20260908-172251/01-mcpwm-ftm/armed.json",
+    "bytes": 518,
+    "sha256": "b75d3c53f48e8986cf2a0186031db3c17f7185f785f4c82634641cc56aa85ea8"
+  },
+  {
+    "path": "historical-evidence/test-output/timing-methods/20260908-172251/01-mcpwm-ftm/capture.sal",
+    "bytes": 5965,
+    "sha256": "caddde92d00ff39a67e2bea5f308293b5b1f1763bcd4d3cfd2574b02e142d5f0"
+  },
+  {
+    "path": "historical-evidence/test-output/timing-methods/20260908-172251/01-mcpwm-ftm/configured.json",
+    "bytes": 330,
+    "sha256": "38b5526d2913d9d8933049b17bd118db3cd3769072b885d4b188370736f36731"
+  },
+  {
+    "path": "historical-evidence/test-output/timing-methods/20260908-172251/01-mcpwm-ftm/digital.csv",
+    "bytes": 7821,
+    "sha256": "f08e384bc33cea214422503c259cbf11de30feb0a0a3eb2920737555c5810e6f"
+  },
+  {
+    "path": "historical-evidence/test-output/timing-methods/20260908-172251/01-mcpwm-ftm/result.json",
+    "bytes": 11037,
+    "sha256": "0eb2043c2ab6969dcadb2cb4e2bd4b1e9272463e1e769699c793248714ff20e2"
+  },
+  {
+    "path": "historical-evidence/test-output/timing-methods/20260908-172251/01-mcpwm-ftm/telemetry.json",
+    "bytes": 11546,
+    "sha256": "2f7d06c474c9d20e30d042c7c6448fc43ce007827782d73cd8aab79b460a6b2b"
+  },
+  {
+    "path": "historical-evidence/test-output/timing-methods/20260908-172251/02-gptpair-ftm/armed.json",
+    "bytes": 518,
+    "sha256": "b6183214db1ab0325f7e17ed5603f90cbe23746a0fec1e7de7d05f4c14adce2f"
+  },
+  {
+    "path": "historical-evidence/test-output/timing-methods/20260908-172251/02-gptpair-ftm/capture.sal",
+    "bytes": 6413,
+    "sha256": "23bcf3ab7ff61a58291b0cc374598ce853a23d3b39f7697902b7c1643cc1cb21"
+  },
+  {
+    "path": "historical-evidence/test-output/timing-methods/20260908-172251/02-gptpair-ftm/configured.json",
+    "bytes": 338,
+    "sha256": "a1607689570dd14fedf9d9f95346ea7564479322cb5e513d466561b53b89cd0c"
+  },
+  {
+    "path": "historical-evidence/test-output/timing-methods/20260908-172251/02-gptpair-ftm/digital.csv",
+    "bytes": 7931,
+    "sha256": "c86fc4aff95760f417b6e5494d18137bc94efa515849ba08e951e9e82c473967"
+  },
+  {
+    "path": "historical-evidence/test-output/timing-methods/20260908-172251/02-gptpair-ftm/result.json",
+    "bytes": 10993,
+    "sha256": "5d3d688e0cec3c52cfef7716a884b067f5223a548e6ff61e8d3758699102db97"
+  },
+  {
+    "path": "historical-evidence/test-output/timing-methods/20260908-172251/02-gptpair-ftm/telemetry.json",
+    "bytes": 11554,
+    "sha256": "c523afb6d7cd0573f470a89f04693dc961528d439c4376d61e57c1ca4fcdea21"
+  },
+  {
+    "path": "historical-evidence/test-output/timing-methods/20260908-172251/02-mcpwm-ftm/armed.json",
+    "bytes": 518,
+    "sha256": "6109b132a137ec8d044400e98098f2c1b938daf71e014b6500a07f0120b59c48"
+  },
+  {
+    "path": "historical-evidence/test-output/timing-methods/20260908-172251/02-mcpwm-ftm/capture.sal",
+    "bytes": 6939,
+    "sha256": "1cef50e771bdd0ce9f06cde0552ed254a86a62e25e0cf193e65ca34ec374d728"
+  },
+  {
+    "path": "historical-evidence/test-output/timing-methods/20260908-172251/02-mcpwm-ftm/configured.json",
+    "bytes": 330,
+    "sha256": "38b5526d2913d9d8933049b17bd118db3cd3769072b885d4b188370736f36731"
+  },
+  {
+    "path": "historical-evidence/test-output/timing-methods/20260908-172251/02-mcpwm-ftm/digital.csv",
+    "bytes": 18559,
+    "sha256": "8030bebc593bc5cbe533ed29e258d4d84bf757f1a3cb0f93fc12cbda2b7aaeb9"
+  },
+  {
+    "path": "historical-evidence/test-output/timing-methods/20260908-172251/02-mcpwm-ftm/result.json",
+    "bytes": 15305,
+    "sha256": "403843c293ce8b3bcdd463111481a3ceae47fa893553cb3091906dd840a77d1a"
+  },
+  {
+    "path": "historical-evidence/test-output/timing-methods/20260908-172251/02-mcpwm-ftm/telemetry.json",
+    "bytes": 11546,
+    "sha256": "a44e4efd9b6c8c652eff7712debfc2acec4ac820a8aa979c6f37c43697b0a15e"
+  },
+  {
+    "path": "historical-evidence/test-output/timing-methods/20260908-172251/settings.json",
+    "bytes": 178,
+    "sha256": "76ad6f24f4ee854c87cfe4e4ad648adbc4bd35d170831eb7a48a687d3d868f5b"
+  },
+  {
+    "path": "historical-evidence/test-output/timing-methods/20260908-173016/00-gptpair-ftm/armed.json",
+    "bytes": 518,
+    "sha256": "196e3299c99df4b273f06543a8d46c2f9cf464a444a18f13e70a022edc60fbdb"
+  },
+  {
+    "path": "historical-evidence/test-output/timing-methods/20260908-173016/00-gptpair-ftm/configured.json",
+    "bytes": 338,
+    "sha256": "6349ec91f496d0706f2b8c0e398cab03af0cf5c386c2990102f2f02a035882e2"
+  },
+  {
+    "path": "historical-evidence/test-output/timing-methods/20260908-173016/00-gptpair-ftm/result.json",
+    "bytes": 816,
+    "sha256": "2b38e21dceaf7214dccc2b29bf2717d5b81b401975c3df88d349c66878a13f1a"
+  },
+  {
+    "path": "historical-evidence/test-output/timing-methods/20260908-173016/00-gptpair-ftm/telemetry.json",
+    "bytes": 6090,
+    "sha256": "9733635e91e8f865bbd7a83da73f22db09c01c71bb50d00402de1ed274577741"
+  },
+  {
+    "path": "historical-evidence/test-output/timing-methods/20260908-173016/00-mcpwm-ftm/armed.json",
+    "bytes": 518,
+    "sha256": "b18232b9cf3dabbb71f0828ad5e67b87b6870719700d73b078c076b2d14bd769"
+  },
+  {
+    "path": "historical-evidence/test-output/timing-methods/20260908-173016/00-mcpwm-ftm/capture.sal",
+    "bytes": 6921,
+    "sha256": "2c33646074f291627f7bf856dd92151a33d5cebacaa5a1c515c75ed4b140da02"
+  },
+  {
+    "path": "historical-evidence/test-output/timing-methods/20260908-173016/00-mcpwm-ftm/configured.json",
+    "bytes": 330,
+    "sha256": "a900aa896c392bf117fe6a5998b5b331696f3149156cff116b44c43fc1cbfb0b"
+  },
+  {
+    "path": "historical-evidence/test-output/timing-methods/20260908-173016/00-mcpwm-ftm/digital.csv",
+    "bytes": 10289,
+    "sha256": "43de7106c6f84bf416bc6f6ac4cfd38d19ba2161f5933bebb48d8bd7a9e31c2f"
+  },
+  {
+    "path": "historical-evidence/test-output/timing-methods/20260908-173016/00-mcpwm-ftm/result.json",
+    "bytes": 15305,
+    "sha256": "5f8c9cecfbf35be6057d09177d6cc2dcc67499a9dbc6133fdb258e9bf170b813"
+  },
+  {
+    "path": "historical-evidence/test-output/timing-methods/20260908-173016/00-mcpwm-ftm/telemetry.json",
+    "bytes": 11546,
+    "sha256": "3266206bcd2acd22645f768669cf2c2483881554bf97fa4f1ba9c6bd5dcd1093"
+  },
+  {
+    "path": "historical-evidence/test-output/timing-methods/20260908-173016/01-gptpair-ftm/armed.json",
+    "bytes": 518,
+    "sha256": "773b87a31953af35c64719d3d7dce61c32661313138ade1aa8b527785f7b0252"
+  },
+  {
+    "path": "historical-evidence/test-output/timing-methods/20260908-173016/01-gptpair-ftm/configured.json",
+    "bytes": 338,
+    "sha256": "a1607689570dd14fedf9d9f95346ea7564479322cb5e513d466561b53b89cd0c"
+  },
+  {
+    "path": "historical-evidence/test-output/timing-methods/20260908-173016/01-gptpair-ftm/result.json",
+    "bytes": 816,
+    "sha256": "61d65cc497c297bffa1cb0dd3e929554c0651bbb7a2a720900eb3c316881a727"
+  },
+  {
+    "path": "historical-evidence/test-output/timing-methods/20260908-173016/01-gptpair-ftm/telemetry.json",
+    "bytes": 10158,
+    "sha256": "f7d8a4e13ec0c7aab3cc0dea2ea54dc5664a5594370dd55750dd0aef8e4e2c7e"
+  },
+  {
+    "path": "historical-evidence/test-output/timing-methods/20260908-173016/01-mcpwm-ftm/armed.json",
+    "bytes": 518,
+    "sha256": "67f67767913e6baf134c98b5f6f5511c088c6907f3ac1ed22cd400be576d5906"
+  },
+  {
+    "path": "historical-evidence/test-output/timing-methods/20260908-173016/01-mcpwm-ftm/capture.sal",
+    "bytes": 6872,
+    "sha256": "43dd53e6108e595bf180f5274dc3f56ed6ed8281c2f4e008b50c28d99a86b570"
+  },
+  {
+    "path": "historical-evidence/test-output/timing-methods/20260908-173016/01-mcpwm-ftm/configured.json",
+    "bytes": 330,
+    "sha256": "972f35f57839c16a57374f2bf5a70fcb5ca5e39630f234ccff45a9ecfc06f817"
+  },
+  {
+    "path": "historical-evidence/test-output/timing-methods/20260908-173016/01-mcpwm-ftm/digital.csv",
+    "bytes": 10072,
+    "sha256": "ac143e593510f97c5009c82e40f0c4263e74cbac1a9ebbedeb9dddf9ba98f172"
+  },
+  {
+    "path": "historical-evidence/test-output/timing-methods/20260908-173016/01-mcpwm-ftm/result.json",
+    "bytes": 15284,
+    "sha256": "2f30b2ce484d2e14dffea9d558e436b572631fa45aba700cef75cfe646d22101"
+  },
+  {
+    "path": "historical-evidence/test-output/timing-methods/20260908-173016/01-mcpwm-ftm/telemetry.json",
+    "bytes": 11546,
+    "sha256": "11982de070ff5e07cb9eedd69a9e6308e65636efc7e904262ba1c431640a6975"
+  },
+  {
+    "path": "historical-evidence/test-output/timing-methods/20260908-173016/settings.json",
+    "bytes": 178,
+    "sha256": "f53fa51470194a5d942ff4a32bc5035a0775f21c48f5f5ed47ab40ec82fcb742"
+  },
+  {
+    "path": "historical-evidence/test-output/timing-methods/20260908-174044/00-mcpwm-ftm/armed.json",
+    "bytes": 516,
+    "sha256": "1f48264a391b66c536a42eef1b856ee78e128531738aa60d03825ab77e99a201"
+  },
+  {
+    "path": "historical-evidence/test-output/timing-methods/20260908-174044/00-mcpwm-ftm/configured.json",
+    "bytes": 326,
+    "sha256": "6ee28cc443dc88f108b70d3529ee9c4738d8bf1d907a1899b6b59a349cf98e9b"
+  },
+  {
+    "path": "historical-evidence/test-output/timing-methods/20260908-174044/00-mcpwm-ftm/result.json",
+    "bytes": 816,
+    "sha256": "681a62b242a939c6b66f11a8108b96e2d9d04abeb08b8f0d350f74fe3493ad2a"
+  },
+  {
+    "path": "historical-evidence/test-output/timing-methods/20260908-174044/00-mcpwm-ftm/telemetry.json",
+    "bytes": 11642,
+    "sha256": "c6ed894cd1a5b2b71fb2909b9b72f33f7d2b1e20f09b437a18235771257e969f"
+  },
+  {
+    "path": "historical-evidence/test-output/timing-methods/20260908-174044/settings.json",
+    "bytes": 158,
+    "sha256": "93ca483f067816161c280f0c06cebfa32bcc41d8f4c2cb4215a191c7b606fdba"
+  },
+  {
+    "path": "historical-evidence/test-output/timing-methods/20260908-174159/00-mcpwm-ftm/armed.json",
+    "bytes": 516,
+    "sha256": "c1ff31a8be3517e6c3629deb8928d716c9e4d108f4772786cbaa19b9f32c14fc"
+  },
+  {
+    "path": "historical-evidence/test-output/timing-methods/20260908-174159/00-mcpwm-ftm/capture.sal",
+    "bytes": 6977,
+    "sha256": "1307eef3612de52dff98f53d3b5f6ffafd496eeccf0489328686c5f3c29aa8e3"
+  },
+  {
+    "path": "historical-evidence/test-output/timing-methods/20260908-174159/00-mcpwm-ftm/configured.json",
+    "bytes": 330,
+    "sha256": "b735d145482df84759f919ec7fcdf652639a8a22111ea8973124562d258b2167"
+  },
+  {
+    "path": "historical-evidence/test-output/timing-methods/20260908-174159/00-mcpwm-ftm/digital.csv",
+    "bytes": 10137,
+    "sha256": "bc19f26d2a1e7910ae3c3d923760367b33ff73ab27ae9fc41d570c461f842650"
+  },
+  {
+    "path": "historical-evidence/test-output/timing-methods/20260908-174159/00-mcpwm-ftm/result.json",
+    "bytes": 15598,
+    "sha256": "dfcec89e82c4286c8b9494587810424f96a007ff37b7090638e738f08011e44b"
+  },
+  {
+    "path": "historical-evidence/test-output/timing-methods/20260908-174159/00-mcpwm-ftm/telemetry.json",
+    "bytes": 11898,
+    "sha256": "d609dec21db626e7386e88ff1848a1c47fefa573fa88880ccb4bc40f60bb4b1a"
+  },
+  {
+    "path": "historical-evidence/test-output/timing-methods/20260908-174159/settings.json",
+    "bytes": 158,
+    "sha256": "93ca483f067816161c280f0c06cebfa32bcc41d8f4c2cb4215a191c7b606fdba"
+  },
+  {
+    "path": "historical_manifest.json",
+    "bytes": 61637,
+    "sha256": "485c535fa1d13bf675e07c720f5ff6bbd6b8fa71de5f8d633c8ce062728fa240"
+  },
+  {
+    "path": "logic-after-user-reset.png",
+    "bytes": 169570,
+    "sha256": "8e4541db3b5a8e184a02725a6e5379785b7cd9ab274ed442db8eb8c7a536bb34"
+  },
+  {
+    "path": "logic-user-check.png",
+    "bytes": 212715,
+    "sha256": "6128bf9877b2b1bb9adb136fe2600d12e0d85be358a67dbf5570b23ecd460c30"
+  },
+  {
+    "path": "new-acquisition/20260909-063033-sync/capture.json",
+    "bytes": 131,
+    "sha256": "2abfa84f2bbef44c7147ae75e7c25587ec6ab00c8c5e64eeea6883d24509df82"
+  },
+  {
+    "path": "new-acquisition/20260909-063033-sync/capture.sal",
+    "bytes": 5367,
+    "sha256": "02585422c3c47c78bb4739c2bc033058c77e523ca70d510b503789edbeb23160"
+  },
+  {
+    "path": "new-acquisition/20260909-063033-sync/digital.csv",
+    "bytes": 1730,
+    "sha256": "d80efd996da1b91e3d7002f0a174b8b03a74a65963c3ab3430af889ae66aafbd"
+  },
+  {
+    "path": "new-acquisition/20260909-063251-campaign/00-00-mcpwm-ftm/armed.json",
+    "bytes": 511,
+    "sha256": "4ae95625f004c53d9fb611aece2e8cb4ddbc1c5655e4255bb54cd0a9a07e7164"
+  },
+  {
+    "path": "new-acquisition/20260909-063251-campaign/00-00-mcpwm-ftm/capture.sal",
+    "bytes": 29353,
+    "sha256": "3014ffb9f0bb1801b280474b20c785d6af3d07c1f1503ba5a44287ba01249348"
+  },
+  {
+    "path": "new-acquisition/20260909-063251-campaign/00-00-mcpwm-ftm/configured.json",
+    "bytes": 327,
+    "sha256": "5be5e0a441e19a8cfcebfdd36e6de13dfe916af91b97bcfdda32be01a726e7e2"
+  },
+  {
+    "path": "new-acquisition/20260909-063251-campaign/00-00-mcpwm-ftm/digital.csv",
+    "bytes": 177878,
+    "sha256": "21f2475e834717af2e02f751ed4668372cdb0785f14dc79027c2a578817f8bf1"
+  },
+  {
+    "path": "new-acquisition/20260909-063251-campaign/00-00-mcpwm-ftm/health-after.json",
+    "bytes": 1457,
+    "sha256": "933131d53ff049f7a43ba656fe12ffa044d0585824c14716d060adc47cbe0a83"
+  },
+  {
+    "path": "new-acquisition/20260909-063251-campaign/00-00-mcpwm-ftm/mode-armed.json",
+    "bytes": 879,
+    "sha256": "40491fbed6da13dd811c880a0048240e30d8baea42791de395aab67335161647"
+  },
+  {
+    "path": "new-acquisition/20260909-063251-campaign/00-00-mcpwm-ftm/result.json",
+    "bytes": 222,
+    "sha256": "0ea879952307acb05f49ce580edb2fb6793b65b92dd51d0bd86b17e194d637fc"
+  },
+  {
+    "path": "new-acquisition/20260909-063251-campaign/00-00-mcpwm-ftm/stopped-before.json",
+    "bytes": 159,
+    "sha256": "e186801fa11b3b658b43ea8292906c1f028a138332402f4430052db728987e67"
+  },
+  {
+    "path": "new-acquisition/20260909-063251-campaign/00-00-mcpwm-ftm/stopped.json",
+    "bytes": 511,
+    "sha256": "68f3a0316173ae4e956990e0ccb1251c0d84609f10e8e6460e6275d1ea5ade7b"
+  },
+  {
+    "path": "new-acquisition/20260909-063251-campaign/00-00-mcpwm-ftm/telemetry.json",
+    "bytes": 3900,
+    "sha256": "b59b7571d77359199bbc9168958167abdf845fc7a76c222e3f74dae827c5410b"
+  },
+  {
+    "path": "new-acquisition/20260909-063251-campaign/00-00-mcpwm-ftm/timing-diagnostic.json",
+    "bytes": 11649,
+    "sha256": "c2412362f133a4167a22b6670440b738f46245d99a704be7928a82ceb1c7985d"
+  },
+  {
+    "path": "new-acquisition/20260909-063251-campaign/device.json",
+    "bytes": 63,
+    "sha256": "f3825ea206067b31bbd5791ffaafb876038adbf275f3ccf0423a15598b6609e0"
+  },
+  {
+    "path": "new-acquisition/20260909-063251-campaign/final-config.json",
+    "bytes": 331,
+    "sha256": "536e104421a04dcc3b855584b367e587309104030022aef805f26baa517b8e82"
+  },
+  {
+    "path": "new-acquisition/20260909-063251-campaign/final-health.json",
+    "bytes": 1457,
+    "sha256": "19d1688eb3bcf7c4a4b763362d18bc57dd1671064a1965abc3e5314d065bfd92"
+  },
+  {
+    "path": "new-acquisition/20260909-063251-campaign/final-stop.json",
+    "bytes": 159,
+    "sha256": "e186801fa11b3b658b43ea8292906c1f028a138332402f4430052db728987e67"
+  },
+  {
+    "path": "new-acquisition/20260909-063251-campaign/health-before.json",
+    "bytes": 1468,
+    "sha256": "085ac7bc5b42ec59d9a974119076a02fea6658ad461a5107a986d431902b51c2"
+  },
+  {
+    "path": "new-acquisition/20260909-063251-campaign/health-restarted.json",
+    "bytes": 1459,
+    "sha256": "abf0c1439519dcd7977fc18e738a9e01263c10079a1e824d1a71ca008ea18ab3"
+  },
+  {
+    "path": "new-acquisition/20260909-063251-campaign/mode-before.json",
+    "bytes": 672,
+    "sha256": "3632d1f2cea4939efce3bbc55e5d3ea24aa91d51ef95f38dfb2ab4f0e74aba82"
+  },
+  {
+    "path": "new-acquisition/20260909-063251-campaign/mode-restarted.json",
+    "bytes": 235,
+    "sha256": "55ae9e179df2b7c286255dc7264801cf036557e0678c5603c38a87d8b5700c08"
+  },
+  {
+    "path": "new-acquisition/20260909-063251-campaign/nodes.json",
+    "bytes": 2318,
+    "sha256": "8b293f4b51dd9b0e414c74d6eff92a550d6ec31f565ff4dba0a4da1e33702227"
+  },
+  {
+    "path": "new-acquisition/20260909-063251-campaign/restart.json",
+    "bytes": 235,
+    "sha256": "55ae9e179df2b7c286255dc7264801cf036557e0678c5603c38a87d8b5700c08"
+  },
+  {
+    "path": "new-acquisition/20260909-063251-campaign/settings.json",
+    "bytes": 145,
+    "sha256": "a6543580ebde3af3f151f7903ca3f161778d9032acefd063909a64d24e3707c3"
+  },
+  {
+    "path": "new-acquisition/20260909-063455-campaign/00-00-mcpwm-mac/armed.json",
+    "bytes": 515,
+    "sha256": "0c98c05b289f5ab6009197dfaa03d06d7c2a5e8142ef3d04e78cafd881ade714"
+  },
+  {
+    "path": "new-acquisition/20260909-063455-campaign/00-00-mcpwm-mac/capture.sal",
+    "bytes": 416285,
+    "sha256": "c097231064c0f6ff1aa6f18c051d0775aa98b3dff5f5d03e6a82dd8986a78bb3"
+  },
+  {
+    "path": "new-acquisition/20260909-063455-campaign/00-00-mcpwm-mac/configured.json",
+    "bytes": 331,
+    "sha256": "f37690b022d12143730bb7fe3a3c61cb032874e0c3dcaf82dd7b4370863bae75"
+  },
+  {
+    "path": "new-acquisition/20260909-063455-campaign/00-00-mcpwm-mac/digital.csv",
+    "bytes": 10692492,
+    "sha256": "90d67e26f1019bc358b0e42b4e5b52785e53eb1dc4659208657a0d598f0974dd"
+  },
+  {
+    "path": "new-acquisition/20260909-063455-campaign/00-00-mcpwm-mac/health-after.json",
+    "bytes": 1461,
+    "sha256": "944583d7d11ded5da129d3cde73852663790d5399082a46d4e58851cb5e0dbf7"
+  },
+  {
+    "path": "new-acquisition/20260909-063455-campaign/00-00-mcpwm-mac/mode-armed.json",
+    "bytes": 883,
+    "sha256": "7580f9527d46e710e2f38ba20d9c08aad10e5b083ab12d4f95ad74f77d6a1d55"
+  },
+  {
+    "path": "new-acquisition/20260909-063455-campaign/00-00-mcpwm-mac/result.json",
+    "bytes": 223,
+    "sha256": "e32007a494dd0f513074900e82b98227ceeb5152e6de28e4a74862fb65307807"
+  },
+  {
+    "path": "new-acquisition/20260909-063455-campaign/00-00-mcpwm-mac/stopped-before.json",
+    "bytes": 159,
+    "sha256": "e186801fa11b3b658b43ea8292906c1f028a138332402f4430052db728987e67"
+  },
+  {
+    "path": "new-acquisition/20260909-063455-campaign/00-00-mcpwm-mac/stopped.json",
+    "bytes": 519,
+    "sha256": "df18844f56a92a278ba03bce2ad4478ad4ac1443c9c3a6a6b06a17d64e8591f8"
+  },
+  {
+    "path": "new-acquisition/20260909-063455-campaign/00-00-mcpwm-mac/telemetry.json",
+    "bytes": 11035,
+    "sha256": "db0e629e10ff47aa27a1b604126254819ad283582aa0359f86aa43f33794565e"
+  },
+  {
+    "path": "new-acquisition/20260909-063455-campaign/00-01-mcpwm-tsf/armed.json",
+    "bytes": 519,
+    "sha256": "7c5b279e9f28626ae92c12085ef70aba34e980634aedb7b97a93ae28e351f1ad"
+  },
+  {
+    "path": "new-acquisition/20260909-063455-campaign/00-01-mcpwm-tsf/capture.sal",
+    "bytes": 651799,
+    "sha256": "4da37f557017f902b0e6003e4772adc94604caa95bb1b8f95ee1a0e5df0c0126"
+  },
+  {
+    "path": "new-acquisition/20260909-063455-campaign/00-01-mcpwm-tsf/configured.json",
+    "bytes": 331,
+    "sha256": "e9a2dfea993d72bcb0c2889a943f8f8ae0450218f48f78e939391c0f59c1d3d5"
+  },
+  {
+    "path": "new-acquisition/20260909-063455-campaign/00-01-mcpwm-tsf/digital.csv",
+    "bytes": 11172512,
+    "sha256": "3a3a95985b69e5145c335c5dc9e4bd5002c138a8798747d28885e7ef46e92820"
+  },
+  {
+    "path": "new-acquisition/20260909-063455-campaign/00-01-mcpwm-tsf/health-after.json",
+    "bytes": 1461,
+    "sha256": "736a8b82628aefdef8eefe8129e395cac59d87a9a597fd6a77bd4d564fd3a777"
+  },
+  {
+    "path": "new-acquisition/20260909-063455-campaign/00-01-mcpwm-tsf/mode-armed.json",
+    "bytes": 887,
+    "sha256": "2af9af4611e6f40c3781911e48016f193773b2a811fc80d01bb8587127a0f542"
+  },
+  {
+    "path": "new-acquisition/20260909-063455-campaign/00-01-mcpwm-tsf/result.json",
+    "bytes": 223,
+    "sha256": "6bea1d6d8c69f81c30a0ba199a0d3e5de20270e297333f3d8e27e08ea19dc93f"
+  },
+  {
+    "path": "new-acquisition/20260909-063455-campaign/00-01-mcpwm-tsf/stopped-before.json",
+    "bytes": 159,
+    "sha256": "e186801fa11b3b658b43ea8292906c1f028a138332402f4430052db728987e67"
+  },
+  {
+    "path": "new-acquisition/20260909-063455-campaign/00-01-mcpwm-tsf/stopped.json",
+    "bytes": 519,
+    "sha256": "dcaf818279e8c9c1ee5aa0a24a4f96323a4645f4f8a53c9cda2124309c8840f3"
+  },
+  {
+    "path": "new-acquisition/20260909-063455-campaign/00-01-mcpwm-tsf/telemetry.json",
+    "bytes": 11886,
+    "sha256": "3e802330e1402896e9daf516016ff2192b0760dd1c231e64936c1a61c00caa70"
+  },
+  {
+    "path": "new-acquisition/20260909-063455-campaign/00-02-mcpwm-ftm/armed.json",
+    "bytes": 519,
+    "sha256": "6713807e858a5fa7ccef82a0277b8da8699da0617006f931041c49bb05d58245"
+  },
+  {
+    "path": "new-acquisition/20260909-063455-campaign/00-02-mcpwm-ftm/capture.sal",
+    "bytes": 809139,
+    "sha256": "ffe89cbfba0c5b97cf90250a85d189d096a748f619dac17d5b1de0073450c6c8"
+  },
+  {
+    "path": "new-acquisition/20260909-063455-campaign/00-02-mcpwm-ftm/configured.json",
+    "bytes": 331,
+    "sha256": "da7054c6fc7a81157ec382f5a038bf89dce1cd30d09e2778e48e24b98ee48f20"
+  },
+  {
+    "path": "new-acquisition/20260909-063455-campaign/00-02-mcpwm-ftm/digital.csv",
+    "bytes": 26475972,
+    "sha256": "babcebbcdc55cdfb1eb163d497d37e8edb9caa3f80ad940f0361e5f714e14fc4"
+  },
+  {
+    "path": "new-acquisition/20260909-063455-campaign/00-02-mcpwm-ftm/health-after.json",
+    "bytes": 1461,
+    "sha256": "d1426fd257d51ca264b492af3e2e1ecebe069ff7966459e1df623c352a13ce03"
+  },
+  {
+    "path": "new-acquisition/20260909-063455-campaign/00-02-mcpwm-ftm/mode-armed.json",
+    "bytes": 887,
+    "sha256": "b00bc218a2520dbbad9797ce5d9afa31765080c526f460c6d3f2711488ce2e99"
+  },
+  {
+    "path": "new-acquisition/20260909-063455-campaign/00-02-mcpwm-ftm/result.json",
+    "bytes": 223,
+    "sha256": "b1b132b3d83598a9b4cc396e7d02b08401526c0116065c82c00e9524c63bd11b"
+  },
+  {
+    "path": "new-acquisition/20260909-063455-campaign/00-02-mcpwm-ftm/stopped-before.json",
+    "bytes": 159,
+    "sha256": "e186801fa11b3b658b43ea8292906c1f028a138332402f4430052db728987e67"
+  },
+  {
+    "path": "new-acquisition/20260909-063455-campaign/00-02-mcpwm-ftm/stopped.json",
+    "bytes": 519,
+    "sha256": "bb56365b303dad93f9f03984ec1a2b728fa961d0dd55dfe42ac97c24c8750d80"
+  },
+  {
+    "path": "new-acquisition/20260909-063455-campaign/00-02-mcpwm-ftm/telemetry.json",
+    "bytes": 11835,
+    "sha256": "786817419fc146eb43452627b326519a667fe2384d546eccbdce618f3a241a98"
+  },
+  {
+    "path": "new-acquisition/20260909-063455-campaign/00-03-mcpwm-frozen/armed.json",
+    "bytes": 519,
+    "sha256": "9955bfddca1ddc6d15a0012effb2d2e8f94612668619202eb7a022d352346307"
+  },
+  {
+    "path": "new-acquisition/20260909-063455-campaign/00-03-mcpwm-frozen/capture.sal",
+    "bytes": 422523,
+    "sha256": "ccbe9f9caf44e72f5d743f4f04301416452cc46b6713032208be971bac6915e8"
+  },
+  {
+    "path": "new-acquisition/20260909-063455-campaign/00-03-mcpwm-frozen/configured.json",
+    "bytes": 343,
+    "sha256": "7502ff4570192a27851e280380b1e83fc9624501138a456c1a8597a646ba6c4b"
+  },
+  {
+    "path": "new-acquisition/20260909-063455-campaign/00-03-mcpwm-frozen/digital.csv",
+    "bytes": 14580633,
+    "sha256": "6045a8a31868562d4e9f2e88a24e9ed5d8073399d424c0128fc2e7c168f40f8d"
+  },
+  {
+    "path": "new-acquisition/20260909-063455-campaign/00-03-mcpwm-frozen/health-after.json",
+    "bytes": 1459,
+    "sha256": "2a15e59bcae8a01e865ba313024894c4b07b2d379580d094ce934450aad87f5a"
+  },
+  {
+    "path": "new-acquisition/20260909-063455-campaign/00-03-mcpwm-frozen/mode-armed.json",
+    "bytes": 887,
+    "sha256": "ac069410c9dfe0278a40078120cb3bf5078652db4556946f0916d1e7230329e5"
+  },
+  {
+    "path": "new-acquisition/20260909-063455-campaign/00-03-mcpwm-frozen/result.json",
+    "bytes": 226,
+    "sha256": "f126583574994d87ba334e72634276c830b2273f2bbde5bb52e3fb27e506e870"
+  },
+  {
+    "path": "new-acquisition/20260909-063455-campaign/00-03-mcpwm-frozen/stopped-before.json",
+    "bytes": 159,
+    "sha256": "e186801fa11b3b658b43ea8292906c1f028a138332402f4430052db728987e67"
+  },
+  {
+    "path": "new-acquisition/20260909-063455-campaign/00-03-mcpwm-frozen/stopped.json",
+    "bytes": 453,
+    "sha256": "e55652ad1abc81d798b79adec76ed8b385dbc5ba93ce42f5fe2a129cf75561ca"
+  },
+  {
+    "path": "new-acquisition/20260909-063455-campaign/00-03-mcpwm-frozen/telemetry.json",
+    "bytes": 8885,
+    "sha256": "f87566511b8a68e25ccdf8cec82283a1e1a7d52af952a2b74f239e9bc2af401a"
+  },
+  {
+    "path": "new-acquisition/20260909-063455-campaign/device.json",
+    "bytes": 63,
+    "sha256": "f3825ea206067b31bbd5791ffaafb876038adbf275f3ccf0423a15598b6609e0"
+  },
+  {
+    "path": "new-acquisition/20260909-063455-campaign/final-config.json",
+    "bytes": 312,
+    "sha256": "174184460ae6ecf4c864cecb7bbeed814e0208c3829f3e155c6649e0d8da0653"
+  },
+  {
+    "path": "new-acquisition/20260909-063455-campaign/final-health.json",
+    "bytes": 1459,
+    "sha256": "8ceac8212370dc6356a37a517c68952f89380455dc33e74dea33ce80fdcadcfc"
+  },
+  {
+    "path": "new-acquisition/20260909-063455-campaign/final-stop.json",
+    "bytes": 183,
+    "sha256": "a8c7b82f324f390c4667bd6209f62318507ead68ef98924b18cab6ec99da7ea1"
+  },
+  {
+    "path": "new-acquisition/20260909-063455-campaign/health-before.json",
+    "bytes": 1459,
+    "sha256": "1e74320bc06bf47b36a6517cc333cb611f7279793be5a1cd80647d1f58b33dfd"
+  },
+  {
+    "path": "new-acquisition/20260909-063455-campaign/mode-before.json",
+    "bytes": 883,
+    "sha256": "a1b6f6e0e6c54c20afaf3e8dd657e247080585e9c90190045b78ffa1b4887cf3"
+  },
+  {
+    "path": "new-acquisition/20260909-063455-campaign/nodes.json",
+    "bytes": 2318,
+    "sha256": "0e56082bba26b04024cd4bb70f7458e39e09246dd96eb07b3212812ec8c0d8ed"
+  },
+  {
+    "path": "new-acquisition/20260909-063455-campaign/settings.json",
+    "bytes": 186,
+    "sha256": "04f11c328e3d1002bcfa0e62dd8d6d59e8ece4a0e88b2b66364fe8c07d0fa9ac"
+  },
+  {
+    "path": "new-acquisition/20260909-063944-static/16000000-high/capture.sal",
+    "bytes": 31272,
+    "sha256": "c6ff804f314767480dc3a9693ab220c3e962daeb1e9a4fb84fb005ecaf11b684"
+  },
+  {
+    "path": "new-acquisition/20260909-063944-static/16000000-high/command.json",
+    "bytes": 263,
+    "sha256": "7a916441f7002df00af902cc28910f2b54cc8b5f38b3a9c6b246eb477b1e9021"
+  },
+  {
+    "path": "new-acquisition/20260909-063944-static/16000000-high/digital.csv",
+    "bytes": 1350497,
+    "sha256": "a480f88735575af487e50dac2d61643a88aab70c6aa9c0122960c72e6d97565c"
+  },
+  {
+    "path": "new-acquisition/20260909-063944-static/16000000-high/result.json",
+    "bytes": 216,
+    "sha256": "ff9a6f154748e2dacaae20769a19928357f4f194f9badbea230a6e4afe25a07f"
+  },
+  {
+    "path": "new-acquisition/20260909-063944-static/16000000-low/capture.sal",
+    "bytes": 11246,
+    "sha256": "90082baae1f7a2cf537cee54e0450bde3535b0c061a68ac1a4600f6aafe4dc66"
+  },
+  {
+    "path": "new-acquisition/20260909-063944-static/16000000-low/command.json",
+    "bytes": 263,
+    "sha256": "171af2b6e75b122fcbc77cba6050b11c99445b128ef97e356aafd7abaf0fc092"
+  },
+  {
+    "path": "new-acquisition/20260909-063944-static/16000000-low/digital.csv",
+    "bytes": 62000,
+    "sha256": "e373a123bb04da7e7c3877855ebe3aca1306c4eb7f501a19912cfeb02287f24d"
+  },
+  {
+    "path": "new-acquisition/20260909-063944-static/16000000-low/result.json",
+    "bytes": 217,
+    "sha256": "343e6d1520aa8f682ef6f298f789f951efd67e1173c271fe9f9fe43be5c415f4"
+  },
+  {
+    "path": "new-acquisition/20260909-063944-static/8000000-high/capture.sal",
+    "bytes": 10560,
+    "sha256": "d490fcc07472c1ab8867f4789b8c7a59afbb689726bff60bba52bee5a9f09996"
+  },
+  {
+    "path": "new-acquisition/20260909-063944-static/8000000-high/command.json",
+    "bytes": 263,
+    "sha256": "7a916441f7002df00af902cc28910f2b54cc8b5f38b3a9c6b246eb477b1e9021"
+  },
+  {
+    "path": "new-acquisition/20260909-063944-static/8000000-high/digital.csv",
+    "bytes": 271223,
+    "sha256": "c69a82cdfa2fa369eadfb26e4c39e82cc2bce8622efa0d742cbc840f9ccfad51"
+  },
+  {
+    "path": "new-acquisition/20260909-063944-static/8000000-high/result.json",
+    "bytes": 214,
+    "sha256": "3121d89546a56d1f000d6daab19918607c60ad036ef90fb9df66952e38cd5ff0"
+  },
+  {
+    "path": "new-acquisition/20260909-063944-static/8000000-low/capture.sal",
+    "bytes": 32514,
+    "sha256": "ca6a24b7eef6c05b8222a242e0610588d2f328d7d63dbffb9e0b61148aba470b"
+  },
+  {
+    "path": "new-acquisition/20260909-063944-static/8000000-low/command.json",
+    "bytes": 263,
+    "sha256": "171af2b6e75b122fcbc77cba6050b11c99445b128ef97e356aafd7abaf0fc092"
+  },
+  {
+    "path": "new-acquisition/20260909-063944-static/8000000-low/digital.csv",
+    "bytes": 1144487,
+    "sha256": "e156928e8c703e72380482e190a19f5a9db4fe0bc36c78100b0a1be95ec4ed3e"
+  },
+  {
+    "path": "new-acquisition/20260909-063944-static/8000000-low/result.json",
+    "bytes": 219,
+    "sha256": "6edd18483fed9a84954e478d3365d5f2693184945370a760f3995a243f5364be"
+  },
+  {
+    "path": "new-acquisition/20260909-063944-static/restored-low.json",
+    "bytes": 263,
+    "sha256": "171af2b6e75b122fcbc77cba6050b11c99445b128ef97e356aafd7abaf0fc092"
+  },
+  {
+    "path": "new-acquisition/20260909-063944-static/stopped.json",
+    "bytes": 159,
+    "sha256": "e186801fa11b3b658b43ea8292906c1f028a138332402f4430052db728987e67"
+  },
+  {
+    "path": "new-acquisition/20260909-064741-static/16000000-high/capture.sal",
+    "bytes": 3014,
+    "sha256": "e7a060e47e848e704533ce99dff7a6bfb20455c3ed4acd1969e84216f7942aea"
+  },
+  {
+    "path": "new-acquisition/20260909-064741-static/16000000-high/command.json",
+    "bytes": 263,
+    "sha256": "7a916441f7002df00af902cc28910f2b54cc8b5f38b3a9c6b246eb477b1e9021"
+  },
+  {
+    "path": "new-acquisition/20260909-064741-static/16000000-high/digital.csv",
+    "bytes": 113,
+    "sha256": "d8d487e0619c9da65c775e9e6f0849b8ede90a0c2497be8c52dd2da128d9ded4"
+  },
+  {
+    "path": "new-acquisition/20260909-064741-static/16000000-high/result.json",
+    "bytes": 209,
+    "sha256": "bfb999fad2779606f35585b5e55d8f02117bab721832b2d5385c2989618d4f59"
+  },
+  {
+    "path": "new-acquisition/20260909-064741-static/16000000-low/capture.sal",
+    "bytes": 3011,
+    "sha256": "f84dcb1135dd21e18ae4e78b988888669e1e15571bf7a3ac32d105be06cbba5c"
+  },
+  {
+    "path": "new-acquisition/20260909-064741-static/16000000-low/command.json",
+    "bytes": 263,
+    "sha256": "171af2b6e75b122fcbc77cba6050b11c99445b128ef97e356aafd7abaf0fc092"
+  },
+  {
+    "path": "new-acquisition/20260909-064741-static/16000000-low/digital.csv",
+    "bytes": 92,
+    "sha256": "db7288f6f11c55552cd8bbf54f354cb1b13b0f0d37db8f297c8e4015373690f0"
+  },
+  {
+    "path": "new-acquisition/20260909-064741-static/16000000-low/result.json",
+    "bytes": 180,
+    "sha256": "49912eda5b70790ccf9048112d4c593343caac53889165e3a825a884aa9f317e"
+  },
+  {
+    "path": "new-acquisition/20260909-064741-static/8000000-high/capture.sal",
+    "bytes": 3007,
+    "sha256": "0856c071d034e9ceba0ba7bdd0ad6c3637a17432f27386fbc2166027ab5458ee"
+  },
+  {
+    "path": "new-acquisition/20260909-064741-static/8000000-high/command.json",
+    "bytes": 263,
+    "sha256": "7a916441f7002df00af902cc28910f2b54cc8b5f38b3a9c6b246eb477b1e9021"
+  },
+  {
+    "path": "new-acquisition/20260909-064741-static/8000000-high/digital.csv",
+    "bytes": 113,
+    "sha256": "7848efc854f14072c778cbc55bee926b2784baf4f3f45a9b2134fa3992f7ab67"
+  },
+  {
+    "path": "new-acquisition/20260909-064741-static/8000000-high/result.json",
+    "bytes": 208,
+    "sha256": "4c6c39f51a47eaa044958c2ea6f9e19c3862a9cbf139ff7ba5568666db858fd2"
+  },
+  {
+    "path": "new-acquisition/20260909-064741-static/8000000-low/capture.sal",
+    "bytes": 3006,
+    "sha256": "1eefb0465261453101fa60ed6513a5a1f60d7a078babc4ba74b5bbdb52287daa"
+  },
+  {
+    "path": "new-acquisition/20260909-064741-static/8000000-low/command.json",
+    "bytes": 263,
+    "sha256": "171af2b6e75b122fcbc77cba6050b11c99445b128ef97e356aafd7abaf0fc092"
+  },
+  {
+    "path": "new-acquisition/20260909-064741-static/8000000-low/digital.csv",
+    "bytes": 113,
+    "sha256": "daf6dd4441edad9aeb8dddfb5d851815989f32d47720ed482e265e295788fe7a"
+  },
+  {
+    "path": "new-acquisition/20260909-064741-static/8000000-low/result.json",
+    "bytes": 207,
+    "sha256": "13a2c18c8390b24f606cb9e7008b562096be8bbb06fe677320c694631d01b14f"
+  },
+  {
+    "path": "new-acquisition/20260909-064741-static/restored-low.json",
+    "bytes": 263,
+    "sha256": "171af2b6e75b122fcbc77cba6050b11c99445b128ef97e356aafd7abaf0fc092"
+  },
+  {
+    "path": "new-acquisition/20260909-064741-static/stopped.json",
+    "bytes": 159,
+    "sha256": "e186801fa11b3b658b43ea8292906c1f028a138332402f4430052db728987e67"
+  },
+  {
+    "path": "new-acquisition/20260909-064935-campaign/00-00-mcpwm-ntp/armed.json",
+    "bytes": 513,
+    "sha256": "7221b479826389418baa180138f5b8602a76ffc5d516e5578ebb7fc356dd8fe4"
+  },
+  {
+    "path": "new-acquisition/20260909-064935-campaign/00-00-mcpwm-ntp/capture.sal",
+    "bytes": 3496,
+    "sha256": "d1d99f5999b55968728b3d730eaa5e8e9703e880184417195fc1cb90ef04d2e2"
+  },
+  {
+    "path": "new-acquisition/20260909-064935-campaign/00-00-mcpwm-ntp/configured.json",
+    "bytes": 703,
+    "sha256": "4b14704dc6aed1b1eedcd8d8e20eaa725f79eb10b2ad91c552d5b9f631115d2d"
+  },
+  {
+    "path": "new-acquisition/20260909-064935-campaign/00-00-mcpwm-ntp/digital.csv",
+    "bytes": 932,
+    "sha256": "a15d2550439e40260effcfff37f311bc11ef6c03074a7db4b627647346e62598"
+  },
+  {
+    "path": "new-acquisition/20260909-064935-campaign/00-00-mcpwm-ntp/health-after.json",
+    "bytes": 1461,
+    "sha256": "f0b5620696a0fab9913a48ce56ca26eadb2ba26853bd52db44b6619e7370f409"
+  },
+  {
+    "path": "new-acquisition/20260909-064935-campaign/00-00-mcpwm-ntp/mode-armed.json",
+    "bytes": 881,
+    "sha256": "1a36ab138be9a11ccd83974cd0881b17e0a8977437ace45a4e3896e95031613a"
+  },
+  {
+    "path": "new-acquisition/20260909-064935-campaign/00-00-mcpwm-ntp/ntp-endpoints.json",
+    "bytes": 527,
+    "sha256": "72515d17ab7cd98b3fee0458fbf86d69212a34ae63694992aafec35dd16ea457"
+  },
+  {
+    "path": "new-acquisition/20260909-064935-campaign/00-00-mcpwm-ntp/ntp-pre-reset.json",
+    "bytes": 327,
+    "sha256": "5be5e0a441e19a8cfcebfdd36e6de13dfe916af91b97bcfdda32be01a726e7e2"
+  },
+  {
+    "path": "new-acquisition/20260909-064935-campaign/00-00-mcpwm-ntp/result.json",
+    "bytes": 222,
+    "sha256": "ed9544143d41f0802c83a8d54bda0a940d2aed01733dce5d639a11e7b6563cfb"
+  },
+  {
+    "path": "new-acquisition/20260909-064935-campaign/00-00-mcpwm-ntp/stopped-before.json",
+    "bytes": 159,
+    "sha256": "e186801fa11b3b658b43ea8292906c1f028a138332402f4430052db728987e67"
+  },
+  {
+    "path": "new-acquisition/20260909-064935-campaign/00-00-mcpwm-ntp/stopped.json",
+    "bytes": 513,
+    "sha256": "bc9d15b3ad4f0ac521289462a788bc2914a51c8011279487bd67d5bc13276f91"
+  },
+  {
+    "path": "new-acquisition/20260909-064935-campaign/00-00-mcpwm-ntp/telemetry.json",
+    "bytes": 7056,
+    "sha256": "ab42657b9cba5e02d0d480f3abaa319189836d1c08f3d5d883691a58b19dbf7c"
+  },
+  {
+    "path": "new-acquisition/20260909-064935-campaign/00-00-mcpwm-ntp/timing-armed.json",
+    "bytes": 751,
+    "sha256": "7239966d0f819430056d02128cbd498098f0bd442bc89ba07b27308625405670"
+  },
+  {
+    "path": "new-acquisition/20260909-064935-campaign/00-01-mcpwm-ftm/armed.json",
+    "bytes": 513,
+    "sha256": "bc63686b2df08182cad428aab9a2e0856ecbf9d9fddc6eee52957e45d19bddeb"
+  },
+  {
+    "path": "new-acquisition/20260909-064935-campaign/00-01-mcpwm-ftm/capture.sal",
+    "bytes": 3487,
+    "sha256": "3e4cefefd3adca7a582d457ba029a0747acf9d7764e3835a32fc8df514129001"
+  },
+  {
+    "path": "new-acquisition/20260909-064935-campaign/00-01-mcpwm-ftm/configured.json",
+    "bytes": 331,
+    "sha256": "98472dcfbcc249c8f279e09300f0af8c7121e4c76aa30ceabb9e2829f535d9c5"
+  },
+  {
+    "path": "new-acquisition/20260909-064935-campaign/00-01-mcpwm-ftm/digital.csv",
+    "bytes": 953,
+    "sha256": "c06d1ac3161b93a3ea207051149ba81753ab657e569019aa4997ada21eb083d6"
+  },
+  {
+    "path": "new-acquisition/20260909-064935-campaign/00-01-mcpwm-ftm/health-after.json",
+    "bytes": 1461,
+    "sha256": "50d2a7b1c1b86341de63a5c0f6f93e7b721b8ed18ea1d9841db7cf14838bb8e0"
+  },
+  {
+    "path": "new-acquisition/20260909-064935-campaign/00-01-mcpwm-ftm/mode-armed.json",
+    "bytes": 881,
+    "sha256": "c9fb3c1426e0352294bcbb327ece9785723cf0e47a9f6d8e791890960cf95b0f"
+  },
+  {
+    "path": "new-acquisition/20260909-064935-campaign/00-01-mcpwm-ftm/result.json",
+    "bytes": 222,
+    "sha256": "6f4ea3cb2e1f520afeb94776dbd348391b0d2ba4fad35a065530c0474cc74d4a"
+  },
+  {
+    "path": "new-acquisition/20260909-064935-campaign/00-01-mcpwm-ftm/stopped-before.json",
+    "bytes": 159,
+    "sha256": "e186801fa11b3b658b43ea8292906c1f028a138332402f4430052db728987e67"
+  },
+  {
+    "path": "new-acquisition/20260909-064935-campaign/00-01-mcpwm-ftm/stopped.json",
+    "bytes": 513,
+    "sha256": "0fac0e48126bc9f34c895e81483e884ba7d76a5981d5da9bf80b01aad28f6172"
+  },
+  {
+    "path": "new-acquisition/20260909-064935-campaign/00-01-mcpwm-ftm/telemetry.json",
+    "bytes": 4145,
+    "sha256": "887e71c9442393e23b1f287d3618536c9cb24fd36b1b58a95159568281dc93da"
+  },
+  {
+    "path": "new-acquisition/20260909-064935-campaign/00-01-mcpwm-ftm/timing-armed.json",
+    "bytes": 327,
+    "sha256": "b72946ba78079735da2a15fff19b2b574f5d1bcc8ccfc23c0ebcdb79acaa8c05"
+  },
+  {
+    "path": "new-acquisition/20260909-064935-campaign/device.json",
+    "bytes": 63,
+    "sha256": "f3825ea206067b31bbd5791ffaafb876038adbf275f3ccf0423a15598b6609e0"
+  },
+  {
+    "path": "new-acquisition/20260909-064935-campaign/final-config.json",
+    "bytes": 331,
+    "sha256": "d3e54f5bafcae71a8a526d40745be8f4888c6f3cd101b11b73814d622df30e16"
+  },
+  {
+    "path": "new-acquisition/20260909-064935-campaign/final-health.json",
+    "bytes": 1461,
+    "sha256": "30b9c559be15d88d21a8e315274dddf3de2048a52a6f029e1a6a6814bbfe6c3d"
+  },
+  {
+    "path": "new-acquisition/20260909-064935-campaign/final-stop.json",
+    "bytes": 159,
+    "sha256": "e186801fa11b3b658b43ea8292906c1f028a138332402f4430052db728987e67"
+  },
+  {
+    "path": "new-acquisition/20260909-064935-campaign/health-before.json",
+    "bytes": 1461,
+    "sha256": "fa420f926699e5334e5339f8c389843996eaab57e8c22f24ab9a8f62cd1fd472"
+  },
+  {
+    "path": "new-acquisition/20260909-064935-campaign/mode-before.json",
+    "bytes": 881,
+    "sha256": "f4f6927033a455433c237a61449a9e81e76c2f8be0f3fa13568ab39a87eafe88"
+  },
+  {
+    "path": "new-acquisition/20260909-064935-campaign/nodes.json",
+    "bytes": 2318,
+    "sha256": "541e2edc0d3a70fccf990ac762d5df0ada91ec9bbb8b151c7ae304b14e3a2c65"
+  },
+  {
+    "path": "new-acquisition/20260909-064935-campaign/settings.json",
+    "bytes": 158,
+    "sha256": "f3261a68d3faf73a2da9c71a5fa4c874d5a86afce35f610ccb1677f0446b0b99"
+  },
+  {
+    "path": "new-acquisition/20260909-065110-campaign/00-00-mcpwm-ftm/armed.json",
+    "bytes": 519,
+    "sha256": "9140e8302c49bb51981d2e9bb9a923db7256495498a0425120194ceb34d595ea"
+  },
+  {
+    "path": "new-acquisition/20260909-065110-campaign/00-00-mcpwm-ftm/capture.sal",
+    "bytes": 6874,
+    "sha256": "deaf64901a5a40a735b770a7e83d523f88edf6dc213a9f32f0ec924dd3ed9ffd"
+  },
+  {
+    "path": "new-acquisition/20260909-065110-campaign/00-00-mcpwm-ftm/configured.json",
+    "bytes": 331,
+    "sha256": "d3e54f5bafcae71a8a526d40745be8f4888c6f3cd101b11b73814d622df30e16"
+  },
+  {
+    "path": "new-acquisition/20260909-065110-campaign/00-00-mcpwm-ftm/digital.csv",
+    "bytes": 10049,
+    "sha256": "55874b216654b6f370178b3d5b299a4bbb182ebe1711f4639931d2cf0e6c3d95"
+  },
+  {
+    "path": "new-acquisition/20260909-065110-campaign/00-00-mcpwm-ftm/health-after.json",
+    "bytes": 1464,
+    "sha256": "cdf06cba579f8be5537eb4383eeb05764d87c9b3962a316f28e1a4d9a02bb1cf"
+  },
+  {
+    "path": "new-acquisition/20260909-065110-campaign/00-00-mcpwm-ftm/mode-armed.json",
+    "bytes": 887,
+    "sha256": "4cc87ff2ce42d3f6c49b6ab0d5c6683485bed1ec700172adf94dfe9c06d5e3f5"
+  },
+  {
+    "path": "new-acquisition/20260909-065110-campaign/00-00-mcpwm-ftm/result.json",
+    "bytes": 223,
+    "sha256": "5c2a55490363a142bb91969bacee2796595b2fe2363a51f39724ee47797392a3"
+  },
+  {
+    "path": "new-acquisition/20260909-065110-campaign/00-00-mcpwm-ftm/stopped-before.json",
+    "bytes": 159,
+    "sha256": "e186801fa11b3b658b43ea8292906c1f028a138332402f4430052db728987e67"
+  },
+  {
+    "path": "new-acquisition/20260909-065110-campaign/00-00-mcpwm-ftm/stopped.json",
+    "bytes": 519,
+    "sha256": "63c3970058c455c40a014315d150d135c4ef7ae215e220ed1ca6b8789103247d"
+  },
+  {
+    "path": "new-acquisition/20260909-065110-campaign/00-00-mcpwm-ftm/telemetry.json",
+    "bytes": 11635,
+    "sha256": "0ef80ff21d7f00cc5f2b545dbfbc8e8688261f65065c53c0ad46165cbbbf997e"
+  },
+  {
+    "path": "new-acquisition/20260909-065110-campaign/00-00-mcpwm-ftm/timing-armed.json",
+    "bytes": 327,
+    "sha256": "6608a19ea2235a17e95c16f12f96e0375e874df6a4807afb85fc049f837be191"
+  },
+  {
+    "path": "new-acquisition/20260909-065110-campaign/00-01-mcpwm-ntp/armed.json",
+    "bytes": 519,
+    "sha256": "36424feea7d303ce1cbcfec627abf8d9c44776ac2e3e24a387a1977ac3c4a88b"
+  },
+  {
+    "path": "new-acquisition/20260909-065110-campaign/00-01-mcpwm-ntp/capture.sal",
+    "bytes": 7291,
+    "sha256": "3842e13c28e2128e36fe529f38e1f44eda4f6bbdaa7a777aec23113c0f501467"
+  },
+  {
+    "path": "new-acquisition/20260909-065110-campaign/00-01-mcpwm-ntp/configured.json",
+    "bytes": 707,
+    "sha256": "127958cbad256dd6364723635c4e4270b54a8df9144fba5beaae4d8210be0ac7"
+  },
+  {
+    "path": "new-acquisition/20260909-065110-campaign/00-01-mcpwm-ntp/digital.csv",
+    "bytes": 10529,
+    "sha256": "5c18db7ef520293bddf13e588f4ca71428831647f44494dfbb2e3691ec4a7377"
+  },
+  {
+    "path": "new-acquisition/20260909-065110-campaign/00-01-mcpwm-ntp/health-after.json",
+    "bytes": 1464,
+    "sha256": "e24e82fec3763cb07619d401702f3b49b95861214af722b94ce691eaad61810f"
+  },
+  {
+    "path": "new-acquisition/20260909-065110-campaign/00-01-mcpwm-ntp/mode-armed.json",
+    "bytes": 887,
+    "sha256": "408a0052aa88041f292774889b71917b28acb68b1022009d08c568b2779d96b8"
+  },
+  {
+    "path": "new-acquisition/20260909-065110-campaign/00-01-mcpwm-ntp/ntp-endpoints.json",
+    "bytes": 580,
+    "sha256": "b26b17aabe55c69b2bd675d1fdf910e04831c4a5ec2e2d48ae54dc48a2e8f99b"
+  },
+  {
+    "path": "new-acquisition/20260909-065110-campaign/00-01-mcpwm-ntp/ntp-pre-reset.json",
+    "bytes": 331,
+    "sha256": "3b7d7409f5f90a27ba98400a34ca5085142b87479c0c43a1bd8e13a52d324c59"
+  },
+  {
+    "path": "new-acquisition/20260909-065110-campaign/00-01-mcpwm-ntp/result.json",
+    "bytes": 223,
+    "sha256": "e06b7e1469364b7253052f512b8ed14dc92a39e3dac197338fc9799334e110b2"
+  },
+  {
+    "path": "new-acquisition/20260909-065110-campaign/00-01-mcpwm-ntp/stopped-before.json",
+    "bytes": 159,
+    "sha256": "e186801fa11b3b658b43ea8292906c1f028a138332402f4430052db728987e67"
+  },
+  {
+    "path": "new-acquisition/20260909-065110-campaign/00-01-mcpwm-ntp/stopped.json",
+    "bytes": 519,
+    "sha256": "24642f43f88e87f989495a37460ec0b1c6a50f474f6d2b524bc5645aac043329"
+  },
+  {
+    "path": "new-acquisition/20260909-065110-campaign/00-01-mcpwm-ntp/telemetry.json",
+    "bytes": 12032,
+    "sha256": "03dddc169fd02c24201f70a14bced2576fc93ff364efb898a91625c2f43baeee"
+  },
+  {
+    "path": "new-acquisition/20260909-065110-campaign/00-01-mcpwm-ntp/timing-armed.json",
+    "bytes": 750,
+    "sha256": "70029e3fd95d8e9188a42d2d01f0c585556446fde07423f519675b7e25754dc8"
+  },
+  {
+    "path": "new-acquisition/20260909-065110-campaign/00-02-mcpwm-mac/armed.json",
+    "bytes": 519,
+    "sha256": "3226f7de5f2bf4747e442bd18f63097d0b2d83934523d1ac9751a6184191d77c"
+  },
+  {
+    "path": "new-acquisition/20260909-065110-campaign/00-02-mcpwm-mac/capture.sal",
+    "bytes": 6851,
+    "sha256": "9905842ff11f29cbe969965a55600fda8c1cc8a9c54cc7cbbae8324550ba3449"
+  },
+  {
+    "path": "new-acquisition/20260909-065110-campaign/00-02-mcpwm-mac/configured.json",
+    "bytes": 331,
+    "sha256": "294977b1b390a67e12084d0fd74bf17dd6e5fd706f7ad98d1430bebe449a9931"
+  },
+  {
+    "path": "new-acquisition/20260909-065110-campaign/00-02-mcpwm-mac/digital.csv",
+    "bytes": 10529,
+    "sha256": "8859871f336cd0171d2fd39f027234c1fe0256eef7efb20aaf6712fbd2c4ad47"
+  },
+  {
+    "path": "new-acquisition/20260909-065110-campaign/00-02-mcpwm-mac/health-after.json",
+    "bytes": 1464,
+    "sha256": "c6bd55367445a96c2589baf18ada45e70f05a3c84a2b849a2f92b5b55b519f51"
+  },
+  {
+    "path": "new-acquisition/20260909-065110-campaign/00-02-mcpwm-mac/mode-armed.json",
+    "bytes": 887,
+    "sha256": "5feb41df7d7725c7efb01593c283358b11a3f6b32e7a9a9cb6b92a3ed7d81cb2"
+  },
+  {
+    "path": "new-acquisition/20260909-065110-campaign/00-02-mcpwm-mac/result.json",
+    "bytes": 223,
+    "sha256": "b0ce7b3604fccb257625fc4dbae6db2c07f0093ec977c9a271dcaa98c39613f2"
+  },
+  {
+    "path": "new-acquisition/20260909-065110-campaign/00-02-mcpwm-mac/stopped-before.json",
+    "bytes": 159,
+    "sha256": "e186801fa11b3b658b43ea8292906c1f028a138332402f4430052db728987e67"
+  },
+  {
+    "path": "new-acquisition/20260909-065110-campaign/00-02-mcpwm-mac/stopped.json",
+    "bytes": 519,
+    "sha256": "43c223ec26158804747cea0cf750400c2db054d7cfea0f85317b8abda0850d89"
+  },
+  {
+    "path": "new-acquisition/20260909-065110-campaign/00-02-mcpwm-mac/telemetry.json",
+    "bytes": 11131,
+    "sha256": "3ef20eed65e7bd5156660ecacd4f3dae11509a39889683856fb2e1f62a7685a7"
+  },
+  {
+    "path": "new-acquisition/20260909-065110-campaign/00-02-mcpwm-mac/timing-armed.json",
+    "bytes": 327,
+    "sha256": "b0a31da5bd1d9decae04641fe978b9b54231fea12e70d8d8087e9ef6964ddc23"
+  },
+  {
+    "path": "new-acquisition/20260909-065110-campaign/00-03-mcpwm-tsf/armed.json",
+    "bytes": 519,
+    "sha256": "2b67d0c5f09f72a7b0abbea5a305bb16c9ee013b5da1f3d6d30a52bfdf2b18f1"
+  },
+  {
+    "path": "new-acquisition/20260909-065110-campaign/00-03-mcpwm-tsf/capture.sal",
+    "bytes": 7103,
+    "sha256": "61df86b7712b3df93eb08aee3dc9ff0b346ed5fe8be689a6416fe81e28c189c5"
+  },
+  {
+    "path": "new-acquisition/20260909-065110-campaign/00-03-mcpwm-tsf/configured.json",
+    "bytes": 331,
+    "sha256": "d03a05049f8580e2ee7800ac2017e252fd1667587fb9f5260ee899863ef74d6f"
+  },
+  {
+    "path": "new-acquisition/20260909-065110-campaign/00-03-mcpwm-tsf/digital.csv",
+    "bytes": 10507,
+    "sha256": "fd9f7471734cdb32695542f045bac375ca83acca0405a8e4eb4988e7424904dd"
+  },
+  {
+    "path": "new-acquisition/20260909-065110-campaign/00-03-mcpwm-tsf/health-after.json",
+    "bytes": 1464,
+    "sha256": "9a087bb7ceae8e0db0b52778140e675dc2620fe71b40b0f20b6d22e2602007a6"
+  },
+  {
+    "path": "new-acquisition/20260909-065110-campaign/00-03-mcpwm-tsf/mode-armed.json",
+    "bytes": 887,
+    "sha256": "eacd7b449eddc49095787787f5d71c7bfb8150a08060a802582095787270ffb5"
+  },
+  {
+    "path": "new-acquisition/20260909-065110-campaign/00-03-mcpwm-tsf/result.json",
+    "bytes": 223,
+    "sha256": "af18492440d072f22ce2b17e22acbcb998152047d17556e565d919100e2658c8"
+  },
+  {
+    "path": "new-acquisition/20260909-065110-campaign/00-03-mcpwm-tsf/stopped-before.json",
+    "bytes": 159,
+    "sha256": "e186801fa11b3b658b43ea8292906c1f028a138332402f4430052db728987e67"
+  },
+  {
+    "path": "new-acquisition/20260909-065110-campaign/00-03-mcpwm-tsf/stopped.json",
+    "bytes": 519,
+    "sha256": "e3fa1997ffaab4ef21bdce2a1301a5f4466cdc3212423a6e7a90a3d605b0d276"
+  },
+  {
+    "path": "new-acquisition/20260909-065110-campaign/00-03-mcpwm-tsf/telemetry.json",
+    "bytes": 11899,
+    "sha256": "984b1ccc60a5e008dd7ce168bb4cb7bdb7fdd66b34557313e15be2d2fbbd7661"
+  },
+  {
+    "path": "new-acquisition/20260909-065110-campaign/00-03-mcpwm-tsf/timing-armed.json",
+    "bytes": 327,
+    "sha256": "981cad623c8e6d831c9451ac4481130d5bfcc4e6f6e067b320f7e39d7059c5ed"
+  },
+  {
+    "path": "new-acquisition/20260909-065110-campaign/00-04-mcpwm-frozen/armed.json",
+    "bytes": 519,
+    "sha256": "1f413cefd144d934b6f75859926be2634486c5d70765cad25f9fa457fb9a946e"
+  },
+  {
+    "path": "new-acquisition/20260909-065110-campaign/00-04-mcpwm-frozen/capture.sal",
+    "bytes": 6874,
+    "sha256": "f7eaf218abcd0c146c9bd4d5aa54c81bd4c190044f2a4de5b054b1d6d7e06c47"
+  },
+  {
+    "path": "new-acquisition/20260909-065110-campaign/00-04-mcpwm-frozen/configured.json",
+    "bytes": 343,
+    "sha256": "84cf0a01d89b48af7ed222c58aa3e701dc7a5a6209328248eb08d417fe303eb5"
+  },
+  {
+    "path": "new-acquisition/20260909-065110-campaign/00-04-mcpwm-frozen/digital.csv",
+    "bytes": 9851,
+    "sha256": "2d4c4624ddf84717cc4f170ed88403b31372a0e01866d84e697a58df759b6ad0"
+  },
+  {
+    "path": "new-acquisition/20260909-065110-campaign/00-04-mcpwm-frozen/health-after.json",
+    "bytes": 1464,
+    "sha256": "c91971b1bd3500b1bc547615b4438b44ff7fb45f1a67de17c4e1d28b2717e24a"
+  },
+  {
+    "path": "new-acquisition/20260909-065110-campaign/00-04-mcpwm-frozen/mode-armed.json",
+    "bytes": 887,
+    "sha256": "c5f24e97cd00b392d13c11f1b92f39763c406dd18f923d0523aff857de0d4400"
+  },
+  {
+    "path": "new-acquisition/20260909-065110-campaign/00-04-mcpwm-frozen/result.json",
+    "bytes": 226,
+    "sha256": "706eb84a058af5ccabd295795047c9dd5753672ab54b37aedfdd4a6087f86a36"
+  },
+  {
+    "path": "new-acquisition/20260909-065110-campaign/00-04-mcpwm-frozen/stopped-before.json",
+    "bytes": 159,
+    "sha256": "e186801fa11b3b658b43ea8292906c1f028a138332402f4430052db728987e67"
+  },
+  {
+    "path": "new-acquisition/20260909-065110-campaign/00-04-mcpwm-frozen/stopped.json",
+    "bytes": 519,
+    "sha256": "b8b16070a034808a3bd93b92880c507a7922b05ac7899c88da0a481312b275ea"
+  },
+  {
+    "path": "new-acquisition/20260909-065110-campaign/00-04-mcpwm-frozen/telemetry.json",
+    "bytes": 11719,
+    "sha256": "0d59d1f80206be66030d26d87cbd99778d200f872759201a1c47fb21be14e0d0"
+  },
+  {
+    "path": "new-acquisition/20260909-065110-campaign/00-04-mcpwm-frozen/timing-armed.json",
+    "bytes": 339,
+    "sha256": "e945ad547098c7570acbf8cd33cac59bac3f9b64ab5961aaa71d4dca47459f2a"
+  },
+  {
+    "path": "new-acquisition/20260909-065110-campaign/01-00-mcpwm-ntp/armed.json",
+    "bytes": 519,
+    "sha256": "3a967d27c5254b224eeac809cde3eaa0270cf5a5403fe51005465be19335ba11"
+  },
+  {
+    "path": "new-acquisition/20260909-065110-campaign/01-00-mcpwm-ntp/capture.sal",
+    "bytes": 7311,
+    "sha256": "d2a8183cb3805995c70684bfe10956f67c98ac4b968fdbd96caec8954445f4ec"
+  },
+  {
+    "path": "new-acquisition/20260909-065110-campaign/01-00-mcpwm-ntp/configured.json",
+    "bytes": 707,
+    "sha256": "ceb4a5efd323961fcddbe231c10f8482e4132be3f0735409a8b06bbc6dc789e5"
+  },
+  {
+    "path": "new-acquisition/20260909-065110-campaign/01-00-mcpwm-ntp/digital.csv",
+    "bytes": 10573,
+    "sha256": "e7e75ef2e2b509b8051cf9b519759da72b781db65e056778893e815c6bfae1e9"
+  },
+  {
+    "path": "new-acquisition/20260909-065110-campaign/01-00-mcpwm-ntp/health-after.json",
+    "bytes": 1464,
+    "sha256": "9a299acfb443a1d72cc10b15fce6258d4a2c15c250ff504680000300d3becdd9"
+  },
+  {
+    "path": "new-acquisition/20260909-065110-campaign/01-00-mcpwm-ntp/mode-armed.json",
+    "bytes": 887,
+    "sha256": "a07d46870e9e1e521096d04c8f5923483eeced36d7ebf5413c4bfcd16fe756c0"
+  },
+  {
+    "path": "new-acquisition/20260909-065110-campaign/01-00-mcpwm-ntp/ntp-endpoints.json",
+    "bytes": 579,
+    "sha256": "a6a4a9e4a536d32716212915d3500ed85151a433d77a56029dd22e2fa30286ee"
+  },
+  {
+    "path": "new-acquisition/20260909-065110-campaign/01-00-mcpwm-ntp/ntp-pre-reset.json",
+    "bytes": 331,
+    "sha256": "d3a4ecc2e87762765a050217d1b465e41c13a097599c23e7f0125048608cc8ab"
+  },
+  {
+    "path": "new-acquisition/20260909-065110-campaign/01-00-mcpwm-ntp/result.json",
+    "bytes": 223,
+    "sha256": "de4499c5bcc1a0f1e3d7b51b1bdae71ae92cb2c820994f9719d46ebc3d4a26ee"
+  },
+  {
+    "path": "new-acquisition/20260909-065110-campaign/01-00-mcpwm-ntp/stopped-before.json",
+    "bytes": 159,
+    "sha256": "e186801fa11b3b658b43ea8292906c1f028a138332402f4430052db728987e67"
+  },
+  {
+    "path": "new-acquisition/20260909-065110-campaign/01-00-mcpwm-ntp/stopped.json",
+    "bytes": 519,
+    "sha256": "c76ebef1db859c80d9755e51a8e8b0a144d4a43f3e65c6f6eccb262a3ec4542a"
+  },
+  {
+    "path": "new-acquisition/20260909-065110-campaign/01-00-mcpwm-ntp/telemetry.json",
+    "bytes": 12034,
+    "sha256": "b186c5be80d3679a68213693b1f57d39a26dd5a5bad137c9269c14b07bdd3ea0"
+  },
+  {
+    "path": "new-acquisition/20260909-065110-campaign/01-00-mcpwm-ntp/timing-armed.json",
+    "bytes": 749,
+    "sha256": "1978de906b272185464ff864eb7fbebedac8ab3f9bb4dc88f4af4d16510b50e0"
+  },
+  {
+    "path": "new-acquisition/20260909-065110-campaign/01-01-mcpwm-mac/armed.json",
+    "bytes": 519,
+    "sha256": "3437f7322ac756bf9a42c8e5849b4e1483b93906da0b8035dc8e1e9131e1028c"
+  },
+  {
+    "path": "new-acquisition/20260909-065110-campaign/01-01-mcpwm-mac/capture.sal",
+    "bytes": 6915,
+    "sha256": "37fa49835c4b54861f4fc9e3fb08f06711694ea4ca56d02d888bb4cf7a1c0c01"
+  },
+  {
+    "path": "new-acquisition/20260909-065110-campaign/01-01-mcpwm-mac/configured.json",
+    "bytes": 331,
+    "sha256": "ddf9d4605d4d2200f3ebc6d19bfc71af499888d116fe943fc7ac6c1a0779f7a6"
+  },
+  {
+    "path": "new-acquisition/20260909-065110-campaign/01-01-mcpwm-mac/digital.csv",
+    "bytes": 10529,
+    "sha256": "ca401d98335e7f9df36325480305acd26804d2a8d6c8529b773ff3ed5038607c"
+  },
+  {
+    "path": "new-acquisition/20260909-065110-campaign/01-01-mcpwm-mac/health-after.json",
+    "bytes": 1464,
+    "sha256": "ba757059da68c3852d60ebe369fc7e1f01bda59a84cf92e4e0f11540663fbdf9"
+  },
+  {
+    "path": "new-acquisition/20260909-065110-campaign/01-01-mcpwm-mac/mode-armed.json",
+    "bytes": 887,
+    "sha256": "b77e4ffa4b82e7434cffef9e706c3f9d141721ba827f79750aef8d886f04787e"
+  },
+  {
+    "path": "new-acquisition/20260909-065110-campaign/01-01-mcpwm-mac/result.json",
+    "bytes": 223,
+    "sha256": "0fe1b2f97266fe0da12c499066a0bcb3c7277f7106e6c7b7f29be2d5d0d79a0c"
+  },
+  {
+    "path": "new-acquisition/20260909-065110-campaign/01-01-mcpwm-mac/stopped-before.json",
+    "bytes": 159,
+    "sha256": "e186801fa11b3b658b43ea8292906c1f028a138332402f4430052db728987e67"
+  },
+  {
+    "path": "new-acquisition/20260909-065110-campaign/01-01-mcpwm-mac/stopped.json",
+    "bytes": 519,
+    "sha256": "c1b5b33ab198d28b421e6aef88ea373133419085be5dbec15093b031d57ca973"
+  },
+  {
+    "path": "new-acquisition/20260909-065110-campaign/01-01-mcpwm-mac/telemetry.json",
+    "bytes": 11132,
+    "sha256": "3e2df03fb667a9a0f39a422f186d6b09b636fe163023d498d76d7c63300f9ca4"
+  },
+  {
+    "path": "new-acquisition/20260909-065110-campaign/01-01-mcpwm-mac/timing-armed.json",
+    "bytes": 327,
+    "sha256": "17f64525fc0ec4240fdd0531c3b5edad67412a2588e16d1cebadca6fc166da08"
+  },
+  {
+    "path": "new-acquisition/20260909-065110-campaign/01-02-mcpwm-tsf/armed.json",
+    "bytes": 519,
+    "sha256": "3a1726dcc2140e6019f96a185b286dba4d34f93cc936a14e9767e1305dc21ad9"
+  },
+  {
+    "path": "new-acquisition/20260909-065110-campaign/01-02-mcpwm-tsf/capture.sal",
+    "bytes": 7125,
+    "sha256": "da799b77f75138f60203314a9eb30d131d72bc3a0aca1f8c8a049ab094255eb9"
+  },
+  {
+    "path": "new-acquisition/20260909-065110-campaign/01-02-mcpwm-tsf/configured.json",
+    "bytes": 331,
+    "sha256": "4a0342a3bf3e21de7133b957b845b4ef6fef2a4db1ab000c41125c1f16dd4f1c"
+  },
+  {
+    "path": "new-acquisition/20260909-065110-campaign/01-02-mcpwm-tsf/digital.csv",
+    "bytes": 10529,
+    "sha256": "a5750447d8654eafbde795fc03572a71710c643ca95300cda76a1fd769e09c20"
+  },
+  {
+    "path": "new-acquisition/20260909-065110-campaign/01-02-mcpwm-tsf/health-after.json",
+    "bytes": 1464,
+    "sha256": "ba7678fdb9ea7fd98a677edc0d54c9bfff278a6f966c86d7c9a92cabe5964adf"
+  },
+  {
+    "path": "new-acquisition/20260909-065110-campaign/01-02-mcpwm-tsf/mode-armed.json",
+    "bytes": 887,
+    "sha256": "9f069ce18a08e9e100dff947f3e4c40e0386eab4d06e4cb11a10907287213e4f"
+  },
+  {
+    "path": "new-acquisition/20260909-065110-campaign/01-02-mcpwm-tsf/result.json",
+    "bytes": 223,
+    "sha256": "426320bf7c52021bb9c4464ee3d49d6c360fb5304e4e1ae34db513fd651c81e4"
+  },
+  {
+    "path": "new-acquisition/20260909-065110-campaign/01-02-mcpwm-tsf/stopped-before.json",
+    "bytes": 159,
+    "sha256": "e186801fa11b3b658b43ea8292906c1f028a138332402f4430052db728987e67"
+  },
+  {
+    "path": "new-acquisition/20260909-065110-campaign/01-02-mcpwm-tsf/stopped.json",
+    "bytes": 519,
+    "sha256": "5c33db4b5b34b95091cd74085c1823e81a297658fe468ff3aaf3de088872ec70"
+  },
+  {
+    "path": "new-acquisition/20260909-065110-campaign/01-02-mcpwm-tsf/telemetry.json",
+    "bytes": 11898,
+    "sha256": "b4f47f8e40f2b5f85010554f6d6fd82fcfae52756d90a259aab7739228d871b8"
+  },
+  {
+    "path": "new-acquisition/20260909-065110-campaign/01-02-mcpwm-tsf/timing-armed.json",
+    "bytes": 327,
+    "sha256": "26b479011ebb9d65df8c6e7595868ba30782d9940ce75704d6fff7528cd0ffdf"
+  },
+  {
+    "path": "new-acquisition/20260909-065110-campaign/01-03-mcpwm-frozen/armed.json",
+    "bytes": 519,
+    "sha256": "83be193e3985757128ca4bfd4b362ec8421a8eccfd4128ce1e15ba471f8ad2fd"
+  },
+  {
+    "path": "new-acquisition/20260909-065110-campaign/01-03-mcpwm-frozen/capture.sal",
+    "bytes": 6910,
+    "sha256": "5a55471f71ef3e0cacc87e30af4caeba275e90190b309941aad321256e8b39e8"
+  },
+  {
+    "path": "new-acquisition/20260909-065110-campaign/01-03-mcpwm-frozen/configured.json",
+    "bytes": 343,
+    "sha256": "1f80f2d48600f7676d5811642f323587cc0d7fd334f78b467640e7a47e2fb833"
+  },
+  {
+    "path": "new-acquisition/20260909-065110-campaign/01-03-mcpwm-frozen/digital.csv",
+    "bytes": 10115,
+    "sha256": "af50c79977f0bd35a1f837a00e528a7cd3281498e9f2329ca3389f73c65e4c02"
+  },
+  {
+    "path": "new-acquisition/20260909-065110-campaign/01-03-mcpwm-frozen/health-after.json",
+    "bytes": 1465,
+    "sha256": "37bcd6180d3d70c4122bb6bd36105fd3ce916deb3b97fcee284b8de69ccb2469"
+  },
+  {
+    "path": "new-acquisition/20260909-065110-campaign/01-03-mcpwm-frozen/mode-armed.json",
+    "bytes": 887,
+    "sha256": "fcaebe6624e2efd760bde3d3911d1f4c06a7326b845e691e4175e72a87ef3b08"
+  },
+  {
+    "path": "new-acquisition/20260909-065110-campaign/01-03-mcpwm-frozen/result.json",
+    "bytes": 226,
+    "sha256": "81223050549dece06b0fe1755178661e67d8a86dbf5169ecd446325945125a96"
+  },
+  {
+    "path": "new-acquisition/20260909-065110-campaign/01-03-mcpwm-frozen/stopped-before.json",
+    "bytes": 159,
+    "sha256": "e186801fa11b3b658b43ea8292906c1f028a138332402f4430052db728987e67"
+  },
+  {
+    "path": "new-acquisition/20260909-065110-campaign/01-03-mcpwm-frozen/stopped.json",
+    "bytes": 521,
+    "sha256": "336acd892be1e6ac4a480f4b389f440893e4c6720c6685bbbeefffcf94fa36b1"
+  },
+  {
+    "path": "new-acquisition/20260909-065110-campaign/01-03-mcpwm-frozen/telemetry.json",
+    "bytes": 11847,
+    "sha256": "1bf7252a741e0e2791ad0d5f1dade0efbec185993bd99113caaed4b465e08fdf"
+  },
+  {
+    "path": "new-acquisition/20260909-065110-campaign/01-03-mcpwm-frozen/timing-armed.json",
+    "bytes": 339,
+    "sha256": "89aab2758ed59efe59684c79f4d5850d13bb42902ed9784d0835e695c8fc74b9"
+  },
+  {
+    "path": "new-acquisition/20260909-065110-campaign/01-04-mcpwm-ftm/armed.json",
+    "bytes": 521,
+    "sha256": "51e2248f40cc1aa990560fad2c9410c6d5f69cc86ba8ddb95410f8eb0e40d978"
+  },
+  {
+    "path": "new-acquisition/20260909-065110-campaign/01-04-mcpwm-ftm/configured.json",
+    "bytes": 331,
+    "sha256": "f2babfc80909ece897bda919aedd24fcb482534c70e7a6c2fb0fd6ed198e7d22"
+  },
+  {
+    "path": "new-acquisition/20260909-065110-campaign/01-04-mcpwm-ftm/health-after.json",
+    "bytes": 1465,
+    "sha256": "b7aac9c1883d8c32555d16ba6d09a486c91b98a0c940cf02c7637beb63cff96a"
+  },
+  {
+    "path": "new-acquisition/20260909-065110-campaign/01-04-mcpwm-ftm/mode-armed.json",
+    "bytes": 889,
+    "sha256": "a84fbd7a28488fb4d0f85b7594d15a85fb09d841971f3f5621e17abb3a7a890f"
+  },
+  {
+    "path": "new-acquisition/20260909-065110-campaign/01-04-mcpwm-ftm/result.json",
+    "bytes": 281,
+    "sha256": "a4c62fc4d7d92c738b09f36e2bb812c198e723cd8d62fc9c70274999be4ce81b"
+  },
+  {
+    "path": "new-acquisition/20260909-065110-campaign/01-04-mcpwm-ftm/stopped-before.json",
+    "bytes": 159,
+    "sha256": "e186801fa11b3b658b43ea8292906c1f028a138332402f4430052db728987e67"
+  },
+  {
+    "path": "new-acquisition/20260909-065110-campaign/01-04-mcpwm-ftm/stopped.json",
+    "bytes": 521,
+    "sha256": "399e67070ee8e3319d6e49a37c1b9a5cd1f87ecc9c415ab2129edb93a9603748"
+  },
+  {
+    "path": "new-acquisition/20260909-065110-campaign/01-04-mcpwm-ftm/telemetry.json",
+    "bytes": 11821,
+    "sha256": "2d92a063e68552fe0024c6bd3a03b828e742de618ec8a0001542aef4d7033f90"
+  },
+  {
+    "path": "new-acquisition/20260909-065110-campaign/01-04-mcpwm-ftm/timing-armed.json",
+    "bytes": 327,
+    "sha256": "0756c2f25b606be55aea928fa380c6cd185990483bbcfea93149dc097e96d3e9"
+  },
+  {
+    "path": "new-acquisition/20260909-065110-campaign/device.json",
+    "bytes": 63,
+    "sha256": "f3825ea206067b31bbd5791ffaafb876038adbf275f3ccf0423a15598b6609e0"
+  },
+  {
+    "path": "new-acquisition/20260909-065110-campaign/final-config.json",
+    "bytes": 331,
+    "sha256": "081654efe5bd4a1203976814200f73217061a25c575dbab8467900cd6b388161"
+  },
+  {
+    "path": "new-acquisition/20260909-065110-campaign/final-health.json",
+    "bytes": 1465,
+    "sha256": "dafc75ace4194ef3c039b67d7060f0b7f0b5c14bab015de8db6e92c84d4d7922"
+  },
+  {
+    "path": "new-acquisition/20260909-065110-campaign/final-stop.json",
+    "bytes": 159,
+    "sha256": "e186801fa11b3b658b43ea8292906c1f028a138332402f4430052db728987e67"
+  },
+  {
+    "path": "new-acquisition/20260909-065110-campaign/health-before.json",
+    "bytes": 1464,
+    "sha256": "a7b8ef9109c9ef4c3e85f6376fbed23e853e0a3d5a7fd65ac675eaac51161a8f"
+  },
+  {
+    "path": "new-acquisition/20260909-065110-campaign/mode-before.json",
+    "bytes": 887,
+    "sha256": "1071a90fd2901967d27ad99b8b98ef419d77e4555270c5c52cafbbb2bd486a38"
+  },
+  {
+    "path": "new-acquisition/20260909-065110-campaign/nodes.json",
+    "bytes": 2317,
+    "sha256": "07e358344788c42ff214700115706e683a8894d3b6f9acc4e4be75cc5dffe5a5"
+  },
+  {
+    "path": "new-acquisition/20260909-065110-campaign/settings.json",
+    "bytes": 198,
+    "sha256": "bd2bf1c9ad5f2b4e009556d72a5306217799c3d270003ebbfcb7255eb6e3a1b7"
+  },
+  {
+    "path": "new-acquisition/20260909-070546-campaign/00-00-mcpwm-ftm/armed.json",
+    "bytes": 527,
+    "sha256": "31c97d5987a257b642ca78b9a9eee22418393daf7e9d1720aae60f9415582fd7"
+  },
+  {
+    "path": "new-acquisition/20260909-070546-campaign/00-00-mcpwm-ftm/capture.sal",
+    "bytes": 3464,
+    "sha256": "01b4ed11942ad6e3f06a637c2c31c9cac9817449e3c98c8d3cd803565a5b6c5e"
+  },
+  {
+    "path": "new-acquisition/20260909-070546-campaign/00-00-mcpwm-ftm/configured.json",
+    "bytes": 331,
+    "sha256": "081654efe5bd4a1203976814200f73217061a25c575dbab8467900cd6b388161"
+  },
+  {
+    "path": "new-acquisition/20260909-070546-campaign/00-00-mcpwm-ftm/digital.csv",
+    "bytes": 827,
+    "sha256": "bfbc9bb8d29690cdf4b014eab7e0160b18945607793e2ea58ee8b2720222e912"
+  },
+  {
+    "path": "new-acquisition/20260909-070546-campaign/00-00-mcpwm-ftm/health-after.json",
+    "bytes": 1468,
+    "sha256": "9d8b2461311fbb4eb0b13166f060ba555430545a88851b1a90d63d137ee06779"
+  },
+  {
+    "path": "new-acquisition/20260909-070546-campaign/00-00-mcpwm-ftm/mode-armed.json",
+    "bytes": 895,
+    "sha256": "a122576ab997a26d882aef8eaa3590d4e84997de7246db58031a2040422c14a1"
+  },
+  {
+    "path": "new-acquisition/20260909-070546-campaign/00-00-mcpwm-ftm/result.json",
+    "bytes": 222,
+    "sha256": "6f4ea3cb2e1f520afeb94776dbd348391b0d2ba4fad35a065530c0474cc74d4a"
+  },
+  {
+    "path": "new-acquisition/20260909-070546-campaign/00-00-mcpwm-ftm/stopped-before.json",
+    "bytes": 159,
+    "sha256": "e186801fa11b3b658b43ea8292906c1f028a138332402f4430052db728987e67"
+  },
+  {
+    "path": "new-acquisition/20260909-070546-campaign/00-00-mcpwm-ftm/stopped.json",
+    "bytes": 527,
+    "sha256": "4e209f2b29ec75dda7186ea70f4f4e5a3b941540bbb045df0d5e959ae1d9b8cf"
+  },
+  {
+    "path": "new-acquisition/20260909-070546-campaign/00-00-mcpwm-ftm/telemetry.json",
+    "bytes": 4391,
+    "sha256": "d2d1f56d295254bf9813d6d1485477e633de1bc2cfa7fcfa64e53c6c83ee4edf"
+  },
+  {
+    "path": "new-acquisition/20260909-070546-campaign/00-00-mcpwm-ftm/timing-armed.json",
+    "bytes": 327,
+    "sha256": "b72946ba78079735da2a15fff19b2b574f5d1bcc8ccfc23c0ebcdb79acaa8c05"
+  },
+  {
+    "path": "new-acquisition/20260909-070546-campaign/device.json",
+    "bytes": 63,
+    "sha256": "f3825ea206067b31bbd5791ffaafb876038adbf275f3ccf0423a15598b6609e0"
+  },
+  {
+    "path": "new-acquisition/20260909-070546-campaign/final-config.json",
+    "bytes": 331,
+    "sha256": "da81a939e8d2a7240853bef4e6476821f907deb004bd897528f792cd0bb031fb"
+  },
+  {
+    "path": "new-acquisition/20260909-070546-campaign/final-health.json",
+    "bytes": 1468,
+    "sha256": "a7efeb1b3bbab21dc8140d38e423409768d2659aa0337a69a6cb397538b1d4e3"
+  },
+  {
+    "path": "new-acquisition/20260909-070546-campaign/final-stop.json",
+    "bytes": 159,
+    "sha256": "e186801fa11b3b658b43ea8292906c1f028a138332402f4430052db728987e67"
+  },
+  {
+    "path": "new-acquisition/20260909-070546-campaign/health-before.json",
+    "bytes": 1468,
+    "sha256": "3b46da1fc52e9377be1046f667d51b8dded9e4a295321450af7eb672fc39ede8"
+  },
+  {
+    "path": "new-acquisition/20260909-070546-campaign/mode-before.json",
+    "bytes": 895,
+    "sha256": "a3e3b3f716e599af3711e0a649c6c277e72a512632cb5c5758f8ce926efe9ef5"
+  },
+  {
+    "path": "new-acquisition/20260909-070546-campaign/nodes.json",
+    "bytes": 2318,
+    "sha256": "9320eac5ae1b014ddd893bb5f0107e17976a652ee9fd56926ed4bfaa22e48aac"
+  },
+  {
+    "path": "new-acquisition/20260909-070546-campaign/settings.json",
+    "bytes": 146,
+    "sha256": "ec636726d79b1ffabb1b36f4604d6ea0e17a3d9825613110573b67e24c42aeda"
+  },
+  {
+    "path": "new-acquisition/20260909-070610-campaign/00-00-mcpwm-ftm/armed.json",
+    "bytes": 527,
+    "sha256": "1eb144d57a7b23c17aae9097815f14fe0174484a926828b0a33e850f9b1fd63f"
+  },
+  {
+    "path": "new-acquisition/20260909-070610-campaign/00-00-mcpwm-ftm/configured.json",
+    "bytes": 331,
+    "sha256": "da81a939e8d2a7240853bef4e6476821f907deb004bd897528f792cd0bb031fb"
+  },
+  {
+    "path": "new-acquisition/20260909-070610-campaign/00-00-mcpwm-ftm/health-after.json",
+    "bytes": 1468,
+    "sha256": "3d9508600a1b62cf692e92e41c1a0ecd79bec8460841e7fe51b1c6026fdb2691"
+  },
+  {
+    "path": "new-acquisition/20260909-070610-campaign/00-00-mcpwm-ftm/mode-armed.json",
+    "bytes": 895,
+    "sha256": "e4e28677ba568d2463a4e2f053cd2803854f340fdfd12fe846e6125e43bf9625"
+  },
+  {
+    "path": "new-acquisition/20260909-070610-campaign/00-00-mcpwm-ftm/result.json",
+    "bytes": 281,
+    "sha256": "83e66dac53ec703c88f6d0c885af5426d6410d89dbd028cbc0ebb436e5dcd471"
+  },
+  {
+    "path": "new-acquisition/20260909-070610-campaign/00-00-mcpwm-ftm/stopped-before.json",
+    "bytes": 159,
+    "sha256": "e186801fa11b3b658b43ea8292906c1f028a138332402f4430052db728987e67"
+  },
+  {
+    "path": "new-acquisition/20260909-070610-campaign/00-00-mcpwm-ftm/stopped.json",
+    "bytes": 527,
+    "sha256": "66e9dd653d8ba3df32e528125d7b57c20ad8dcf320a4817b344b92c70a26a4eb"
+  },
+  {
+    "path": "new-acquisition/20260909-070610-campaign/00-00-mcpwm-ftm/telemetry.json",
+    "bytes": 12347,
+    "sha256": "df9dc40e742ffeb553fcf5de7aa7522ed9faf530f1f7880410375bb61a722c78"
+  },
+  {
+    "path": "new-acquisition/20260909-070610-campaign/00-00-mcpwm-ftm/timing-armed.json",
+    "bytes": 327,
+    "sha256": "e9389953bf4ae0bd036c21bf1f1625279cc55594fadf89608c49ae892c82cd14"
+  },
+  {
+    "path": "new-acquisition/20260909-070610-campaign/device.json",
+    "bytes": 63,
+    "sha256": "f3825ea206067b31bbd5791ffaafb876038adbf275f3ccf0423a15598b6609e0"
+  },
+  {
+    "path": "new-acquisition/20260909-070610-campaign/final-config.json",
+    "bytes": 331,
+    "sha256": "0a4ccea16dd12c8129c2d30108c48d2921023e6da5c061a1404848c57b16bc89"
+  },
+  {
+    "path": "new-acquisition/20260909-070610-campaign/final-health.json",
+    "bytes": 1468,
+    "sha256": "740921756dc5389637f753fb8b4cfff99381af39f14467e62ca7dbf95e6e7b0e"
+  },
+  {
+    "path": "new-acquisition/20260909-070610-campaign/final-stop.json",
+    "bytes": 159,
+    "sha256": "e186801fa11b3b658b43ea8292906c1f028a138332402f4430052db728987e67"
+  },
+  {
+    "path": "new-acquisition/20260909-070610-campaign/health-before.json",
+    "bytes": 1468,
+    "sha256": "f65a91cbef2a12f81136757dbfc997889c25a5b2ae96154e2fa6860b05cd016b"
+  },
+  {
+    "path": "new-acquisition/20260909-070610-campaign/mode-before.json",
+    "bytes": 895,
+    "sha256": "1ca254d9935b03dd497fddfde95364a3b3e085140bbae8c68d90e82639615244"
+  },
+  {
+    "path": "new-acquisition/20260909-070610-campaign/nodes.json",
+    "bytes": 2317,
+    "sha256": "6d5dbfcd785ae11751d7494223f762fd5dcd9568289b44a7992c9d2449d98fb7"
+  },
+  {
+    "path": "new-acquisition/20260909-070610-campaign/settings.json",
+    "bytes": 210,
+    "sha256": "5ead6d39dfe187ae0285a3d6bfdb873c5da1c3dcf6c914dbd0e0ee7a17a823f3"
+  },
+  {
+    "path": "new-acquisition/20260909-070748-campaign/00-00-mcpwm-ftm/armed.json",
+    "bytes": 527,
+    "sha256": "25ed8c1494ad586bd3878be0d0ade8708d55c2eb73d845745212936f525e11bd"
+  },
+  {
+    "path": "new-acquisition/20260909-070748-campaign/00-00-mcpwm-ftm/configured.json",
+    "bytes": 331,
+    "sha256": "0a4ccea16dd12c8129c2d30108c48d2921023e6da5c061a1404848c57b16bc89"
+  },
+  {
+    "path": "new-acquisition/20260909-070748-campaign/00-00-mcpwm-ftm/health-after.json",
+    "bytes": 1468,
+    "sha256": "765e305cd797893022d6143e04c2717ea99fa32179493e4c97dde6fb96684987"
+  },
+  {
+    "path": "new-acquisition/20260909-070748-campaign/00-00-mcpwm-ftm/mode-armed.json",
+    "bytes": 895,
+    "sha256": "575418e9014c6b8b65d0e18fffea81443dd610aadc5729e6a6b79aecf20a38e2"
+  },
+  {
+    "path": "new-acquisition/20260909-070748-campaign/00-00-mcpwm-ftm/result.json",
+    "bytes": 281,
+    "sha256": "30e00e33bb1d07faa9700018630167f945b465b37e292171bbf0e7d8f79e15ae"
+  },
+  {
+    "path": "new-acquisition/20260909-070748-campaign/00-00-mcpwm-ftm/stopped-before.json",
+    "bytes": 159,
+    "sha256": "e186801fa11b3b658b43ea8292906c1f028a138332402f4430052db728987e67"
+  },
+  {
+    "path": "new-acquisition/20260909-070748-campaign/00-00-mcpwm-ftm/stopped.json",
+    "bytes": 527,
+    "sha256": "90163e3cc628fe9ac269003245adead33e43e9feaa1e95bc50c9c4f884d3caa9"
+  },
+  {
+    "path": "new-acquisition/20260909-070748-campaign/00-00-mcpwm-ftm/telemetry.json",
+    "bytes": 5027,
+    "sha256": "097b24488acf9d2ad67b9cd6c919467e23800f334ab1d5ce966533fa1d59460b"
+  },
+  {
+    "path": "new-acquisition/20260909-070748-campaign/00-00-mcpwm-ftm/timing-armed.json",
+    "bytes": 327,
+    "sha256": "b72946ba78079735da2a15fff19b2b574f5d1bcc8ccfc23c0ebcdb79acaa8c05"
+  },
+  {
+    "path": "new-acquisition/20260909-070748-campaign/device.json",
+    "bytes": 63,
+    "sha256": "f3825ea206067b31bbd5791ffaafb876038adbf275f3ccf0423a15598b6609e0"
+  },
+  {
+    "path": "new-acquisition/20260909-070748-campaign/final-config.json",
+    "bytes": 331,
+    "sha256": "4f116f65a0e067ced91861c8ab9e52c67ce4700592b9f41248bc2071cf75d4ff"
+  },
+  {
+    "path": "new-acquisition/20260909-070748-campaign/final-health.json",
+    "bytes": 1468,
+    "sha256": "d6b9b088efb50b12983ff13638c9bf05cb58df797a46b1158202d0843d532853"
+  },
+  {
+    "path": "new-acquisition/20260909-070748-campaign/final-stop.json",
+    "bytes": 159,
+    "sha256": "e186801fa11b3b658b43ea8292906c1f028a138332402f4430052db728987e67"
+  },
+  {
+    "path": "new-acquisition/20260909-070748-campaign/health-before.json",
+    "bytes": 1468,
+    "sha256": "5968f797110790ace00b6def0a0c8f3d2fb7d146d1012616a0edeac2fccfc6a1"
+  },
+  {
+    "path": "new-acquisition/20260909-070748-campaign/mode-before.json",
+    "bytes": 895,
+    "sha256": "84fda77744a1e609f95d21dece993560906ce50cdfdf17551b5fe2a15274159a"
+  },
+  {
+    "path": "new-acquisition/20260909-070748-campaign/nodes.json",
+    "bytes": 2316,
+    "sha256": "e245e7759faf67d12239a063ad44161af5d47ff7b44de49821e9c1f13761ef77"
+  },
+  {
+    "path": "new-acquisition/20260909-070748-campaign/settings.json",
+    "bytes": 147,
+    "sha256": "8978b71eb9890decf14f990ca7738a281a9d72c8209621493ddde723bf1e3778"
+  },
+  {
+    "path": "new-acquisition/20260909-070851-campaign/00-00-mcpwm-ftm/armed.json",
+    "bytes": 527,
+    "sha256": "e17229589a35a757369a6b739943f0aec8952a30201a80b3d21c436e0418c339"
+  },
+  {
+    "path": "new-acquisition/20260909-070851-campaign/00-00-mcpwm-ftm/configured.json",
+    "bytes": 331,
+    "sha256": "4f116f65a0e067ced91861c8ab9e52c67ce4700592b9f41248bc2071cf75d4ff"
+  },
+  {
+    "path": "new-acquisition/20260909-070851-campaign/00-00-mcpwm-ftm/health-after.json",
+    "bytes": 1468,
+    "sha256": "da08479343ef96698cc6ecc1d90872a6fed59e7fbad4e2b4c8eeaac555162bb5"
+  },
+  {
+    "path": "new-acquisition/20260909-070851-campaign/00-00-mcpwm-ftm/mode-armed.json",
+    "bytes": 895,
+    "sha256": "1cd3d316d3c1d400c3e2930d60728954b5b073ba714a200880c82498ff781ad0"
+  },
+  {
+    "path": "new-acquisition/20260909-070851-campaign/00-00-mcpwm-ftm/result.json",
+    "bytes": 280,
+    "sha256": "ce64baeffdb23982487e844866cfea7403d700bb14e9e963289642528fd9505d"
+  },
+  {
+    "path": "new-acquisition/20260909-070851-campaign/00-00-mcpwm-ftm/stopped-before.json",
+    "bytes": 159,
+    "sha256": "e186801fa11b3b658b43ea8292906c1f028a138332402f4430052db728987e67"
+  },
+  {
+    "path": "new-acquisition/20260909-070851-campaign/00-00-mcpwm-ftm/stopped.json",
+    "bytes": 527,
+    "sha256": "3516bb55fe073c3b1be925d00d8084f3c7f45b03c41854cf4a500e1b5081eae2"
+  },
+  {
+    "path": "new-acquisition/20260909-070851-campaign/00-00-mcpwm-ftm/telemetry.json",
+    "bytes": 6847,
+    "sha256": "c15deb15034e58763ffe0d033d38e9453dc9d1d1a1ec125b1567b16e244fb754"
+  },
+  {
+    "path": "new-acquisition/20260909-070851-campaign/00-00-mcpwm-ftm/timing-armed.json",
+    "bytes": 327,
+    "sha256": "b72946ba78079735da2a15fff19b2b574f5d1bcc8ccfc23c0ebcdb79acaa8c05"
+  },
+  {
+    "path": "new-acquisition/20260909-070851-campaign/device.json",
+    "bytes": 63,
+    "sha256": "f3825ea206067b31bbd5791ffaafb876038adbf275f3ccf0423a15598b6609e0"
+  },
+  {
+    "path": "new-acquisition/20260909-070851-campaign/final-config.json",
+    "bytes": 331,
+    "sha256": "598a978629fa3356b8d8dfeb7fb7d0740607ef48951426aa0c9e0972d20077bc"
+  },
+  {
+    "path": "new-acquisition/20260909-070851-campaign/final-health.json",
+    "bytes": 1468,
+    "sha256": "7d1d4d2e0e63d7c3eb12e95f73fefe05c62f537604b2efd1d93309429d1ff976"
+  },
+  {
+    "path": "new-acquisition/20260909-070851-campaign/final-stop.json",
+    "bytes": 159,
+    "sha256": "e186801fa11b3b658b43ea8292906c1f028a138332402f4430052db728987e67"
+  },
+  {
+    "path": "new-acquisition/20260909-070851-campaign/health-before.json",
+    "bytes": 1468,
+    "sha256": "cb16a3e9fea4a040452dba2b040f1ce60ae99c9bfa5a15e4af76ffb347a1df9b"
+  },
+  {
+    "path": "new-acquisition/20260909-070851-campaign/mode-before.json",
+    "bytes": 895,
+    "sha256": "115f9deae855ec4747fec6d25971a49aab341ecad21dd59ce9c44d3a541b7480"
+  },
+  {
+    "path": "new-acquisition/20260909-070851-campaign/nodes.json",
+    "bytes": 2319,
+    "sha256": "4d9309dc7171ccd3161172dfddf5b494fbee651d00079689faaed995017d4020"
+  },
+  {
+    "path": "new-acquisition/20260909-070851-campaign/settings.json",
+    "bytes": 146,
+    "sha256": "4072fee9e8528589ab3eae55084adf50068a709cb0f1155fa2fb66e8d365ed3d"
+  },
+  {
+    "path": "new-acquisition/20260909-070956-static/16000000-high/capture.sal",
+    "bytes": 3018,
+    "sha256": "32a31cf1d5d30986095452c260a6bf026a8d01bb6ab538e60e41134caa71438a"
+  },
+  {
+    "path": "new-acquisition/20260909-070956-static/16000000-high/command.json",
+    "bytes": 263,
+    "sha256": "7a916441f7002df00af902cc28910f2b54cc8b5f38b3a9c6b246eb477b1e9021"
+  },
+  {
+    "path": "new-acquisition/20260909-070956-static/16000000-high/digital.csv",
+    "bytes": 113,
+    "sha256": "725e809fa3cb2aadf5cb0b80f9b962e1539c03060f73d645ebd18c2a3754a55d"
+  },
+  {
+    "path": "new-acquisition/20260909-070956-static/16000000-high/result.json",
+    "bytes": 209,
+    "sha256": "bfb999fad2779606f35585b5e55d8f02117bab721832b2d5385c2989618d4f59"
+  },
+  {
+    "path": "new-acquisition/20260909-070956-static/16000000-low/capture.sal",
+    "bytes": 3014,
+    "sha256": "63cacfd65b78b4e63b8b9f65daaf6f561cc301805d1e27f837e8ff6de6b206d8"
+  },
+  {
+    "path": "new-acquisition/20260909-070956-static/16000000-low/command.json",
+    "bytes": 263,
+    "sha256": "171af2b6e75b122fcbc77cba6050b11c99445b128ef97e356aafd7abaf0fc092"
+  },
+  {
+    "path": "new-acquisition/20260909-070956-static/16000000-low/digital.csv",
+    "bytes": 92,
+    "sha256": "db7288f6f11c55552cd8bbf54f354cb1b13b0f0d37db8f297c8e4015373690f0"
+  },
+  {
+    "path": "new-acquisition/20260909-070956-static/16000000-low/result.json",
+    "bytes": 180,
+    "sha256": "49912eda5b70790ccf9048112d4c593343caac53889165e3a825a884aa9f317e"
+  },
+  {
+    "path": "new-acquisition/20260909-070956-static/8000000-high/capture.sal",
+    "bytes": 3011,
+    "sha256": "fa0148b2c3dc05dc9366eeb1005c114b5f00028492b87dad158238c4de9925a8"
+  },
+  {
+    "path": "new-acquisition/20260909-070956-static/8000000-high/command.json",
+    "bytes": 263,
+    "sha256": "7a916441f7002df00af902cc28910f2b54cc8b5f38b3a9c6b246eb477b1e9021"
+  },
+  {
+    "path": "new-acquisition/20260909-070956-static/8000000-high/digital.csv",
+    "bytes": 113,
+    "sha256": "7848efc854f14072c778cbc55bee926b2784baf4f3f45a9b2134fa3992f7ab67"
+  },
+  {
+    "path": "new-acquisition/20260909-070956-static/8000000-high/result.json",
+    "bytes": 208,
+    "sha256": "4c6c39f51a47eaa044958c2ea6f9e19c3862a9cbf139ff7ba5568666db858fd2"
+  },
+  {
+    "path": "new-acquisition/20260909-070956-static/8000000-low/capture.sal",
+    "bytes": 3015,
+    "sha256": "9be582aef548b67890a13bdf39271d1308f2cd57380f0ed14c0e0ba423953cd6"
+  },
+  {
+    "path": "new-acquisition/20260909-070956-static/8000000-low/command.json",
+    "bytes": 263,
+    "sha256": "171af2b6e75b122fcbc77cba6050b11c99445b128ef97e356aafd7abaf0fc092"
+  },
+  {
+    "path": "new-acquisition/20260909-070956-static/8000000-low/digital.csv",
+    "bytes": 113,
+    "sha256": "8cbfa29a529626c8a8455ba8477019a35b5c34e0dc5e236b59af0de3d25e3c83"
+  },
+  {
+    "path": "new-acquisition/20260909-070956-static/8000000-low/result.json",
+    "bytes": 207,
+    "sha256": "13a2c18c8390b24f606cb9e7008b562096be8bbb06fe677320c694631d01b14f"
+  },
+  {
+    "path": "new-acquisition/20260909-070956-static/restored-low.json",
+    "bytes": 263,
+    "sha256": "171af2b6e75b122fcbc77cba6050b11c99445b128ef97e356aafd7abaf0fc092"
+  },
+  {
+    "path": "new-acquisition/20260909-070956-static/stopped.json",
+    "bytes": 159,
+    "sha256": "e186801fa11b3b658b43ea8292906c1f028a138332402f4430052db728987e67"
+  },
+  {
+    "path": "noise_forensics.md",
+    "bytes": 7493,
+    "sha256": "9c0b091cc24f32c2675bf2a1a32c431741dde3a56c116a5d69e040492dcdfe6c"
+  },
+  {
+    "path": "noise_forensics.py",
+    "bytes": 1323,
+    "sha256": "0f8f4dba40f9bcd69fda7c1f9a43c4950069dbf21f44807e9a138f43ca268fd7"
+  },
+  {
+    "path": "noise_forensics_metrics.json",
+    "bytes": 5878,
+    "sha256": "912debe70f1baa44060f91aa4ee216cdd65c099fc3440f897fc52e5f39a9dc69"
+  },
+  {
+    "path": "ntp_hardware_audit.md",
+    "bytes": 5223,
+    "sha256": "dc373f3e412fd0d1d46f2165e0b8e80f5aa313b1cbcad58d3cde8b9985b7de75"
+  },
+  {
+    "path": "ntp_method.md",
+    "bytes": 7953,
+    "sha256": "ea023b222957c273927373349df87b508f72c4f3b6391d3d9af20a9d77f0080e"
+  },
+  {
+    "path": "preflight/20260909-063130-669186/node0.txt",
+    "bytes": 329,
+    "sha256": "6fd05b5f6e5e0ecaba60c59d26f236b8e0756701ee1ed7c92484d0c2d34ebfb9"
+  },
+  {
+    "path": "preflight/20260909-063130-669186/node1.txt",
+    "bytes": 329,
+    "sha256": "93f64080b706d8ad6cb05a99b233fc0e7882218cac183d463c64322ee55adaba"
+  },
+  {
+    "path": "preflight/20260909-063130-669186/node2.txt",
+    "bytes": 404,
+    "sha256": "45aca7114e92c1a513c8f1d821437bce5e92d942ad894b20ee4a51db59e4a0f0"
+  },
+  {
+    "path": "preflight/20260909-063130-669186/node3.txt",
+    "bytes": 330,
+    "sha256": "b5bc2f9c2ecc956feb2637ec3bb8094991eee529560502640f15d2edf75ee05f"
+  },
+  {
+    "path": "preflight/20260909-063130-669186/preflight.json",
+    "bytes": 2764,
+    "sha256": "04e5a75165b00e5eac8072577f383d21188566cdb968ba491d9183e701666788"
+  },
+  {
+    "path": "quality_checks.json",
+    "bytes": 607,
+    "sha256": "56e9d2c605e6681bcc9f5d6325fc6d3eba8e9346d2b00792be430d63f74c6d76"
+  },
+  {
+    "path": "README.md",
+    "bytes": 4052,
+    "sha256": "9fa9164cd8198394c5412c885245d027a610767f8a8b159d64228ffbcb528d9c"
+  },
+  {
+    "path": "references/Freenove-ESP32S3-Pinout.png",
+    "bytes": 259211,
+    "sha256": "e3f297e2c9c14f941a0784b13d1195a24d0c2360663f486946453356e4e1df6e"
+  },
+  {
+    "path": "session_log.json",
+    "bytes": 1721,
+    "sha256": "d52ba7207115d6fd55ac41f9dc38dcf6a501dad06d7df77a09b17b7773304962"
+  },
+  {
+    "path": "timesync_report.md",
+    "bytes": 35445,
+    "sha256": "d8fe678971f691b80091a44a755bca9c5a451f8b6a8ad4292f5a569778bd39e4"
+  },
+  {
+    "path": "timesync_report.pdf",
+    "bytes": 612166,
+    "sha256": "5f27831efc3af5241a0eed03e6b297dad236f2100f09d7fddfff1ef9359ddbd8"
+  },
+  {
+    "path": "user-signal-check.json",
+    "bytes": 1850,
+    "sha256": "b8187bfceb20edde8a8edb9c432b8ed3996b93c3adb8fc780b2c46b35ee1cd48"
+  }
+]

@@ -1,0 +1,6 @@
+{
+  "0": "via Wi-Fi 192.168.137.112\nntp running=0 server=0 poll_ms=1000 accepted=20 rejected=1 offset_us=-6261.500 rtt_us=12991 age_us=140793165",
+  "1": "via Wi-Fi 192.168.137.204\nntp running=0 server=0 poll_ms=1000 accepted=20 rejected=1 offset_us=-288183160.500 rtt_us=10211 age_us=140822274",
+  "2": "via Wi-Fi 192.168.137.177\nntp running=0 server=1 poll_ms=1000 accepted=0 rejected=0 offset_us=0.000 rtt_us=0 age_us=-1",
+  "3": "via Wi-Fi 192.168.137.136\nntp running=0 server=0 poll_ms=1000 accepted=21 rejected=0 offset_us=-29777.000 rtt_us=7086 age_us=140805067"
+}

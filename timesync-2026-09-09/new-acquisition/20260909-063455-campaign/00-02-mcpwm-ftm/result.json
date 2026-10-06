@@ -1,0 +1,9 @@
+{
+  "method": "mcpwm:ftm",
+  "repeat": 0,
+  "duration": 60.0,
+  "sample_rate": 16000000,
+  "build": "fdb0d3b4ab514a2d",
+  "network_load": "no deliberate health polling during capture",
+  "acquisition": "completed"
+}

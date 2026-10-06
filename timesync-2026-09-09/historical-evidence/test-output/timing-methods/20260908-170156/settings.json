@@ -1,0 +1,14 @@
+{
+  "methods": [
+    "task:ftm",
+    "high:ftm",
+    "esp:ftm",
+    "gpt:ftm",
+    "gpt:frozen",
+    "gpt:tsf"
+  ],
+  "seconds": 25.0,
+  "repeats": 1,
+  "build": "34e1a3df22c26af8",
+  "only_node": null
+}

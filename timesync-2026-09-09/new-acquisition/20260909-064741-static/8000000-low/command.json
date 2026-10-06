@@ -1,0 +1,6 @@
+{
+  "0": "via Wi-Fi 192.168.137.112\ntiming gpio=41 pad_level=0",
+  "1": "via Wi-Fi 192.168.137.204\ntiming gpio=41 pad_level=0",
+  "2": "via Wi-Fi 192.168.137.177\ntiming gpio=41 pad_level=0",
+  "3": "via Wi-Fi 192.168.137.136\ntiming gpio=41 pad_level=0"
+}

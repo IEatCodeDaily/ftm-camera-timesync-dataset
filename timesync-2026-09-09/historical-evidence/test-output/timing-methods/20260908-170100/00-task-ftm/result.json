@@ -1,0 +1,13 @@
+{
+  "method": "task:ftm",
+  "repeat": 0,
+  "sample_rate": 16000000,
+  "duration": 4.0,
+  "error": "Failed to export data: Failed to create directory test-output\\timing-methods\\20260908-170100\\00-task-ftm: create_directories: Access is denied.: \"test-output\\timing-methods\\20260908-170100\\00-task-ftm\"",
+  "stopped": {
+    "0": "via Wi-Fi 192.168.137.177\n",
+    "1": "via Wi-Fi 192.168.137.94\n",
+    "2": "via Wi-Fi 192.168.137.243\nI (44791) strobe_gpio: mode: 1HZ -> OFF\nI (44792) mode_ctrl: applied mode OFF (value=0)",
+    "3": "via Wi-Fi 192.168.137.228\n"
+  }
+}

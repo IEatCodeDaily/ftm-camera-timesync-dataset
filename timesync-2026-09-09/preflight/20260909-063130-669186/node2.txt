@@ -1,0 +1,6 @@
+via Wi-Fi 192.168.137.177
+role=RESPONDER node_id=2 leader_id=255 fw_proto=1
+model: valid=0 rev=0 inliers=0/0 drift_ppm=0.000 resid_ns_std=0.00 resid_ns_max=0.00 r2=0.000000 rtt_med_ns=0.0
+via Wi-Fi 192.168.137.177
+mode: OFF (threshold=220 width=10us gpio=41 identify_gpio=2)
+clock_source=wifi_mac clock_ready=1 reference=1 mac_us=28770980213 esp_us=28770085975 mac_minus_esp_us=894238 read_span_us=1

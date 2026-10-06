@@ -1,0 +1,6 @@
+via Wi-Fi 192.168.137.204
+role=NODE node_id=1 leader_id=255 fw_proto=1
+model: valid=1 rev=6204 inliers=64/64 drift_ppm=-5.981 resid_ns_std=2.80 resid_ns_max=13.03 r2=1.000000 rtt_med_ns=1.6
+via Wi-Fi 192.168.137.204
+mode: OFF (threshold=220 width=10us gpio=41 identify_gpio=2)
+clock_source=wifi_mac clock_ready=0 reference=0

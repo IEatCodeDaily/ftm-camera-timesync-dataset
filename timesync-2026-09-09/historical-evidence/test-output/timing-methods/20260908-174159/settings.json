@@ -1,0 +1,10 @@
+{
+  "methods": [
+    "mcpwm:ftm"
+  ],
+  "seconds": 60.0,
+  "repeats": 1,
+  "build": "e0ac899e423e2d93",
+  "only_node": null,
+  "network_load": true
+}

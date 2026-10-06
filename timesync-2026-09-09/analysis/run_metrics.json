@@ -1,0 +1,4266 @@
+[
+  {
+    "run": "test-output/pipeline/20260908-175800-tracking",
+    "new": false,
+    "method": "mcpwm:ftm-camera-load",
+    "duration": 60,
+    "build": "unknown",
+    "error": null,
+    "pairs": {
+      "0": {
+        "n": 60,
+        "mean_us": 0.23016666658715046,
+        "sd_us": 0.9003055427953565,
+        "rms_us": 0.9292614082140084,
+        "p95_abs_us": 1.7499999991343884,
+        "max_abs_us": 2.0630000037158425,
+        "min_us": -2.0630000037158425,
+        "max_us": 1.87499999526608,
+        "trend_us_per_s": 0.005782672387787492,
+        "unmatched_reference": 0,
+        "unmatched_follower": 0
+      },
+      "1": {
+        "n": 60,
+        "mean_us": 0.874899999662541,
+        "sd_us": 0.8812125863196426,
+        "rms_us": 1.2417671406901003,
+        "p95_abs_us": 1.8759999989015341,
+        "max_abs_us": 2.750000000162345,
+        "min_us": -1.3749999965284587,
+        "max_us": 2.750000000162345,
+        "trend_us_per_s": -0.00761651844575598,
+        "unmatched_reference": 0,
+        "unmatched_follower": 0
+      },
+      "3": {
+        "n": 60,
+        "mean_us": 0.3249999995717327,
+        "sd_us": 0.7231176940902112,
+        "rms_us": 0.7927951811331666,
+        "p95_abs_us": 1.4999999997655777,
+        "max_abs_us": 1.562000001342767,
+        "min_us": -1.562000001342767,
+        "max_us": 1.4999999997655777,
+        "trend_us_per_s": -0.003574103823674877,
+        "unmatched_reference": 0,
+        "unmatched_follower": 0
+      }
+    },
+    "channels": {
+      "0": {
+        "raw": 60,
+        "qualified": 60,
+        "rejected": 0,
+        "cadence_bad_intervals": 0,
+        "intervals_over_1_5_s": 0,
+        "period_min_s": 0.9999672500000001,
+        "period_max_s": 0.9999710000000022,
+        "unclosed_observed_rises": 0
+      },
+      "1": {
+        "raw": 60,
+        "qualified": 60,
+        "rejected": 0,
+        "cadence_bad_intervals": 0,
+        "intervals_over_1_5_s": 0,
+        "period_min_s": 0.9999675000000003,
+        "period_max_s": 0.9999710000000004,
+        "unclosed_observed_rises": 0
+      },
+      "2": {
+        "raw": 157,
+        "qualified": 60,
+        "rejected": 97,
+        "cadence_bad_intervals": 0,
+        "intervals_over_1_5_s": 0,
+        "period_min_s": 0.9999673120000026,
+        "period_max_s": 0.9999706879999977,
+        "unclosed_observed_rises": 0
+      },
+      "3": {
+        "raw": 85,
+        "qualified": 60,
+        "rejected": 25,
+        "cadence_bad_intervals": 0,
+        "intervals_over_1_5_s": 0,
+        "period_min_s": 0.9999673120000026,
+        "period_max_s": 0.9999710630000003,
+        "unclosed_observed_rises": 0
+      }
+    },
+    "signal_clean": false,
+    "minimum_matched": 60,
+    "classification": "provisional glitches",
+    "primary_eligible": false
+  },
+  {
+    "run": "test-output/timing-methods/20260908-170100/00-task-ftm",
+    "new": false,
+    "method": "task:ftm",
+    "duration": 4.0,
+    "build": "34e1a3df22c26af8",
+    "error": "Failed to export data: Failed to create directory test-output\\timing-methods\\20260908-170100\\00-task-ftm: create_directories: Access is denied.: \"test-output\\timing-methods\\20260908-170100\\00-task-ftm\"",
+    "pairs": {},
+    "channels": {},
+    "classification": "acquisition failed / no raw CSV",
+    "primary_eligible": false
+  },
+  {
+    "run": "test-output/timing-methods/20260908-170133/00-task-ftm",
+    "new": false,
+    "method": "task:ftm",
+    "duration": 4.0,
+    "build": "34e1a3df22c26af8",
+    "error": null,
+    "pairs": {
+      "0": {
+        "n": 0,
+        "unmatched_reference": 4,
+        "unmatched_follower": 0
+      },
+      "1": {
+        "n": 0,
+        "unmatched_reference": 4,
+        "unmatched_follower": 0
+      },
+      "3": {
+        "n": 0,
+        "unmatched_reference": 4,
+        "unmatched_follower": 0
+      }
+    },
+    "channels": {
+      "0": {
+        "raw": 0,
+        "qualified": 0,
+        "rejected": 0,
+        "cadence_bad_intervals": 0,
+        "intervals_over_1_5_s": 0,
+        "period_min_s": null,
+        "period_max_s": null,
+        "unclosed_observed_rises": 0
+      },
+      "1": {
+        "raw": 0,
+        "qualified": 0,
+        "rejected": 0,
+        "cadence_bad_intervals": 0,
+        "intervals_over_1_5_s": 0,
+        "period_min_s": null,
+        "period_max_s": null,
+        "unclosed_observed_rises": 0
+      },
+      "2": {
+        "raw": 4,
+        "qualified": 4,
+        "rejected": 0,
+        "cadence_bad_intervals": 0,
+        "intervals_over_1_5_s": 0,
+        "period_min_s": 0.9999685,
+        "period_max_s": 0.9999685619999998,
+        "unclosed_observed_rises": 0
+      },
+      "3": {
+        "raw": 0,
+        "qualified": 0,
+        "rejected": 0,
+        "cadence_bad_intervals": 0,
+        "intervals_over_1_5_s": 0,
+        "period_min_s": null,
+        "period_max_s": null,
+        "unclosed_observed_rises": 0
+      }
+    },
+    "signal_clean": true,
+    "minimum_matched": 0,
+    "classification": "insufficient/full-fleet inconclusive",
+    "primary_eligible": false
+  },
+  {
+    "run": "test-output/timing-methods/20260908-170156/00-esp-ftm",
+    "new": false,
+    "method": "esp:ftm",
+    "duration": 25.0,
+    "build": "34e1a3df22c26af8",
+    "error": null,
+    "pairs": {
+      "0": {
+        "n": 25,
+        "mean_us": 6.9475999998791504,
+        "sd_us": 23.43387400336537,
+        "rms_us": 24.4420865836762,
+        "p95_abs_us": 20.561999999557656,
+        "max_abs_us": 103.18800000064243,
+        "min_us": -103.18800000064243,
+        "max_us": 20.561999999557656,
+        "trend_us_per_s": -0.09216462027401492,
+        "unmatched_reference": 0,
+        "unmatched_follower": 0
+      },
+      "1": {
+        "n": 25,
+        "mean_us": 6.957519999960526,
+        "sd_us": 28.740787559345257,
+        "rms_us": 29.570930896427083,
+        "p95_abs_us": 92.6260000007062,
+        "max_abs_us": 102.06199999984733,
+        "min_us": -102.06199999984733,
+        "max_us": 92.6260000007062,
+        "trend_us_per_s": -0.41779713491089554,
+        "unmatched_reference": 0,
+        "unmatched_follower": 0
+      },
+      "3": {
+        "n": 25,
+        "mean_us": -6.339920000042465,
+        "sd_us": 22.13589493616232,
+        "rms_us": 23.025907804726288,
+        "p95_abs_us": 14.874999999969774,
+        "max_abs_us": 110.0619999991892,
+        "min_us": -110.0619999991892,
+        "max_us": 14.874999999969774,
+        "trend_us_per_s": -0.147373444011386,
+        "unmatched_reference": 0,
+        "unmatched_follower": 0
+      }
+    },
+    "channels": {
+      "0": {
+        "raw": 25,
+        "qualified": 25,
+        "rejected": 0,
+        "cadence_bad_intervals": 0,
+        "intervals_over_1_5_s": 0,
+        "period_min_s": 0.999953437000002,
+        "period_max_s": 0.999984125000001,
+        "unclosed_observed_rises": 0
+      },
+      "1": {
+        "raw": 25,
+        "qualified": 25,
+        "rejected": 0,
+        "cadence_bad_intervals": 0,
+        "intervals_over_1_5_s": 0,
+        "period_min_s": 0.9998935620000005,
+        "period_max_s": 1.000046813,
+        "unclosed_observed_rises": 0
+      },
+      "2": {
+        "raw": 25,
+        "qualified": 25,
+        "rejected": 0,
+        "cadence_bad_intervals": 0,
+        "intervals_over_1_5_s": 0,
+        "period_min_s": 0.9998556880000002,
+        "period_max_s": 1.0000856250000005,
+        "unclosed_observed_rises": 0
+      },
+      "3": {
+        "raw": 25,
+        "qualified": 25,
+        "rejected": 0,
+        "cadence_bad_intervals": 0,
+        "intervals_over_1_5_s": 0,
+        "period_min_s": 0.9999544380000003,
+        "period_max_s": 0.999982937,
+        "unclosed_observed_rises": 0
+      }
+    },
+    "signal_clean": true,
+    "minimum_matched": 25,
+    "classification": "insufficient/full-fleet inconclusive",
+    "primary_eligible": false
+  },
+  {
+    "run": "test-output/timing-methods/20260908-170156/00-gpt-frozen",
+    "new": false,
+    "method": "gpt:frozen",
+    "duration": 25.0,
+    "build": "34e1a3df22c26af8",
+    "error": null,
+    "pairs": {
+      "0": {
+        "n": 25,
+        "mean_us": -0.02503999985803418,
+        "sd_us": 1.13177324521314,
+        "rms_us": 1.1320502109770454,
+        "p95_abs_us": 1.8130000007943181,
+        "max_abs_us": 4.50000000107309,
+        "min_us": -1.8130000007943181,
+        "max_us": 4.50000000107309,
+        "trend_us_per_s": 0.012381924310347412,
+        "unmatched_reference": 0,
+        "unmatched_follower": 0
+      },
+      "1": {
+        "n": 25,
+        "mean_us": 2.452400000392818,
+        "sd_us": 13.674970049016542,
+        "rms_us": 13.893130374520574,
+        "p95_abs_us": 1.8129999999061397,
+        "max_abs_us": 69.37500000070429,
+        "min_us": -1.8129999999061397,
+        "max_us": 69.37500000070429,
+        "trend_us_per_s": 0.06258194050351483,
+        "unmatched_reference": 0,
+        "unmatched_follower": 0
+      },
+      "3": {
+        "n": 25,
+        "mean_us": -8.75251999980453,
+        "sd_us": 41.39020744797163,
+        "rms_us": 42.30550648477222,
+        "p95_abs_us": 1.250000000396767,
+        "max_abs_us": 211.50100000077998,
+        "min_us": -211.50100000077998,
+        "max_us": 0.9380000003389455,
+        "trend_us_per_s": 0.3043703542862401,
+        "unmatched_reference": 0,
+        "unmatched_follower": 0
+      }
+    },
+    "channels": {
+      "0": {
+        "raw": 25,
+        "qualified": 25,
+        "rejected": 0,
+        "cadence_bad_intervals": 0,
+        "intervals_over_1_5_s": 0,
+        "period_min_s": 0.9999642499999997,
+        "period_max_s": 0.999972188000001,
+        "unclosed_observed_rises": 0
+      },
+      "1": {
+        "raw": 25,
+        "qualified": 25,
+        "rejected": 0,
+        "cadence_bad_intervals": 0,
+        "intervals_over_1_5_s": 0,
+        "period_min_s": 0.9999000000000002,
+        "period_max_s": 1.0000370630000006,
+        "unclosed_observed_rises": 0
+      },
+      "2": {
+        "raw": 25,
+        "qualified": 25,
+        "rejected": 0,
+        "cadence_bad_intervals": 0,
+        "intervals_over_1_5_s": 0,
+        "period_min_s": 0.999967311999999,
+        "period_max_s": 0.9999693759999992,
+        "unclosed_observed_rises": 0
+      },
+      "3": {
+        "raw": 25,
+        "qualified": 25,
+        "rejected": 0,
+        "cadence_bad_intervals": 0,
+        "intervals_over_1_5_s": 0,
+        "period_min_s": 0.9997568119999993,
+        "period_max_s": 1.000179751000001,
+        "unclosed_observed_rises": 0
+      }
+    },
+    "signal_clean": true,
+    "minimum_matched": 25,
+    "classification": "insufficient/full-fleet inconclusive",
+    "primary_eligible": false
+  },
+  {
+    "run": "test-output/timing-methods/20260908-170156/00-gpt-ftm",
+    "new": false,
+    "method": "gpt:ftm",
+    "duration": 25.0,
+    "build": "34e1a3df22c26af8",
+    "error": null,
+    "pairs": {
+      "0": {
+        "n": 25,
+        "mean_us": -0.6051599997425328,
+        "sd_us": 0.45165984349801774,
+        "rms_us": 0.7551259759252333,
+        "p95_abs_us": 1.1259999972423884,
+        "max_abs_us": 1.1879999988195777,
+        "min_us": -1.1879999988195777,
+        "max_us": 0.7499999998827889,
+        "trend_us_per_s": -0.0031154830723150065,
+        "unmatched_reference": 0,
+        "unmatched_follower": 0
+      },
+      "1": {
+        "n": 25,
+        "mean_us": -0.16487999983105794,
+        "sd_us": 0.580829015557627,
+        "rms_us": 0.6037779059040931,
+        "p95_abs_us": 1.373999999998432,
+        "max_abs_us": 1.4999999997655777,
+        "min_us": -1.4999999997655777,
+        "max_us": 1.312999998503983,
+        "trend_us_per_s": -0.0015731267045253382,
+        "unmatched_reference": 0,
+        "unmatched_follower": 0
+      },
+      "3": {
+        "n": 25,
+        "mean_us": -0.26251999970750006,
+        "sd_us": 0.3884645796905178,
+        "rms_us": 0.46885123431698084,
+        "p95_abs_us": 0.749999998106432,
+        "max_abs_us": 1.3750000000811724,
+        "min_us": -1.3750000000811724,
+        "max_us": 0.3760000009123132,
+        "trend_us_per_s": -0.007195611995624091,
+        "unmatched_reference": 0,
+        "unmatched_follower": 0
+      }
+    },
+    "channels": {
+      "0": {
+        "raw": 25,
+        "qualified": 25,
+        "rejected": 0,
+        "cadence_bad_intervals": 0,
+        "intervals_over_1_5_s": 0,
+        "period_min_s": 0.9999672499999992,
+        "period_max_s": 0.9999702500000005,
+        "unclosed_observed_rises": 0
+      },
+      "1": {
+        "raw": 25,
+        "qualified": 25,
+        "rejected": 0,
+        "cadence_bad_intervals": 0,
+        "intervals_over_1_5_s": 0,
+        "period_min_s": 0.9999670620000005,
+        "period_max_s": 0.9999700620000009,
+        "unclosed_observed_rises": 0
+      },
+      "2": {
+        "raw": 25,
+        "qualified": 25,
+        "rejected": 0,
+        "cadence_bad_intervals": 0,
+        "intervals_over_1_5_s": 0,
+        "period_min_s": 0.9999683130000001,
+        "period_max_s": 0.9999684380000002,
+        "unclosed_observed_rises": 0
+      },
+      "3": {
+        "raw": 25,
+        "qualified": 25,
+        "rejected": 0,
+        "cadence_bad_intervals": 0,
+        "intervals_over_1_5_s": 0,
+        "period_min_s": 0.9999668120000003,
+        "period_max_s": 0.9999697509999983,
+        "unclosed_observed_rises": 0
+      }
+    },
+    "signal_clean": true,
+    "minimum_matched": 25,
+    "classification": "insufficient/full-fleet inconclusive",
+    "primary_eligible": false
+  },
+  {
+    "run": "test-output/timing-methods/20260908-170156/00-gpt-tsf",
+    "new": false,
+    "method": "gpt:tsf",
+    "duration": 25.0,
+    "build": "34e1a3df22c26af8",
+    "error": null,
+    "pairs": {
+      "0": {
+        "n": 25,
+        "mean_us": -8.757600000275367,
+        "sd_us": 5.850947895578721,
+        "rms_us": 10.532290778439426,
+        "p95_abs_us": 18.250000000108457,
+        "max_abs_us": 22.124999999983963,
+        "min_us": -22.124999999983963,
+        "max_us": 2.937999997953966,
+        "trend_us_per_s": 0.27379252474356003,
+        "unmatched_reference": 0,
+        "unmatched_follower": 0
+      },
+      "1": {
+        "n": 25,
+        "mean_us": -13.940120000117684,
+        "sd_us": 4.957555053413213,
+        "rms_us": 14.795414753406002,
+        "p95_abs_us": 18.750000000178346,
+        "max_abs_us": 32.18799999998856,
+        "min_us": -32.18799999998856,
+        "max_us": -4.624999999869317,
+        "trend_us_per_s": 0.1294673115772014,
+        "unmatched_reference": 0,
+        "unmatched_follower": 0
+      },
+      "3": {
+        "n": 25,
+        "mean_us": -13.112400000203639,
+        "sd_us": 6.4777013822769645,
+        "rms_us": 14.62517175842025,
+        "p95_abs_us": 21.312000001216802,
+        "max_abs_us": 35.124999999969205,
+        "min_us": -35.124999999969205,
+        "max_us": -1.250000000396767,
+        "trend_us_per_s": 0.12918334632324474,
+        "unmatched_reference": 0,
+        "unmatched_follower": 0
+      }
+    },
+    "channels": {
+      "0": {
+        "raw": 25,
+        "qualified": 25,
+        "rejected": 0,
+        "cadence_bad_intervals": 0,
+        "intervals_over_1_5_s": 0,
+        "period_min_s": 1.0000001870000013,
+        "period_max_s": 1.0000242499999992,
+        "unclosed_observed_rises": 0
+      },
+      "1": {
+        "raw": 25,
+        "qualified": 25,
+        "rejected": 0,
+        "cadence_bad_intervals": 0,
+        "intervals_over_1_5_s": 0,
+        "period_min_s": 1.0000011880000006,
+        "period_max_s": 1.0000209990000002,
+        "unclosed_observed_rises": 0
+      },
+      "2": {
+        "raw": 25,
+        "qualified": 25,
+        "rejected": 0,
+        "cadence_bad_intervals": 0,
+        "intervals_over_1_5_s": 0,
+        "period_min_s": 0.9999883120000002,
+        "period_max_s": 1.000025313,
+        "unclosed_observed_rises": 0
+      },
+      "3": {
+        "raw": 25,
+        "qualified": 25,
+        "rejected": 0,
+        "cadence_bad_intervals": 0,
+        "intervals_over_1_5_s": 0,
+        "period_min_s": 1.0000027500000002,
+        "period_max_s": 1.000024812,
+        "unclosed_observed_rises": 0
+      }
+    },
+    "signal_clean": true,
+    "minimum_matched": 25,
+    "classification": "insufficient/full-fleet inconclusive",
+    "primary_eligible": false
+  },
+  {
+    "run": "test-output/timing-methods/20260908-170156/00-high-ftm",
+    "new": false,
+    "method": "high:ftm",
+    "duration": 25.0,
+    "build": "34e1a3df22c26af8",
+    "error": "Error interacting with device during capture: ReadTimeout.",
+    "pairs": {},
+    "channels": {},
+    "classification": "acquisition failed / no raw CSV",
+    "primary_eligible": false
+  },
+  {
+    "run": "test-output/timing-methods/20260908-170156/00-task-ftm",
+    "new": false,
+    "method": "task:ftm",
+    "duration": 25.0,
+    "build": "34e1a3df22c26af8",
+    "error": null,
+    "pairs": {
+      "0": {
+        "n": 25,
+        "mean_us": 0.06496000026223747,
+        "sd_us": 0.6868882573270189,
+        "rms_us": 0.6899530996291116,
+        "p95_abs_us": 1.31300000028034,
+        "max_abs_us": 1.876000000677891,
+        "min_us": -0.8749999995671942,
+        "max_us": 1.876000000677891,
+        "trend_us_per_s": -0.0019816013365243474,
+        "unmatched_reference": 0,
+        "unmatched_follower": 0
+      },
+      "1": {
+        "n": 25,
+        "mean_us": 0.6348799999666978,
+        "sd_us": 1.5813214554801882,
+        "rms_us": 1.7040100234211344,
+        "p95_abs_us": 5.000000001587068,
+        "max_abs_us": 5.374999998863927,
+        "min_us": -1.3750000000811724,
+        "max_us": 5.374999998863927,
+        "trend_us_per_s": 0.016786683389085823,
+        "unmatched_reference": 0,
+        "unmatched_follower": 0
+      },
+      "3": {
+        "n": 25,
+        "mean_us": 0.00740000019927578,
+        "sd_us": 0.5299474695133661,
+        "rms_us": 0.5299991324960536,
+        "p95_abs_us": 0.8760000014262914,
+        "max_abs_us": 1.5630000014255074,
+        "min_us": -1.5630000014255074,
+        "max_us": 0.8760000014262914,
+        "trend_us_per_s": -0.008321801093310472,
+        "unmatched_reference": 0,
+        "unmatched_follower": 0
+      }
+    },
+    "channels": {
+      "0": {
+        "raw": 25,
+        "qualified": 25,
+        "rejected": 0,
+        "cadence_bad_intervals": 0,
+        "intervals_over_1_5_s": 0,
+        "period_min_s": 0.9999669989999997,
+        "period_max_s": 0.9999703130000004,
+        "unclosed_observed_rises": 0
+      },
+      "1": {
+        "raw": 25,
+        "qualified": 25,
+        "rejected": 0,
+        "cadence_bad_intervals": 0,
+        "intervals_over_1_5_s": 0,
+        "period_min_s": 0.9999648749999999,
+        "period_max_s": 0.9999733129999999,
+        "unclosed_observed_rises": 0
+      },
+      "2": {
+        "raw": 25,
+        "qualified": 25,
+        "rejected": 0,
+        "cadence_bad_intervals": 0,
+        "intervals_over_1_5_s": 0,
+        "period_min_s": 0.9999681239999996,
+        "period_max_s": 0.9999688760000005,
+        "unclosed_observed_rises": 0
+      },
+      "3": {
+        "raw": 25,
+        "qualified": 25,
+        "rejected": 0,
+        "cadence_bad_intervals": 0,
+        "intervals_over_1_5_s": 0,
+        "period_min_s": 0.9999664369999994,
+        "period_max_s": 0.9999707510000011,
+        "unclosed_observed_rises": 0
+      }
+    },
+    "signal_clean": true,
+    "minimum_matched": 25,
+    "classification": "insufficient/full-fleet inconclusive",
+    "primary_eligible": false
+  },
+  {
+    "run": "test-output/timing-methods/20260908-171055/00-gptpair-ftm",
+    "new": false,
+    "method": "gptpair:ftm",
+    "duration": 25.0,
+    "build": "8dc05893b49ecfab",
+    "error": null,
+    "pairs": {
+      "0": {
+        "n": 25,
+        "mean_us": 0.27244000005071517,
+        "sd_us": 0.6734002128315982,
+        "rms_us": 0.7264237057456725,
+        "p95_abs_us": 1.4370000016583617,
+        "max_abs_us": 1.8120000007115777,
+        "min_us": -1.8120000007115777,
+        "max_us": 1.4370000016583617,
+        "trend_us_per_s": -0.004954008886127745,
+        "unmatched_reference": 0,
+        "unmatched_follower": 0
+      },
+      "1": {
+        "n": 25,
+        "mean_us": -0.26267999967098665,
+        "sd_us": 0.9768524851528679,
+        "rms_us": 1.0115540321586798,
+        "p95_abs_us": 1.874000002288767,
+        "max_abs_us": 1.9369999995078047,
+        "min_us": -1.874000002288767,
+        "max_us": 1.9369999995078047,
+        "trend_us_per_s": -0.01912215133881334,
+        "unmatched_reference": 0,
+        "unmatched_follower": 0
+      },
+      "3": {
+        "n": 25,
+        "mean_us": -0.1875600000561181,
+        "sd_us": 0.7621402014021533,
+        "rms_us": 0.7848798890367658,
+        "p95_abs_us": 1.5000000000006328,
+        "max_abs_us": 1.5629999996491506,
+        "min_us": -1.5629999996491506,
+        "max_us": 1.4999999997655777,
+        "trend_us_per_s": 0.01657821165333666,
+        "unmatched_reference": 0,
+        "unmatched_follower": 0
+      }
+    },
+    "channels": {
+      "0": {
+        "raw": 26,
+        "qualified": 25,
+        "rejected": 0,
+        "cadence_bad_intervals": 0,
+        "intervals_over_1_5_s": 0,
+        "period_min_s": 0.9999668750000019,
+        "period_max_s": 0.9999689380000003,
+        "unclosed_observed_rises": 1
+      },
+      "1": {
+        "raw": 26,
+        "qualified": 25,
+        "rejected": 0,
+        "cadence_bad_intervals": 0,
+        "intervals_over_1_5_s": 0,
+        "period_min_s": 0.9999660000000006,
+        "period_max_s": 0.9999699999999994,
+        "unclosed_observed_rises": 1
+      },
+      "2": {
+        "raw": 26,
+        "qualified": 25,
+        "rejected": 0,
+        "cadence_bad_intervals": 0,
+        "intervals_over_1_5_s": 0,
+        "period_min_s": 0.999966312999998,
+        "period_max_s": 0.999969375,
+        "unclosed_observed_rises": 1
+      },
+      "3": {
+        "raw": 26,
+        "qualified": 25,
+        "rejected": 0,
+        "cadence_bad_intervals": 0,
+        "intervals_over_1_5_s": 0,
+        "period_min_s": 0.9999659380000008,
+        "period_max_s": 0.9999699999999994,
+        "unclosed_observed_rises": 1
+      }
+    },
+    "signal_clean": true,
+    "minimum_matched": 25,
+    "classification": "insufficient/full-fleet inconclusive",
+    "primary_eligible": false
+  },
+  {
+    "run": "test-output/timing-methods/20260908-171055/00-high-ftm",
+    "new": false,
+    "method": "high:ftm",
+    "duration": 25.0,
+    "build": "8dc05893b49ecfab",
+    "error": null,
+    "pairs": {
+      "0": {
+        "n": 25,
+        "mean_us": 0.9924800000460365,
+        "sd_us": 4.136545642335477,
+        "rms_us": 4.253942453961502,
+        "p95_abs_us": 8.874999998909061,
+        "max_abs_us": 19.12500000145201,
+        "min_us": -1.8120000007115777,
+        "max_us": 19.12500000145201,
+        "trend_us_per_s": 0.14616385000219512,
+        "unmatched_reference": 0,
+        "unmatched_follower": 0
+      },
+      "1": {
+        "n": 25,
+        "mean_us": 0.07012000020178988,
+        "sd_us": 1.2278409122895482,
+        "rms_us": 1.2298415021133124,
+        "p95_abs_us": 2.563000000677107,
+        "max_abs_us": 4.50000000107309,
+        "min_us": -2.0620000000803884,
+        "max_us": 4.50000000107309,
+        "trend_us_per_s": -0.0003407787056009284,
+        "unmatched_reference": 0,
+        "unmatched_follower": 0
+      },
+      "3": {
+        "n": 25,
+        "mean_us": -0.2974400000121946,
+        "sd_us": 0.4756583715468339,
+        "rms_us": 0.5610003921833212,
+        "p95_abs_us": 1.061999999052432,
+        "max_abs_us": 1.0619999999406105,
+        "min_us": -1.0619999999406105,
+        "max_us": 0.875000001343551,
+        "trend_us_per_s": 0.0019969844782783274,
+        "unmatched_reference": 0,
+        "unmatched_follower": 0
+      }
+    },
+    "channels": {
+      "0": {
+        "raw": 25,
+        "qualified": 25,
+        "rejected": 0,
+        "cadence_bad_intervals": 0,
+        "intervals_over_1_5_s": 0,
+        "period_min_s": 0.9999575000000007,
+        "period_max_s": 0.9999875620000012,
+        "unclosed_observed_rises": 0
+      },
+      "1": {
+        "raw": 25,
+        "qualified": 25,
+        "rejected": 0,
+        "cadence_bad_intervals": 0,
+        "intervals_over_1_5_s": 0,
+        "period_min_s": 0.9999638120000007,
+        "period_max_s": 0.999972188000001,
+        "unclosed_observed_rises": 0
+      },
+      "2": {
+        "raw": 25,
+        "qualified": 25,
+        "rejected": 0,
+        "cadence_bad_intervals": 0,
+        "intervals_over_1_5_s": 0,
+        "period_min_s": 0.9999675620000001,
+        "period_max_s": 0.9999691870000014,
+        "unclosed_observed_rises": 0
+      },
+      "3": {
+        "raw": 25,
+        "qualified": 25,
+        "rejected": 0,
+        "cadence_bad_intervals": 0,
+        "intervals_over_1_5_s": 0,
+        "period_min_s": 0.9999674380000001,
+        "period_max_s": 0.999969375,
+        "unclosed_observed_rises": 0
+      }
+    },
+    "signal_clean": true,
+    "minimum_matched": 25,
+    "classification": "insufficient/full-fleet inconclusive",
+    "primary_eligible": false
+  },
+  {
+    "run": "test-output/timing-methods/20260908-171055/00-mcpwm-ftm",
+    "new": false,
+    "method": "mcpwm:ftm",
+    "duration": 25.0,
+    "build": "8dc05893b49ecfab",
+    "error": null,
+    "pairs": {
+      "0": {
+        "n": 25,
+        "mean_us": -0.9700399999944264,
+        "sd_us": 0.5381799313985332,
+        "rms_us": 1.1093309876449484,
+        "p95_abs_us": 1.874000002288767,
+        "max_abs_us": 2.311999999449199,
+        "min_us": -2.311999999449199,
+        "max_us": 0.2500000002569891,
+        "trend_us_per_s": -0.026926238884729378,
+        "unmatched_reference": 0,
+        "unmatched_follower": 0
+      },
+      "1": {
+        "n": 25,
+        "mean_us": -0.9000000001818664,
+        "sd_us": 0.5496751038915304,
+        "rms_us": 1.0545817750015996,
+        "p95_abs_us": 1.6870000010271724,
+        "max_abs_us": 1.8749999988187938,
+        "min_us": -1.8749999988187938,
+        "max_us": 0.498999998654881,
+        "trend_us_per_s": -0.01286656256201492,
+        "unmatched_reference": 0,
+        "unmatched_follower": 0
+      },
+      "3": {
+        "n": 25,
+        "mean_us": -1.0074400003468043,
+        "sd_us": 0.5067481491762004,
+        "rms_us": 1.1277096439209313,
+        "p95_abs_us": 1.9380000004787235,
+        "max_abs_us": 2.375000001109129,
+        "min_us": -2.375000001109129,
+        "max_us": 0.0620000006890109,
+        "trend_us_per_s": -0.010700340249613277,
+        "unmatched_reference": 0,
+        "unmatched_follower": 0
+      }
+    },
+    "channels": {
+      "0": {
+        "raw": 26,
+        "qualified": 25,
+        "rejected": 0,
+        "cadence_bad_intervals": 0,
+        "intervals_over_1_5_s": 0,
+        "period_min_s": 0.9999668750000001,
+        "period_max_s": 0.9999688760000005,
+        "unclosed_observed_rises": 1
+      },
+      "1": {
+        "raw": 26,
+        "qualified": 25,
+        "rejected": 0,
+        "cadence_bad_intervals": 0,
+        "intervals_over_1_5_s": 0,
+        "period_min_s": 0.9999668749999984,
+        "period_max_s": 0.9999699369999995,
+        "unclosed_observed_rises": 1
+      },
+      "2": {
+        "raw": 26,
+        "qualified": 25,
+        "rejected": 0,
+        "cadence_bad_intervals": 0,
+        "intervals_over_1_5_s": 0,
+        "period_min_s": 0.999967625,
+        "period_max_s": 0.9999689380000003,
+        "unclosed_observed_rises": 1
+      },
+      "3": {
+        "raw": 26,
+        "qualified": 25,
+        "rejected": 0,
+        "cadence_bad_intervals": 0,
+        "intervals_over_1_5_s": 0,
+        "period_min_s": 0.9999668749999984,
+        "period_max_s": 0.9999698749999997,
+        "unclosed_observed_rises": 1
+      }
+    },
+    "signal_clean": true,
+    "minimum_matched": 25,
+    "classification": "insufficient/full-fleet inconclusive",
+    "primary_eligible": false
+  },
+  {
+    "run": "test-output/timing-methods/20260908-171055/01-gptpair-ftm",
+    "new": false,
+    "method": "gptpair:ftm",
+    "duration": 25.0,
+    "build": "8dc05893b49ecfab",
+    "error": null,
+    "pairs": {
+      "0": {
+        "n": 25,
+        "mean_us": -0.5349600000004173,
+        "sd_us": 0.5750418054565002,
+        "rms_us": 0.7854013493896722,
+        "p95_abs_us": 1.4379999981883884,
+        "max_abs_us": 1.4999999997655777,
+        "min_us": -1.4999999997655777,
+        "max_us": 1.000000000139778,
+        "trend_us_per_s": -0.02795935121267487,
+        "unmatched_reference": 0,
+        "unmatched_follower": 0
+      },
+      "1": {
+        "n": 25,
+        "mean_us": -0.5199999998239946,
+        "sd_us": 0.7528032416322632,
+        "rms_us": 0.9149386429859644,
+        "p95_abs_us": 1.8130000007943181,
+        "max_abs_us": 2.1240000016575777,
+        "min_us": -2.1240000016575777,
+        "max_us": 0.9380000003389455,
+        "trend_us_per_s": -0.02726317554947511,
+        "unmatched_reference": 0,
+        "unmatched_follower": 0
+      },
+      "3": {
+        "n": 25,
+        "mean_us": -0.34747999995587975,
+        "sd_us": 0.5728976255340057,
+        "rms_us": 0.6700403269295363,
+        "p95_abs_us": 1.4369999998820049,
+        "max_abs_us": 1.999999998503199,
+        "min_us": -1.999999998503199,
+        "max_us": 1.1259999999069237,
+        "trend_us_per_s": -0.016748227167432975,
+        "unmatched_reference": 0,
+        "unmatched_follower": 0
+      }
+    },
+    "channels": {
+      "0": {
+        "raw": 25,
+        "qualified": 25,
+        "rejected": 0,
+        "cadence_bad_intervals": 0,
+        "intervals_over_1_5_s": 0,
+        "period_min_s": 0.9999668750000001,
+        "period_max_s": 0.9999698749999997,
+        "unclosed_observed_rises": 0
+      },
+      "1": {
+        "raw": 25,
+        "qualified": 25,
+        "rejected": 0,
+        "cadence_bad_intervals": 0,
+        "intervals_over_1_5_s": 0,
+        "period_min_s": 0.9999658759999974,
+        "period_max_s": 0.9999698750000001,
+        "unclosed_observed_rises": 0
+      },
+      "2": {
+        "raw": 25,
+        "qualified": 25,
+        "rejected": 0,
+        "cadence_bad_intervals": 0,
+        "intervals_over_1_5_s": 0,
+        "period_min_s": 0.9999668750000019,
+        "period_max_s": 0.9999695620000004,
+        "unclosed_observed_rises": 0
+      },
+      "3": {
+        "raw": 25,
+        "qualified": 25,
+        "rejected": 0,
+        "cadence_bad_intervals": 0,
+        "intervals_over_1_5_s": 0,
+        "period_min_s": 0.9999668749999993,
+        "period_max_s": 0.9999698129999999,
+        "unclosed_observed_rises": 0
+      }
+    },
+    "signal_clean": true,
+    "minimum_matched": 25,
+    "classification": "insufficient/full-fleet inconclusive",
+    "primary_eligible": false
+  },
+  {
+    "run": "test-output/timing-methods/20260908-171055/01-high-ftm",
+    "new": false,
+    "method": "high:ftm",
+    "duration": 25.0,
+    "build": "8dc05893b49ecfab",
+    "error": null,
+    "pairs": {
+      "0": {
+        "n": 25,
+        "mean_us": -0.18252000008267544,
+        "sd_us": 0.6036311538405703,
+        "rms_us": 0.6306220106506576,
+        "p95_abs_us": 1.1250000007123617,
+        "max_abs_us": 1.4989999996828374,
+        "min_us": -1.4989999996828374,
+        "max_us": 1.0630000009115292,
+        "trend_us_per_s": 0.003155489691517404,
+        "unmatched_reference": 0,
+        "unmatched_follower": 0
+      },
+      "1": {
+        "n": 25,
+        "mean_us": -0.41512000009902295,
+        "sd_us": 0.9046522566054915,
+        "rms_us": 0.9953493456388169,
+        "p95_abs_us": 1.8119999998233993,
+        "max_abs_us": 2.561999999706188,
+        "min_us": -1.8119999998233993,
+        "max_us": 2.561999999706188,
+        "trend_us_per_s": -0.010949570774182354,
+        "unmatched_reference": 0,
+        "unmatched_follower": 0
+      },
+      "3": {
+        "n": 25,
+        "mean_us": -0.3051599999803756,
+        "sd_us": 0.8837534807335428,
+        "rms_us": 0.9349560632974552,
+        "p95_abs_us": 0.9380000001169009,
+        "max_abs_us": 3.874999999986528,
+        "min_us": -3.874999999986528,
+        "max_us": 0.9380000001169009,
+        "trend_us_per_s": 0.004991645268412524,
+        "unmatched_reference": 0,
+        "unmatched_follower": 0
+      }
+    },
+    "channels": {
+      "0": {
+        "raw": 25,
+        "qualified": 25,
+        "rejected": 0,
+        "cadence_bad_intervals": 0,
+        "intervals_over_1_5_s": 0,
+        "period_min_s": 0.9999494369999997,
+        "period_max_s": 0.9999874380000002,
+        "unclosed_observed_rises": 0
+      },
+      "1": {
+        "raw": 25,
+        "qualified": 25,
+        "rejected": 0,
+        "cadence_bad_intervals": 0,
+        "intervals_over_1_5_s": 0,
+        "period_min_s": 0.9999496250000002,
+        "period_max_s": 0.999987687,
+        "unclosed_observed_rises": 0
+      },
+      "2": {
+        "raw": 25,
+        "qualified": 25,
+        "rejected": 0,
+        "cadence_bad_intervals": 0,
+        "intervals_over_1_5_s": 0,
+        "period_min_s": 0.999950063,
+        "period_max_s": 0.9999872489999997,
+        "unclosed_observed_rises": 0
+      },
+      "3": {
+        "raw": 25,
+        "qualified": 25,
+        "rejected": 0,
+        "cadence_bad_intervals": 0,
+        "intervals_over_1_5_s": 0,
+        "period_min_s": 0.9999537510000005,
+        "period_max_s": 0.9999832499999997,
+        "unclosed_observed_rises": 0
+      }
+    },
+    "signal_clean": true,
+    "minimum_matched": 25,
+    "classification": "insufficient/full-fleet inconclusive",
+    "primary_eligible": false
+  },
+  {
+    "run": "test-output/timing-methods/20260908-171055/01-mcpwm-ftm",
+    "new": false,
+    "method": "mcpwm:ftm",
+    "duration": 25.0,
+    "build": "8dc05893b49ecfab",
+    "error": null,
+    "pairs": {
+      "0": {
+        "n": 25,
+        "mean_us": -1.002280000164113,
+        "sd_us": 0.5830362953724877,
+        "rms_us": 1.159524264709734,
+        "p95_abs_us": 2.311999999449199,
+        "max_abs_us": 2.3129999995319395,
+        "min_us": -2.3129999995319395,
+        "max_us": -0.31299999925238353,
+        "trend_us_per_s": -0.00034924267569829147,
+        "unmatched_reference": 0,
+        "unmatched_follower": 0
+      },
+      "1": {
+        "n": 25,
+        "mean_us": -0.8298800003814222,
+        "sd_us": 0.7136486150204299,
+        "rms_us": 1.0945296527521067,
+        "p95_abs_us": 1.8119999998233993,
+        "max_abs_us": 1.8120000002674885,
+        "min_us": -1.8120000002674885,
+        "max_us": 0.7499999998827889,
+        "trend_us_per_s": 0.03727733709423857,
+        "unmatched_reference": 0,
+        "unmatched_follower": 0
+      },
+      "3": {
+        "n": 25,
+        "mean_us": -1.1099600001385213,
+        "sd_us": 0.5031018568335427,
+        "rms_us": 1.2186560959749329,
+        "p95_abs_us": 2.000000000279556,
+        "max_abs_us": 2.250999999731107,
+        "min_us": -2.250999999731107,
+        "max_us": -0.06299999988357285,
+        "trend_us_per_s": 0.007398695366995646,
+        "unmatched_reference": 0,
+        "unmatched_follower": 0
+      }
+    },
+    "channels": {
+      "0": {
+        "raw": 25,
+        "qualified": 25,
+        "rejected": 0,
+        "cadence_bad_intervals": 0,
+        "intervals_over_1_5_s": 0,
+        "period_min_s": 0.9999668120000003,
+        "period_max_s": 0.9999698759999998,
+        "unclosed_observed_rises": 0
+      },
+      "1": {
+        "raw": 25,
+        "qualified": 25,
+        "rejected": 0,
+        "cadence_bad_intervals": 0,
+        "intervals_over_1_5_s": 0,
+        "period_min_s": 0.9999668750000001,
+        "period_max_s": 0.9999699369999995,
+        "unclosed_observed_rises": 0
+      },
+      "2": {
+        "raw": 25,
+        "qualified": 25,
+        "rejected": 0,
+        "cadence_bad_intervals": 0,
+        "intervals_over_1_5_s": 0,
+        "period_min_s": 0.9999673749999989,
+        "period_max_s": 0.999969063,
+        "unclosed_observed_rises": 0
+      },
+      "3": {
+        "raw": 25,
+        "qualified": 25,
+        "rejected": 0,
+        "cadence_bad_intervals": 0,
+        "intervals_over_1_5_s": 0,
+        "period_min_s": 0.9999668750000001,
+        "period_max_s": 0.9999698129999999,
+        "unclosed_observed_rises": 0
+      }
+    },
+    "signal_clean": true,
+    "minimum_matched": 25,
+    "classification": "insufficient/full-fleet inconclusive",
+    "primary_eligible": false
+  },
+  {
+    "run": "test-output/timing-methods/20260908-171431/00-gptpair-ftm",
+    "new": false,
+    "method": "gptpair:ftm",
+    "duration": 60.0,
+    "build": "8dc05893b49ecfab",
+    "error": null,
+    "pairs": {
+      "0": {
+        "n": 59,
+        "mean_us": 474961.1419661018,
+        "sd_us": 3.571907888749873,
+        "rms_us": 474961.14197953284,
+        "p95_abs_us": 474962.6880000001,
+        "max_abs_us": 474975.24999999994,
+        "min_us": 474946.18700000044,
+        "max_us": 474975.24999999994,
+        "trend_us_per_s": 0.028512106905030442,
+        "unmatched_reference": 1,
+        "unmatched_follower": 1
+      },
+      "1": {
+        "n": 59,
+        "mean_us": 474960.67996610195,
+        "sd_us": 2.879992184284276,
+        "rms_us": 474960.67997483356,
+        "p95_abs_us": 474962.12500000466,
+        "max_abs_us": 474962.9370000008,
+        "min_us": 474944.6870000007,
+        "max_us": 474962.9370000008,
+        "trend_us_per_s": 0.027345032110517403,
+        "unmatched_reference": 1,
+        "unmatched_follower": 1
+      },
+      "3": {
+        "n": 59,
+        "mean_us": 474960.55925423786,
+        "sd_us": 3.287919400755356,
+        "rms_us": 474960.55926561815,
+        "p95_abs_us": 474961.8749999982,
+        "max_abs_us": 474974.43800000026,
+        "min_us": 474945.6250000002,
+        "max_us": 474974.43800000026,
+        "trend_us_per_s": 0.02049963616775775,
+        "unmatched_reference": 1,
+        "unmatched_follower": 1
+      }
+    },
+    "channels": {
+      "0": {
+        "raw": 60,
+        "qualified": 60,
+        "rejected": 0,
+        "cadence_bad_intervals": 0,
+        "intervals_over_1_5_s": 0,
+        "period_min_s": 0.9999539990000059,
+        "period_max_s": 0.9999824379999964,
+        "unclosed_observed_rises": 0
+      },
+      "1": {
+        "raw": 60,
+        "qualified": 60,
+        "rejected": 0,
+        "cadence_bad_intervals": 0,
+        "intervals_over_1_5_s": 0,
+        "period_min_s": 0.9999666870000006,
+        "period_max_s": 0.99996975,
+        "unclosed_observed_rises": 0
+      },
+      "2": {
+        "raw": 60,
+        "qualified": 60,
+        "rejected": 0,
+        "cadence_bad_intervals": 0,
+        "intervals_over_1_5_s": 0,
+        "period_min_s": 0.9999526249999988,
+        "period_max_s": 0.9999834370000009,
+        "unclosed_observed_rises": 0
+      },
+      "3": {
+        "raw": 60,
+        "qualified": 60,
+        "rejected": 0,
+        "cadence_bad_intervals": 0,
+        "intervals_over_1_5_s": 0,
+        "period_min_s": 0.9999540620000005,
+        "period_max_s": 0.999981437999999,
+        "unclosed_observed_rises": 0
+      }
+    },
+    "signal_clean": true,
+    "minimum_matched": 59,
+    "classification": "known pre-repair epoch failure",
+    "primary_eligible": false
+  },
+  {
+    "run": "test-output/timing-methods/20260908-171431/00-high-ftm",
+    "new": false,
+    "method": "high:ftm",
+    "duration": 60.0,
+    "build": "8dc05893b49ecfab",
+    "error": null,
+    "pairs": {
+      "0": {
+        "n": 59,
+        "mean_us": 474960.75423728826,
+        "sd_us": 1.891906341086158,
+        "rms_us": 474960.75424105616,
+        "p95_abs_us": 474961.9989999996,
+        "max_abs_us": 474970.12499999866,
+        "min_us": 474950.8750000011,
+        "max_us": 474970.12499999866,
+        "trend_us_per_s": 0.01428869658333287,
+        "unmatched_reference": 1,
+        "unmatched_follower": 1
+      },
+      "1": {
+        "n": 59,
+        "mean_us": 474962.0455254241,
+        "sd_us": 5.45120304314463,
+        "rms_us": 474962.04555670626,
+        "p95_abs_us": 474975.50000000023,
+        "max_abs_us": 474984.12399999524,
+        "min_us": 474940.8749999979,
+        "max_us": 474984.12399999524,
+        "trend_us_per_s": -0.005239409496025803,
+        "unmatched_reference": 1,
+        "unmatched_follower": 1
+      },
+      "3": {
+        "n": 59,
+        "mean_us": 474961.24471186457,
+        "sd_us": 3.6968381955977234,
+        "rms_us": 474961.24472625164,
+        "p95_abs_us": 474961.9369999998,
+        "max_abs_us": 474979.9370000005,
+        "min_us": 474940.4370000008,
+        "max_us": 474979.9370000005,
+        "trend_us_per_s": 0.021153952483360536,
+        "unmatched_reference": 1,
+        "unmatched_follower": 1
+      }
+    },
+    "channels": {
+      "0": {
+        "raw": 60,
+        "qualified": 60,
+        "rejected": 0,
+        "cadence_bad_intervals": 0,
+        "intervals_over_1_5_s": 0,
+        "period_min_s": 0.9999573749999975,
+        "period_max_s": 0.9999795630000001,
+        "unclosed_observed_rises": 0
+      },
+      "1": {
+        "raw": 60,
+        "qualified": 60,
+        "rejected": 0,
+        "cadence_bad_intervals": 0,
+        "intervals_over_1_5_s": 0,
+        "period_min_s": 0.9999436260000039,
+        "period_max_s": 0.9999862489999956,
+        "unclosed_observed_rises": 0
+      },
+      "2": {
+        "raw": 60,
+        "qualified": 60,
+        "rejected": 0,
+        "cadence_bad_intervals": 0,
+        "intervals_over_1_5_s": 0,
+        "period_min_s": 0.9999477500000005,
+        "period_max_s": 0.9999885000000006,
+        "unclosed_observed_rises": 0
+      },
+      "3": {
+        "raw": 60,
+        "qualified": 60,
+        "rejected": 0,
+        "cadence_bad_intervals": 0,
+        "intervals_over_1_5_s": 0,
+        "period_min_s": 0.9999493749999999,
+        "period_max_s": 0.9999874370000015,
+        "unclosed_observed_rises": 0
+      }
+    },
+    "signal_clean": true,
+    "minimum_matched": 59,
+    "classification": "known pre-repair epoch failure",
+    "primary_eligible": false
+  },
+  {
+    "run": "test-output/timing-methods/20260908-171431/00-mcpwm-ftm",
+    "new": false,
+    "method": "mcpwm:ftm",
+    "duration": 60.0,
+    "build": "8dc05893b49ecfab",
+    "error": null,
+    "pairs": {
+      "0": {
+        "n": 60,
+        "mean_us": 474798.3530500001,
+        "sd_us": 1245.9784062928813,
+        "rms_us": 474799.98791194323,
+        "p95_abs_us": 474961.75000000565,
+        "max_abs_us": 474963.12500000035,
+        "min_us": 465227.81299999997,
+        "max_us": 474963.12500000035,
+        "trend_us_per_s": 15.956189616728238,
+        "unmatched_reference": 1,
+        "unmatched_follower": 0
+      },
+      "1": {
+        "n": 60,
+        "mean_us": 474798.9468000001,
+        "sd_us": 1246.0149786334403,
+        "rms_us": 474800.5817558739,
+        "p95_abs_us": 474961.93799999985,
+        "max_abs_us": 474962.4380000004,
+        "min_us": 465228.125,
+        "max_us": 474962.4380000004,
+        "trend_us_per_s": 15.954171747331467,
+        "unmatched_reference": 1,
+        "unmatched_follower": 0
+      },
+      "3": {
+        "n": 60,
+        "mean_us": 474798.1259500002,
+        "sd_us": 1246.0302926272473,
+        "rms_us": 474799.76094888925,
+        "p95_abs_us": 474961.5630000008,
+        "max_abs_us": 474962.0630000013,
+        "min_us": 465227.187,
+        "max_us": 474962.0630000013,
+        "trend_us_per_s": 15.950423820070277,
+        "unmatched_reference": 1,
+        "unmatched_follower": 0
+      }
+    },
+    "channels": {
+      "0": {
+        "raw": 60,
+        "qualified": 60,
+        "rejected": 0,
+        "cadence_bad_intervals": 0,
+        "intervals_over_1_5_s": 0,
+        "period_min_s": 0.9999664999999993,
+        "period_max_s": 0.9999696880000002,
+        "unclosed_observed_rises": 0
+      },
+      "1": {
+        "raw": 60,
+        "qualified": 60,
+        "rejected": 0,
+        "cadence_bad_intervals": 0,
+        "intervals_over_1_5_s": 0,
+        "period_min_s": 0.9999666869999988,
+        "period_max_s": 0.9999696880000002,
+        "unclosed_observed_rises": 0
+      },
+      "2": {
+        "raw": 61,
+        "qualified": 61,
+        "rejected": 0,
+        "cadence_bad_intervals": 0,
+        "intervals_over_1_5_s": 0,
+        "period_min_s": 0.990234625,
+        "period_max_s": 0.999969375,
+        "unclosed_observed_rises": 0
+      },
+      "3": {
+        "raw": 60,
+        "qualified": 60,
+        "rejected": 0,
+        "cadence_bad_intervals": 0,
+        "intervals_over_1_5_s": 0,
+        "period_min_s": 0.999966686999997,
+        "period_max_s": 0.9999703760000003,
+        "unclosed_observed_rises": 0
+      }
+    },
+    "signal_clean": true,
+    "minimum_matched": 60,
+    "classification": "known pre-repair epoch failure",
+    "primary_eligible": false
+  },
+  {
+    "run": "test-output/timing-methods/20260908-171431/00-task-ftm",
+    "new": false,
+    "method": "task:ftm",
+    "duration": 60.0,
+    "build": "8dc05893b49ecfab",
+    "error": null,
+    "pairs": {
+      "0": {
+        "n": 57,
+        "mean_us": 275019.99338596535,
+        "sd_us": 234597.0166745939,
+        "rms_us": 361485.4865615439,
+        "p95_abs_us": 475044.625999999,
+        "max_abs_us": 477719.8130000002,
+        "min_us": -1641.9999999999213,
+        "max_us": 477719.8130000002,
+        "trend_us_per_s": 11797.876707435706,
+        "unmatched_reference": 3,
+        "unmatched_follower": 0
+      },
+      "1": {
+        "n": 53,
+        "mean_us": 259857.41867924554,
+        "sd_us": 236501.067320531,
+        "rms_us": 351366.806750995,
+        "p95_abs_us": 474965.8740000058,
+        "max_abs_us": 475771.7499999998,
+        "min_us": -2745.312999999916,
+        "max_us": 475771.7499999998,
+        "trend_us_per_s": 11895.04146358561,
+        "unmatched_reference": 7,
+        "unmatched_follower": 0
+      },
+      "3": {
+        "n": 57,
+        "mean_us": 291632.59540350916,
+        "sd_us": 231313.60120736714,
+        "rms_us": 372230.5103095497,
+        "p95_abs_us": 474963.0630000041,
+        "max_abs_us": 477403.4999999977,
+        "min_us": -2745.999999999915,
+        "max_us": 477403.4999999977,
+        "trend_us_per_s": 11501.50919034,
+        "unmatched_reference": 3,
+        "unmatched_follower": 0
+      }
+    },
+    "channels": {
+      "0": {
+        "raw": 57,
+        "qualified": 57,
+        "rejected": 0,
+        "cadence_bad_intervals": 1,
+        "intervals_over_1_5_s": 1,
+        "period_min_s": 0.99776825,
+        "period_max_s": 3.4748659380000007,
+        "unclosed_observed_rises": 0
+      },
+      "1": {
+        "raw": 53,
+        "qualified": 53,
+        "rejected": 0,
+        "cadence_bad_intervals": 1,
+        "intervals_over_1_5_s": 1,
+        "period_min_s": 0.9991579379999962,
+        "period_max_s": 7.474739249000002,
+        "unclosed_observed_rises": 0
+      },
+      "2": {
+        "raw": 60,
+        "qualified": 60,
+        "rejected": 0,
+        "cadence_bad_intervals": 0,
+        "intervals_over_1_5_s": 0,
+        "period_min_s": 0.997222875,
+        "period_max_s": 1.0003062509999978,
+        "unclosed_observed_rises": 0
+      },
+      "3": {
+        "raw": 57,
+        "qualified": 57,
+        "rejected": 0,
+        "cadence_bad_intervals": 1,
+        "intervals_over_1_5_s": 1,
+        "period_min_s": 0.9976028130000003,
+        "period_max_s": 3.474865562999998,
+        "unclosed_observed_rises": 0
+      }
+    },
+    "signal_clean": true,
+    "minimum_matched": 53,
+    "classification": "known pre-repair epoch failure",
+    "primary_eligible": false
+  },
+  {
+    "run": "test-output/timing-methods/20260908-172251/00-gptpair-ftm",
+    "new": false,
+    "method": "gptpair:ftm",
+    "duration": 60.0,
+    "build": "33a74b5c18b078e9",
+    "error": null,
+    "pairs": {
+      "0": {
+        "n": 60,
+        "mean_us": -1.4646166662616682,
+        "sd_us": 4.204398288396494,
+        "rms_us": 4.452197990494448,
+        "p95_abs_us": 12.125000004914455,
+        "max_abs_us": 13.81299999891894,
+        "min_us": -13.81299999891894,
+        "max_us": 2.625999997007966,
+        "trend_us_per_s": -0.021392094201254673,
+        "unmatched_reference": 0,
+        "unmatched_follower": 0
+      },
+      "1": {
+        "n": 60,
+        "mean_us": -1.155116666417174,
+        "sd_us": 4.733331279818442,
+        "rms_us": 4.872239681865252,
+        "p95_abs_us": 12.499999996862243,
+        "max_abs_us": 15.749999999314923,
+        "min_us": -15.749999999314923,
+        "max_us": 13.688000000122713,
+        "trend_us_per_s": -0.026593699875725522,
+        "unmatched_reference": 0,
+        "unmatched_follower": 0
+      },
+      "3": {
+        "n": 0,
+        "unmatched_reference": 60,
+        "unmatched_follower": 0
+      }
+    },
+    "channels": {
+      "0": {
+        "raw": 60,
+        "qualified": 60,
+        "rejected": 0,
+        "cadence_bad_intervals": 0,
+        "intervals_over_1_5_s": 0,
+        "period_min_s": 0.9999647490000001,
+        "period_max_s": 0.9999711250000018,
+        "unclosed_observed_rises": 0
+      },
+      "1": {
+        "raw": 60,
+        "qualified": 60,
+        "rejected": 0,
+        "cadence_bad_intervals": 0,
+        "intervals_over_1_5_s": 0,
+        "period_min_s": 0.9999539369999999,
+        "period_max_s": 0.9999828750000006,
+        "unclosed_observed_rises": 0
+      },
+      "2": {
+        "raw": 60,
+        "qualified": 60,
+        "rejected": 0,
+        "cadence_bad_intervals": 0,
+        "intervals_over_1_5_s": 0,
+        "period_min_s": 0.9999533120000024,
+        "period_max_s": 0.9999831879999981,
+        "unclosed_observed_rises": 0
+      },
+      "3": {
+        "raw": 1,
+        "qualified": 0,
+        "rejected": 0,
+        "cadence_bad_intervals": 0,
+        "intervals_over_1_5_s": 0,
+        "period_min_s": null,
+        "period_max_s": null,
+        "unclosed_observed_rises": 1
+      }
+    },
+    "signal_clean": true,
+    "minimum_matched": 0,
+    "classification": "inconclusive disconnected probe / reconnection",
+    "primary_eligible": false
+  },
+  {
+    "run": "test-output/timing-methods/20260908-172251/00-mcpwm-ftm",
+    "new": false,
+    "method": "mcpwm:ftm",
+    "duration": 60.0,
+    "build": "33a74b5c18b078e9",
+    "error": null,
+    "pairs": {
+      "0": {
+        "n": 60,
+        "mean_us": -0.003100000179704724,
+        "sd_us": 0.6974047776738199,
+        "rms_us": 0.6974116674700707,
+        "p95_abs_us": 1.3129999993921615,
+        "max_abs_us": 1.5630000049782211,
+        "min_us": -1.5630000049782211,
+        "max_us": 1.3129999993921615,
+        "trend_us_per_s": 0.007318598377252613,
+        "unmatched_reference": 0,
+        "unmatched_follower": 0
+      },
+      "1": {
+        "n": 60,
+        "mean_us": -0.12491666617024204,
+        "sd_us": 0.7149193030978551,
+        "rms_us": 0.7257504966784456,
+        "p95_abs_us": 1.1250000042650754,
+        "max_abs_us": 1.6249999958972694,
+        "min_us": -1.2499999986204102,
+        "max_us": 1.6249999958972694,
+        "trend_us_per_s": 0.008761017255819566,
+        "unmatched_reference": 0,
+        "unmatched_follower": 0
+      },
+      "3": {
+        "n": 0,
+        "unmatched_reference": 60,
+        "unmatched_follower": 0
+      }
+    },
+    "channels": {
+      "0": {
+        "raw": 60,
+        "qualified": 60,
+        "rejected": 0,
+        "cadence_bad_intervals": 0,
+        "intervals_over_1_5_s": 0,
+        "period_min_s": 0.9999667499999987,
+        "period_max_s": 0.9999698120000033,
+        "unclosed_observed_rises": 0
+      },
+      "1": {
+        "raw": 60,
+        "qualified": 60,
+        "rejected": 0,
+        "cadence_bad_intervals": 0,
+        "intervals_over_1_5_s": 0,
+        "period_min_s": 0.999966748999995,
+        "period_max_s": 0.9999698130000001,
+        "unclosed_observed_rises": 0
+      },
+      "2": {
+        "raw": 60,
+        "qualified": 60,
+        "rejected": 0,
+        "cadence_bad_intervals": 0,
+        "intervals_over_1_5_s": 0,
+        "period_min_s": 0.9999667499999987,
+        "period_max_s": 0.9999696250000056,
+        "unclosed_observed_rises": 0
+      },
+      "3": {
+        "raw": 0,
+        "qualified": 0,
+        "rejected": 0,
+        "cadence_bad_intervals": 0,
+        "intervals_over_1_5_s": 0,
+        "period_min_s": null,
+        "period_max_s": null,
+        "unclosed_observed_rises": 0
+      }
+    },
+    "signal_clean": true,
+    "minimum_matched": 0,
+    "classification": "inconclusive disconnected probe / reconnection",
+    "primary_eligible": false
+  },
+  {
+    "run": "test-output/timing-methods/20260908-172251/01-gptpair-ftm",
+    "new": false,
+    "method": "gptpair:ftm",
+    "duration": 60.0,
+    "build": "33a74b5c18b078e9",
+    "error": null,
+    "pairs": {
+      "0": {
+        "n": 59,
+        "mean_us": 0.12389830524533924,
+        "sd_us": 3.878226318694742,
+        "rms_us": 3.8802049132821885,
+        "p95_abs_us": 11.874999998440217,
+        "max_abs_us": 13.125000002389697,
+        "min_us": -12.688000005312006,
+        "max_us": 13.125000002389697,
+        "trend_us_per_s": -0.019370214189893216,
+        "unmatched_reference": 1,
+        "unmatched_follower": 0
+      },
+      "1": {
+        "n": 60,
+        "mean_us": -0.9906499998960557,
+        "sd_us": 3.5627629767082003,
+        "rms_us": 3.697927453384764,
+        "p95_abs_us": 10.56299999646626,
+        "max_abs_us": 15.937000000576518,
+        "min_us": -15.937000000576518,
+        "max_us": 12.812000001360957,
+        "trend_us_per_s": -0.018432321036844043,
+        "unmatched_reference": 0,
+        "unmatched_follower": 0
+      },
+      "3": {
+        "n": 0,
+        "unmatched_reference": 60,
+        "unmatched_follower": 0
+      }
+    },
+    "channels": {
+      "0": {
+        "raw": 60,
+        "qualified": 59,
+        "rejected": 1,
+        "cadence_bad_intervals": 1,
+        "intervals_over_1_5_s": 1,
+        "period_min_s": 0.9999534379999986,
+        "period_max_s": 1.9999355009999995,
+        "unclosed_observed_rises": 0
+      },
+      "1": {
+        "raw": 60,
+        "qualified": 60,
+        "rejected": 0,
+        "cadence_bad_intervals": 0,
+        "intervals_over_1_5_s": 0,
+        "period_min_s": 0.9999549379999984,
+        "period_max_s": 0.9999814990000004,
+        "unclosed_observed_rises": 0
+      },
+      "2": {
+        "raw": 60,
+        "qualified": 60,
+        "rejected": 0,
+        "cadence_bad_intervals": 0,
+        "intervals_over_1_5_s": 0,
+        "period_min_s": 0.9999531259999976,
+        "period_max_s": 0.9999831870000015,
+        "unclosed_observed_rises": 0
+      },
+      "3": {
+        "raw": 0,
+        "qualified": 0,
+        "rejected": 0,
+        "cadence_bad_intervals": 0,
+        "intervals_over_1_5_s": 0,
+        "period_min_s": null,
+        "period_max_s": null,
+        "unclosed_observed_rises": 0
+      }
+    },
+    "signal_clean": false,
+    "minimum_matched": 0,
+    "classification": "inconclusive disconnected probe / reconnection",
+    "primary_eligible": false
+  },
+  {
+    "run": "test-output/timing-methods/20260908-172251/01-mcpwm-ftm",
+    "new": false,
+    "method": "mcpwm:ftm",
+    "duration": 60.0,
+    "build": "33a74b5c18b078e9",
+    "error": null,
+    "pairs": {
+      "0": {
+        "n": 59,
+        "mean_us": 0.02859322084188011,
+        "sd_us": 0.7116642256035843,
+        "rms_us": 0.712238402700993,
+        "p95_abs_us": 1.2510000004795074,
+        "max_abs_us": 1.3760000001639128,
+        "min_us": -1.25099999337408,
+        "max_us": 1.3760000001639128,
+        "trend_us_per_s": 0.0018394234442392463,
+        "unmatched_reference": 1,
+        "unmatched_follower": 0
+      },
+      "1": {
+        "n": 60,
+        "mean_us": -0.25096666622833236,
+        "sd_us": 0.6241851213470988,
+        "rms_us": 0.6727490864125016,
+        "p95_abs_us": 1.1249999998241833,
+        "max_abs_us": 1.5630000049782211,
+        "min_us": -1.1869999951841237,
+        "max_us": 1.5630000049782211,
+        "trend_us_per_s": 0.002595469787306175,
+        "unmatched_reference": 0,
+        "unmatched_follower": 0
+      },
+      "3": {
+        "n": 0,
+        "unmatched_reference": 60,
+        "unmatched_follower": 0
+      }
+    },
+    "channels": {
+      "0": {
+        "raw": 60,
+        "qualified": 59,
+        "rejected": 1,
+        "cadence_bad_intervals": 1,
+        "intervals_over_1_5_s": 1,
+        "period_min_s": 0.9999667499999987,
+        "period_max_s": 1.999936499999997,
+        "unclosed_observed_rises": 0
+      },
+      "1": {
+        "raw": 61,
+        "qualified": 60,
+        "rejected": 1,
+        "cadence_bad_intervals": 0,
+        "intervals_over_1_5_s": 0,
+        "period_min_s": 0.999966624999999,
+        "period_max_s": 0.9999698120000033,
+        "unclosed_observed_rises": 0
+      },
+      "2": {
+        "raw": 61,
+        "qualified": 60,
+        "rejected": 1,
+        "cadence_bad_intervals": 0,
+        "intervals_over_1_5_s": 0,
+        "period_min_s": 0.9999670629999997,
+        "period_max_s": 0.9999691249999998,
+        "unclosed_observed_rises": 0
+      },
+      "3": {
+        "raw": 0,
+        "qualified": 0,
+        "rejected": 0,
+        "cadence_bad_intervals": 0,
+        "intervals_over_1_5_s": 0,
+        "period_min_s": null,
+        "period_max_s": null,
+        "unclosed_observed_rises": 0
+      }
+    },
+    "signal_clean": false,
+    "minimum_matched": 0,
+    "classification": "inconclusive disconnected probe / reconnection",
+    "primary_eligible": false
+  },
+  {
+    "run": "test-output/timing-methods/20260908-172251/02-gptpair-ftm",
+    "new": false,
+    "method": "gptpair:ftm",
+    "duration": 60.0,
+    "build": "33a74b5c18b078e9",
+    "error": null,
+    "pairs": {
+      "0": {
+        "n": 60,
+        "mean_us": 0.1290999993019959,
+        "sd_us": 2.791605365981163,
+        "rms_us": 2.7945889374279353,
+        "p95_abs_us": 2.87499999984675,
+        "max_abs_us": 13.499999994337486,
+        "min_us": -11.187000000134617,
+        "max_us": 13.499999994337486,
+        "trend_us_per_s": 0.007564159045953147,
+        "unmatched_reference": 0,
+        "unmatched_follower": 0
+      },
+      "1": {
+        "n": 60,
+        "mean_us": -0.4677666669209805,
+        "sd_us": 2.2417681284092565,
+        "rms_us": 2.29005021696772,
+        "p95_abs_us": 2.9379999944012525,
+        "max_abs_us": 11.436999999947517,
+        "min_us": -11.436999999947517,
+        "max_us": 2.3749999940037014,
+        "trend_us_per_s": 0.013734848679294122,
+        "unmatched_reference": 0,
+        "unmatched_follower": 0
+      },
+      "3": {
+        "n": 0,
+        "unmatched_reference": 60,
+        "unmatched_follower": 0
+      }
+    },
+    "channels": {
+      "0": {
+        "raw": 60,
+        "qualified": 60,
+        "rejected": 0,
+        "cadence_bad_intervals": 0,
+        "intervals_over_1_5_s": 0,
+        "period_min_s": 0.9999551880000013,
+        "period_max_s": 0.9999803119999982,
+        "unclosed_observed_rises": 0
+      },
+      "1": {
+        "raw": 60,
+        "qualified": 60,
+        "rejected": 0,
+        "cadence_bad_intervals": 0,
+        "intervals_over_1_5_s": 0,
+        "period_min_s": 0.9999651880000044,
+        "period_max_s": 0.9999711879999964,
+        "unclosed_observed_rises": 0
+      },
+      "2": {
+        "raw": 60,
+        "qualified": 60,
+        "rejected": 0,
+        "cadence_bad_intervals": 0,
+        "intervals_over_1_5_s": 0,
+        "period_min_s": 0.9999546880000001,
+        "period_max_s": 0.9999805620000001,
+        "unclosed_observed_rises": 0
+      },
+      "3": {
+        "raw": 0,
+        "qualified": 0,
+        "rejected": 0,
+        "cadence_bad_intervals": 0,
+        "intervals_over_1_5_s": 0,
+        "period_min_s": null,
+        "period_max_s": null,
+        "unclosed_observed_rises": 0
+      }
+    },
+    "signal_clean": true,
+    "minimum_matched": 0,
+    "classification": "inconclusive disconnected probe / reconnection",
+    "primary_eligible": false
+  },
+  {
+    "run": "test-output/timing-methods/20260908-172251/02-mcpwm-ftm",
+    "new": false,
+    "method": "mcpwm:ftm",
+    "duration": 60.0,
+    "build": "33a74b5c18b078e9",
+    "error": null,
+    "pairs": {
+      "0": {
+        "n": 60,
+        "mean_us": -0.031266666911111685,
+        "sd_us": 0.608280304183746,
+        "rms_us": 0.6090833546548461,
+        "p95_abs_us": 1.187000002289551,
+        "max_abs_us": 1.250000000396767,
+        "min_us": -1.250000000396767,
+        "max_us": 1.2499999999526779,
+        "trend_us_per_s": -0.00490335229347335,
+        "unmatched_reference": 0,
+        "unmatched_follower": 0
+      },
+      "1": {
+        "n": 60,
+        "mean_us": -0.4071666668048479,
+        "sd_us": 0.6088363807471128,
+        "rms_us": 0.7324386889550644,
+        "p95_abs_us": 1.188000005925005,
+        "max_abs_us": 1.4369999945529344,
+        "min_us": -1.2499999968440534,
+        "max_us": 1.4369999945529344,
+        "trend_us_per_s": 0.0017167533455244243,
+        "unmatched_reference": 0,
+        "unmatched_follower": 0
+      },
+      "3": {
+        "n": 24,
+        "mean_us": -0.46608333400162866,
+        "sd_us": 0.4748406673170454,
+        "rms_us": 0.6653625579878768,
+        "p95_abs_us": 1.0629999991351724,
+        "max_abs_us": 1.1250000042650754,
+        "min_us": -1.1250000042650754,
+        "max_us": 0.8119999961309077,
+        "trend_us_per_s": 0.006372007811577966,
+        "unmatched_reference": 36,
+        "unmatched_follower": 0
+      }
+    },
+    "channels": {
+      "0": {
+        "raw": 60,
+        "qualified": 60,
+        "rejected": 0,
+        "cadence_bad_intervals": 0,
+        "intervals_over_1_5_s": 0,
+        "period_min_s": 0.9999666870000041,
+        "period_max_s": 0.9999697500000018,
+        "unclosed_observed_rises": 0
+      },
+      "1": {
+        "raw": 60,
+        "qualified": 60,
+        "rejected": 0,
+        "cadence_bad_intervals": 0,
+        "intervals_over_1_5_s": 0,
+        "period_min_s": 0.9999666879999971,
+        "period_max_s": 0.99996975,
+        "unclosed_observed_rises": 0
+      },
+      "2": {
+        "raw": 60,
+        "qualified": 60,
+        "rejected": 0,
+        "cadence_bad_intervals": 0,
+        "intervals_over_1_5_s": 0,
+        "period_min_s": 0.9999668130000003,
+        "period_max_s": 0.9999693749999992,
+        "unclosed_observed_rises": 0
+      },
+      "3": {
+        "raw": 249,
+        "qualified": 24,
+        "rejected": 225,
+        "cadence_bad_intervals": 1,
+        "intervals_over_1_5_s": 1,
+        "period_min_s": 0.9999672500000045,
+        "period_max_s": 1.9999364369999952,
+        "unclosed_observed_rises": 0
+      }
+    },
+    "signal_clean": false,
+    "minimum_matched": 24,
+    "classification": "inconclusive disconnected probe / reconnection",
+    "primary_eligible": false
+  },
+  {
+    "run": "test-output/timing-methods/20260908-173016/00-gptpair-ftm",
+    "new": false,
+    "method": "gptpair:ftm",
+    "duration": 60.0,
+    "build": "33a74b5c18b078e9",
+    "error": "Error interacting with device during capture: ReadTimeout.",
+    "pairs": {},
+    "channels": {},
+    "classification": "acquisition failed / no raw CSV",
+    "primary_eligible": false
+  },
+  {
+    "run": "test-output/timing-methods/20260908-173016/00-mcpwm-ftm",
+    "new": false,
+    "method": "mcpwm:ftm",
+    "duration": 60.0,
+    "build": "33a74b5c18b078e9",
+    "error": null,
+    "pairs": {
+      "0": {
+        "n": 60,
+        "mean_us": -0.07906666646036638,
+        "sd_us": 0.7035273951182874,
+        "rms_us": 0.7079564488208846,
+        "p95_abs_us": 1.4369999998820049,
+        "max_abs_us": 1.5619999942373397,
+        "min_us": -1.4989999996828374,
+        "max_us": 1.5619999942373397,
+        "trend_us_per_s": 0.001577987969703313,
+        "unmatched_reference": 0,
+        "unmatched_follower": 0
+      },
+      "1": {
+        "n": 60,
+        "mean_us": -0.31039999977740723,
+        "sd_us": 0.610758632015125,
+        "rms_us": 0.6851089449443799,
+        "p95_abs_us": 1.1869999951841237,
+        "max_abs_us": 1.562000001342767,
+        "min_us": -1.1879999988195777,
+        "max_us": 1.562000001342767,
+        "trend_us_per_s": 0.003916156548641295,
+        "unmatched_reference": 0,
+        "unmatched_follower": 0
+      },
+      "3": {
+        "n": 60,
+        "mean_us": -0.4624999997186278,
+        "sd_us": 0.5221223517369903,
+        "rms_us": 0.6975084228330839,
+        "p95_abs_us": 1.1250000007123617,
+        "max_abs_us": 1.1879999988195777,
+        "min_us": -1.1879999988195777,
+        "max_us": 1.187000002289551,
+        "trend_us_per_s": 0.0007200557484422596,
+        "unmatched_reference": 0,
+        "unmatched_follower": 0
+      }
+    },
+    "channels": {
+      "0": {
+        "raw": 60,
+        "qualified": 60,
+        "rejected": 0,
+        "cadence_bad_intervals": 0,
+        "intervals_over_1_5_s": 0,
+        "period_min_s": 0.9999667489999986,
+        "period_max_s": 0.9999697500000018,
+        "unclosed_observed_rises": 0
+      },
+      "1": {
+        "raw": 60,
+        "qualified": 60,
+        "rejected": 0,
+        "cadence_bad_intervals": 0,
+        "intervals_over_1_5_s": 0,
+        "period_min_s": 0.9999665620000044,
+        "period_max_s": 0.9999697509999983,
+        "unclosed_observed_rises": 0
+      },
+      "2": {
+        "raw": 60,
+        "qualified": 60,
+        "rejected": 0,
+        "cadence_bad_intervals": 0,
+        "intervals_over_1_5_s": 0,
+        "period_min_s": 0.9999665000000064,
+        "period_max_s": 0.9999698120000033,
+        "unclosed_observed_rises": 0
+      },
+      "3": {
+        "raw": 60,
+        "qualified": 60,
+        "rejected": 0,
+        "cadence_bad_intervals": 0,
+        "intervals_over_1_5_s": 0,
+        "period_min_s": 0.9999670620000032,
+        "period_max_s": 0.9999691249999998,
+        "unclosed_observed_rises": 0
+      }
+    },
+    "signal_clean": true,
+    "minimum_matched": 60,
+    "classification": "clean descriptive",
+    "primary_eligible": false
+  },
+  {
+    "run": "test-output/timing-methods/20260908-173016/01-gptpair-ftm",
+    "new": false,
+    "method": "gptpair:ftm",
+    "duration": 60.0,
+    "build": "33a74b5c18b078e9",
+    "error": "Error interacting with device during capture: ReadTimeout.",
+    "pairs": {},
+    "channels": {},
+    "classification": "acquisition failed / no raw CSV",
+    "primary_eligible": false
+  },
+  {
+    "run": "test-output/timing-methods/20260908-173016/01-mcpwm-ftm",
+    "new": false,
+    "method": "mcpwm:ftm",
+    "duration": 60.0,
+    "build": "33a74b5c18b078e9",
+    "error": null,
+    "pairs": {
+      "0": {
+        "n": 60,
+        "mean_us": -0.13229999966853553,
+        "sd_us": 0.6082861528299103,
+        "rms_us": 0.6225072960511446,
+        "p95_abs_us": 1.2500000039494807,
+        "max_abs_us": 1.5000000033182914,
+        "min_us": -1.5000000033182914,
+        "max_us": 1.2500000001747225,
+        "trend_us_per_s": -0.0008903872038812465,
+        "unmatched_reference": 0,
+        "unmatched_follower": 0
+      },
+      "1": {
+        "n": 60,
+        "mean_us": -0.2344999997609213,
+        "sd_us": 0.6352395217481648,
+        "rms_us": 0.6771406795332187,
+        "p95_abs_us": 1.1879999988195777,
+        "max_abs_us": 1.6249999958972694,
+        "min_us": -1.1879999988195777,
+        "max_us": 1.6249999958972694,
+        "trend_us_per_s": -0.0009919742927638137,
+        "unmatched_reference": 0,
+        "unmatched_follower": 0
+      },
+      "3": {
+        "n": 60,
+        "mean_us": -0.5229999997728255,
+        "sd_us": 0.48097061600514585,
+        "rms_us": 0.7105362293526947,
+        "p95_abs_us": 1.1240000006296214,
+        "max_abs_us": 1.4999999997655777,
+        "min_us": -1.4999999997655777,
+        "max_us": 0.8129999999884063,
+        "trend_us_per_s": -0.003306024221764343,
+        "unmatched_reference": 0,
+        "unmatched_follower": 0
+      }
+    },
+    "channels": {
+      "0": {
+        "raw": 60,
+        "qualified": 60,
+        "rejected": 0,
+        "cadence_bad_intervals": 0,
+        "intervals_over_1_5_s": 0,
+        "period_min_s": 0.9999664379999977,
+        "period_max_s": 0.9999700000000047,
+        "unclosed_observed_rises": 0
+      },
+      "1": {
+        "raw": 60,
+        "qualified": 60,
+        "rejected": 0,
+        "cadence_bad_intervals": 0,
+        "intervals_over_1_5_s": 0,
+        "period_min_s": 0.999966624999999,
+        "period_max_s": 0.9999696880000002,
+        "unclosed_observed_rises": 0
+      },
+      "2": {
+        "raw": 60,
+        "qualified": 60,
+        "rejected": 0,
+        "cadence_bad_intervals": 0,
+        "intervals_over_1_5_s": 0,
+        "period_min_s": 0.9999670000000052,
+        "period_max_s": 0.9999691879999943,
+        "unclosed_observed_rises": 0
+      },
+      "3": {
+        "raw": 60,
+        "qualified": 60,
+        "rejected": 0,
+        "cadence_bad_intervals": 0,
+        "intervals_over_1_5_s": 0,
+        "period_min_s": 0.9999673129999991,
+        "period_max_s": 0.9999690000000001,
+        "unclosed_observed_rises": 0
+      }
+    },
+    "signal_clean": true,
+    "minimum_matched": 60,
+    "classification": "clean descriptive",
+    "primary_eligible": false
+  },
+  {
+    "run": "test-output/timing-methods/20260908-174044/00-mcpwm-ftm",
+    "new": false,
+    "method": "mcpwm:ftm",
+    "duration": 60.0,
+    "build": "e0ac899e423e2d93",
+    "error": "Error interacting with device during capture: ReadTimeout.",
+    "pairs": {},
+    "channels": {},
+    "classification": "acquisition failed / no raw CSV",
+    "primary_eligible": false
+  },
+  {
+    "run": "test-output/timing-methods/20260908-174159/00-mcpwm-ftm",
+    "new": false,
+    "method": "mcpwm:ftm",
+    "duration": 60.0,
+    "build": "e0ac899e423e2d93",
+    "error": null,
+    "pairs": {
+      "0": {
+        "n": 60,
+        "mean_us": 0.06258333351364757,
+        "sd_us": 0.5777544543555467,
+        "rms_us": 0.5811341352573913,
+        "p95_abs_us": 0.9379999994507671,
+        "max_abs_us": 1.937000000395983,
+        "min_us": -1.937000000395983,
+        "max_us": 0.8119999996836214,
+        "trend_us_per_s": -0.0001888646640942101,
+        "unmatched_reference": 0,
+        "unmatched_follower": 0
+      },
+      "1": {
+        "n": 60,
+        "mean_us": -0.3916666665012188,
+        "sd_us": 0.5817381619909856,
+        "rms_us": 0.7013002686188187,
+        "p95_abs_us": 1.3120000019739564,
+        "max_abs_us": 1.8120000007115777,
+        "min_us": -1.8120000007115777,
+        "max_us": 1.312999998503983,
+        "trend_us_per_s": -0.001606831225926159,
+        "unmatched_reference": 0,
+        "unmatched_follower": 0
+      },
+      "3": {
+        "n": 60,
+        "mean_us": -0.2155666667539672,
+        "sd_us": 0.563398774068016,
+        "rms_us": 0.6032306080072191,
+        "p95_abs_us": 1.31300000028034,
+        "max_abs_us": 1.4379999999647453,
+        "min_us": -1.4379999999647453,
+        "max_us": 1.31300000028034,
+        "trend_us_per_s": 0.0040114635027084415,
+        "unmatched_reference": 0,
+        "unmatched_follower": 0
+      }
+    },
+    "channels": {
+      "0": {
+        "raw": 60,
+        "qualified": 60,
+        "rejected": 0,
+        "cadence_bad_intervals": 0,
+        "intervals_over_1_5_s": 0,
+        "period_min_s": 0.9999663120000015,
+        "period_max_s": 0.9999704999999999,
+        "unclosed_observed_rises": 0
+      },
+      "1": {
+        "raw": 60,
+        "qualified": 60,
+        "rejected": 0,
+        "cadence_bad_intervals": 0,
+        "intervals_over_1_5_s": 0,
+        "period_min_s": 0.9999663749999996,
+        "period_max_s": 0.9999701250000008,
+        "unclosed_observed_rises": 0
+      },
+      "2": {
+        "raw": 60,
+        "qualified": 60,
+        "rejected": 0,
+        "cadence_bad_intervals": 0,
+        "intervals_over_1_5_s": 0,
+        "period_min_s": 0.9999670000000052,
+        "period_max_s": 0.99996925,
+        "unclosed_observed_rises": 0
+      },
+      "3": {
+        "raw": 60,
+        "qualified": 60,
+        "rejected": 0,
+        "cadence_bad_intervals": 0,
+        "intervals_over_1_5_s": 0,
+        "period_min_s": 0.9999668130000003,
+        "period_max_s": 0.9999698749999997,
+        "unclosed_observed_rises": 0
+      }
+    },
+    "signal_clean": true,
+    "minimum_matched": 60,
+    "classification": "clean descriptive",
+    "primary_eligible": false
+  },
+  {
+    "run": "new-acquisition/20260909-063251-campaign/00-00-mcpwm-ftm",
+    "new": true,
+    "method": "mcpwm:ftm",
+    "duration": 5.0,
+    "build": "fdb0d3b4ab514a2d",
+    "error": null,
+    "pairs": {
+      "0": {
+        "n": 5,
+        "mean_us": 0.4999999999366622,
+        "sd_us": 0.21974530702551076,
+        "rms_us": 0.5461574863502269,
+        "p95_abs_us": 0.8750000000112834,
+        "max_abs_us": 0.8750000000112834,
+        "min_us": 0.25100000033972947,
+        "max_us": 0.8750000000112834,
+        "trend_us_per_s": 0.02500075815037344,
+        "unmatched_reference": 0,
+        "unmatched_follower": 0
+      },
+      "1": {
+        "n": 5,
+        "mean_us": 0.4376000001027336,
+        "sd_us": 0.23722360759652555,
+        "rms_us": 0.49776379949833915,
+        "p95_abs_us": 0.6250000001983835,
+        "max_abs_us": 0.6250000001983835,
+        "min_us": 0.0,
+        "max_us": 0.6250000001983835,
+        "trend_us_per_s": -0.012600381432290267,
+        "unmatched_reference": 0,
+        "unmatched_follower": 0
+      },
+      "3": {
+        "n": 5,
+        "mean_us": 0.30019999994745916,
+        "sd_us": 0.33136891826988457,
+        "rms_us": 0.44713018234492724,
+        "p95_abs_us": 0.6879999999709341,
+        "max_abs_us": 0.6879999999709341,
+        "min_us": -0.12400000004575418,
+        "max_us": 0.6879999999709341,
+        "trend_us_per_s": -0.1626049089069682,
+        "unmatched_reference": 0,
+        "unmatched_follower": 0
+      }
+    },
+    "channels": {
+      "0": {
+        "raw": 1562,
+        "qualified": 5,
+        "rejected": 1557,
+        "cadence_bad_intervals": 0,
+        "intervals_over_1_5_s": 0,
+        "period_min_s": 0.9999691260000003,
+        "period_max_s": 0.999970187,
+        "unclosed_observed_rises": 0
+      },
+      "1": {
+        "raw": 7,
+        "qualified": 5,
+        "rejected": 2,
+        "cadence_bad_intervals": 0,
+        "intervals_over_1_5_s": 0,
+        "period_min_s": 0.9999691239999999,
+        "period_max_s": 0.9999701250000004,
+        "unclosed_observed_rises": 0
+      },
+      "2": {
+        "raw": 3178,
+        "qualified": 5,
+        "rejected": 3173,
+        "cadence_bad_intervals": 0,
+        "intervals_over_1_5_s": 0,
+        "period_min_s": 0.9999697489999999,
+        "period_max_s": 0.9999700009999999,
+        "unclosed_observed_rises": 0
+      },
+      "3": {
+        "raw": 3681,
+        "qualified": 5,
+        "rejected": 3676,
+        "cadence_bad_intervals": 0,
+        "intervals_over_1_5_s": 0,
+        "period_min_s": 0.9999689379999999,
+        "period_max_s": 0.9999699999999999,
+        "unclosed_observed_rises": 0
+      }
+    },
+    "signal_clean": false,
+    "minimum_matched": 5,
+    "classification": "insufficient/full-fleet inconclusive",
+    "observed_builds_after": {
+      "0": "fdb0d3b4ab514a2d",
+      "1": "fdb0d3b4ab514a2d",
+      "2": "fdb0d3b4ab514a2d",
+      "3": "fdb0d3b4ab514a2d"
+    },
+    "primary_eligible": false
+  },
+  {
+    "run": "new-acquisition/20260909-063455-campaign/00-00-mcpwm-mac",
+    "new": true,
+    "method": "mcpwm:mac",
+    "duration": 60.0,
+    "build": "fdb0d3b4ab514a2d",
+    "error": null,
+    "pairs": {
+      "0": {
+        "n": 60,
+        "mean_us": -449503.42189999967,
+        "sd_us": 6.903047645073583,
+        "rms_us": 449503.4219530049,
+        "p95_abs_us": 449513.6249999998,
+        "max_abs_us": 449514.75,
+        "min_us": -449514.75,
+        "max_us": -449491.3130000029,
+        "trend_us_per_s": 0.3982529108436854,
+        "unmatched_reference": 0,
+        "unmatched_follower": 0
+      },
+      "1": {
+        "n": 60,
+        "mean_us": 269427.08849999966,
+        "sd_us": 97.7437933544477,
+        "rms_us": 269427.1062299333,
+        "p95_abs_us": 269576.93800000014,
+        "max_abs_us": 269593.93700000003,
+        "min_us": 269259.9989999991,
+        "max_us": 269593.93700000003,
+        "trend_us_per_s": -5.644141615254997,
+        "unmatched_reference": 0,
+        "unmatched_follower": 0
+      },
+      "3": {
+        "n": 50,
+        "mean_us": -427894.1575599997,
+        "sd_us": 93.81243891492483,
+        "rms_us": 427894.16784382047,
+        "p95_abs_us": 428028.1870000024,
+        "max_abs_us": 428039.4380000061,
+        "min_us": -428039.4380000061,
+        "max_us": -427702.68700000003,
+        "trend_us_per_s": -5.679113899570989,
+        "unmatched_reference": 10,
+        "unmatched_follower": 0
+      }
+    },
+    "channels": {
+      "0": {
+        "raw": 10302,
+        "qualified": 60,
+        "rejected": 10242,
+        "cadence_bad_intervals": 0,
+        "intervals_over_1_5_s": 0,
+        "period_min_s": 0.9999700009999941,
+        "period_max_s": 0.9999701880000007,
+        "unclosed_observed_rises": 0
+      },
+      "1": {
+        "raw": 1343,
+        "qualified": 60,
+        "rejected": 1283,
+        "cadence_bad_intervals": 0,
+        "intervals_over_1_5_s": 0,
+        "period_min_s": 0.9999629369999994,
+        "period_max_s": 0.9999651259999993,
+        "unclosed_observed_rises": 0
+      },
+      "2": {
+        "raw": 36017,
+        "qualified": 60,
+        "rejected": 35957,
+        "cadence_bad_intervals": 0,
+        "intervals_over_1_5_s": 0,
+        "period_min_s": 0.999968312,
+        "period_max_s": 0.9999706879999977,
+        "unclosed_observed_rises": 0
+      },
+      "3": {
+        "raw": 240080,
+        "qualified": 50,
+        "rejected": 240030,
+        "cadence_bad_intervals": 3,
+        "intervals_over_1_5_s": 3,
+        "period_min_s": 0.9999629999999999,
+        "period_max_s": 5.999784687,
+        "unclosed_observed_rises": 0
+      }
+    },
+    "signal_clean": false,
+    "minimum_matched": 50,
+    "classification": "provisional glitches",
+    "observed_builds_after": {
+      "0": "fdb0d3b4ab514a2d",
+      "1": "fdb0d3b4ab514a2d",
+      "2": "fdb0d3b4ab514a2d",
+      "3": "fdb0d3b4ab514a2d"
+    },
+    "primary_eligible": false
+  },
+  {
+    "run": "new-acquisition/20260909-063455-campaign/00-01-mcpwm-tsf",
+    "new": true,
+    "method": "mcpwm:tsf",
+    "duration": 60.0,
+    "build": "fdb0d3b4ab514a2d",
+    "error": null,
+    "pairs": {
+      "0": {
+        "n": 54,
+        "mean_us": -5.079777777573954,
+        "sd_us": 18.230246881349895,
+        "rms_us": 18.92474685760689,
+        "p95_abs_us": 15.875000000775685,
+        "max_abs_us": 94.37599999984059,
+        "min_us": -67.37500000042473,
+        "max_us": 94.37599999984059,
+        "trend_us_per_s": -0.34398517241068644,
+        "unmatched_reference": 5,
+        "unmatched_follower": 0
+      },
+      "1": {
+        "n": 56,
+        "mean_us": -8.388357142811975,
+        "sd_us": 16.461475805779944,
+        "rms_us": 18.475516806293758,
+        "p95_abs_us": 19.43700000062165,
+        "max_abs_us": 97.31300000037635,
+        "min_us": -57.06299999985731,
+        "max_us": 97.31300000037635,
+        "trend_us_per_s": -0.2520532252307018,
+        "unmatched_reference": 3,
+        "unmatched_follower": 0
+      },
+      "3": {
+        "n": 59,
+        "mean_us": -8.433186440444757,
+        "sd_us": 14.976336618909654,
+        "rms_us": 17.18747485997276,
+        "p95_abs_us": 17.49899999836657,
+        "max_abs_us": 85.93800000067375,
+        "min_us": -63.06299999891962,
+        "max_us": 85.93800000067375,
+        "trend_us_per_s": -0.17585054031288938,
+        "unmatched_reference": 0,
+        "unmatched_follower": 0
+      }
+    },
+    "channels": {
+      "0": {
+        "raw": 189061,
+        "qualified": 54,
+        "rejected": 189006,
+        "cadence_bad_intervals": 0,
+        "intervals_over_1_5_s": 0,
+        "period_min_s": 0.999952062000002,
+        "period_max_s": 1.0000730000000004,
+        "unclosed_observed_rises": 1
+      },
+      "1": {
+        "raw": 126512,
+        "qualified": 56,
+        "rejected": 126455,
+        "cadence_bad_intervals": 1,
+        "intervals_over_1_5_s": 1,
+        "period_min_s": 0.9999975629999938,
+        "period_max_s": 2.000018874000002,
+        "unclosed_observed_rises": 1
+      },
+      "2": {
+        "raw": 117050,
+        "qualified": 59,
+        "rejected": 116990,
+        "cadence_bad_intervals": 0,
+        "intervals_over_1_5_s": 0,
+        "period_min_s": 0.9999036249999995,
+        "period_max_s": 1.0001075630000003,
+        "unclosed_observed_rises": 1
+      },
+      "3": {
+        "raw": 108000,
+        "qualified": 59,
+        "rejected": 107940,
+        "cadence_bad_intervals": 0,
+        "intervals_over_1_5_s": 0,
+        "period_min_s": 0.9999988750000028,
+        "period_max_s": 1.0000248750000011,
+        "unclosed_observed_rises": 1
+      }
+    },
+    "signal_clean": false,
+    "minimum_matched": 54,
+    "classification": "provisional glitches",
+    "observed_builds_after": {
+      "0": "fdb0d3b4ab514a2d",
+      "1": "fdb0d3b4ab514a2d",
+      "2": "fdb0d3b4ab514a2d",
+      "3": "fdb0d3b4ab514a2d"
+    },
+    "primary_eligible": false
+  },
+  {
+    "run": "new-acquisition/20260909-063455-campaign/00-02-mcpwm-ftm",
+    "new": true,
+    "method": "mcpwm:ftm",
+    "duration": 60.0,
+    "build": "fdb0d3b4ab514a2d",
+    "error": null,
+    "pairs": {
+      "0": {
+        "n": 47,
+        "mean_us": 0.5212127664903773,
+        "sd_us": 0.42146966533229385,
+        "rms_us": 0.6702980133849932,
+        "p95_abs_us": 1.0630000062405998,
+        "max_abs_us": 1.312999998503983,
+        "min_us": -0.8750000048962647,
+        "max_us": 1.312999998503983,
+        "trend_us_per_s": -0.0007667223887514121,
+        "unmatched_reference": 7,
+        "unmatched_follower": 4
+      },
+      "1": {
+        "n": 52,
+        "mean_us": 0.08169230773577776,
+        "sd_us": 0.491453047155549,
+        "rms_us": 0.4981964780101032,
+        "p95_abs_us": 0.8129999997663617,
+        "max_abs_us": 1.3120000019739564,
+        "min_us": -1.3120000019739564,
+        "max_us": 1.000000000139778,
+        "trend_us_per_s": -0.003419798633488296,
+        "unmatched_reference": 2,
+        "unmatched_follower": 4
+      },
+      "3": {
+        "n": 42,
+        "mean_us": 0.2841666667054353,
+        "sd_us": 0.5822513333587042,
+        "rms_us": 0.6478945204772663,
+        "p95_abs_us": 1.3750000000811724,
+        "max_abs_us": 1.687999997557199,
+        "min_us": -0.8119999961309077,
+        "max_us": 1.687999997557199,
+        "trend_us_per_s": -0.0051258259199229925,
+        "unmatched_reference": 12,
+        "unmatched_follower": 0
+      }
+    },
+    "channels": {
+      "0": {
+        "raw": 182832,
+        "qualified": 51,
+        "rejected": 182781,
+        "cadence_bad_intervals": 2,
+        "intervals_over_1_5_s": 2,
+        "period_min_s": 0.9999689369999984,
+        "period_max_s": 8.999726875,
+        "unclosed_observed_rises": 0
+      },
+      "1": {
+        "raw": 113709,
+        "qualified": 56,
+        "rejected": 113653,
+        "cadence_bad_intervals": 1,
+        "intervals_over_1_5_s": 1,
+        "period_min_s": 0.999968750999999,
+        "period_max_s": 4.999848188,
+        "unclosed_observed_rises": 0
+      },
+      "2": {
+        "raw": 139928,
+        "qualified": 54,
+        "rejected": 139874,
+        "cadence_bad_intervals": 2,
+        "intervals_over_1_5_s": 2,
+        "period_min_s": 0.9999685619999994,
+        "period_max_s": 5.9998183130000005,
+        "unclosed_observed_rises": 0
+      },
+      "3": {
+        "raw": 462046,
+        "qualified": 42,
+        "rejected": 462004,
+        "cadence_bad_intervals": 2,
+        "intervals_over_1_5_s": 2,
+        "period_min_s": 0.999967937000001,
+        "period_max_s": 5.999816624999994,
+        "unclosed_observed_rises": 0
+      }
+    },
+    "signal_clean": false,
+    "minimum_matched": 42,
+    "classification": "provisional glitches",
+    "observed_builds_after": {
+      "0": "fdb0d3b4ab514a2d",
+      "1": "fdb0d3b4ab514a2d",
+      "2": "fdb0d3b4ab514a2d",
+      "3": "fdb0d3b4ab514a2d"
+    },
+    "primary_eligible": false
+  },
+  {
+    "run": "new-acquisition/20260909-063455-campaign/00-03-mcpwm-frozen",
+    "new": true,
+    "method": "mcpwm:frozen",
+    "duration": 60.0,
+    "build": "fdb0d3b4ab514a2d",
+    "error": null,
+    "pairs": {
+      "0": {
+        "n": 46,
+        "mean_us": -155.3858913041012,
+        "sd_us": 1052.1432005784065,
+        "rms_us": 1063.5554004092796,
+        "p95_abs_us": 2.3749999940037014,
+        "max_abs_us": 7213.376000001048,
+        "min_us": -7213.376000001048,
+        "max_us": 2.375000001109129,
+        "trend_us_per_s": 10.073379089804078,
+        "unmatched_reference": 0,
+        "unmatched_follower": 14
+      },
+      "1": {
+        "n": 6,
+        "mean_us": 0.1980000002843596,
+        "sd_us": 0.36356063204037686,
+        "rms_us": 0.41398107841084325,
+        "p95_abs_us": 0.8129999999884063,
+        "max_abs_us": 0.8129999999884063,
+        "min_us": -0.24999999936881068,
+        "max_us": 0.8129999999884063,
+        "trend_us_per_s": -0.07640687498293279,
+        "unmatched_reference": 40,
+        "unmatched_follower": 5
+      },
+      "3": {
+        "n": 43,
+        "mean_us": -167.88079069732035,
+        "sd_us": 1087.2498782922642,
+        "rms_us": 1100.1346543635925,
+        "p95_abs_us": 2.126000005375772,
+        "max_abs_us": 7214.063000001048,
+        "min_us": -7214.063000001048,
+        "max_us": 1.123999999741443,
+        "trend_us_per_s": 12.731192497560471,
+        "unmatched_reference": 3,
+        "unmatched_follower": 11
+      }
+    },
+    "channels": {
+      "0": {
+        "raw": 60,
+        "qualified": 60,
+        "rejected": 0,
+        "cadence_bad_intervals": 0,
+        "intervals_over_1_5_s": 0,
+        "period_min_s": 0.9999680009999992,
+        "period_max_s": 0.9999708749999954,
+        "unclosed_observed_rises": 0
+      },
+      "1": {
+        "raw": 13,
+        "qualified": 11,
+        "rejected": 2,
+        "cadence_bad_intervals": 0,
+        "intervals_over_1_5_s": 0,
+        "period_min_s": 0.9999687499999999,
+        "period_max_s": 0.9999698130000008,
+        "unclosed_observed_rises": 0
+      },
+      "2": {
+        "raw": 254097,
+        "qualified": 46,
+        "rejected": 254051,
+        "cadence_bad_intervals": 7,
+        "intervals_over_1_5_s": 7,
+        "period_min_s": 0.9927553119999999,
+        "period_max_s": 4.999847375000002,
+        "unclosed_observed_rises": 0
+      },
+      "3": {
+        "raw": 146724,
+        "qualified": 54,
+        "rejected": 146670,
+        "cadence_bad_intervals": 2,
+        "intervals_over_1_5_s": 2,
+        "period_min_s": 0.9999678120000013,
+        "period_max_s": 5.999816813000001,
+        "unclosed_observed_rises": 0
+      }
+    },
+    "signal_clean": false,
+    "minimum_matched": 6,
+    "classification": "INVALID: firmware changed during campaign",
+    "observed_builds_after": {
+      "0": "fdb0d3b4ab514a2d",
+      "1": "507f8d74b8d34447",
+      "2": "fdb0d3b4ab514a2d",
+      "3": "fdb0d3b4ab514a2d"
+    },
+    "primary_eligible": false
+  },
+  {
+    "run": "new-acquisition/20260909-064935-campaign/00-00-mcpwm-ntp",
+    "new": true,
+    "method": "mcpwm:ntp",
+    "duration": 5.0,
+    "build": "507f8d74b8d34447",
+    "error": null,
+    "pairs": {
+      "0": {
+        "n": 5,
+        "mean_us": 763.4500000000877,
+        "sd_us": 850.6221043156305,
+        "rms_us": 1142.9846310648647,
+        "p95_abs_us": 1952.1250000000823,
+        "max_abs_us": 1952.1250000000823,
+        "min_us": -692.6249999998912,
+        "max_us": 1952.1250000000823,
+        "trend_us_per_s": -95.55280468153853,
+        "unmatched_reference": 0,
+        "unmatched_follower": 0
+      },
+      "1": {
+        "n": 5,
+        "mean_us": -1156.4877999999944,
+        "sd_us": 3479.9014185077735,
+        "rms_us": 3667.039393581864,
+        "p95_abs_us": 4813.936999999991,
+        "max_abs_us": 4813.936999999991,
+        "min_us": -4765.312999999937,
+        "max_us": 4813.936999999991,
+        "trend_us_per_s": -446.807235119327,
+        "unmatched_reference": 0,
+        "unmatched_follower": 0
+      },
+      "3": {
+        "n": 5,
+        "mean_us": 1023.1127999999811,
+        "sd_us": 2350.4275155932896,
+        "rms_us": 2563.448713663264,
+        "p95_abs_us": 5698.0630000000865,
+        "max_abs_us": 5698.0630000000865,
+        "min_us": -487.3130000002668,
+        "max_us": 5698.0630000000865,
+        "trend_us_per_s": -459.83296427998704,
+        "unmatched_reference": 0,
+        "unmatched_follower": 0
+      }
+    },
+    "channels": {
+      "0": {
+        "raw": 5,
+        "qualified": 5,
+        "rejected": 0,
+        "cadence_bad_intervals": 0,
+        "intervals_over_1_5_s": 0,
+        "period_min_s": 0.99732425,
+        "period_max_s": 1.0017155619999998,
+        "unclosed_observed_rises": 0
+      },
+      "1": {
+        "raw": 5,
+        "qualified": 5,
+        "rejected": 0,
+        "cadence_bad_intervals": 0,
+        "intervals_over_1_5_s": 0,
+        "period_min_s": 0.9940320630000001,
+        "period_max_s": 1.00954825,
+        "unclosed_observed_rises": 0
+      },
+      "2": {
+        "raw": 5,
+        "qualified": 5,
+        "rejected": 0,
+        "cadence_bad_intervals": 0,
+        "intervals_over_1_5_s": 0,
+        "period_min_s": 0.999967625,
+        "period_max_s": 0.9999692489999998,
+        "unclosed_observed_rises": 0
+      },
+      "3": {
+        "raw": 5,
+        "qualified": 5,
+        "rejected": 0,
+        "cadence_bad_intervals": 0,
+        "intervals_over_1_5_s": 0,
+        "period_min_s": 0.9937835619999997,
+        "period_max_s": 1.006006063,
+        "unclosed_observed_rises": 0
+      }
+    },
+    "signal_clean": true,
+    "minimum_matched": 5,
+    "classification": "insufficient/full-fleet inconclusive",
+    "observed_builds_after": {
+      "0": "507f8d74b8d34447",
+      "1": "507f8d74b8d34447",
+      "2": "507f8d74b8d34447",
+      "3": "507f8d74b8d34447"
+    },
+    "primary_eligible": false
+  },
+  {
+    "run": "new-acquisition/20260909-064935-campaign/00-01-mcpwm-ftm",
+    "new": true,
+    "method": "mcpwm:ftm",
+    "duration": 5.0,
+    "build": "507f8d74b8d34447",
+    "error": null,
+    "pairs": {
+      "0": {
+        "n": 5,
+        "mean_us": -0.32459999989853383,
+        "sd_us": 0.8078815756415931,
+        "rms_us": 0.8706536625979767,
+        "p95_abs_us": 1.1250000002682725,
+        "max_abs_us": 1.1250000002682725,
+        "min_us": -1.1250000002682725,
+        "max_us": 0.7510000001875738,
+        "trend_us_per_s": 0.118803478268564,
+        "unmatched_reference": 0,
+        "unmatched_follower": 0
+      },
+      "1": {
+        "n": 5,
+        "mean_us": -0.07459999998848943,
+        "sd_us": 0.5666549568311513,
+        "rms_us": 0.5715443990623971,
+        "p95_abs_us": 0.8750000000112834,
+        "max_abs_us": 0.8750000000112834,
+        "min_us": -0.8750000000112834,
+        "max_us": 0.7510000001875738,
+        "trend_us_per_s": -0.031601142141304446,
+        "unmatched_reference": 0,
+        "unmatched_follower": 0
+      },
+      "3": {
+        "n": 5,
+        "mean_us": -0.037000000002729294,
+        "sd_us": 0.7357564814996912,
+        "rms_us": 0.7366862290480307,
+        "p95_abs_us": 1.1880000001518454,
+        "max_abs_us": 1.1880000001518454,
+        "min_us": -1.1239999999912431,
+        "max_us": 1.1880000001518454,
+        "trend_us_per_s": 0.08730259642283678,
+        "unmatched_reference": 0,
+        "unmatched_follower": 0
+      }
+    },
+    "channels": {
+      "0": {
+        "raw": 6,
+        "qualified": 5,
+        "rejected": 0,
+        "cadence_bad_intervals": 0,
+        "intervals_over_1_5_s": 0,
+        "period_min_s": 0.9999686239999999,
+        "period_max_s": 0.9999696260000001,
+        "unclosed_observed_rises": 1
+      },
+      "1": {
+        "raw": 6,
+        "qualified": 5,
+        "rejected": 0,
+        "cadence_bad_intervals": 0,
+        "intervals_over_1_5_s": 0,
+        "period_min_s": 0.9999688739999999,
+        "period_max_s": 0.9999688759999996,
+        "unclosed_observed_rises": 1
+      },
+      "2": {
+        "raw": 6,
+        "qualified": 5,
+        "rejected": 0,
+        "cadence_bad_intervals": 0,
+        "intervals_over_1_5_s": 0,
+        "period_min_s": 0.9999679999999999,
+        "period_max_s": 0.9999705000000003,
+        "unclosed_observed_rises": 1
+      },
+      "3": {
+        "raw": 6,
+        "qualified": 5,
+        "rejected": 0,
+        "cadence_bad_intervals": 0,
+        "intervals_over_1_5_s": 0,
+        "period_min_s": 0.9999683119999996,
+        "period_max_s": 0.9999703120000001,
+        "unclosed_observed_rises": 1
+      }
+    },
+    "signal_clean": true,
+    "minimum_matched": 5,
+    "classification": "insufficient/full-fleet inconclusive",
+    "observed_builds_after": {
+      "0": "507f8d74b8d34447",
+      "1": "507f8d74b8d34447",
+      "2": "507f8d74b8d34447",
+      "3": "507f8d74b8d34447"
+    },
+    "primary_eligible": false
+  },
+  {
+    "run": "new-acquisition/20260909-065110-campaign/00-00-mcpwm-ftm",
+    "new": true,
+    "method": "mcpwm:ftm",
+    "duration": 60.0,
+    "build": "507f8d74b8d34447",
+    "error": null,
+    "pairs": {
+      "0": {
+        "n": 60,
+        "mean_us": 0.08118333303201257,
+        "sd_us": 0.6065331399507139,
+        "rms_us": 0.6119421405824729,
+        "p95_abs_us": 0.9380000003389455,
+        "max_abs_us": 1.250000000396767,
+        "min_us": -0.999000000945216,
+        "max_us": 1.250000000396767,
+        "trend_us_per_s": -0.0013960155816999233,
+        "unmatched_reference": 0,
+        "unmatched_follower": 0
+      },
+      "1": {
+        "n": 60,
+        "mean_us": 0.3019833329861073,
+        "sd_us": 0.6351551122731002,
+        "rms_us": 0.7032893785974963,
+        "p95_abs_us": 1.1879999988195777,
+        "max_abs_us": 1.6259999995327235,
+        "min_us": -1.6259999995327235,
+        "max_us": 1.1879999988195777,
+        "trend_us_per_s": 0.0031880676274141976,
+        "unmatched_reference": 0,
+        "unmatched_follower": 0
+      },
+      "3": {
+        "n": 60,
+        "mean_us": 0.21556666615629716,
+        "sd_us": 0.7486477444691195,
+        "rms_us": 0.7790651018088544,
+        "p95_abs_us": 1.5629999978727938,
+        "max_abs_us": 1.687999997557199,
+        "min_us": -1.31300000028034,
+        "max_us": 1.687999997557199,
+        "trend_us_per_s": 0.007034172746005503,
+        "unmatched_reference": 0,
+        "unmatched_follower": 0
+      }
+    },
+    "channels": {
+      "0": {
+        "raw": 60,
+        "qualified": 60,
+        "rejected": 0,
+        "cadence_bad_intervals": 0,
+        "intervals_over_1_5_s": 0,
+        "period_min_s": 0.9999681239999987,
+        "period_max_s": 0.9999698759999998,
+        "unclosed_observed_rises": 0
+      },
+      "1": {
+        "raw": 60,
+        "qualified": 60,
+        "rejected": 0,
+        "cadence_bad_intervals": 0,
+        "intervals_over_1_5_s": 0,
+        "period_min_s": 0.9999676870000016,
+        "period_max_s": 0.9999698120000002,
+        "unclosed_observed_rises": 0
+      },
+      "2": {
+        "raw": 60,
+        "qualified": 60,
+        "rejected": 0,
+        "cadence_bad_intervals": 0,
+        "intervals_over_1_5_s": 0,
+        "period_min_s": 0.9999676870000016,
+        "period_max_s": 0.999969937000003,
+        "unclosed_observed_rises": 0
+      },
+      "3": {
+        "raw": 60,
+        "qualified": 60,
+        "rejected": 0,
+        "cadence_bad_intervals": 0,
+        "intervals_over_1_5_s": 0,
+        "period_min_s": 0.9999670620000032,
+        "period_max_s": 0.999970187,
+        "unclosed_observed_rises": 0
+      }
+    },
+    "signal_clean": true,
+    "minimum_matched": 60,
+    "classification": "clean descriptive",
+    "observed_builds_after": {
+      "0": "507f8d74b8d34447",
+      "1": "507f8d74b8d34447",
+      "2": "507f8d74b8d34447",
+      "3": "507f8d74b8d34447"
+    },
+    "primary_eligible": true,
+    "block": 1
+  },
+  {
+    "run": "new-acquisition/20260909-065110-campaign/00-01-mcpwm-ntp",
+    "new": true,
+    "method": "mcpwm:ntp",
+    "duration": 60.0,
+    "build": "507f8d74b8d34447",
+    "error": null,
+    "pairs": {
+      "0": {
+        "n": 59,
+        "mean_us": 47.13569491569409,
+        "sd_us": 2322.8450716541934,
+        "rms_us": 2323.3232664963693,
+        "p95_abs_us": 4858.437000000215,
+        "max_abs_us": 7504.686999999954,
+        "min_us": -6940.875000001512,
+        "max_us": 7504.686999999954,
+        "trend_us_per_s": -8.767816855723032,
+        "unmatched_reference": 1,
+        "unmatched_follower": 0
+      },
+      "1": {
+        "n": 60,
+        "mean_us": -2946.786399999428,
+        "sd_us": 7602.696973018303,
+        "rms_us": 8153.805942672615,
+        "p95_abs_us": 15239.06299999922,
+        "max_abs_us": 39774.1879999991,
+        "min_us": -39774.1879999991,
+        "max_us": 22702.43699999952,
+        "trend_us_per_s": -54.95282399928289,
+        "unmatched_reference": 0,
+        "unmatched_follower": 0
+      },
+      "3": {
+        "n": 60,
+        "mean_us": -361.5832499993624,
+        "sd_us": 2844.3751434471774,
+        "rms_us": 2867.2656666831995,
+        "p95_abs_us": 5996.312000000615,
+        "max_abs_us": 12695.374999999842,
+        "min_us": -12695.374999999842,
+        "max_us": 8337.000000000038,
+        "trend_us_per_s": -20.788137308685158,
+        "unmatched_reference": 0,
+        "unmatched_follower": 0
+      }
+    },
+    "channels": {
+      "0": {
+        "raw": 59,
+        "qualified": 59,
+        "rejected": 0,
+        "cadence_bad_intervals": 1,
+        "intervals_over_1_5_s": 1,
+        "period_min_s": 0.9915835630000007,
+        "period_max_s": 1.9997035620000005,
+        "unclosed_observed_rises": 0
+      },
+      "1": {
+        "raw": 60,
+        "qualified": 60,
+        "rejected": 0,
+        "cadence_bad_intervals": 8,
+        "intervals_over_1_5_s": 0,
+        "period_min_s": 0.9709066250000014,
+        "period_max_s": 1.0624453129999978,
+        "unclosed_observed_rises": 0
+      },
+      "2": {
+        "raw": 60,
+        "qualified": 60,
+        "rejected": 0,
+        "cadence_bad_intervals": 0,
+        "intervals_over_1_5_s": 0,
+        "period_min_s": 0.9999676239999999,
+        "period_max_s": 0.9999696880000002,
+        "unclosed_observed_rises": 0
+      },
+      "3": {
+        "raw": 60,
+        "qualified": 60,
+        "rejected": 0,
+        "cadence_bad_intervals": 4,
+        "intervals_over_1_5_s": 0,
+        "period_min_s": 0.9868423750000019,
+        "period_max_s": 1.012860437999997,
+        "unclosed_observed_rises": 0
+      }
+    },
+    "signal_clean": true,
+    "minimum_matched": 59,
+    "classification": "clean signal; cadence/completeness criterion failed",
+    "observed_builds_after": {
+      "0": "507f8d74b8d34447",
+      "1": "507f8d74b8d34447",
+      "2": "507f8d74b8d34447",
+      "3": "507f8d74b8d34447"
+    },
+    "primary_eligible": true,
+    "block": 1
+  },
+  {
+    "run": "new-acquisition/20260909-065110-campaign/00-02-mcpwm-mac",
+    "new": true,
+    "method": "mcpwm:mac",
+    "duration": 60.0,
+    "build": "507f8d74b8d34447",
+    "error": null,
+    "pairs": {
+      "0": {
+        "n": 60,
+        "mean_us": -7087.211516666706,
+        "sd_us": 6.776053968553001,
+        "rms_us": 7087.214755944719,
+        "p95_abs_us": 7097.688000001767,
+        "max_abs_us": 7098.31200000366,
+        "min_us": -7098.31200000366,
+        "max_us": -7075.812999999931,
+        "trend_us_per_s": -0.39007730976029664,
+        "unmatched_reference": 0,
+        "unmatched_follower": 0
+      },
+      "1": {
+        "n": 60,
+        "mean_us": -185055.5385833335,
+        "sd_us": 104.77871473782065,
+        "rms_us": 185055.56824626133,
+        "p95_abs_us": 185215.687000003,
+        "max_abs_us": 185233.8119999999,
+        "min_us": -185233.8119999999,
+        "max_us": -184878.31300000002,
+        "trend_us_per_s": -6.050304600288418,
+        "unmatched_reference": 0,
+        "unmatched_follower": 0
+      },
+      "3": {
+        "n": 59,
+        "mean_us": -32986.59215254203,
+        "sd_us": 98.56014987397884,
+        "rms_us": 32986.73939541904,
+        "p95_abs_us": 33135.87600000289,
+        "max_abs_us": 33158.24899999598,
+        "min_us": -33158.24899999598,
+        "max_us": -32819.374999999985,
+        "trend_us_per_s": -5.768187013471666,
+        "unmatched_reference": 1,
+        "unmatched_follower": 0
+      }
+    },
+    "channels": {
+      "0": {
+        "raw": 60,
+        "qualified": 60,
+        "rejected": 0,
+        "cadence_bad_intervals": 0,
+        "intervals_over_1_5_s": 0,
+        "period_min_s": 0.9999671879999994,
+        "period_max_s": 0.9999691879999979,
+        "unclosed_observed_rises": 0
+      },
+      "1": {
+        "raw": 60,
+        "qualified": 60,
+        "rejected": 0,
+        "cadence_bad_intervals": 0,
+        "intervals_over_1_5_s": 0,
+        "period_min_s": 0.9999614379999997,
+        "period_max_s": 0.9999641249999982,
+        "unclosed_observed_rises": 0
+      },
+      "2": {
+        "raw": 60,
+        "qualified": 60,
+        "rejected": 0,
+        "cadence_bad_intervals": 0,
+        "intervals_over_1_5_s": 0,
+        "period_min_s": 0.9999674999999968,
+        "period_max_s": 0.9999696249999985,
+        "unclosed_observed_rises": 0
+      },
+      "3": {
+        "raw": 59,
+        "qualified": 59,
+        "rejected": 0,
+        "cadence_bad_intervals": 1,
+        "intervals_over_1_5_s": 1,
+        "period_min_s": 0.9999615000000048,
+        "period_max_s": 1.9999256259999996,
+        "unclosed_observed_rises": 0
+      }
+    },
+    "signal_clean": true,
+    "minimum_matched": 59,
+    "classification": "clean signal; cadence/completeness criterion failed",
+    "observed_builds_after": {
+      "0": "507f8d74b8d34447",
+      "1": "507f8d74b8d34447",
+      "2": "507f8d74b8d34447",
+      "3": "507f8d74b8d34447"
+    },
+    "primary_eligible": true,
+    "block": 1
+  },
+  {
+    "run": "new-acquisition/20260909-065110-campaign/00-03-mcpwm-tsf",
+    "new": true,
+    "method": "mcpwm:tsf",
+    "duration": 60.0,
+    "build": "507f8d74b8d34447",
+    "error": null,
+    "pairs": {
+      "0": {
+        "n": 60,
+        "mean_us": -8.589400000053038,
+        "sd_us": 28.740394691408255,
+        "rms_us": 29.99646778170455,
+        "p95_abs_us": 60.18699999543742,
+        "max_abs_us": 176.18799999752355,
+        "min_us": -176.18799999752355,
+        "max_us": 84.68799999761245,
+        "trend_us_per_s": -0.23906085474057254,
+        "unmatched_reference": 0,
+        "unmatched_follower": 0
+      },
+      "1": {
+        "n": 59,
+        "mean_us": -7.385491525098454,
+        "sd_us": 18.620201928339586,
+        "rms_us": 20.03141045756495,
+        "p95_abs_us": 20.06200000437275,
+        "max_abs_us": 85.75000000377031,
+        "min_us": -52.24999999953184,
+        "max_us": 85.75000000377031,
+        "trend_us_per_s": 0.05055044689348584,
+        "unmatched_reference": 1,
+        "unmatched_follower": 0
+      },
+      "3": {
+        "n": 60,
+        "mean_us": -9.005133333330381,
+        "sd_us": 19.324423245758755,
+        "rms_us": 21.319609755628253,
+        "p95_abs_us": 23.499000000981596,
+        "max_abs_us": 74.5000000001994,
+        "min_us": -23.499000000981596,
+        "max_us": 74.5000000001994,
+        "trend_us_per_s": 0.19177913434616167,
+        "unmatched_reference": 0,
+        "unmatched_follower": 0
+      }
+    },
+    "channels": {
+      "0": {
+        "raw": 60,
+        "qualified": 60,
+        "rejected": 0,
+        "cadence_bad_intervals": 0,
+        "intervals_over_1_5_s": 0,
+        "period_min_s": 0.9998400620000041,
+        "period_max_s": 1.000063124999997,
+        "unclosed_observed_rises": 0
+      },
+      "1": {
+        "raw": 59,
+        "qualified": 59,
+        "rejected": 0,
+        "cadence_bad_intervals": 1,
+        "intervals_over_1_5_s": 1,
+        "period_min_s": 0.9999754999999997,
+        "period_max_s": 2.000016875,
+        "unclosed_observed_rises": 0
+      },
+      "2": {
+        "raw": 60,
+        "qualified": 60,
+        "rejected": 0,
+        "cadence_bad_intervals": 0,
+        "intervals_over_1_5_s": 0,
+        "period_min_s": 0.9999254999999998,
+        "period_max_s": 1.0001036879999994,
+        "unclosed_observed_rises": 0
+      },
+      "3": {
+        "raw": 60,
+        "qualified": 60,
+        "rejected": 0,
+        "cadence_bad_intervals": 0,
+        "intervals_over_1_5_s": 0,
+        "period_min_s": 0.9999356880000008,
+        "period_max_s": 1.0000966869999957,
+        "unclosed_observed_rises": 0
+      }
+    },
+    "signal_clean": true,
+    "minimum_matched": 59,
+    "classification": "clean signal; cadence/completeness criterion failed",
+    "observed_builds_after": {
+      "0": "507f8d74b8d34447",
+      "1": "507f8d74b8d34447",
+      "2": "507f8d74b8d34447",
+      "3": "507f8d74b8d34447"
+    },
+    "primary_eligible": true,
+    "block": 1
+  },
+  {
+    "run": "new-acquisition/20260909-065110-campaign/00-04-mcpwm-frozen",
+    "new": true,
+    "method": "mcpwm:frozen",
+    "duration": 60.0,
+    "build": "507f8d74b8d34447",
+    "error": null,
+    "pairs": {
+      "0": {
+        "n": 59,
+        "mean_us": -0.1186949150059403,
+        "sd_us": 0.5386656534963158,
+        "rms_us": 0.5515878616366393,
+        "p95_abs_us": 1.0629999991351724,
+        "max_abs_us": 1.250000000396767,
+        "min_us": -1.250000000396767,
+        "max_us": 1.1879999988195777,
+        "trend_us_per_s": 0.00211500584981648,
+        "unmatched_reference": 1,
+        "unmatched_follower": 0
+      },
+      "1": {
+        "n": 60,
+        "mean_us": -0.05624999985243129,
+        "sd_us": 0.6551619550114335,
+        "rms_us": 0.6575722392085923,
+        "p95_abs_us": 1.312999998503983,
+        "max_abs_us": 1.6239999993672427,
+        "min_us": -1.6239999993672427,
+        "max_us": 1.312999998503983,
+        "trend_us_per_s": -0.0013423325536139129,
+        "unmatched_reference": 0,
+        "unmatched_follower": 0
+      },
+      "3": {
+        "n": 59,
+        "mean_us": 0.005305084546799586,
+        "sd_us": 0.6700446796371932,
+        "rms_us": 0.6700656808344667,
+        "p95_abs_us": 1.1869999951841237,
+        "max_abs_us": 1.5620000000104994,
+        "min_us": -1.3750000000811724,
+        "max_us": 1.5620000000104994,
+        "trend_us_per_s": -0.005463587311275419,
+        "unmatched_reference": 1,
+        "unmatched_follower": 0
+      }
+    },
+    "channels": {
+      "0": {
+        "raw": 59,
+        "qualified": 59,
+        "rejected": 0,
+        "cadence_bad_intervals": 1,
+        "intervals_over_1_5_s": 1,
+        "period_min_s": 0.9999670629999997,
+        "period_max_s": 1.9999361260000015,
+        "unclosed_observed_rises": 0
+      },
+      "1": {
+        "raw": 60,
+        "qualified": 60,
+        "rejected": 0,
+        "cadence_bad_intervals": 0,
+        "intervals_over_1_5_s": 0,
+        "period_min_s": 0.999967250000001,
+        "period_max_s": 0.9999703740000001,
+        "unclosed_observed_rises": 0
+      },
+      "2": {
+        "raw": 60,
+        "qualified": 60,
+        "rejected": 0,
+        "cadence_bad_intervals": 0,
+        "intervals_over_1_5_s": 0,
+        "period_min_s": 0.9999674369999987,
+        "period_max_s": 0.9999695000000006,
+        "unclosed_observed_rises": 0
+      },
+      "3": {
+        "raw": 59,
+        "qualified": 59,
+        "rejected": 0,
+        "cadence_bad_intervals": 1,
+        "intervals_over_1_5_s": 1,
+        "period_min_s": 0.999966624999999,
+        "period_max_s": 1.999937249999995,
+        "unclosed_observed_rises": 0
+      }
+    },
+    "signal_clean": true,
+    "minimum_matched": 59,
+    "classification": "clean signal; cadence/completeness criterion failed",
+    "observed_builds_after": {
+      "0": "507f8d74b8d34447",
+      "1": "507f8d74b8d34447",
+      "2": "507f8d74b8d34447",
+      "3": "507f8d74b8d34447"
+    },
+    "primary_eligible": true,
+    "block": 1
+  },
+  {
+    "run": "new-acquisition/20260909-065110-campaign/01-00-mcpwm-ntp",
+    "new": true,
+    "method": "mcpwm:ntp",
+    "duration": 60.0,
+    "build": "507f8d74b8d34447",
+    "error": null,
+    "pairs": {
+      "0": {
+        "n": 60,
+        "mean_us": 92.24796666648841,
+        "sd_us": 5319.592387742874,
+        "rms_us": 5320.392171549578,
+        "p95_abs_us": 9663.624999994625,
+        "max_abs_us": 28816.436999996142,
+        "min_us": -22034.25100000089,
+        "max_us": 28816.436999996142,
+        "trend_us_per_s": 8.48571019276519,
+        "unmatched_reference": 0,
+        "unmatched_follower": 0
+      },
+      "1": {
+        "n": 60,
+        "mean_us": -41.57493333379054,
+        "sd_us": 8163.658209169511,
+        "rms_us": 8163.764072486567,
+        "p95_abs_us": 9419.938000000628,
+        "max_abs_us": 55503.061999999656,
+        "min_us": -20313.249999993845,
+        "max_us": 55503.061999999656,
+        "trend_us_per_s": 96.09898766467833,
+        "unmatched_reference": 0,
+        "unmatched_follower": 0
+      },
+      "3": {
+        "n": 60,
+        "mean_us": -173.48423333390184,
+        "sd_us": 3213.144913901573,
+        "rms_us": 3217.824889105527,
+        "p95_abs_us": 4963.81300000337,
+        "max_abs_us": 19614.87500000203,
+        "min_us": -19614.87500000203,
+        "max_us": 7100.4999999999545,
+        "trend_us_per_s": -37.572168608167296,
+        "unmatched_reference": 0,
+        "unmatched_follower": 0
+      }
+    },
+    "channels": {
+      "0": {
+        "raw": 60,
+        "qualified": 60,
+        "rejected": 0,
+        "cadence_bad_intervals": 4,
+        "intervals_over_1_5_s": 0,
+        "period_min_s": 0.9491176869999975,
+        "period_max_s": 1.038448437999996,
+        "unclosed_observed_rises": 0
+      },
+      "1": {
+        "raw": 60,
+        "qualified": 60,
+        "rejected": 0,
+        "cadence_bad_intervals": 5,
+        "intervals_over_1_5_s": 0,
+        "period_min_s": 0.9442976249999973,
+        "period_max_s": 1.0460515000000044,
+        "unclosed_observed_rises": 0
+      },
+      "2": {
+        "raw": 60,
+        "qualified": 60,
+        "rejected": 0,
+        "cadence_bad_intervals": 0,
+        "intervals_over_1_5_s": 0,
+        "period_min_s": 0.9999673120000026,
+        "period_max_s": 0.9999695009999954,
+        "unclosed_observed_rises": 0
+      },
+      "3": {
+        "raw": 60,
+        "qualified": 60,
+        "rejected": 0,
+        "cadence_bad_intervals": 3,
+        "intervals_over_1_5_s": 0,
+        "period_min_s": 0.9813422499999973,
+        "period_max_s": 1.0194208750000016,
+        "unclosed_observed_rises": 0
+      }
+    },
+    "signal_clean": true,
+    "minimum_matched": 60,
+    "classification": "clean signal; cadence/completeness criterion failed",
+    "observed_builds_after": {
+      "0": "507f8d74b8d34447",
+      "1": "507f8d74b8d34447",
+      "2": "507f8d74b8d34447",
+      "3": "507f8d74b8d34447"
+    },
+    "primary_eligible": true,
+    "block": 2
+  },
+  {
+    "run": "new-acquisition/20260909-065110-campaign/01-01-mcpwm-mac",
+    "new": true,
+    "method": "mcpwm:mac",
+    "duration": 60.0,
+    "build": "507f8d74b8d34447",
+    "error": null,
+    "pairs": {
+      "0": {
+        "n": 60,
+        "mean_us": -7191.002049999992,
+        "sd_us": 6.588999765955549,
+        "rms_us": 7191.005068696726,
+        "p95_abs_us": 7200.8120000006675,
+        "max_abs_us": 7202.31199999688,
+        "min_us": -7202.31199999688,
+        "max_us": -7178.936999999996,
+        "trend_us_per_s": -0.37932312736333795,
+        "unmatched_reference": 0,
+        "unmatched_follower": 0
+      },
+      "1": {
+        "n": 59,
+        "mean_us": -186718.40784745783,
+        "sd_us": 105.09436425737032,
+        "rms_us": 186718.4374236112,
+        "p95_abs_us": 186878.18799999435,
+        "max_abs_us": 186896.24999999665,
+        "min_us": -186896.24999999665,
+        "max_us": -186539.93699999998,
+        "trend_us_per_s": -6.019834743868156,
+        "unmatched_reference": 1,
+        "unmatched_follower": 0
+      },
+      "3": {
+        "n": 60,
+        "mean_us": -34588.10933333348,
+        "sd_us": 100.53416644106248,
+        "rms_us": 34588.25543986358,
+        "p95_abs_us": 34741.93699999972,
+        "max_abs_us": 34759.56199999786,
+        "min_us": -34759.56199999786,
+        "max_us": -34415.81199999999,
+        "trend_us_per_s": -5.805163545167494,
+        "unmatched_reference": 0,
+        "unmatched_follower": 0
+      }
+    },
+    "channels": {
+      "0": {
+        "raw": 60,
+        "qualified": 60,
+        "rejected": 0,
+        "cadence_bad_intervals": 0,
+        "intervals_over_1_5_s": 0,
+        "period_min_s": 0.9999669990000015,
+        "period_max_s": 0.9999691249999998,
+        "unclosed_observed_rises": 0
+      },
+      "1": {
+        "raw": 59,
+        "qualified": 59,
+        "rejected": 0,
+        "cadence_bad_intervals": 1,
+        "intervals_over_1_5_s": 1,
+        "period_min_s": 0.9999613119999999,
+        "period_max_s": 1.9999250629999992,
+        "unclosed_observed_rises": 0
+      },
+      "2": {
+        "raw": 60,
+        "qualified": 60,
+        "rejected": 0,
+        "cadence_bad_intervals": 0,
+        "intervals_over_1_5_s": 0,
+        "period_min_s": 0.9999672499999974,
+        "period_max_s": 0.9999696250000021,
+        "unclosed_observed_rises": 0
+      },
+      "3": {
+        "raw": 60,
+        "qualified": 60,
+        "rejected": 0,
+        "cadence_bad_intervals": 0,
+        "intervals_over_1_5_s": 0,
+        "period_min_s": 0.9999608749999993,
+        "period_max_s": 0.9999641869999998,
+        "unclosed_observed_rises": 0
+      }
+    },
+    "signal_clean": true,
+    "minimum_matched": 59,
+    "classification": "clean signal; cadence/completeness criterion failed",
+    "observed_builds_after": {
+      "0": "507f8d74b8d34447",
+      "1": "507f8d74b8d34447",
+      "2": "507f8d74b8d34447",
+      "3": "507f8d74b8d34447"
+    },
+    "primary_eligible": true,
+    "block": 2
+  },
+  {
+    "run": "new-acquisition/20260909-065110-campaign/01-02-mcpwm-tsf",
+    "new": true,
+    "method": "mcpwm:tsf",
+    "duration": 60.0,
+    "build": "507f8d74b8d34447",
+    "error": null,
+    "pairs": {
+      "0": {
+        "n": 60,
+        "mean_us": -10.184433333449798,
+        "sd_us": 13.968025752710327,
+        "rms_us": 17.286654556387198,
+        "p95_abs_us": 31.43700000052263,
+        "max_abs_us": 77.31200000193894,
+        "min_us": -77.31200000193894,
+        "max_us": 2.375000001109129,
+        "trend_us_per_s": -0.0617474682337598,
+        "unmatched_reference": 0,
+        "unmatched_follower": 0
+      },
+      "1": {
+        "n": 60,
+        "mean_us": -10.680316666600298,
+        "sd_us": 27.293905306519513,
+        "rms_us": 29.309152682739125,
+        "p95_abs_us": 21.93799999972157,
+        "max_abs_us": 182.18800000013857,
+        "min_us": -75.06300000059696,
+        "max_us": 182.18800000013857,
+        "trend_us_per_s": -0.17877241985439674,
+        "unmatched_reference": 0,
+        "unmatched_follower": 0
+      },
+      "3": {
+        "n": 59,
+        "mean_us": -15.387745762912292,
+        "sd_us": 13.835181942382741,
+        "rms_us": 20.692872662896725,
+        "p95_abs_us": 39.31200000195645,
+        "max_abs_us": 83.06200000163244,
+        "min_us": -83.06200000163244,
+        "max_us": 47.31199999952196,
+        "trend_us_per_s": -0.05819105244101928,
+        "unmatched_reference": 1,
+        "unmatched_follower": 0
+      }
+    },
+    "channels": {
+      "0": {
+        "raw": 60,
+        "qualified": 60,
+        "rejected": 0,
+        "cadence_bad_intervals": 0,
+        "intervals_over_1_5_s": 0,
+        "period_min_s": 0.9999451869999945,
+        "period_max_s": 1.0000751250000022,
+        "unclosed_observed_rises": 0
+      },
+      "1": {
+        "raw": 60,
+        "qualified": 60,
+        "rejected": 0,
+        "cadence_bad_intervals": 0,
+        "intervals_over_1_5_s": 0,
+        "period_min_s": 0.9997904999999996,
+        "period_max_s": 1.0002305000000007,
+        "unclosed_observed_rises": 0
+      },
+      "2": {
+        "raw": 60,
+        "qualified": 60,
+        "rejected": 0,
+        "cadence_bad_intervals": 0,
+        "intervals_over_1_5_s": 0,
+        "period_min_s": 0.999943499999997,
+        "period_max_s": 1.000080563000001,
+        "unclosed_observed_rises": 0
+      },
+      "3": {
+        "raw": 59,
+        "qualified": 59,
+        "rejected": 0,
+        "cadence_bad_intervals": 1,
+        "intervals_over_1_5_s": 1,
+        "period_min_s": 0.9999506880000002,
+        "period_max_s": 2.0000224370000055,
+        "unclosed_observed_rises": 0
+      }
+    },
+    "signal_clean": true,
+    "minimum_matched": 59,
+    "classification": "clean signal; cadence/completeness criterion failed",
+    "observed_builds_after": {
+      "0": "507f8d74b8d34447",
+      "1": "507f8d74b8d34447",
+      "2": "507f8d74b8d34447",
+      "3": "507f8d74b8d34447"
+    },
+    "primary_eligible": true,
+    "block": 2
+  },
+  {
+    "run": "new-acquisition/20260909-065110-campaign/01-03-mcpwm-frozen",
+    "new": true,
+    "method": "mcpwm:frozen",
+    "duration": 60.0,
+    "build": "507f8d74b8d34447",
+    "error": null,
+    "pairs": {
+      "0": {
+        "n": 60,
+        "mean_us": 0.1853500005782882,
+        "sd_us": 0.732850344455083,
+        "rms_us": 0.7559260877111632,
+        "p95_abs_us": 1.4379999981883884,
+        "max_abs_us": 1.937000000395983,
+        "min_us": -1.2490000003140267,
+        "max_us": 1.937000000395983,
+        "trend_us_per_s": 0.018859748417096044,
+        "unmatched_reference": 0,
+        "unmatched_follower": 0
+      },
+      "1": {
+        "n": 59,
+        "mean_us": -0.12079661023292657,
+        "sd_us": 0.7997453996251328,
+        "rms_us": 0.8088167439323503,
+        "p95_abs_us": 1.5009999998483181,
+        "max_abs_us": 1.5629999978727938,
+        "min_us": -1.312999998503983,
+        "max_us": 1.5629999978727938,
+        "trend_us_per_s": 0.018813877057459995,
+        "unmatched_reference": 1,
+        "unmatched_follower": 0
+      },
+      "3": {
+        "n": 60,
+        "mean_us": -0.01665000043162464,
+        "sd_us": 0.73786369140028,
+        "rms_us": 0.7380515223215929,
+        "p95_abs_us": 1.311999994868529,
+        "max_abs_us": 1.6249999958972694,
+        "min_us": -1.2500000039494807,
+        "max_us": 1.6249999958972694,
+        "trend_us_per_s": 0.00016991301741807872,
+        "unmatched_reference": 0,
+        "unmatched_follower": 0
+      }
+    },
+    "channels": {
+      "0": {
+        "raw": 60,
+        "qualified": 60,
+        "rejected": 0,
+        "cadence_bad_intervals": 0,
+        "intervals_over_1_5_s": 0,
+        "period_min_s": 0.9999671870000029,
+        "period_max_s": 0.9999701240000007,
+        "unclosed_observed_rises": 0
+      },
+      "1": {
+        "raw": 59,
+        "qualified": 59,
+        "rejected": 0,
+        "cadence_bad_intervals": 1,
+        "intervals_over_1_5_s": 1,
+        "period_min_s": 0.9999674999999968,
+        "period_max_s": 1.9999380000000002,
+        "unclosed_observed_rises": 0
+      },
+      "2": {
+        "raw": 60,
+        "qualified": 60,
+        "rejected": 0,
+        "cadence_bad_intervals": 0,
+        "intervals_over_1_5_s": 0,
+        "period_min_s": 0.9999674380000059,
+        "period_max_s": 0.9999695630000005,
+        "unclosed_observed_rises": 0
+      },
+      "3": {
+        "raw": 60,
+        "qualified": 60,
+        "rejected": 0,
+        "cadence_bad_intervals": 0,
+        "intervals_over_1_5_s": 0,
+        "period_min_s": 0.9999666869999997,
+        "period_max_s": 0.9999697500000018,
+        "unclosed_observed_rises": 0
+      }
+    },
+    "signal_clean": true,
+    "minimum_matched": 59,
+    "classification": "clean signal; cadence/completeness criterion failed",
+    "observed_builds_after": {
+      "0": "507f8d74b8d34447",
+      "1": "507f8d74b8d34447",
+      "2": "507f8d74b8d34447",
+      "3": "507f8d74b8d34447"
+    },
+    "primary_eligible": true,
+    "block": 2
+  },
+  {
+    "run": "new-acquisition/20260909-065110-campaign/01-04-mcpwm-ftm",
+    "new": true,
+    "method": "mcpwm:ftm",
+    "duration": 60.0,
+    "build": "507f8d74b8d34447",
+    "error": "DeviceError('Error interacting with device during capture: ReadTimeout.')",
+    "pairs": {},
+    "channels": {},
+    "classification": "acquisition failed / no raw CSV",
+    "observed_builds_after": {
+      "0": "507f8d74b8d34447",
+      "1": "507f8d74b8d34447",
+      "2": "507f8d74b8d34447",
+      "3": "507f8d74b8d34447"
+    },
+    "primary_eligible": false
+  },
+  {
+    "run": "new-acquisition/20260909-070546-campaign/00-00-mcpwm-ftm",
+    "new": true,
+    "method": "mcpwm:ftm",
+    "duration": 5.0,
+    "build": "507f8d74b8d34447",
+    "error": null,
+    "pairs": {
+      "0": {
+        "n": 5,
+        "mean_us": -0.16239999989231535,
+        "sd_us": 0.5487099779343799,
+        "rms_us": 0.5722380622169165,
+        "p95_abs_us": 0.8129999999884063,
+        "max_abs_us": 0.8129999999884063,
+        "min_us": -0.7499999998827889,
+        "max_us": 0.8129999999884063,
+        "trend_us_per_s": -0.23130724279183515,
+        "unmatched_reference": 0,
+        "unmatched_follower": 0
+      },
+      "1": {
+        "n": 5,
+        "mean_us": -0.05019999996802582,
+        "sd_us": 0.7412779236135371,
+        "rms_us": 0.7429757735172706,
+        "p95_abs_us": 1.250000000008189,
+        "max_abs_us": 1.250000000008189,
+        "min_us": -0.6260000002811239,
+        "max_us": 1.250000000008189,
+        "trend_us_per_s": -0.45631422218308254,
+        "unmatched_reference": 0,
+        "unmatched_follower": 0
+      },
+      "3": {
+        "n": 5,
+        "mean_us": 0.17480000008562868,
+        "sd_us": 0.5054033636076373,
+        "rms_us": 0.5347780847939165,
+        "p95_abs_us": 0.9999999999732445,
+        "max_abs_us": 0.9999999999732445,
+        "min_us": -0.4380000002690565,
+        "max_us": 0.9999999999732445,
+        "trend_us_per_s": -0.31250973499057655,
+        "unmatched_reference": 0,
+        "unmatched_follower": 0
+      }
+    },
+    "channels": {
+      "0": {
+        "raw": 5,
+        "qualified": 5,
+        "rejected": 0,
+        "cadence_bad_intervals": 0,
+        "intervals_over_1_5_s": 0,
+        "period_min_s": 0.9999681870000001,
+        "period_max_s": 0.9999694380000002,
+        "unclosed_observed_rises": 0
+      },
+      "1": {
+        "raw": 5,
+        "qualified": 5,
+        "rejected": 0,
+        "cadence_bad_intervals": 0,
+        "intervals_over_1_5_s": 0,
+        "period_min_s": 0.9999677489999999,
+        "period_max_s": 0.9999688130000001,
+        "unclosed_observed_rises": 0
+      },
+      "2": {
+        "raw": 5,
+        "qualified": 5,
+        "rejected": 0,
+        "cadence_bad_intervals": 0,
+        "intervals_over_1_5_s": 0,
+        "period_min_s": 0.9999686869999995,
+        "period_max_s": 0.99996975,
+        "unclosed_observed_rises": 0
+      },
+      "3": {
+        "raw": 5,
+        "qualified": 5,
+        "rejected": 0,
+        "cadence_bad_intervals": 0,
+        "intervals_over_1_5_s": 0,
+        "period_min_s": 0.9999679369999996,
+        "period_max_s": 0.9999689370000001,
+        "unclosed_observed_rises": 0
+      }
+    },
+    "signal_clean": true,
+    "minimum_matched": 5,
+    "classification": "insufficient/full-fleet inconclusive",
+    "observed_builds_after": {
+      "0": "507f8d74b8d34447",
+      "1": "507f8d74b8d34447",
+      "2": "507f8d74b8d34447",
+      "3": "507f8d74b8d34447"
+    },
+    "primary_eligible": false
+  },
+  {
+    "run": "new-acquisition/20260909-070610-campaign/00-00-mcpwm-ftm",
+    "new": true,
+    "method": "mcpwm:ftm",
+    "duration": 60.0,
+    "build": "507f8d74b8d34447",
+    "error": "DeviceError('Error interacting with device during capture: ReadTimeout.')",
+    "pairs": {},
+    "channels": {},
+    "classification": "acquisition failed / no raw CSV",
+    "observed_builds_after": {
+      "0": "507f8d74b8d34447",
+      "1": "507f8d74b8d34447",
+      "2": "507f8d74b8d34447",
+      "3": "507f8d74b8d34447"
+    },
+    "primary_eligible": false
+  },
+  {
+    "run": "new-acquisition/20260909-070748-campaign/00-00-mcpwm-ftm",
+    "new": true,
+    "method": "mcpwm:ftm",
+    "duration": 30.0,
+    "build": "507f8d74b8d34447",
+    "error": "DeviceError('Error interacting with device during capture: ReadTimeout.')",
+    "pairs": {},
+    "channels": {},
+    "classification": "acquisition failed / no raw CSV",
+    "observed_builds_after": {
+      "0": "507f8d74b8d34447",
+      "1": "507f8d74b8d34447",
+      "2": "507f8d74b8d34447",
+      "3": "507f8d74b8d34447"
+    },
+    "primary_eligible": false
+  },
+  {
+    "run": "new-acquisition/20260909-070851-campaign/00-00-mcpwm-ftm",
+    "new": true,
+    "method": "mcpwm:ftm",
+    "duration": 60.0,
+    "build": "507f8d74b8d34447",
+    "error": "DeviceError('Error interacting with device during capture: ReadTimeout.')",
+    "pairs": {},
+    "channels": {},
+    "classification": "acquisition failed / no raw CSV",
+    "observed_builds_after": {
+      "0": "507f8d74b8d34447",
+      "1": "507f8d74b8d34447",
+      "2": "507f8d74b8d34447",
+      "3": "507f8d74b8d34447"
+    },
+    "primary_eligible": false
+  }
+]

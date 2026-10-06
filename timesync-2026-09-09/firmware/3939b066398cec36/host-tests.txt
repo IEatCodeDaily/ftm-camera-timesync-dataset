@@ -1,0 +1,2 @@
+four-timestamp offset, asymmetry, rollover and rejection tests passed
+MAC and FTM epoch, rollover, and independent-clock RTT tests passed

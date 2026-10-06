@@ -1,0 +1,13 @@
+{
+  "methods": [
+    "task:ftm",
+    "high:ftm",
+    "gptpair:ftm",
+    "mcpwm:ftm"
+  ],
+  "seconds": 60.0,
+  "repeats": 1,
+  "build": "8dc05893b49ecfab",
+  "only_node": null,
+  "network_load": true
+}

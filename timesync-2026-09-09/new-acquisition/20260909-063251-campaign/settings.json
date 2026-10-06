@@ -1,0 +1,10 @@
+{
+  "seconds": 5.0,
+  "methods": [
+    "ftm"
+  ],
+  "repeats": 1,
+  "restart": true,
+  "build": "fdb0d3b4ab514a2d",
+  "rate": 16000000
+}

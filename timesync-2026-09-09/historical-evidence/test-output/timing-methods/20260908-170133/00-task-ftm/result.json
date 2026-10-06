@@ -1,0 +1,155 @@
+{
+  "method": "task:ftm",
+  "repeat": 0,
+  "sample_rate": 16000000,
+  "duration": 4.0,
+  "stopped": {
+    "0": "via Wi-Fi 192.168.137.177\n",
+    "1": "via Wi-Fi 192.168.137.94\n",
+    "2": "via Wi-Fi 192.168.137.243\nI (76597) strobe_gpio: mode: 1HZ -> OFF\nI (76598) mode_ctrl: applied mode OFF (value=0)",
+    "3": "via Wi-Fi 192.168.137.228\n"
+  },
+  "diagnostic": {
+    "status": "diagnostic_only",
+    "pulse_width_gate_ms": [
+      40,
+      65
+    ],
+    "absolute_accuracy": "Not measured; no independent calibrated reference",
+    "channels": {
+      "2": {
+        "raw_rising_edges": 4,
+        "qualified_pulses": 4,
+        "rejected_high_pulses": 0,
+        "period_s": {
+          "n": 3,
+          "mean": 0.999968521,
+          "median": 0.999968501,
+          "rms": 0.9999685210000004,
+          "std": 2.8994252216600568e-08,
+          "minimum": 0.9999685,
+          "maximum": 0.9999685619999998,
+          "peak_to_peak": 6.199999980083248e-08,
+          "p95_abs": 0.9999685619999998,
+          "p99_abs": 0.9999685619999998
+        },
+        "period_error_us": {
+          "n": 3,
+          "mean": -31.47900000003793,
+          "median": -31.498999999990396,
+          "rms": 31.47901335285224,
+          "std": 0.02899425221660057,
+          "minimum": -31.499999999962114,
+          "maximum": -31.43800000016128,
+          "peak_to_peak": 0.061999999800832484,
+          "p95_abs": 31.499999999962114,
+          "p99_abs": 31.499999999962114
+        },
+        "width_ms": {
+          "n": 4,
+          "mean": 49.339484249999984,
+          "median": 49.340406,
+          "rms": 49.33948450282466,
+          "std": 0.0049948452115532544,
+          "minimum": 49.331687999999986,
+          "maximum": 49.34543699999993,
+          "peak_to_peak": 0.013748999999947387,
+          "p95_abs": 49.34543699999993,
+          "p99_abs": 49.34543699999993
+        }
+      },
+      "0": {
+        "raw_rising_edges": 0,
+        "qualified_pulses": 0,
+        "rejected_high_pulses": 0,
+        "period_s": null,
+        "period_error_us": null,
+        "width_ms": null
+      },
+      "1": {
+        "raw_rising_edges": 0,
+        "qualified_pulses": 0,
+        "rejected_high_pulses": 0,
+        "period_s": null,
+        "period_error_us": null,
+        "width_ms": null
+      },
+      "3": {
+        "raw_rising_edges": 0,
+        "qualified_pulses": 0,
+        "rejected_high_pulses": 0,
+        "period_s": null,
+        "period_error_us": null,
+        "width_ms": null
+      }
+    },
+    "pairs": {
+      "2-0": {
+        "offset_b_minus_a_us": null,
+        "matched_pulses": 0,
+        "unmatched_a": 4,
+        "unmatched_b": 0
+      },
+      "2-1": {
+        "offset_b_minus_a_us": null,
+        "matched_pulses": 0,
+        "unmatched_a": 4,
+        "unmatched_b": 0
+      },
+      "2-3": {
+        "offset_b_minus_a_us": null,
+        "matched_pulses": 0,
+        "unmatched_a": 4,
+        "unmatched_b": 0
+      },
+      "0-1": {
+        "offset_b_minus_a_us": null,
+        "matched_pulses": 0,
+        "unmatched_a": 0,
+        "unmatched_b": 0
+      },
+      "0-3": {
+        "offset_b_minus_a_us": null,
+        "matched_pulses": 0,
+        "unmatched_a": 0,
+        "unmatched_b": 0
+      },
+      "1-3": {
+        "offset_b_minus_a_us": null,
+        "matched_pulses": 0,
+        "unmatched_a": 0,
+        "unmatched_b": 0
+      }
+    },
+    "signal_clean": true,
+    "note": "Width-qualified timing is provisional when raw glitches exist; no digital glitch filter was applied."
+  },
+  "raw_counts": {
+    "0": 0,
+    "1": 0,
+    "2": 4,
+    "3": 0
+  },
+  "phase_vs_2_us": {
+    "0": null,
+    "1": null,
+    "3": null
+  },
+  "lateness_us": {
+    "0": null,
+    "1": null,
+    "2": {
+      "n": 7,
+      "mean": 2,
+      "median": 2,
+      "rms": 2.0,
+      "std": 0.0,
+      "minimum": 2,
+      "maximum": 2,
+      "peak_to_peak": 0,
+      "p95_abs": 2,
+      "p99_abs": 2
+    },
+    "3": null
+  }
+}

@@ -1,0 +1,138 @@
+{
+  "primary": [
+    {
+      "source": "ftm",
+      "label": "Live FTM",
+      "max_us": 1.687999997557199,
+      "runs": 1,
+      "gaps": 0,
+      "runs_used": [
+        "new-acquisition/20260909-065110-campaign/00-00-mcpwm-ftm"
+      ]
+    },
+    {
+      "source": "frozen",
+      "label": "Frozen FTM",
+      "max_us": 1.937000000395983,
+      "runs": 2,
+      "gaps": 3,
+      "runs_used": [
+        "new-acquisition/20260909-065110-campaign/00-04-mcpwm-frozen",
+        "new-acquisition/20260909-065110-campaign/01-03-mcpwm-frozen"
+      ]
+    },
+    {
+      "source": "tsf",
+      "label": "AP TSF",
+      "max_us": 182.18800000013857,
+      "runs": 2,
+      "gaps": 2,
+      "runs_used": [
+        "new-acquisition/20260909-065110-campaign/00-03-mcpwm-tsf",
+        "new-acquisition/20260909-065110-campaign/01-02-mcpwm-tsf"
+      ]
+    },
+    {
+      "source": "ntp",
+      "label": "Simple NTP-style",
+      "max_us": 55503.061999999656,
+      "runs": 2,
+      "gaps": 1,
+      "runs_used": [
+        "new-acquisition/20260909-065110-campaign/00-01-mcpwm-ntp",
+        "new-acquisition/20260909-065110-campaign/01-00-mcpwm-ntp"
+      ]
+    },
+    {
+      "source": "mac",
+      "label": "No timesync",
+      "max_us": 186896.24999999665,
+      "runs": 2,
+      "gaps": 2,
+      "runs_used": [
+        "new-acquisition/20260909-065110-campaign/00-02-mcpwm-mac",
+        "new-acquisition/20260909-065110-campaign/01-01-mcpwm-mac"
+      ]
+    }
+  ],
+  "backend": [
+    {
+      "backend": "Task",
+      "block": "170156",
+      "run_max_us": [
+        5.374999998863927
+      ],
+      "runs": [
+        "test-output/timing-methods/20260908-170156/00-task-ftm"
+      ]
+    },
+    {
+      "backend": "esp_timer",
+      "block": "170156",
+      "run_max_us": [
+        110.0619999991892
+      ],
+      "runs": [
+        "test-output/timing-methods/20260908-170156/00-esp-ftm"
+      ]
+    },
+    {
+      "backend": "GPTimer",
+      "block": "170156",
+      "run_max_us": [
+        1.4999999997655777
+      ],
+      "runs": [
+        "test-output/timing-methods/20260908-170156/00-gpt-ftm"
+      ]
+    },
+    {
+      "backend": "High-priority task",
+      "block": "171055",
+      "run_max_us": [
+        19.12500000145201,
+        3.874999999986528
+      ],
+      "runs": [
+        "test-output/timing-methods/20260908-171055/00-high-ftm",
+        "test-output/timing-methods/20260908-171055/01-high-ftm"
+      ]
+    },
+    {
+      "backend": "Paired GPTimer",
+      "block": "171055",
+      "run_max_us": [
+        1.9369999995078047,
+        2.1240000016575777
+      ],
+      "runs": [
+        "test-output/timing-methods/20260908-171055/00-gptpair-ftm",
+        "test-output/timing-methods/20260908-171055/01-gptpair-ftm"
+      ]
+    },
+    {
+      "backend": "MCPWM",
+      "block": "171055",
+      "run_max_us": [
+        2.375000001109129,
+        2.3129999995319395
+      ],
+      "runs": [
+        "test-output/timing-methods/20260908-171055/00-mcpwm-ftm",
+        "test-output/timing-methods/20260908-171055/01-mcpwm-ftm"
+      ]
+    }
+  ],
+  "edge_example": {
+    "file": "new-acquisition\\20260909-065110-campaign\\00-00-mcpwm-ftm\\digital.csv",
+    "reference_time_s": 0.842550687,
+    "offsets_us": {
+      "0": 0.625999999948057,
+      "1": 1.1249999999352056,
+      "2": 0.0,
+      "3": -0.18700000004034933
+    }
+  },
+  "screenshot": "Actual Logic window after loading the same archived FTM capture; 2-second view. Disabled channels D4-D7 are not measurements.",
+  "photo": "User-supplied photograph; physical board order not assigned to node IDs. Analyzer label shows24MHz8CH, while software reports Logic; manufacturer authenticity not verified."
+}

@@ -1,0 +1,6 @@
+{
+  "0": "via Wi-Fi 192.168.137.112\ntiming backend=mcpwm source=ntp recorded=12\nntp running=1 server=0 poll_ms=1000 accepted=12 rejected=1 offset_us=-7586.500 rtt_us=4833 age_us=785788",
+  "1": "via Wi-Fi 192.168.137.204\ntiming backend=mcpwm source=ntp recorded=12\nntp running=1 server=0 poll_ms=1000 accepted=12 rejected=1 offset_us=-288185886.000 rtt_us=3660 age_us=792651",
+  "2": "via Wi-Fi 192.168.137.177\ntiming backend=mcpwm source=ntp recorded=13\nntp running=1 server=1 poll_ms=1000 accepted=0 rejected=0 offset_us=0.000 rtt_us=0 age_us=-1",
+  "3": "via Wi-Fi 192.168.137.136\ntiming backend=mcpwm source=ntp recorded=13\nntp running=1 server=0 poll_ms=1000 accepted=13 rejected=0 offset_us=-33891.000 rtt_us=3580 age_us=799542"
+}

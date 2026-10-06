@@ -1,0 +1,40 @@
+{
+  "node_id": 3,
+  "before": {
+    "ok": true,
+    "node_id": 3,
+    "leader_id": 255,
+    "role": "NODE",
+    "fw_proto": 1,
+    "partition": "ota_1",
+    "build_id": "fdb0d3b4ab514a2d",
+    "recovery_count": 0,
+    "last_fault": 0,
+    "safe_boot": false,
+    "reset_reason": 1,
+    "free_internal": 170335,
+    "min_internal": 128884,
+    "uptime_us": 239238334
+  },
+  "after": {
+    "ok": true,
+    "node_id": 3,
+    "leader_id": 255,
+    "role": "NODE",
+    "fw_proto": 1,
+    "partition": "ota_0",
+    "build_id": "507f8d74b8d34447",
+    "recovery_count": 0,
+    "last_fault": 0,
+    "safe_boot": false,
+    "reset_reason": 3,
+    "free_internal": 169915,
+    "min_internal": 133920,
+    "uptime_us": 8172845
+  },
+  "status": "via Wi-Fi 192.168.137.136\nrole=NODE node_id=3 leader_id=255 fw_proto=1\nmodel: valid=1 rev=2 inliers=47/60 drift_ppm=-5.602 resid_ns_std=0.47 resid_ns_max=1.33 r2=1.000000 rtt_med_ns=3.1",
+  "mode": "via Wi-Fi 192.168.137.136\nmode: OFF (threshold=220 width=10us gpio=41 identify_gpio=2)\nclock_source=wifi_mac clock_ready=1 reference=0 mac_us=9288939 esp_us=8400282 mac_minus_esp_us=888657 read_span_us=0",
+  "transport_uncertain": false,
+  "transport_returncode": 0,
+  "application_sha256": "80a9b87dfc7aee92c5f3e9ccb707feaaf9616df7a31d161c8ce31ca010f592a1"
+}
