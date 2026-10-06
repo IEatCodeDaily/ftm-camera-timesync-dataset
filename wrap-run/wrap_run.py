@@ -7,12 +7,15 @@ hub time. Per tick, spread = max - min capture across nodes. A wrap-handling fau
 a step in spread, a missing node, or sync_valid dropping - the known faults were
 50-475 ms jumps, ~1000x above this method's ~tens-of-us resolution.
 
-Usage: python3 wrap_run.py <seconds> <out.jsonl>
+Usage: [NODES=0,3] python3 wrap_run.py <seconds> <out.jsonl> ["node cmd; node cmd"]
+The optional third argument is sent to every node once capture runs, e.g.
+"cam hwstamp on; cam hwtrig on" for the hardware capture-timing A/B.
 """
 import json, struct, sys, time, urllib.request
 
 BASE, HDRS, REC_HDR = "http://127.0.0.1:3001", {"Content-Type": "application/json", "x-mocap-studio": "1"}, 29
 dur, out = float(sys.argv[1]), open(sys.argv[2], "a")
+extra = [c.strip() for c in (sys.argv[3] if len(sys.argv) > 3 else "").split(";") if c.strip()]
 
 def cmd(addr, text):
     req = urllib.request.Request(f"{BASE}/api/nodes/{addr}/command", json.dumps({"cmd": text}).encode(), HDRS, method="POST")
@@ -33,12 +36,20 @@ def snapshot():
 def log(kind, **k): out.write(json.dumps({"t": time.time(), "kind": kind, **k}) + "\n"); out.flush()
 
 ns = {n["node_id"]: n["ip_address"] for n in nodes() if n.get("online") and n.get("ip_address")}
+import os
+if os.environ.get("NODES"): ns = {k: v for k, v in ns.items() if str(k) in os.environ["NODES"].split(",")}
 log("start", nodes=ns, dur=dur)
 for a in ns.values(): cmd(a, "mode off")
 time.sleep(14)
 for a in ns.values(): cmd(a, "collector 192.168.137.1"); log("frex", addr=a, reply=cmd(a, "cam syncfrex on")[:200])
 for a in ns.values(): log("mode", addr=a, reply=cmd(a, "mode udp 10 qvga sync --nomesh")[:200])
 time.sleep(22)
+for a in ns.values():
+    for c in extra: log("extra", addr=a, cmd=c, reply=cmd(a, c)[:200])
+for a in ns.values():
+    for c in ("cam hwstamp stats", "cam hwtrig stats"): cmd(a, c)   # reset counters at t0
+for a in ns.values():
+    log("stats0", addr=a, cmd="sync", reply=" ".join(l for l in cmd(a, "cam stats").splitlines() if l.startswith("sync:")))
 
 t0, seen, last_health = time.time(), set(), 0.0
 try:
@@ -54,5 +65,9 @@ try:
             except Exception as e: log("err", e=str(e)[:200])
         time.sleep(0.04)
 finally:
+    for a in ns.values():
+        for c in ("cam hwstamp stats", "cam hwtrig stats"): log("stats", addr=a, cmd=c, reply=cmd(a, c)[:400])
+        # node-side send counter: frames lost between node and logger vs never sent
+        log("stats", addr=a, cmd="sync", reply=" ".join(l for l in cmd(a, "cam stats").splitlines() if l.startswith("sync:")))
     for a in ns.values(): cmd(a, "mode off")
     log("end", frames=len(seen))

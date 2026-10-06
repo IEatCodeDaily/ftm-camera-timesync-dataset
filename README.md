@@ -18,6 +18,7 @@ Four ESP32-S3 nodes (one FTM responder, three initiators) each drive a 50 ms pul
 | `sync-matrix/sync-matrix.csv` | Summary (not per-slot observations) of triggered frame-capture spread and yield for 3 cameras (QVGA/VGA, 10–60 frames/s) |
 | `paper/make_figures.py` | Regenerates every figure and table in the letter from `offsets.csv` and `sync-matrix.csv`, and asserts the headline statistics. Hardware, configuration and fault-history numbers quoted in the letter are not derived here |
 | `wrap-run/` | 40-min all-node run (6 Oct 2026) with no logic analyzer: every node captures FREX-triggered QVGA frames at 10 frames/s; per-frame trigger tick and capture timestamp in the shared clock, node health every 5 s. `wrap_run.py` (logger), `analyze_wrap.py` → `wrap-40min.jsonl.stats.json` |
+| `wrap-run/ab-*.jsonl` | Capture-path A/B on firmware 68cee2605ffadeb1 (6 Oct 2026, same 4 nodes, QVGA 10 frames/s FREX): `ab-base-clean`/`ab-base2` = software trigger + software VSYNC stamp (10 and 5 min), `ab-hw3` = `cam hwstamp on; cam hwtrig on` (5 min, MCPWM-latched VSYNC + GPTimer-started trigger write). Same analysis script |
 | `tracking/` | IR tracking recordings (6 Oct 2026, MCAP of on-node centroids, VGA 35 frames/s, 3–4 cameras), the calibration files used, host-replay logs, and `analyze_tracking.py` → `TRACKING_RESULTS.md` / `stats.json` |
 
 ## Reproduce

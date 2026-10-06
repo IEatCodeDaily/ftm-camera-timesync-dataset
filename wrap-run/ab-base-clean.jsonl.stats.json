@@ -1,0 +1,56 @@
+{
+ "duration_s": 600.0,
+ "period_us": 100000,
+ "slots": 6001,
+ "nodes": [
+  0,
+  1,
+  2,
+  3
+ ],
+ "frames": 20973,
+ "late_frames": 0,
+ "full_on_time_slots": 3916,
+ "full_slot_yield": 0.6525579070154974,
+ "slots_logged": 5698,
+ "full_yield_of_logged": 0.6872586872586872,
+ "frames_per_node": {
+  "0": 5645,
+  "1": 5691,
+  "2": 5672,
+  "3": 3965
+ },
+ "spread_us": {
+  "median": 125,
+  "p95": 264,
+  "p99": 376,
+  "max": 664
+ },
+ "per_node_median_delay_us": {
+  "0": 2266,
+  "1": 2169,
+  "2": 2162.0,
+  "3": 2175
+ },
+ "jitter_spread_us": {
+  "median": 79,
+  "p95": 213,
+  "max": 571
+ },
+ "per_node_1min_median_range_us": {
+  "0": 41,
+  "1": 29.0,
+  "2": 31,
+  "3": 25.0
+ },
+ "ftm_wraps_crossed": 2,
+ "mac_wrap_s": 4294.967296,
+ "initiators": [
+  1,
+  2,
+  3
+ ],
+ "sync_lost_checks": 0,
+ "sync_checks": 345,
+ "logger_errors": 2
+}
