@@ -1,8 +1,8 @@
-"""Graphical abstract for the IEEE Sensors Letters submission.
-Reuses make_figures.py's data source; numbers are recomputed and asserted, not typed.
+"""Graphical abstract for the IEEE Sensors Letters submission: two panels (clock layer, capture layer).
+Numbers are read from the dataset files and asserted, never typed.
 Output: figures/graphical_abstract.{png,pdf} (1200x600 px at 200 dpi).
 """
-import csv
+import csv, json
 from pathlib import Path
 import matplotlib
 matplotlib.use("Agg")
@@ -12,42 +12,45 @@ _here = Path(__file__).resolve().parent
 DATA = next(d for d in (_here.parent, Path("/mnt/e/Projects/ftm-camera-timesync-dataset")) if (d / "timesync-2026-09-09").is_dir())
 rows = list(csv.DictReader((DATA / "timesync-2026-09-09/analysis/offsets.csv").open()))
 CAMPAIGN = "20260909-065110-campaign"
-src = {"NTP-style\nUDP": "mcpwm:ntp", "AP beacon\n(TSF)": "mcpwm:tsf", "Live FTM\n(this work)": "mcpwm:ftm"}
+src = {"NTP-style UDP\n(unfiltered)": "mcpwm:ntp", "AP beacon\n(TSF)": "mcpwm:tsf", "Live FTM": "mcpwm:ftm"}
 worst = {k: max(abs(float(r["offset_us"])) for r in rows if CAMPAIGN in r["run"] and r["method"] == m) for k, m in src.items()}
 assert [round(v, 1) for v in worst.values()] == [55503.1, 182.2, 1.7], worst
 
+R4 = next(r for r in json.load((DATA / "tracking/stats.json").open())["recordings"] if r["file"].startswith("tracking-1791273844728"))
+WR = json.load((DATA / "wrap-run/wrap-40min.jsonl.stats.json").open())
+cap = {"capture-stamp jitter\n(tracking, med.)": R4["B_capture_spread_after_fixed_offset_us"]["median"],
+       "capture-stamp jitter\n(40-min run, med.)": WR["jitter_spread_us"]["median"],
+       "rolling-shutter row\noffset (med.)": R4["C_marker_row_time_us"]["median"]}
+assert [round(v) for v in cap.values()] == [33, 67, 4986], cap
+assert WR["ftm_wraps_crossed"] == 8 and WR["sync_lost_checks"] == 0 and R4["duration_s"] > 296
+
 plt.rcParams.update({"font.family": "serif", "font.serif": ["STIXGeneral", "DejaVu Serif"], "mathtext.fontset": "stix", "pdf.fonttype": 42})
 fig = plt.figure(figsize=(6, 3), dpi=200)
+fig.text(.5, .955, "Wi-Fi FTM clock alignment for wireless ESP32-S3 + OV5640 infrared tracking", ha="center", fontsize=10, weight="bold")
 
-# Left: what was built and how it was measured
-ax = fig.add_axes([0, 0, .5, 1]); ax.set_axis_off(); ax.set_xlim(0, 10); ax.set_ylim(0, 10)
-ax.text(5, 9.3, "Wire-free clock alignment of\nESP32-S3 + OV5640 IR camera nodes", ha="center", va="top", fontsize=10.5, weight="bold")
-for i, x in enumerate([.6, 3.0, 5.4, 7.8]):
-    ref = i == 2
-    ax.add_patch(plt.Rectangle((x, 4.2), 1.8, 1.6, fc="#dbe9f6" if ref else "white", ec="k", lw=.8))
-    ax.text(x + .9, 5.0, f"node {i}\n" + ("FTM\nresponder" if ref else "FTM\ninitiator"), ha="center", va="center", fontsize=7.5)
-    ax.plot([x + .9] * 2, [5.8, 6.6], color="#1f77b4", lw=1)
-    ax.annotate("", (x + .9, 2.6), (x + .9, 4.2), arrowprops=dict(arrowstyle="->", lw=.8))
-ax.plot([.8, 9.4], [6.6, 6.6], ls="--", color="#1f77b4", lw=1)
-ax.text(5, 6.85, "Wi-Fi Fine Timing Measurement (802.11 FTM)", ha="center", fontsize=8, color="#1f77b4")
-ax.add_patch(plt.Rectangle((.6, 1.4), 9.0, 1.2, fc="0.93", ec="k", lw=.8))
-ax.text(5.1, 2.0, "logic analyzer: 1 pulse/s per node, 16 MS/s", ha="center", va="center", fontsize=8)
-ax.text(5, .55, "same firmware and output path for every clock source", ha="center", fontsize=7.5, style="italic")
 
-# Right: the result, worst follower-to-reference offset, log scale
-ax = fig.add_axes([.62, .2, .35, .62])
-names, vals = list(worst), list(worst.values())
-# Dots, not bars: bar length on a log axis would misstate the ratios.
-ax.hlines(range(3), .5, vals, color="0.8", lw=1)
-ax.scatter(vals, range(3), s=[30, 30, 60], color=["0.55", "0.4", "#1f77b4"], zorder=3)
-ax.set_xscale("log"); ax.set_xlim(.5, 2e6); ax.set_yticks(range(3), names, fontsize=8)
-ax.set_xlabel("worst offset between nodes, µs (log scale)\n60-s records, 3 followers, 16 MS/s", fontsize=7.5); ax.tick_params(axis="x", labelsize=7)
-for y, v in enumerate(vals):
-    lab = f"{v:,.0f} µs" if v > 10 else f"{v:.1f} µs"
-    ax.text(v * 1.8, y, lab, va="center", fontsize=8.5, weight="bold" if v < 10 else "normal")
-ax.spines[["top", "right"]].set_visible(False)
-fig.text(.795, .9, "~100× better than beacon timing", ha="center", fontsize=9.5, weight="bold", color="#1f77b4")
+def panel(x0, title, note, items, hi, color):
+    fig.text(x0 + .22, .86, title, ha="center", fontsize=9, weight="bold", color=color)
+    ax = fig.add_axes([x0 + .14, .27, .3, .5])
+    names, vals = list(items), list(items.values())
+    ax.hlines(range(len(vals)), .5, vals, color="0.8", lw=1)   # dots, not bars: bar length on a log axis misleads
+    ax.scatter(vals, range(len(vals)), s=[60 if i == hi else 30 for i in range(len(vals))],
+               color=[color if i == hi else "0.5" for i in range(len(vals))], zorder=3)
+    ax.set_xscale("log"); ax.set_xlim(.5, 3e6); ax.set_yticks(range(len(vals)), names, fontsize=7)
+    ax.tick_params(axis="x", labelsize=6.5); ax.spines[["top", "right"]].set_visible(False)
+    for y, v in enumerate(vals):
+        lab = f"{v / 1000:,.1f} ms" if v >= 1000 else (f"{v:.0f} µs" if v > 10 else f"{v:.1f} µs")
+        ax.text(v * 1.9, y, lab, va="center", fontsize=8, weight="bold" if y == hi else "normal")
+    ax.set_xlabel("µs (log scale)", fontsize=7)
+    fig.text(x0 + .22, .06, note, ha="center", va="center", fontsize=6.8, style="italic")
 
+
+panel(0, "1  Clock layer (GPIO, logic analyzer)",
+      "largest observed follower-to-reference GPIO offset,\n60-s records, cameras idle; not exposure timing",
+      worst, 2, "#1f77b4")
+panel(.5, "2  Capture layer (4-camera tracking)",
+      "software capture timestamps, fixed per-camera delay removed;\nnot optical exposure. 40-min: 8 counter wraps, 0 sync losses",
+      cap, 2, "#d62728")
 out = Path(__file__).parent / "figures"
 fig.savefig(out / "graphical_abstract.png"); fig.savefig(out / "graphical_abstract.pdf")
 print("graphical abstract ->", out)

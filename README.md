@@ -2,7 +2,7 @@
 
 Raw data, analysis scripts, and figure scripts behind the letter
 
-> R. P. Wardana and E. M. Budi, "Microsecond Clock Alignment of Wireless ESP32 Tracking Cameras Using Wi-Fi Fine Timing Measurement," submitted to *IEEE Sensors Letters*.
+> R. P. Wardana and E. M. Budi, "Wi-Fi FTM Clock Alignment for Low-Cost Wireless Infrared Tracking: From Node Clocks to Rolling-Shutter Capture," submitted to *IEEE Sensors Letters*.
 
 Four ESP32-S3 nodes (one FTM responder, three initiators) each drive a 50 ms pulse on GPIO41 once per predicted shared second. A Saleae logic analyzer records all four outputs at 16 MS/s. Five clock sources are compared on one firmware image and the same MCPWM output path: no sync, NTP-style UDP exchange, AP TSF, FTM holdover, and live FTM.
 
@@ -33,7 +33,7 @@ Rules used by the analysis: a pulse counts when its HIGH width is 40–65 ms; fo
 ## Scope and limits
 
 - Offsets are electrical GPIO phase relative to the reference node. They are not optical exposure times.
-- No record is longer than 60 s, so timestamp-wrap handling over longer runs is not covered here.
+- No logic-analyzer record is longer than 60 s. The 40-min `wrap-run/` crosses 8 FTM 48-bit wraps (camera-timestamp resolution, tens of µs); the 71.6-min MAC 32-bit wrap is not crossed.
 - Nine of fifteen planned campaign records finished before analyzer timeouts stopped the campaign. Short and failed attempts are kept but are not counted.
 - `acquire.py` and `check_signal.py` drive physical hardware and are kept for provenance only.
 - Some JSON logs contain private-subnet node addresses (192.168.137.x) from an isolated laptop hotspot.

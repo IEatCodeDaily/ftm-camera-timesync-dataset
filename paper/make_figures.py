@@ -1,5 +1,5 @@
 """Regenerate every paper figure + stats from retained logic-analyzer offsets.
-Input: <dataset>/timesync-2026-09-09/analysis/offsets.csv, <dataset>/sync-matrix/sync-matrix.csv
+Input: <dataset>/timesync-2026-09-09/analysis/offsets.csv, <dataset>/tracking/stats.json, <dataset>/wrap-run/wrap-40min.jsonl.stats.json
 Run:   paperenv/.venv/bin/python make_figures.py
 """
 import csv, json, math, statistics as st, sys
@@ -98,6 +98,7 @@ drift = [abs(slope([(float(r["time_s"]), float(r["offset_us"])) for r in rows if
          for run in {r["run"] for r in rows if CAMPAIGN in r["run"] and r["method"] == "mcpwm:mac"} for n in "013"]
 assert (round(min(drift), 1), round(max(drift), 1)) == (0.4, 6.1), drift
 # improvement factors (M5): worst case TSF / live FTM ~ 10^2; NTP-style / live FTM > 10^4
+assert round(stats["AP TSF"]["max"] / stats["Live FTM"]["max"]) == 108                     # "108x" in text
 assert 100 < 182.188 / stats["Live FTM"]["max"] < 120 and 55503.062 / stats["Live FTM"]["max"] > 1e4
 # 4 live-FTM records pooled: SD 0.66, max 1.937
 pool4 = summ([float(r["offset_us"]) for run in LIVE4 for r in rec(run)])
@@ -135,7 +136,7 @@ ax.axhline(1000, ls="--", lw=.8, color="0.4"); ax.text(4.6, 1250, "1 ms", ha="ce
 fig.tight_layout(); fig.savefig(OUT / "source_comparison.pdf"); plt.close(fig)
 
 # Fig 3: live-FTM offset time series, 3 repaired records + campaign record
-fig, ax = plt.subplots(figsize=(3.5, 2.2))
+fig, ax = plt.subplots(figsize=(3.5, 1.55))
 mk = {"0": "o", "1": "s", "3": "^"}
 for node in "013":
     pts = [r for r in hist + sel(lambda r: CAMPAIGN in r["run"] and r["method"] == "mcpwm:ftm") if r["node"] == node]
@@ -172,13 +173,91 @@ box(.15, .2, 9.7, 1.0, "logic analyzer, 16 MS/s", "0.93")
 fig.tight_layout(pad=.1); fig.savefig(OUT / "system.pdf"); plt.close(fig)
 
 
-sync = list(csv.DictReader((DATA / "sync-matrix/sync-matrix.csv").open()))
-SM = {(r["resolution"], r["fps"]): r for r in sync}   # triggered-capture matrix quoted in Sec. IV-E
-assert [(SM[k]["median_us"], SM[k]["p95_us"], SM[k]["yield_pct"]) for k in
-        [("qvga", "10"), ("qvga", "15"), ("qvga", "30"), ("qvga", "60"), ("vga", "10"), ("vga", "15"), ("vga", "30")]] == [
-    ("28", "166", "100.0"), ("43", "171", "52.0"), ("32", "303", "59.0"), ("30", "285", "46.0"),
-    ("107", "1276", "32.0"), ("", "", "0.0"), ("596", "1520", "62.0")], SM
-json.dump({"offset_stats": stats, "sync_matrix_3cam": sync, "follower_means": {f"{k[0]}|{k[1]}": v for k, v in fmeans.items()},
+# ---- Clock layer: timer-backend pair on build 8dc05893 (TRACKING_RESULTS.md section F) ----
+PAIR = "20260908-171055"
+def worst(m):   # worst per-node population SD and worst |offset| over both 25-s repeats
+    rr = [r for r in rows if PAIR in r["run"] and r["method"] == m]
+    sds = [st.pstdev([float(r["offset_us"]) for r in rr if r["run"] == run and r["node"] == n])
+           for run in {r["run"] for r in rr} for n in "013"]
+    return max(sds), max(abs(float(r["offset_us"])) for r in rr), len({r["run"] for r in rr})
+mc, gp = worst("mcpwm:ftm"), worst("gptpair:ftm")
+assert (round(mc[0], 3), round(mc[1], 3), mc[2]) == (0.714, 2.375, 2), mc
+assert (round(gp[0], 3), round(gp[1], 3), gp[2]) == (0.977, 2.124, 2), gp
+assert mc[0] < gp[0] and gp[1] < mc[1]          # neither wins both metrics -> not ranked in the text
+bk = {k: stats["Backend " + k] for k in back}
+assert (round(bk["esp_timer callback"]["sd"], 1), round(bk["FreeRTOS task"]["sd"], 2), round(bk["GPTimer (HW)"]["sd"], 2)) == (25.7, 1.08, 0.52), bk
+
+# ---- Capture layer: tracking recordings + 40-min FREX run (dataset tracking/, wrap-run/) ----
+TS = json.load((DATA / "tracking/stats.json").open())
+REC = {r["file"][9:22]: r for r in TS["recordings"]}
+R4, R15b, R04, R09, R11 = (REC[k] for k in ("1791273844728", "1791274143423", "1791266693622", "1791266988742", "1791267118434"))
+assert R4["cameras"] == [0, 1, 2, 3] and R4["inferred_fps"] == 35 and R4["resolution"] == [640, 480] and R4["row_period_ns"] == 25750
+WR = json.load((DATA / "wrap-run/wrap-40min.jsonl.stats.json").open())
+dly = R4["B_trigger_to_capture_us_median"].values(); wdl = WR["per_node_median_delay_us"].values()
+jit, raw = R4["B_capture_spread_after_fixed_offset_us"], R4["B_capture_spread_raw_us"]
+row, xrow = R4["C_marker_row_time_us"], R4["C_cross_camera_row_time_diff_us"]
+det = [c["detection_us_median"] for r in (R4, R15b) for c in r["per_camera"].values()]
+d2 = [R4["D_static_2d"][c][k] for c in "23" for k in ("sd_x_px_median", "sd_y_px_median")]
+L9, L11 = R09["E_3d"]["L_calibrator"], R11["E_3d"]["L_calibrator"]
+rep = {g["recording"][9:22]: g for g in TS["G_replay"]}["1791273844728"]
+LIVE = stats["Live FTM"]["max"]
+N = {  # every capture-layer number printed in main.tex / table_capture.tex
+    "TrkDur": f"{R4['duration_s']:.0f}", "TrkFps": f"{R4['inferred_fps']}", "RowUs": f"{R4['row_period_ns'] / 1000:.2f}",
+    "RowSpanMs": f"{R4['C_full_frame_row_span_us'] / 1000:.2f}",
+    "TrkSlots": f"{100 * R4['frac_slots_all_paced_cams']:.1f}", "TrkSlotsN": f"{R4['slots_all_paced_cams']:,}".replace(",", "{,}"),
+    "TrkSlotsAll": f"{R4['slots_spanned']:,}".replace(",", "{,}"),
+    "DelayLo": f"{min(dly):.0f}", "DelayHi": f"{max(dly):.0f}",
+    "JitMed": f"{jit['median']:.0f}", "JitPn": f"{jit['p95']:.0f}", "RawMed": f"{raw['median']:.0f}", "RawPn": f"{raw['p95']:.0f}",
+    "RowMedMs": f"{row['median'] / 1000:.1f}", "RowPnMs": f"{row['p95'] / 1000:.1f}",
+    "XrowMed": f"{xrow['median']:.0f}", "XrowPn": f"{xrow['p95']:.0f}",
+    "XrowOverJit": f"{xrow['median'] / jit['median']:.0f}", "XrowOverClk": f"{xrow['median'] / mc[1]:.0f}",
+    "DetLo": f"{min(det) / 1000:.2f}", "DetHi": f"{max(det) / 1000:.2f}",
+    "CentLo": f"{min(d2):.3f}", "CentHi": f"{max(d2):.3f}", "CentWin": f"{R4['D_static_2d']['2']['windows']}",
+    "SDthreeD": f"{R04['E_3d']['static_3d']['sd_3d_mm_median']:.2f}", "SDthreeDwin": f"{R04['E_3d']['static_3d']['windows']}",
+    "ResFour": f"{R04['E_3d']['reproj_residual_px_max_of_2_views']['median']:.2f}",
+    "LnineA": f"{L9['median_mm'][0]:.2f}", "LnineB": f"{L9['median_mm'][1]:.2f}", "LnineC": f"{L9['median_mm'][2]:.2f}",
+    "LnineSD": f"{min(L9['sd_mm']):.2f}--{max(L9['sd_mm']):.2f}", "LnineN": f"{L9['frames']}", "LnineRes": f"{L9['reproj_residual_px']['median']:.2f}",
+    "LelevA": f"{L11['median_mm'][0]:.2f}", "LelevB": f"{L11['median_mm'][1]:.2f}", "LelevC": f"{L11['median_mm'][2]:.2f}",
+    "LelevSD": f"{min(L11['sd_mm']):.1f}--{max(L11['sd_mm']):.1f}", "LelevIQR": f"{min(L11['iqr_mm']):.1f}--{max(L11['iqr_mm']):.1f}",
+    "LelevN": f"{L11['frames']:,}".replace(",", "{,}"), "LelevRes": f"{L11['reproj_residual_px']['median']:.2f}",
+    "Quorum": f"{rep['quorum_yield']:.3f}",
+    "OldDelayLo": f"{min(R04['B_trigger_to_capture_us_median'].values()) / 1000:.1f}",
+    "OldDelayHi": f"{max(v for r in (R09, R11) for v in r['B_trigger_to_capture_us_median'].values()) / 1000:.1f}",
+    "WrDurS": f"{WR['duration_s']:.1f}", "WrMin": f"{WR['duration_s'] / 60:.0f}", "WrWraps": f"{WR['ftm_wraps_crossed']}",
+    "MacWrapMin": f"{WR['mac_wrap_s'] / 60:.1f}",
+    "WrDelayLo": f"{min(wdl):.0f}", "WrDelayHi": f"{max(wdl):.0f}",
+    "WrStepLo": f"{min(WR['per_node_1min_median_range_us'].values()):.0f}", "WrStepHi": f"{max(WR['per_node_1min_median_range_us'].values()):.0f}",
+    "WrSpMed": f"{WR['spread_us']['median']}", "WrSpPn": f"{WR['spread_us']['p95']}", "WrSpPnn": f"{WR['spread_us']['p99']}", "WrSpMax": f"{WR['spread_us']['max']}",
+    "WrJitMed": f"{WR['jitter_spread_us']['median']:.0f}", "WrJitPn": f"{WR['jitter_spread_us']['p95']:.0f}",
+    "WrLost": f"{WR['sync_lost_checks']}", "WrChecks": f"{WR['sync_checks']:,}".replace(",", "{,}"),
+    "WrLate": f"{WR['late_frames']}", "WrFrames": f"{WR['frames']:,}".replace(",", "{,}"),
+    "WrYield": f"{100 * WR['full_slot_yield']:.0f}", "WrYieldLogged": f"{100 * WR['full_yield_of_logged']:.0f}", "WrErr": f"{WR['logger_errors']}",
+    "JitOverClkLo": f"{jit['median'] / LIVE:.0f}", "JitOverClkHi": f"{WR['jitter_spread_us']['median'] / LIVE:.0f}",
+    "McSD": f"{mc[0]:.3f}", "GpSD": f"{gp[0]:.3f}", "McMax": f"{mc[1]:.3f}", "GpMax": f"{gp[1]:.3f}",
+    "ZeroLive": f"{sum(1 for x in data[4] if x == 0)}", "ZeroHold": f"{sum(1 for x in data[3] if x == 0)}",
+}
+# Regression guard: the values the author's brief quotes from the evidence files must be what the files say.
+assert [N[k] for k in ("TrkDur", "TrkSlots", "DelayLo", "DelayHi", "JitMed", "RowMedMs", "XrowMed", "XrowOverJit", "XrowOverClk",
+                       "DetLo", "DetHi", "SDthreeD", "LnineA", "LnineB", "LnineC", "LnineRes", "Quorum")] == [
+    "296", "99.8", "1761", "1801", "33", "5.0", "468", "14", "197", "0.11", "0.13", "0.27", "150.10", "200.34", "249.44", "0.15", "0.999"], N
+assert [N[k] for k in ("WrDurS", "WrWraps", "WrDelayLo", "WrDelayHi", "WrStepLo", "WrStepHi", "WrSpMed", "WrSpPn", "WrSpPnn", "WrSpMax",
+                       "WrJitMed", "WrJitPn", "WrLost", "WrChecks", "WrLate", "WrFrames", "WrYield", "WrYieldLogged", "WrErr", "MacWrapMin")] == [
+    "2398.8", "8", "2161", "2215", "25", "38", "85", "228", "344", "650", "67", "208", "0", "1{,}239", "53", "70{,}535", "69", "91", "97", "71.6"], N
+assert (N["JitOverClkLo"], N["JitOverClkHi"], N["ZeroLive"], N["ZeroHold"]) == ("20", "40", "6", "14"), N
+assert WR["duration_s"] < WR["mac_wrap_s"] and WR["period_us"] == 100000 and WR["nodes"] == [0, 1, 2, 3]   # MAC wrap NOT crossed; QVGA 10 frames/s, 4 nodes
+assert all(c["paced_at_P"] for c in R4["per_camera"].values())
+assert abs(TS["C_vs_F_clock_err_ratio_median"] - xrow["median"] / mc[1]) < 1e-6      # same ratio as analyze_tracking.py
+(OUT / "numbers.tex").write_text("".join(f"\\newcommand{{\\{k}}}{{{v}}}\n" for k, v in N.items()))
+cap = [  # Table 3 rows: quantity | tracking (VGA) | 40-min run (QVGA)
+    (r"Trigger-to-stamp delay, per cam. (\textmu s)", f"{N['DelayLo']}--{N['DelayHi']}", f"{N['WrDelayLo']}--{N['WrDelayHi']}"),
+    (r"Cross-cam. spread: med./p95 (\textmu s)", f"{N['RawMed']}/{N['RawPn']}", f"{N['WrSpMed']}/{N['WrSpPn']}"),
+    (r"\quad fixed delay removed (\textmu s)", f"{N['JitMed']}/{N['JitPn']}", f"{N['WrJitMed']}/{N['WrJitPn']}"),
+    (r"Slots from all cameras (\%)", N["TrkSlots"], f"{N['WrYieldLogged']}$^a$"),
+    (r"Row offset $y\,t_\text{row}$: med./p95 (ms)", f"{N['RowMedMs']}/{N['RowPnMs']}", "--"),
+    (r"Cross-cam. row-time diff. (\textmu s)", f"{N['XrowMed']}/{N['XrowPn']}", "--"),
+]
+(OUT / "table_capture.tex").write_text("\n".join(" & ".join(r) + r" \\" for r in cap) + "\n")
+json.dump({"offset_stats": stats, "capture_numbers": N, "follower_means": {f"{k[0]}|{k[1]}": v for k, v in fmeans.items()},
            "three_cornered_hat": TCH, "nosync_drift_us_per_s": drift, "short_mcpwm_max": max(short)}, (OUT / "stats.json").open("w"), indent=1)
 for k, s in stats.items():
     print(f"{k:45s} n={s['n']:4d} mean={s['mean']:+11.3f} sd={s['sd']:10.3f} p95={s['p95']:10.3f} p99={s['p99']:10.3f} max={s['max']:10.3f}")
