@@ -43,6 +43,8 @@ health = [x for x in L if x["kind"] == "health"]
 initiators = {n["node_id"] for h in health for n in h["n"] if n["role"] == "NODE" and n["sync_valid"]}
 lost = sum(1 for h in health for n in h["n"] if n["node_id"] in initiators and not n["sync_valid"])
 checks = sum(1 for h in health for n in h["n"] if n["node_id"] in initiators)
+lost_by_node = {i: sum(1 for h in health for n in h["n"] if n["node_id"] == i and not n["sync_valid"]) for i in sorted(initiators)}
+max_age_ms = max((n["sync_age_ms"] or 0) for h in health for n in h["n"] if n["node_id"] in initiators)
 
 q = lambda s, p: s[round(p * (len(s) - 1))]
 out = {
@@ -58,7 +60,7 @@ out = {
     "jitter_spread_us": {"median": q(jit, .5), "p95": q(jit, .95), "max": jit[-1]},
     "per_node_1min_median_range_us": step,
     "ftm_wraps_crossed": int(dur_s // FTM_WRAP_S), "mac_wrap_s": MAC_WRAP_S,
-    "initiators": sorted(initiators), "sync_lost_checks": lost, "sync_checks": checks,
+    "initiators": sorted(initiators), "sync_lost_checks": lost, "sync_checks": checks, "sync_lost_by_node": lost_by_node, "max_sync_age_ms": max_age_ms,
     "logger_errors": sum(x["kind"] == "err" for x in L),
 }
 json.dump(out, open(sys.argv[1] + ".stats.json", "w"), indent=1)

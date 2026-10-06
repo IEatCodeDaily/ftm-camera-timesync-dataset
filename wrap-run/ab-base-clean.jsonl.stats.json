@@ -52,5 +52,11 @@
  ],
  "sync_lost_checks": 0,
  "sync_checks": 345,
+ "sync_lost_by_node": {
+  "1": 0,
+  "2": 0,
+  "3": 0
+ },
+ "max_sync_age_ms": 2172,
  "logger_errors": 2
 }

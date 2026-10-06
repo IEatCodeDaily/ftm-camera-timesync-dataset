@@ -1,0 +1,69 @@
+{
+ "tag": "hw",
+ "hw": "on",
+ "t0": 1791305319.863847,
+ "dur": 600.0,
+ "node_stats": {
+  "192.168.137.81": [
+   "hwstamp on=1 hits=21011 misses=0 rise=27 fall=20984 sw_lag_us=143..272 mean=187 isr_lag_us=-2..54",
+   "hwtrig on=1 ok=21011 late=11 nack=0 timeout=0 busy=0 fire_us=2..67 done_us=105..170"
+  ],
+  "192.168.137.18": [
+   "hwstamp on=1 hits=20994 misses=0 rise=7 fall=20987 sw_lag_us=138..483 mean=180 isr_lag_us=-1..46",
+   "hwtrig on=1 ok=20995 late=26 nack=0 timeout=0 busy=0 fire_us=2..68 done_us=97..164"
+  ],
+  "192.168.137.162": [
+   "hwstamp on=1 hits=20997 misses=0 rise=6 fall=20991 sw_lag_us=101..489 mean=211 isr_lag_us=0..69",
+   "hwtrig on=1 ok=21000 late=24 nack=0 timeout=0 busy=0 fire_us=2..58 done_us=97..154"
+  ],
+  "192.168.137.140": [
+   "hwstamp on=1 hits=21006 misses=0 rise=10 fall=20996 sw_lag_us=103..465 mean=178 isr_lag_us=-2..47",
+   "hwtrig on=1 ok=21007 late=19 nack=0 timeout=0 busy=0 fire_us=3..57 done_us=98..152"
+  ]
+ },
+ "status": {
+  "running": true,
+  "resolution": "vga",
+  "phase": "running",
+  "generation": 30,
+  "active_node_ids": [
+   0,
+   1,
+   2,
+   3
+  ],
+  "last_error": null,
+  "recording": {
+   "active": true,
+   "path": "E:\\Projects\\wireless-ir-mocap\\mocap\\studio\\recordings\\tracking-1791305297791160000.mcap",
+   "enqueued": 37,
+   "written": 37,
+   "dropped": 0,
+   "write_errors": 0
+  },
+  "detect": {
+   "pose_hz": 35.95129376235467,
+   "quorum_yield": 0.965534,
+   "late_observations": 1040,
+   "rig_ready": true,
+   "pixel_bias": {
+    "0": [
+     3.9947264441171235,
+     -1.2116187033847787
+    ],
+    "1": [
+     -1.9054672867959457,
+     0.8278062589754602
+    ],
+    "2": [
+     -1.664078587245638,
+     -1.1009590071457955
+    ],
+    "3": [
+     -0.42518057007554,
+     1.484771451555114
+    ]
+   }
+  }
+ }
+}
