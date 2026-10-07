@@ -326,12 +326,13 @@ N.update({
     "LatRttLo": f"{min(rtt):.0f}", "LatRttHi": f"{max(rtt):.0f}",
 })
 # Claims the text makes: readout-bound handoff ~ one 35-fps period, it grows when the period grows,
-# detection is <1% of it, Wi-Fi tail dominates the p95, and the total is a lower bound (unknown one-way offset >= 0).
+# detection is <1% of it, the node term exceeds the Wi-Fi 95th percentile, and the total is a lower bound (unknown one-way offset >= 0).
 assert 27 < LA["frame_ready_us"]["median"] / 1000 < 1e3 / 35 + 0.5
 assert LR[20]["frame_ready_us"]["median"] > 1.5 * LR[35]["frame_ready_us"]["median"]
 assert LA["detection_us"]["median"] < 0.01 * LA["frame_ready_us"]["median"]
-assert LA["delivery_excess_us"]["p95"] > LA["send_after_capture_us"]["p95"]
-assert [N[k] for k in ("LatReady", "LatSend", "LatWifiMed", "LatWifiPn", "LatTotMed", "LatTotPn")] == ["27.9", "28.3", "15", "29", "46", "64"], N
+assert LA["send_after_capture_us"]["median"] > 2 * LA["delivery_excess_us"]["p95"]   # node term dominates even the Wi-Fi 95th pct
+assert [N[k] for k in ("LatReady", "LatSend", "LatWifiMed", "LatWifiPn", "LatTotMed", "LatTotPn")] == ["27.9", "28.3", "2", "12", "32", "49"], N
+assert abs(LA["host_vs_hub_drift_ppm"]) < 100   # host-vs-hub drift removed before measuring Wi-Fi excess
 (OUT / "numbers.tex").write_text("".join(f"\\newcommand{{\\{k}}}{{{v}}}\n" for k, v in N.items()))
 cap = [  # Table 3 rows: quantity | tracking SW | tracking HW | 40-min SW | 40-min HW
     (r"Delay", f"{N['SwDelayLo']}--{N['SwDelayHi']}", f"{N['HwDelayLo']}--{N['HwDelayHi']}",

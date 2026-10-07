@@ -11,7 +11,7 @@
 3. Host grouping: per slot, last camera's arrival minus first's = time the
    estimator waits before it can close the group.
 
-Usage: python3 latency_probe.py <seconds_per_rate> <outdir> [fps ...]
+Usage: [LOWLAT=on] python3 latency_probe.py <seconds_per_rate> <outdir> [fps ...]
 """
 import json, os, shutil, subprocess, sys, time, urllib.request
 from collections import defaultdict
@@ -21,6 +21,7 @@ from mcap.reader import make_reader
 B, H = "http://127.0.0.1:3001", {"Content-Type": "application/json", "x-mocap-studio": "1"}
 DUR, OUT = float(sys.argv[1]), sys.argv[2]
 RATES = [int(x) for x in sys.argv[3:]] or [35, 20, 10]
+TAG = "-lowlat" if os.environ.get("LOWLAT") == "on" else ""   # LOWLAT=on: firmware `cam lowlat on`
 os.makedirs(OUT, exist_ok=True)
 
 
@@ -38,19 +39,23 @@ def q(a):
 def run(fps):
     ns = {n["node_id"]: n["ip_address"] for n in json.loads(req("/api/nodes")) if n.get("online")}
     for ip in ns.values():
-        for c in ("cam hwstamp on", "cam hwtrig on"):
+        for c in ("cam hwstamp on", "cam hwtrig on", f"cam lowlat {os.environ.get('LOWLAT', 'off')}"):
             for attempt in range(3):          # a node command occasionally 400s transiently
                 try: req(f"/api/nodes/{ip}/command", {"cmd": c}, "POST"); break
                 except Exception:
                     if attempt == 2: raise
                     time.sleep(2)
-    req("/api/tracking/start", {"target_node_ids": sorted(ns), "resolution": "vga", "fps": fps}, "POST")
+    for attempt in range(3):              # start can 400 while a node is still settling
+        try: req("/api/tracking/start", {"target_node_ids": sorted(ns), "resolution": "vga", "fps": fps}, "POST"); break
+        except Exception:
+            if attempt == 2: raise
+            req("/api/tracking/stop", {}, "POST"); time.sleep(10)
     time.sleep(15)
     t0 = time.time(); time.sleep(DUR)
     status = json.loads(req("/api/tracking/status"))
     req("/api/tracking/stop", {}, "POST"); time.sleep(5)
     src = status["recording"]["path"].replace("E:\\", "/mnt/e/").replace("\\", "/")
-    dst = os.path.join(OUT, f"latency-{fps}fps.mcap"); shutil.copy(src, dst)
+    dst = os.path.join(OUT, f"latency-{fps}fps{TAG}.mcap"); shutil.copy(src, dst)
     json.dump({"t0": t0, "dur": DUR, "nodes": len(ns)}, open(dst + ".json", "w"))
     return analyse(dst, fps, t0, DUR, len(ns))
 
@@ -65,15 +70,29 @@ def analyse(dst, fps, t0, dur, n_nodes):
         d = r["host_time_ns"] / 1e3 - r["capture_us"] - onnode       # delivery + unknown offset
         deliv[r["camera_id"]].append(d)
         slots[round(r["capture_us"] / period)].append(r["host_time_ns"] / 1e3)
-    base = min(min(v) for v in deliv.values())                       # common offset: hub clock is shared
+    # The host clock and the hub clock run at different rates (measured ~40 ppm, i.e. 24 ms over
+    # 600 s), so one global minimum would count the drift ramp as Wi-Fi delay. Remove a linear
+    # host-vs-hub drift fitted to the per-10-s minima (the fastest deliveries), then measure
+    # excess over that lower envelope.
+    cap = np.array([r["capture_us"] for r in rows], float)
+    raw = np.array([r["host_time_ns"] / 1e3 - r["capture_us"] - (r["frame_ready_us"] + r["preprocess_us"] + r["detection_us"]) for r in rows])
+    tb = ((cap - cap.min()) // 10e6).astype(int)
+    xs = np.array([cap[tb == b].mean() for b in np.unique(tb)]); ys = np.array([raw[tb == b].min() for b in np.unique(tb)])
+    slope, icpt = np.polyfit(xs, ys, 1) if len(xs) > 1 else (0.0, ys[0])
+    env = lambda c: slope * c + icpt
+    for r in rows: r["_env"] = env(r["capture_us"])
+    deliv = defaultdict(list)
+    for r in rows:
+        deliv[r["camera_id"]].append(r["host_time_ns"] / 1e3 - r["capture_us"] - (r["frame_ready_us"] + r["preprocess_us"] + r["detection_us"]) - r["_env"])
+    base = min(min(v) for v in deliv.values())                       # >= ~0 after detrending
     # Per slot: frame-start (capture_us) -> LAST camera's packet at the host, i.e. when the
     # estimator can first close the group. Reported up to the unknown fastest one-way Wi-Fi
     # time (>= 0, bounded by ICMP RTT): last_arrival - capture - base + onnode_of_that_packet.
     full = defaultdict(list)
     for r in rows:
-        full[round(r["capture_us"] / period)].append(r["host_time_ns"] / 1e3 - r["capture_us"])
+        full[round(r["capture_us"] / period)].append(r["host_time_ns"] / 1e3 - r["capture_us"] - r["_env"])
     slot_ready = [max(v) - base for v in full.values() if len(v) == n_nodes]
-    return {"fps": fps, "slot_period_us": period, "packets": len(rows),
+    return {"fps": fps, "slot_period_us": period, "packets": len(rows), "host_vs_hub_drift_ppm": float(slope * 1e6),
             "frame_ready_us": q([r["frame_ready_us"] for r in rows]),
             "detection_us": q([r["detection_us"] for r in rows]),
             "preprocess_us": q([r["preprocess_us"] for r in rows]),
@@ -94,16 +113,16 @@ if __name__ == "__main__":
     if os.environ.get("ANALYSE_ONLY"):   # re-analyse saved recordings (t0 from the sidecar json)
         res = {"rates": []}
         for f in RATES:
-            dst = os.path.join(OUT, f"latency-{f}fps.mcap"); m = json.load(open(dst + ".json"))
+            dst = os.path.join(OUT, f"latency-{f}fps{TAG}.mcap"); m = json.load(open(dst + ".json"))
             res["rates"].append(analyse(dst, f, m["t0"], m["dur"], m["nodes"]))
     else:
         res = {"rates": [run(f) for f in RATES]}
     if os.environ.get("ANALYSE_ONLY"):
-        res["icmp_rtt_ms"] = json.load(open(os.path.join(OUT, "latency.stats.json")))["icmp_rtt_ms"]
+        res["icmp_rtt_ms"] = json.load(open(os.path.join(OUT, f"latency{TAG}.stats.json")))["icmp_rtt_ms"]
     else:
         ns = {n["node_id"]: n["ip_address"] for n in json.loads(req("/api/nodes")) if n.get("online")}
         res["icmp_rtt_ms"] = {k: ping(ip) for k, ip in ns.items()}
-    json.dump(res, open(os.path.join(OUT, "latency.stats.json"), "w"), indent=1)
+    json.dump(res, open(os.path.join(OUT, f"latency{TAG}.stats.json"), "w"), indent=1)
     for r in res["rates"]:
         print(r["fps"], "frame_ready med", r["frame_ready_us"]["median"], "det med", r["detection_us"]["median"],
               "deliv excess med/p95/p99", r["delivery_excess_us"]["median"], r["delivery_excess_us"]["p95"], r["delivery_excess_us"]["p99"],
