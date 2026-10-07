@@ -308,6 +308,30 @@ assert h["spread_us"]["median"] - LIVE < 10 and h["jitter_fixed_removed_us"]["p9
 assert xrow["median"] > 10 * h["spread_us"]["p95"] and s["jitter_fixed_removed_us"]["median"] > 20 * LIVE   # "far above"
 assert WH["sync_lost_by_node"] == {"1": 0, "2": 11, "3": 1} and WH["period_us"] == 100000 and WH["nodes"] == [0, 1, 2, 3] and len(n2) == 8
 assert h["spread_us"]["p95"] < s["spread_us"]["median"] and WH["jitter_spread_us"]["median"] < WR["jitter_spread_us"]["median"]   # direction of every claim
+# ---- End-to-end latency breakdown (dataset tracking/ab/latency_ab.stats.json, tracking/latency/) ----
+LA = json.load((DATA / "tracking/ab/latency_ab.stats.json").open())["hw"]
+LP = json.load((DATA / "tracking/latency/latency.stats.json").open())
+LR = {r["fps"]: r for r in LP["rates"]}
+assert sorted(LR) == [10, 20, 35] and LA["fps"] == 35
+rtt = [v["median"] for v in LP["icmp_rtt_ms"].values()]
+N.update({
+    "LatReady": f"{LA['frame_ready_us']['median'] / 1000:.1f}", "LatDet": f"{LA['detection_us']['median'] / 1000:.2f}",
+    "LatSend": f"{LA['send_after_capture_us']['median'] / 1000:.1f}",
+    "LatWifiMed": f"{LA['delivery_excess_us']['median'] / 1000:.0f}", "LatWifiPn": f"{LA['delivery_excess_us']['p95'] / 1000:.0f}",
+    "LatWifiPnn": f"{LA['delivery_excess_us']['p99'] / 1000:.0f}",
+    "LatSlotMed": f"{LA['slot_arrival_spread_us']['median'] / 1000:.1f}", "LatSlotPn": f"{LA['slot_arrival_spread_us']['p95'] / 1000:.0f}",
+    "LatTotMed": f"{LA['capture_to_last_camera_at_host_us']['median'] / 1000:.0f}", "LatTotPn": f"{LA['capture_to_last_camera_at_host_us']['p95'] / 1000:.0f}",
+    "LatTotPnn": f"{LA['capture_to_last_camera_at_host_us']['p99'] / 1000:.0f}",
+    "LatReadyTwenty": f"{LR[20]['frame_ready_us']['median'] / 1000:.0f}",
+    "LatRttLo": f"{min(rtt):.0f}", "LatRttHi": f"{max(rtt):.0f}",
+})
+# Claims the text makes: readout-bound handoff ~ one 35-fps period, it grows when the period grows,
+# detection is <1% of it, Wi-Fi tail dominates the p95, and the total is a lower bound (unknown one-way offset >= 0).
+assert 27 < LA["frame_ready_us"]["median"] / 1000 < 1e3 / 35 + 0.5
+assert LR[20]["frame_ready_us"]["median"] > 1.5 * LR[35]["frame_ready_us"]["median"]
+assert LA["detection_us"]["median"] < 0.01 * LA["frame_ready_us"]["median"]
+assert LA["delivery_excess_us"]["p95"] > LA["send_after_capture_us"]["p95"]
+assert [N[k] for k in ("LatReady", "LatSend", "LatWifiMed", "LatWifiPn", "LatTotMed", "LatTotPn")] == ["27.9", "28.3", "15", "29", "46", "64"], N
 (OUT / "numbers.tex").write_text("".join(f"\\newcommand{{\\{k}}}{{{v}}}\n" for k, v in N.items()))
 cap = [  # Table 3 rows: quantity | tracking SW | tracking HW | 40-min SW | 40-min HW
     (r"Delay", f"{N['SwDelayLo']}--{N['SwDelayHi']}", f"{N['HwDelayLo']}--{N['HwDelayHi']}",

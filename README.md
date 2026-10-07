@@ -21,6 +21,7 @@ Four ESP32-S3 nodes (one FTM responder, three initiators) each drive a 50 ms pul
 | `wrap-run/ab-*.jsonl` | Capture-path A/B on firmware 68cee2605ffadeb1 (6 Oct 2026, same 4 nodes, QVGA 10 frames/s FREX): `ab-base-clean`/`ab-base2` = software trigger + software VSYNC stamp (10 and 5 min), `ab-hw3` = `cam hwstamp on; cam hwtrig on` (5 min, MCPWM-latched VSYNC + GPTimer-started trigger write). Same analysis script |
 | `wrap-run/wrap-40min-hw.jsonl` | Same 40-min run as `wrap-40min.jsonl` on firmware 68cee2605ffadeb1 with `cam hwstamp on; cam hwtrig on` |
 | `tracking/ab/` | Tracking-mode A/B (6 Oct 2026, 4 cameras, VGA 35 frames/s, 600 s each, firmware 68cee2605ffadeb1): software path vs hardware VSYNC stamp + timer-started trigger. MCAPs, node counters, `tracking_ab.py` → `tracking_ab.stats.json` |
+| `tracking/latency/`, `tracking/ab/latency_ab.stats.json` | Latency breakdown (6 Oct 2026, hardware capture timing): tracking at 35/20/10 frames/s, 60 s each, plus the 600-s A/B sessions re-analysed; ICMP round trips. `tracking/latency_probe.py` (`ANALYSE_ONLY=1` re-analyses the saved MCAPs) |
 | `tracking/` | IR tracking recordings (6 Oct 2026, MCAP of on-node centroids, VGA 35 frames/s, 3–4 cameras), the calibration files used, host-replay logs, and `analyze_tracking.py` → `TRACKING_RESULTS.md` / `stats.json` |
 
 ## Reproduce
