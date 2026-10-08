@@ -1,3 +1,4 @@
+import numpy as np
 """Regenerate every paper figure + stats from retained logic-analyzer offsets.
 Input: <dataset>/timesync-2026-09-09/analysis/offsets.csv, <dataset>/tracking/stats.json, <dataset>/wrap-run/wrap-40min.jsonl.stats.json
 Run:   paperenv/.venv/bin/python make_figures.py
@@ -304,7 +305,36 @@ assert [N[k] for k in ("WhDelayLo", "WhDelayHi", "WhSpMed", "WhSpPn", "WhSpPnn",
                        "WhWraps", "WhLate", "WhFrames", "WhLost", "WhLostTwo", "WhChecks", "WhAgeS", "WhNtwoLo", "WhNtwoHi")] == [
     "1600", "1629", "35", "69", "148", "342", "30", "68", "6.5", "15", "8", "0", "84{,}315", "12", "11", "1{,}335", "6.8", "1599", "1602"], N
 assert N["WhMin"] == N["WrMin"] == "40"
-assert h["spread_us"]["median"] - LIVE < 10 and h["jitter_fixed_removed_us"]["p95"] - LIVE < 5   # "within a few us of the clock error"
+# ---- Revision 9 (journal review r8) ----
+# M2 two-term budget: clock term = camera-load GPIO record L (only clock evidence with cameras running);
+# capture term = HW delay-removed spread. Different builds; no external skew on the capture build.
+LD = stats["Live FTM, camera tracking load (provisional)"]
+hdl = h["per_camera_offset_from_slot_us"].values()
+# M3 FREX global reset: effective per-row instant moves 1/2..1 t_row per row -> magnitudes are half..full of the y*t_row values
+# M4 ratios: SD and p95 lead, max secondary; backend esp_timer vs GPTimer with robust spreads too
+def iqr(v): q = st.quantiles(v, n=4, method="inclusive"); return q[2] - q[0]
+def madsd(v): m = st.median(v); return 1.4826 * st.median([abs(x - m) for x in v])
+bv = {m: [float(r["offset_us"]) for r in rows if BACKEND_RUN in r["run"] and r["method"] == m] for m in ("esp:ftm", "gpt:ftm")}
+TS_, LF_ = stats["AP TSF"], stats["Live FTM"]
+N.update({
+    "LoadSD": f"{LD['sd']:.2f}", "LoadMax": f"{LD['max']:.2f}", "LoadN": f"{LD['n']}",
+    "HwDelayRange": f"{max(hdl) - min(hdl):.1f}",
+    "RowHalfMs": f"{row['median'] / 2000:.1f}", "XrowHalf": f"{xrow['median'] / 2:.0f}",
+    "TsfSdRatio": f"{TS_['sd'] / LF_['sd']:.0f}", "TsfPnRatio": f"{TS_['p95'] / LF_['p95']:.0f}",
+    "TsfMaxRatio": f"{TS_['max'] / LF_['max']:.0f}", "TsfN": f"{TS_['n']}", "LiveN": f"{LF_['n']}",
+    "BkSdRatio": f"{st.pstdev(bv['esp:ftm']) / st.pstdev(bv['gpt:ftm']):.0f}",
+    "BkIqrRatio": f"{iqr(bv['esp:ftm']) / iqr(bv['gpt:ftm']):.0f}", "BkMadRatio": f"{madsd(bv['esp:ftm']) / madsd(bv['gpt:ftm']):.0f}",
+    "BkN": f"{len(bv['esp:ftm'])}",
+    "RefSdLo": f"{min(ref_sd):.2f}", "RefSdHi": f"{max(ref_sd):.2f}", "LiveSD": f"{LF_['sd']:.2f}",
+})
+assert N["LiveSD"] == "0.67"
+assert [N[k] for k in ("LoadSD", "LoadMax", "LoadN", "HwDelayRange", "RowHalfMs", "XrowHalf", "TsfSdRatio", "TsfPnRatio", "TsfMaxRatio",
+                       "TsfN", "LiveN", "BkSdRatio", "BkIqrRatio", "BkMadRatio", "BkN", "RefSdLo", "RefSdHi")] == [
+    "0.89", "2.75", "180", "9.4", "2.5", "234", "32", "30", "108", "358", "180", "50", "24", "25", "75", "0.36", "0.46"], N
+assert len({r["run"] for r in rows if CAMPAIGN in r["run"] and r["method"] == "mcpwm:tsf"}) == 2                  # AP TSF: two records
+assert len({r["run"] for r in rows if CAMPAIGN in r["run"] and r["method"] == "mcpwm:ftm"}) == 1                  # live FTM: one record
+assert xrow["median"] / 2 > 10 * h["spread_us"]["p95"] and row["median"] / 2 > 100 * h["spread_us"]["p95"]   # row term dominates at either slope
+assert h["spread_us"]["median"] - (max(hdl) - min(hdl)) < 1                       # HW spread median ~ the fixed per-camera delay difference
 assert xrow["median"] > 10 * h["spread_us"]["p95"] and s["jitter_fixed_removed_us"]["median"] > 20 * LIVE   # "far above"
 assert WH["sync_lost_by_node"] == {"1": 0, "2": 11, "3": 1} and WH["period_us"] == 100000 and WH["nodes"] == [0, 1, 2, 3] and len(n2) == 8
 assert h["spread_us"]["p95"] < s["spread_us"]["median"] and WH["jitter_spread_us"]["median"] < WR["jitter_spread_us"]["median"]   # direction of every claim
@@ -333,14 +363,32 @@ assert LA["detection_us"]["median"] < 0.01 * LA["frame_ready_us"]["median"]
 assert LA["send_after_capture_us"]["median"] > 2 * LA["delivery_excess_us"]["p95"]   # node term dominates even the Wi-Fi 95th pct
 assert [N[k] for k in ("LatReady", "LatSend", "LatWifiMed", "LatWifiPn", "LatTotMed", "LatTotPn")] == ["27.9", "28.3", "2", "12", "32", "49"], N
 assert abs(LA["host_vs_hub_drift_ppm"]) < 100   # host-vs-hub drift removed before measuring Wi-Fi excess
+N.update({"LatTotMedB": f"{LR[35]['capture_to_last_camera_at_host_us']['median'] / 1000:.0f}",   # dedicated latency run (rev9, M7)
+          "LatReadyTen": f"{LR[10]['frame_ready_us']['median'] / 1000:.0f}"})
+assert N["LatTotMedB"] == "42" and N["LatReadyTen"] == "66" and LR[35]["capture_to_last_camera_at_host_us"]["median"] > LA["capture_to_last_camera_at_host_us"]["median"]
+# ---- Robot-arm reference (dataset arm-reference/arm-reference.json) ----
+AR = json.load((DATA / "arm-reference/arm-reference.json").open())
+ARs = AR["summary"]; ARok = [r for r in AR["rows"] if "err" in r]
+assert ARs["n_ok"] == len(ARok) == 36 and ARs["n_fail"] == 0 and ARs["n_poses"] == 18 and ARs["repeats"] == 2
+_e = sorted(r["err_norm"] for r in ARok)
+assert abs(np.median(_e) - ARs["err_median_mm"]) < 1e-9 and abs(_e[-1] - ARs["err_max_mm"]) < 1e-9
+N.update({
+    "ArmPoses": str(ARs["n_poses"]), "ArmVisits": str(ARs["n_ok"]),
+    "ArmCalRms": f"{ARs['calibration']['rms_mm']:.1f}", "ArmCalN": str(ARs["calibration"]["points"]),
+    "ArmErrMed": f"{ARs['err_median_mm']:.1f}", "ArmErrRms": f"{ARs['err_rms_mm']:.1f}", "ArmErrMax": f"{ARs['err_max_mm']:.1f}",
+    "ArmStaticSd": f"{ARs['static_ir_sd_median_mm']:.2f}", "ArmRepeat": f"{ARs['repeat_ir_dist_median_mm']:.1f}",
+})
+# claims in the text: held-out error is mm-level, the IR point itself is ~20x steadier than that,
+# and the IR point moves by about the same as the error between approach directions (arm repeatability bound)
+assert 1.0 < ARs["err_median_mm"] < 2.0 and ARs["err_max_mm"] < 3.0
+assert ARs["static_ir_sd_median_mm"] * 10 < ARs["err_median_mm"]
+assert 0.5 * ARs["err_median_mm"] < ARs["repeat_ir_dist_median_mm"] < 1.5 * ARs["err_median_mm"]
 (OUT / "numbers.tex").write_text("".join(f"\\newcommand{{\\{k}}}{{{v}}}\n" for k, v in N.items()))
-cap = [  # Table 3 rows: quantity | tracking SW | tracking HW | 40-min SW | 40-min HW
-    (r"Delay", f"{N['SwDelayLo']}--{N['SwDelayHi']}", f"{N['HwDelayLo']}--{N['HwDelayHi']}",
-     f"{N['WrDelayLo']}--{N['WrDelayHi']}", f"{N['WhDelayLo']}--{N['WhDelayHi']}"),
-    (r"Spread, med./p95", f"{N['SwSpMed']}/{N['SwSpPn']}", f"{N['HwSpMed']}/{N['HwSpPn']}", f"{N['WrSpMed']}/{N['WrSpPn']}", f"{N['WhSpMed']}/{N['WhSpPn']}"),
-    (r"\quad delay removed", f"{N['SwJitMed']}/{N['SwJitPn']}", f"{N['HwJitMed']}/{N['HwJitPn']}", f"{N['WrJitMed']}/{N['WrJitPn']}", f"{N['WhJitMed']}/{N['WhJitPn']}"),
-    (r"Full slots (\%)", N["SwYield"], N["HwYield"], f"{N['WrYieldLogged']}$^a$", f"{N['WhYieldLogged']}$^a$"),
-    (r"Late frames", "--", "--", N["WrLate"], N["WhLate"]),
+cap = [  # Table 3 rows: quantity | tracking SW | tracking HW (FTM-timed tracking pair only; the AP-TSF-timed 40-min runs are not in it)
+    (r"Delay (per-camera medians)", f"{N['SwDelayLo']}--{N['SwDelayHi']}", f"{N['HwDelayLo']}--{N['HwDelayHi']}"),
+    (r"Spread, med./p95", f"{N['SwSpMed']}/{N['SwSpPn']}", f"{N['HwSpMed']}/{N['HwSpPn']}"),
+    (r"Delay-removed spread, med./p95", f"{N['SwJitMed']}/{N['SwJitPn']}", f"{N['HwJitMed']}/{N['HwJitPn']}"),
+    (r"Full slots (\%)", N["SwYield"], N["HwYield"]),
 ]
 (OUT / "table_capture.tex").write_text("\n".join(" & ".join(r) + r" \\" for r in cap) + "\n")
 json.dump({"offset_stats": stats, "capture_numbers": N, "follower_means": {f"{k[0]}|{k[1]}": v for k, v in fmeans.items()},

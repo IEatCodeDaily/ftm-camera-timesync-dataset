@@ -1,0 +1,56 @@
+rep 0 pose  0 n 19 |err|   0.64 mm  ir sd 0.07
+rep 0 pose  1 n 19 |err|   0.42 mm  ir sd 0.08
+rep 0 pose  2 n 19 |err|   0.38 mm  ir sd 0.09
+rep 0 pose  3 n 19 |err|   0.60 mm  ir sd 0.06
+rep 0 pose  4 n 19 |err|   0.41 mm  ir sd 0.07
+rep 0 pose  5 n 19 |err|   0.77 mm  ir sd 0.08
+rep 0 pose  6 n 19 |err|   1.54 mm  ir sd 0.07
+rep 0 pose  7 n 19 |err|   0.74 mm  ir sd 0.07
+rep 0 pose  8 n 19 |err|   1.51 mm  ir sd 0.09
+rep 0 pose  9 n 19 |err|   1.23 mm  ir sd 0.05
+rep 0 pose 10 n 19 |err|   0.84 mm  ir sd 0.07
+rep 0 pose 11 n 19 |err|   1.69 mm  ir sd 0.05
+rep 0 pose 12 n 19 |err|   1.33 mm  ir sd 0.09
+rep 0 pose 13 n 19 |err|   1.42 mm  ir sd 0.07
+rep 0 pose 14 n 19 |err|   1.49 mm  ir sd 0.11
+rep 0 pose 15 n 19 |err|   1.47 mm  ir sd 0.08
+rep 0 pose 16 n 19 |err|   1.61 mm  ir sd 0.07
+rep 0 pose 17 n 19 |err|   2.67 mm  ir sd 0.06
+rep 1 pose  0 n 19 |err|   2.70 mm  ir sd 0.06
+rep 1 pose  1 n 19 |err|   1.55 mm  ir sd 0.06
+rep 1 pose  2 n 19 |err|   1.44 mm  ir sd 0.08
+rep 1 pose  3 n 15 |err|   1.90 mm  ir sd 0.07
+rep 1 pose  4 n 19 |err|   1.95 mm  ir sd 0.06
+rep 1 pose  5 n 19 |err|   1.97 mm  ir sd 0.05
+rep 1 pose  6 n 19 |err|   2.21 mm  ir sd 0.06
+rep 1 pose  7 n 19 |err|   1.16 mm  ir sd 0.05
+rep 1 pose  8 n 19 |err|   1.77 mm  ir sd 0.08
+rep 1 pose  9 n 19 |err|   2.43 mm  ir sd 0.08
+rep 1 pose 10 n 19 |err|   1.75 mm  ir sd 0.08
+rep 1 pose 11 n 19 |err|   2.62 mm  ir sd 0.08
+rep 1 pose 12 n 19 |err|   1.93 mm  ir sd 0.06
+rep 1 pose 13 n 19 |err|   1.33 mm  ir sd 0.08
+rep 1 pose 14 n 19 |err|   1.84 mm  ir sd 0.09
+rep 1 pose 15 n 19 |err|   1.87 mm  ir sd 0.08
+rep 1 pose 16 n 19 |err|   1.46 mm  ir sd 0.08
+rep 1 pose 17 n 19 |err|   2.65 mm  ir sd 0.08
+{
+ "n_poses": 18,
+ "repeats": 2,
+ "n_ok": 36,
+ "n_fail": 0,
+ "err_median_mm": 1.5209135173246426,
+ "err_rms_mm": 1.6639899380658023,
+ "err_max_mm": 2.6984675240718006,
+ "err_p95_mm": 2.6510553357343305,
+ "per_axis_rms_mm": [
+  0.7764927380012694,
+  1.1735808672932313,
+  0.8880481348095899
+ ],
+ "static_ir_sd_median_mm": 0.07166059765307348,
+ "ee_body": "dobot-taped-calibrator",
+ "t_unix": 1791472870.718764,
+ "repeat_ir_dist_median_mm": 1.2362724224526032
+}
+DONE
