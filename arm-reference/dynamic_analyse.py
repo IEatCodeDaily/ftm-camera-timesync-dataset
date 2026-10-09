@@ -14,15 +14,15 @@ import json, sys, glob, itertools, math
 import numpy as np
 from mcap.reader import make_reader
 
-STUDIO = "/mnt/e/Projects/wireless-ir-mocap/mocap/studio"
+RIG = __import__("os").path.join(__import__("os").path.dirname(__import__("os").path.abspath(__file__)), "rig")
 RESID_PX = 3.0
 
 
 def rig():
     K = {}
-    for f in glob.glob(f"{STUDIO}/calibrations/board-*-sensor-5640-vga.json"):
+    for f in glob.glob(f"{RIG}/board-*-sensor-5640-vga.json"):
         d = json.load(open(f)); K[d["node_id"]] = np.array(d["solution"]["k"])
-    ex = json.load(open(f"{STUDIO}/extrinsic-frames/last-solution.json"))
+    ex = json.load(open(f"{RIG}/extrinsics.json"))
     return {e["camera_id"]: K[e["camera_id"]] @ np.hstack([np.array(e["R"]), np.array(e["t"])[:, None]]) for e in ex["extrinsics"]}
 
 

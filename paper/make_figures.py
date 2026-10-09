@@ -401,6 +401,41 @@ N.update({
 # direction-reversing (timing) shear monotonically with slope, and the full slope is smallest
 assert np.median(_e) < 1.0 and np.percentile(_e, 95) < 2.0 and _vmax > 500
 assert _fast("1.0") < _fast("0.5") < _fast("0.0") and _fast("0.0") < 0.2
+# ---- Fig. 3: rig top view (calibrated geometry) + moving distance error vs speed ----
+_rig = DATA / "arm-reference/rig"
+_ex = json.load((_rig / "extrinsics.json").open())["extrinsics"]
+_cal = json.load((DATA / "arm-reference/arm-reference.json").open())["summary"]["calibration"]
+_Rr, _tr = np.array(_cal["r"]), np.array(_cal["t"])
+_w = lambda p: (_Rr @ np.array(p, float) + _tr) / 1000          # robot mm -> world m
+_held = [r for r in json.load((DATA / "arm-reference/arm-reference.json").open())["rows"] if "ir_world" in r]
+fig, (a0, a1) = plt.subplots(1, 2, figsize=(3.5, 1.42), gridspec_kw=dict(width_ratios=[1.1, 1.2]))
+_lab = {0: (10, 3), 1: (2, 6), 2: (-11, 2), 3: (2, 6)}
+for e in _ex:
+    R, t = np.array(e["R"]), np.array(e["t"]); C = -R.T @ t / 1000; z = R.T @ np.array([0, 0, 1.0]); u = z[:2] / np.hypot(*z[:2])
+    a0.annotate("", C[:2] + .6 * u, C[:2], arrowprops=dict(arrowstyle="-|>", lw=.6, mutation_scale=6, color="k"))
+    a0.plot(*C[:2], "s", ms=3.5, color="k", zorder=3)
+    a0.annotate(f"C{e['camera_id']}", C[:2], xytext=_lab[e["camera_id"]], textcoords="offset points", fontsize=6.5, ha="center")
+# arm working area used (calibration grid r 175-275 mm, yaw +-35 deg) as a wedge, sweeps as lines
+th = np.radians(np.linspace(-35, 35, 30))
+ring = np.vstack([[_w([r * np.cos(a), r * np.sin(a), 50]) for a in th] for r in (175,)] + [[_w([275 * np.cos(a), 275 * np.sin(a), 50]) for a in th[::-1]]])
+a0.fill(ring[:, 0], ring[:, 1], fc="#9ec5e8", ec="#1f77b4", lw=.6, zorder=1)
+a0.plot(*_w([0, 0, 0])[:2], "o", ms=3, mfc="0.6", mec="k", mew=.4, zorder=2)
+a0.annotate("Dobot", _w([0, 0, 0])[:2], xytext=(0, -9), textcoords="offset points", fontsize=6.5, ha="center")
+a0.set_xlim(-2.3, 2.6); a0.set_ylim(-3.0, 2.1); a0.set_aspect("equal")
+a0.set_xlabel("x (m)", fontsize=7); a0.set_ylabel("y (m)", fontsize=7); a0.tick_params(labelsize=6)
+a0.text(.04, .06, "(a)", transform=a0.transAxes, fontsize=7, va="top")
+_v = np.array([r["speed_mm_s"] for r in _mv]); _de = np.abs(np.array([r["d_mm"] for r in _mv]) - _ref).ravel()
+_v3 = np.repeat(_v, 3)
+_bins = np.arange(0, 600, 100); _ok = [((_v3 >= lo) & (_v3 < lo + 100)).sum() >= 30 for lo in _bins]
+_q = np.array([np.percentile(_de[(_v3 >= lo) & (_v3 < lo + 100)], [25, 50, 75]) for lo, k in zip(_bins, _ok) if k])
+_c = np.array([lo + 50 for lo, k in zip(_bins, _ok) if k])
+a1.plot(_v3, _de, ".", ms=.6, alpha=.25, color="0.55", rasterized=True, zorder=2)
+a1.fill_between(_c, _q[:, 0], _q[:, 2], color="#1f77b4", alpha=.35, lw=0, zorder=3)
+a1.plot(_c, _q[:, 1], "-o", ms=2, lw=.8, color="#1f77b4", zorder=4)
+a1.set_xlabel("marker speed (mm/s)", fontsize=7); a1.set_ylabel(r"$|\Delta d|$ (mm)", fontsize=7); a1.tick_params(labelsize=6)
+a1.set_ylim(-.05, 2.5); a1.set_xlim(0, 600)
+a1.text(.03, .97, "(b)", transform=a1.transAxes, fontsize=7, va="top")
+fig.tight_layout(pad=.2); fig.savefig(OUT / "rig_dynamic.pdf", dpi=300); plt.close(fig)
 (OUT / "numbers.tex").write_text("".join(f"\\newcommand{{\\{k}}}{{{v}}}\n" for k, v in N.items()))
 cap = [  # Table 3 rows: quantity | tracking SW | tracking HW (FTM-timed tracking pair only; the AP-TSF-timed 40-min runs are not in it)
     (r"Delay (per-camera medians)", f"{N['SwDelayLo']}--{N['SwDelayHi']}", f"{N['HwDelayLo']}--{N['HwDelayHi']}"),
