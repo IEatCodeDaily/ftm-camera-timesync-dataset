@@ -44,7 +44,12 @@ for label, m in src.items():
 hist = [r for r in rows if r["run"].endswith(CLEAN_FTM)]
 stats["Live FTM, 3 repaired records"] = summ([float(r["offset_us"]) for r in hist])
 load = [float(r["offset_us"]) for r in rows if r["method"] == "mcpwm:ftm-camera-load"]
-stats["Live FTM, camera tracking load (provisional)"] = summ(load)
+stats["Live FTM, camera tracking load"] = summ(load)
+# record L glitch check (a-priori 1-us filter; dataset timesync-2026-09-09/recheck_record_L.py)
+import importlib.util as _ilu
+_sp = _ilu.spec_from_file_location("recheckL", DATA / "timesync-2026-09-09/recheck_record_L.py"); _rL = _ilu.module_from_spec(_sp); _sp.loader.exec_module(_rL)
+_Rf, _offL = _rL.offsets(_rL.FILTER_US)
+assert sorted(round(x, 3) for x in _offL) == sorted(round(x, 3) for x in load), "record L changes under glitch filter"
 back = {"esp_timer callback": "esp:ftm", "FreeRTOS task": "task:ftm", "GPTimer (HW)": "gpt:ftm"}
 for label, m in back.items():
     stats["Backend " + label] = summ([float(r["offset_us"]) for r in rows if BACKEND_RUN in r["run"] and r["method"] == m])
@@ -115,7 +120,7 @@ for label, m in src.items():
         rec_rows.append((label, f"C{int(run.split('/')[-1][:2]) + 1}", [float(r["offset_us"]) for r in rows if r["run"] == run]))
 for i, run in enumerate(CLEAN_FTM):
     rec_rows.append(("Live FTM", f"H{i + 1}", [float(r["offset_us"]) for r in rows if r["run"].endswith(run)]))
-rec_rows.append(("\\textit{Camera load}", "\\textit{L}", load))   # provisional row set in italics
+rec_rows.append(("Camera load", "L", load))
 tex = []
 SHOW = {"AP TSF": "AP TSF (API)", "NTP-style UDP": "NTP-style (naive)"}   # rev10 M2: TSF as exposed by ESP-IDF API
 for label, rec, v in rec_rows:
@@ -123,7 +128,7 @@ for label, rec, v in rec_rows:
     tex.append(f"{SHOW.get(label, label)} & {rec} & {s['n']} & {('+' if s['mean'] >= 0 else '$-$') + fmt(abs(s['mean']))} & {fmt(s['sd'])} & {fmt(s['p95'])} & {fmt(s['max'])} \\\\")
 out, prev = [], None
 for l in tex:                                   # thin gap between sources
-    k = l.split(" & ")[0].replace("\\textit{Camera load}", "Live FTM")
+    k = l.split(" & ")[0].replace("Camera load", "Live FTM")
     if prev and k != prev: out.append("\\addlinespace[1pt]")
     out.append(l); prev = k
 (OUT / "table_records.tex").write_text("\n".join(out) + "\n")
@@ -134,7 +139,7 @@ plt.rcParams.update({"font.size": 8, "font.family": "serif", "font.serif": ["STI
 # Fig 2: source comparison, |offset| log scale
 fig, ax = plt.subplots(figsize=(3.5, 2.0))
 ax.boxplot(data, whis=(0, 100), widths=.55, medianprops=dict(color="k"))
-ax.set_yscale("log"); ax.set_ylabel(r"|follower $-$ reference| ($\mu$s)")
+ax.set_yscale("symlog", linthresh=0.1, linscale=0.6); ax.set_ylim(-0.03, 3e5); ax.set_yticks([0, 1e-1, 1, 1e1, 1e2, 1e3, 1e4, 1e5], ["0", "$10^{-1}$", "$10^{0}$", "$10^{1}$", "$10^{2}$", "$10^{3}$", "$10^{4}$", "$10^{5}$"]); ax.set_ylabel(r"|follower $-$ reference| ($\mu$s)")
 ax.set_xticks(range(1, 6), ["No\nsync", "NTP\nstyle", "AP\nTSF", "FTM\nhold", "Live\nFTM"])
 ax.axhline(1000, ls="--", lw=.8, color="0.4"); ax.text(4.6, 1250, "1 ms", ha="center", fontsize=8, color="0.3")
 fig.tight_layout(); fig.savefig(OUT / "source_comparison.pdf"); plt.close(fig)
@@ -311,7 +316,7 @@ assert N["WhMin"] == N["WrMin"] == "40"
 # ---- Revision 9 (journal review r8) ----
 # M2 two-term budget: clock term = camera-load GPIO record L (only clock evidence with cameras running);
 # capture term = HW delay-removed spread. Different builds; no external skew on the capture build.
-LD = stats["Live FTM, camera tracking load (provisional)"]
+LD = stats["Live FTM, camera tracking load"]
 hdl = h["per_camera_offset_from_slot_us"].values()
 # M3 FREX global reset: effective per-row instant moves 1/2..1 t_row per row -> magnitudes are half..full of the y*t_row values
 # M4 ratios: SD and p95 lead, max secondary; backend esp_timer vs GPTimer with robust spreads too
@@ -431,6 +436,12 @@ a1.set_xlabel("marker speed (mm/s)", fontsize=7); a1.set_ylabel(r"$|\Delta d|$ (
 a1.set_ylim(-.05, 2.5); a1.set_xlim(0, 600)
 a1.text(.03, .97, "(b)", transform=a1.transAxes, fontsize=7, va="top")
 fig.tight_layout(pad=.2); fig.savefig(OUT / "rig_dynamic.pdf", dpi=300); plt.close(fig)
+# Delay-removed spread uses capture stamps at 1-us resolution (capture_us integer): the range of 4
+# independent uniform quantisation errors has E = (n-1)/(n+1) = 0.6 us (n=4).
+assert all(isinstance(json.loads(m.data)["capture_us"], int) for _, _, m in __import__("itertools").islice(
+    __import__("mcap.reader", fromlist=["make_reader"]).make_reader((DATA / "tracking/ab/tracking-hw.mcap").open("rb")).iter_messages(topics=["/mocap/centroids"]), 200))
+N["QuantRange"] = f"{(4 - 1) / (4 + 1):.1f}"
+assert N["QuantRange"] == "0.6" and float(N["QuantRange"]) < float(N["HwJitMed"])
 (OUT / "numbers.tex").write_text("".join(f"\\newcommand{{\\{k}}}{{{v}}}\n" for k, v in N.items()))
 cap = [  # Table 3 rows: quantity | tracking SW | tracking HW (FTM-timed tracking pair only; the AP-TSF-timed 40-min runs are not in it)
     (r"Delay (per-camera medians)", f"{N['SwDelayLo']}--{N['SwDelayHi']}", f"{N['HwDelayLo']}--{N['HwDelayHi']}"),

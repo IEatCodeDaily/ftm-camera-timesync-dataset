@@ -1,0 +1,38 @@
+--- a/managed_components/espressif__esp32-camera/driver/cam_hal.c
++++ b/managed_components/espressif__esp32-camera/driver/cam_hal.c
+@@ -493,14 +493,27 @@
+     }
+     return false;
+ }
++/* ftmcs hardware VSYNC stamp: given the driver's VSYNC interrupt time, return
++ * the hardware-latched edge time (same esp_timer clock), or 0 to keep the
++ * software stamp. Read before ll_cam_do_vsync(): its synthetic pulse re-enters
++ * the VSYNC interrupt and overwrites the real edge's interrupt time. */
++static int64_t (*volatile s_vsync_stamp)(int64_t vsync_isr_us);
++void cam_hal_set_vsync_stamp(int64_t (*fn)(int64_t vsync_isr_us)) { s_vsync_stamp = fn; }
++static int64_t vsync_isr_us(void);
+ static bool cam_start_frame(int * frame_pos, ftmcs_frame_start_reason_t reason)
+ {
++    const int64_t isr_us = vsync_isr_us();
+     if (cam_get_next_frame(frame_pos)) {
+         if(ll_cam_start(cam_obj, *frame_pos)){
+             /* Candidate hypothesis: only steady native-Y8 bounce restarts
+              * may omit the synthetic receiver pulse. Never skip initial/idle. */
+             if (!startup_vsync_omit(cam_obj,reason)) ll_cam_do_vsync(cam_obj);
+             uint64_t us = (uint64_t)esp_timer_get_time();
++            int64_t (*stamp)(int64_t) = s_vsync_stamp;
++            if (stamp && isr_us > 0) {
++                const int64_t hw = stamp(isr_us);
++                if (hw > 0) us = (uint64_t)hw;
++            }
+             cam_obj->frames[*frame_pos].fb.timestamp.tv_sec = us / 1000000UL;
+             cam_obj->frames[*frame_pos].fb.timestamp.tv_usec = us % 1000000UL;
+             prog_start(cam_obj->frames[*frame_pos].fb.buf, (int64_t)us);
+@@ -520,6 +533,7 @@
+  * belongs to the latest trigger's image. s_trig_us == 0: not triggered, every
+  * VSYNC starts a frame. */
+ static DRAM_ATTR volatile int64_t s_vs_us, s_trig_us;
++static int64_t vsync_isr_us(void) { return s_vs_us; }
+ #define VS_FRESH_US 300     /* ponytail: arm latency budget before image row 0; measured arm 15-80 us after the edge */
+ #define TRIG_IMAGE_MIN_US 300    /* ponytail: the image VSYNC lands trigger + SCCB write (0.4-0.9 ms) + a delay that SHRINKS with exposure (rawtrace: +1.6 ms at 400 rows, +1.2 ms at 236); 1500 rejected every short-exposure frame. Nothing image-related can precede the write landing. */
+ #define TRIG_IMAGE_MAX_US 12000  /* later VSYNCs are the sensor's autonomous, unsynced frames */
