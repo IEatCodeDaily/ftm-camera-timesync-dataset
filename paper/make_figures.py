@@ -383,6 +383,24 @@ N.update({
 assert 1.0 < ARs["err_median_mm"] < 2.0 and ARs["err_max_mm"] < 3.0
 assert ARs["static_ir_sd_median_mm"] * 10 < ARs["err_median_mm"]
 assert 0.5 * ARs["err_median_mm"] < ARs["repeat_ir_dist_median_mm"] < 1.5 * ARs["err_median_mm"]
+# ---- Dobot dynamic sweeps (dataset arm-reference/dynamic/) ----
+DY = json.load((DATA / "arm-reference/dynamic/dynamic.json").open())
+PA = json.load((DATA / "arm-reference/dynamic/paired.json").open())
+_segs = [g for f in sorted((DATA / "arm-reference/dynamic").glob("seg-speed*.json")) for g in json.load(f.open())["segments"]]
+_ref = np.array(DY["summary"]["static_d_mm"])
+_mv = [r for r in DY["rows"]["1.0"] if 20 < r["speed_mm_s"] < 600 and any(g["t0_ns"] + 3e8 <= r["host_ns"] <= g["t1_ns"] - 3e8 for g in _segs)]
+_e = np.abs(np.array([r["d_mm"] for r in _mv]) - _ref).ravel()
+_fast = lambda sl: float(np.mean([v["half_diff_all_pairs_median_mm"] for k, v in PA[sl].items() if k in ("speed100/yaw", "speed50/yaw")]))
+_vmax = max(v["speed_max_mm_s"] for v in PA["1.0"].values())
+N.update({
+    "DynN": f"{len(_mv):,}", "DynVmax": f"{round(_vmax, -1):.0f}", "DynErrMed": f"{np.median(_e):.1f}", "DynErrPn": f"{np.percentile(_e, 95):.1f}",
+    "DynStaticSd": f"{max(DY['summary']['static_d_sd_mm']):.1f}",
+    "DynShearRaw": f"{_fast('0.0'):.2f}", "DynShearHalf": f"{_fast('0.5'):.2f}", "DynShearFull": f"{_fast('1.0'):.2f}",
+})
+# claims: moving distance error stays within static noise scale; row correction shrinks the
+# direction-reversing (timing) shear monotonically with slope, and the full slope is smallest
+assert np.median(_e) < 1.0 and np.percentile(_e, 95) < 2.0 and _vmax > 500
+assert _fast("1.0") < _fast("0.5") < _fast("0.0") and _fast("0.0") < 0.2
 (OUT / "numbers.tex").write_text("".join(f"\\newcommand{{\\{k}}}{{{v}}}\n" for k, v in N.items()))
 cap = [  # Table 3 rows: quantity | tracking SW | tracking HW (FTM-timed tracking pair only; the AP-TSF-timed 40-min runs are not in it)
     (r"Delay (per-camera medians)", f"{N['SwDelayLo']}--{N['SwDelayHi']}", f"{N['HwDelayLo']}--{N['HwDelayHi']}"),
