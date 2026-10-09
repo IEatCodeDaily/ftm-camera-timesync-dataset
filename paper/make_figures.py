@@ -86,8 +86,10 @@ assert (round(min(fol_sd), 2), round(max(fol_sd), 2)) == (0.32, 0.59), fol_sd
 assert (round(min(ff_sd), 2), round(max(ff_sd), 2)) == (0.53, 0.78), ff_sd
 assert (round(min(corr), 2), round(max(corr), 2)) == (0.34, 0.59), corr
 assert (round(min(share), 1), round(max(share), 1)) == (0.3, 0.6), share
-# MCPWM tick 1 us (resolution_hz=1000000, archived strobe_gpio.c) -> uniform quantization SD
-assert round(1 / math.sqrt(12), 2) == 0.29
+# MCPWM tick 1 us (resolution_hz=1000000, archived strobe_gpio.c): follower minus reference = difference of two
+# independent 1-us quantizers -> SD sqrt(2/12) (rev10, M7)
+QDIFF = math.sqrt(2 / 12)
+assert round(QDIFF, 2) == 0.41
 # excluded 25-s MCPWM live-FTM records (short-record sensitivity, M4)
 short = [abs(float(r["offset_us"])) for r in rows if "20260908-171055" in r["run"] and r["method"] == "mcpwm:ftm"]
 assert len(short) == 150 and abs(max(short) - 2.375) < 1e-3
@@ -98,9 +100,9 @@ def slope(pts):
 drift = [abs(slope([(float(r["time_s"]), float(r["offset_us"])) for r in rows if r["run"] == run and r["node"] == n]))
          for run in {r["run"] for r in rows if CAMPAIGN in r["run"] and r["method"] == "mcpwm:mac"} for n in "013"]
 assert (round(min(drift), 1), round(max(drift), 1)) == (0.4, 6.1), drift
-# improvement factors (M5): worst case TSF / live FTM ~ 10^2; NTP-style / live FTM > 10^4
-assert round(stats["AP TSF"]["max"] / stats["Live FTM"]["max"]) == 108                     # "108x" in text
-assert 100 < 182.188 / stats["Live FTM"]["max"] < 120 and 55503.062 / stats["Live FTM"]["max"] > 1e4
+# improvement factor TSF / live FTM max ~ 10^2 (NTP-style ratio dropped in rev10, M2)
+assert round(stats["AP TSF"]["max"] / stats["Live FTM"]["max"]) == 108                     # "108x" in Sec III (with read-path caveat)
+assert 100 < 182.188 / stats["Live FTM"]["max"] < 120
 # 4 live-FTM records pooled: SD 0.66, max 1.937
 pool4 = summ([float(r["offset_us"]) for run in LIVE4 for r in rec(run)])
 assert pool4["n"] == 720 and round(pool4["sd"], 2) == 0.66 and abs(pool4["max"] - 1.937) < 1e-3
@@ -115,9 +117,10 @@ for i, run in enumerate(CLEAN_FTM):
     rec_rows.append(("Live FTM", f"H{i + 1}", [float(r["offset_us"]) for r in rows if r["run"].endswith(run)]))
 rec_rows.append(("\\textit{Camera load}", "\\textit{L}", load))   # provisional row set in italics
 tex = []
+SHOW = {"AP TSF": "AP TSF (API)", "NTP-style UDP": "NTP-style (naive)"}   # rev10 M2: TSF as exposed by ESP-IDF API
 for label, rec, v in rec_rows:
     s = summ(v)
-    tex.append(f"{label} & {rec} & {s['n']} & {('+' if s['mean'] >= 0 else '$-$') + fmt(abs(s['mean']))} & {fmt(s['sd'])} & {fmt(s['p95'])} & {fmt(s['max'])} \\\\")
+    tex.append(f"{SHOW.get(label, label)} & {rec} & {s['n']} & {('+' if s['mean'] >= 0 else '$-$') + fmt(abs(s['mean']))} & {fmt(s['sd'])} & {fmt(s['p95'])} & {fmt(s['max'])} \\\\")
 out, prev = [], None
 for l in tex:                                   # thin gap between sources
     k = l.split(" & ")[0].replace("\\textit{Camera load}", "Live FTM")
@@ -129,7 +132,7 @@ assert sum(1 for l, *_ in rec_rows if l == "Live FTM") == 4 and len(rec_rows) ==
 plt.rcParams.update({"font.size": 8, "font.family": "serif", "font.serif": ["STIXGeneral", "DejaVu Serif"], "mathtext.fontset": "stix", "pdf.fonttype": 42, "axes.grid": True, "grid.alpha": .3})
 
 # Fig 2: source comparison, |offset| log scale
-fig, ax = plt.subplots(figsize=(3.5, 2.4))
+fig, ax = plt.subplots(figsize=(3.5, 2.0))
 ax.boxplot(data, whis=(0, 100), widths=.55, medianprops=dict(color="k"))
 ax.set_yscale("log"); ax.set_ylabel(r"|follower $-$ reference| ($\mu$s)")
 ax.set_xticks(range(1, 6), ["No\nsync", "NTP\nstyle", "AP\nTSF", "FTM\nhold", "Live\nFTM"])
@@ -328,6 +331,20 @@ N.update({
     "RefSdLo": f"{min(ref_sd):.2f}", "RefSdHi": f"{max(ref_sd):.2f}", "LiveSD": f"{LF_['sd']:.2f}",
 })
 assert N["LiveSD"] == "0.67"
+# ---- Revision 10 (journal review r9) ----
+L4 = [summ([float(r["offset_us"]) for r in rows if r["run"].endswith(run)]) for run in LIVE4]          # M7: four live-FTM records
+HO = stats["FTM holdover"]
+fire = [kv(l, "fire_us") for l in ht]
+N.update({
+    "LiveFourSdLo": f"{min(x['sd'] for x in L4):.2f}", "LiveFourSdHi": f"{max(x['sd'] for x in L4):.2f}",
+    "LiveFourMaxLo": f"{min(x['max'] for x in L4):.2f}", "LiveFourMaxHi": f"{max(x['max'] for x in L4):.2f}",
+    "QuantDiffSd": f"{QDIFF:.2f}", "HoldSD": f"{HO['sd']:.2f}", "HoldMax": f"{HO['max']:.2f}", "LiveMax": f"{LF_['max']:.2f}",
+    "FireLo": f"{min(a for a, _ in fire)}", "FireHi": f"{max(b for _, b in fire)}",
+})
+assert [N[k] for k in ("LiveFourSdLo", "LiveFourSdHi", "LiveFourMaxLo", "LiveFourMaxHi", "QuantDiffSd", "HoldSD", "HoldMax",
+                       "LiveMax", "FireLo", "FireHi")] == ["0.60", "0.67", "1.56", "1.94", "0.41", "0.70", "1.94", "1.69",
+                                                                 "2", "68"], N
+assert abs(HO["sd"] - LF_["sd"]) < 0.1 and HO["n"] == 357        # M3: holdover ~ live over 60 s
 assert [N[k] for k in ("LoadSD", "LoadMax", "LoadN", "HwDelayRange", "RowHalfMs", "XrowHalf", "TsfSdRatio", "TsfPnRatio", "TsfMaxRatio",
                        "TsfN", "LiveN", "BkSdRatio", "BkIqrRatio", "BkMadRatio", "BkN", "RefSdLo", "RefSdHi")] == [
     "0.89", "2.75", "180", "9.4", "2.5", "234", "32", "30", "108", "358", "180", "50", "24", "25", "75", "0.36", "0.46"], N
@@ -338,34 +355,6 @@ assert h["spread_us"]["median"] - (max(hdl) - min(hdl)) < 1                     
 assert xrow["median"] > 10 * h["spread_us"]["p95"] and s["jitter_fixed_removed_us"]["median"] > 20 * LIVE   # "far above"
 assert WH["sync_lost_by_node"] == {"1": 0, "2": 11, "3": 1} and WH["period_us"] == 100000 and WH["nodes"] == [0, 1, 2, 3] and len(n2) == 8
 assert h["spread_us"]["p95"] < s["spread_us"]["median"] and WH["jitter_spread_us"]["median"] < WR["jitter_spread_us"]["median"]   # direction of every claim
-# ---- End-to-end latency breakdown (dataset tracking/ab/latency_ab.stats.json, tracking/latency/) ----
-LA = json.load((DATA / "tracking/ab/latency_ab.stats.json").open())["hw"]
-LP = json.load((DATA / "tracking/latency/latency.stats.json").open())
-LR = {r["fps"]: r for r in LP["rates"]}
-assert sorted(LR) == [10, 20, 35] and LA["fps"] == 35
-rtt = [v["median"] for v in LP["icmp_rtt_ms"].values()]
-N.update({
-    "LatReady": f"{LA['frame_ready_us']['median'] / 1000:.1f}", "LatDet": f"{LA['detection_us']['median'] / 1000:.2f}",
-    "LatSend": f"{LA['send_after_capture_us']['median'] / 1000:.1f}",
-    "LatWifiMed": f"{LA['delivery_excess_us']['median'] / 1000:.0f}", "LatWifiPn": f"{LA['delivery_excess_us']['p95'] / 1000:.0f}",
-    "LatWifiPnn": f"{LA['delivery_excess_us']['p99'] / 1000:.0f}",
-    "LatSlotMed": f"{LA['slot_arrival_spread_us']['median'] / 1000:.1f}", "LatSlotPn": f"{LA['slot_arrival_spread_us']['p95'] / 1000:.0f}",
-    "LatTotMed": f"{LA['capture_to_last_camera_at_host_us']['median'] / 1000:.0f}", "LatTotPn": f"{LA['capture_to_last_camera_at_host_us']['p95'] / 1000:.0f}",
-    "LatTotPnn": f"{LA['capture_to_last_camera_at_host_us']['p99'] / 1000:.0f}",
-    "LatReadyTwenty": f"{LR[20]['frame_ready_us']['median'] / 1000:.0f}",
-    "LatRttLo": f"{min(rtt):.0f}", "LatRttHi": f"{max(rtt):.0f}",
-})
-# Claims the text makes: readout-bound handoff ~ one 35-fps period, it grows when the period grows,
-# detection is <1% of it, the node term exceeds the Wi-Fi 95th percentile, and the total is a lower bound (unknown one-way offset >= 0).
-assert 27 < LA["frame_ready_us"]["median"] / 1000 < 1e3 / 35 + 0.5
-assert LR[20]["frame_ready_us"]["median"] > 1.5 * LR[35]["frame_ready_us"]["median"]
-assert LA["detection_us"]["median"] < 0.01 * LA["frame_ready_us"]["median"]
-assert LA["send_after_capture_us"]["median"] > 2 * LA["delivery_excess_us"]["p95"]   # node term dominates even the Wi-Fi 95th pct
-assert [N[k] for k in ("LatReady", "LatSend", "LatWifiMed", "LatWifiPn", "LatTotMed", "LatTotPn")] == ["27.9", "28.3", "2", "12", "32", "49"], N
-assert abs(LA["host_vs_hub_drift_ppm"]) < 100   # host-vs-hub drift removed before measuring Wi-Fi excess
-N.update({"LatTotMedB": f"{LR[35]['capture_to_last_camera_at_host_us']['median'] / 1000:.0f}",   # dedicated latency run (rev9, M7)
-          "LatReadyTen": f"{LR[10]['frame_ready_us']['median'] / 1000:.0f}"})
-assert N["LatTotMedB"] == "42" and N["LatReadyTen"] == "66" and LR[35]["capture_to_last_camera_at_host_us"]["median"] > LA["capture_to_last_camera_at_host_us"]["median"]
 # ---- Robot-arm reference (dataset arm-reference/arm-reference.json) ----
 AR = json.load((DATA / "arm-reference/arm-reference.json").open())
 ARs = AR["summary"]; ARok = [r for r in AR["rows"] if "err" in r]
@@ -378,8 +367,8 @@ N.update({
     "ArmErrMed": f"{ARs['err_median_mm']:.1f}", "ArmErrRms": f"{ARs['err_rms_mm']:.1f}", "ArmErrMax": f"{ARs['err_max_mm']:.1f}",
     "ArmStaticSd": f"{ARs['static_ir_sd_median_mm']:.2f}", "ArmRepeat": f"{ARs['repeat_ir_dist_median_mm']:.1f}",
 })
-# claims in the text: held-out error is mm-level, the IR point itself is ~20x steadier than that,
-# and the IR point moves by about the same as the error between approach directions (arm repeatability bound)
+# claims in the text: held-out error is mm-level, the IR point itself is ~20x steadier than that;
+# ArmRepeat = tracker-measured distance between opposite-direction approaches to one commanded pose (not arm spec)
 assert 1.0 < ARs["err_median_mm"] < 2.0 and ARs["err_max_mm"] < 3.0
 assert ARs["static_ir_sd_median_mm"] * 10 < ARs["err_median_mm"]
 assert 0.5 * ARs["err_median_mm"] < ARs["repeat_ir_dist_median_mm"] < 1.5 * ARs["err_median_mm"]
@@ -390,17 +379,23 @@ _segs = [g for f in sorted((DATA / "arm-reference/dynamic").glob("seg-speed*.jso
 _ref = np.array(DY["summary"]["static_d_mm"])
 _mv = [r for r in DY["rows"]["1.0"] if 20 < r["speed_mm_s"] < 600 and any(g["t0_ns"] + 3e8 <= r["host_ns"] <= g["t1_ns"] - 3e8 for g in _segs)]
 _e = np.abs(np.array([r["d_mm"] for r in _mv]) - _ref).ravel()
-_fast = lambda sl: float(np.mean([v["half_diff_all_pairs_median_mm"] for k, v in PA[sl].items() if k in ("speed100/yaw", "speed50/yaw")]))
 _vmax = max(v["speed_max_mm_s"] for v in PA["1.0"].values())
 N.update({
     "DynN": f"{len(_mv):,}", "DynVmax": f"{round(_vmax, -1):.0f}", "DynErrMed": f"{np.median(_e):.1f}", "DynErrPn": f"{np.percentile(_e, 95):.1f}",
     "DynStaticSd": f"{max(DY['summary']['static_d_sd_mm']):.1f}",
-    "DynShearRaw": f"{_fast('0.0'):.2f}", "DynShearHalf": f"{_fast('0.5'):.2f}", "DynShearFull": f"{_fast('1.0'):.2f}",
 })
-# claims: moving distance error stays within static noise scale; row correction shrinks the
-# direction-reversing (timing) shear monotonically with slope, and the full slope is smallest
+# claims: moving distance error stays within static noise scale (row-slope shear conclusion dropped in rev10, M4c)
 assert np.median(_e) < 1.0 and np.percentile(_e, 95) < 2.0 and _vmax > 500
-assert _fast("1.0") < _fast("0.5") < _fast("0.0") and _fast("0.0") < 0.2
+# rev10 M4d: disclose exclusions (same segment + speed filters as _mv) and the large mislabel errors kept
+_inseg = [r for r in DY["rows"]["1.0"] if any(g["t0_ns"] + 3e8 <= r["host_ns"] <= g["t1_ns"] - 3e8 for g in _segs)]
+_slot = np.abs(np.array([r["d_mm"] for r in _mv]) - _ref).max(axis=1)
+# rev10 M4a: a skew dt moves a marker by v*dt -> detectable skew ~ static inter-LED noise / max speed
+_noise = float(np.median(DY["summary"]["static_d_sd_mm"]))
+N.update({"DynInSeg": f"{len(_inseg):,}".replace(",", "{,}"), "DynExcl": str(len(_inseg) - len(_mv)),
+          "DynBig": str(int((_slot > 5).sum())), "DynErrMax": f"{_slot.max():.0f}",
+          "DynNoise": f"{_noise:.2f}", "DynSkewDetMs": f"{_noise / _vmax * 1e3:.1f}"})
+assert (len(_inseg), len(_mv), N["DynExcl"], N["DynBig"], N["DynErrMax"]) == (1858, 1756, "102", "3", "187"), N
+assert 0.5 < _noise / _vmax * 1e3 < 5 and N["DynSkewDetMs"] == "1.0" and N["DynNoise"] == "0.55"
 # ---- Fig. 3: rig top view (calibrated geometry) + moving distance error vs speed ----
 _rig = DATA / "arm-reference/rig"
 _ex = json.load((_rig / "extrinsics.json").open())["extrinsics"]

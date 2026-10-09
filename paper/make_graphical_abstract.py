@@ -12,20 +12,19 @@ _here = Path(__file__).resolve().parent
 DATA = next(d for d in (_here.parent, Path("/mnt/e/Projects/ftm-camera-timesync-dataset")) if (d / "timesync-2026-09-09").is_dir())
 rows = list(csv.DictReader((DATA / "timesync-2026-09-09/analysis/offsets.csv").open()))
 CAMPAIGN = "20260909-065110-campaign"
-src = {"NTP-style UDP\n(unfiltered)": "mcpwm:ntp", "AP beacon\n(TSF)": "mcpwm:tsf", "Live FTM": "mcpwm:ftm"}
+src = {"NTP-style UDP\n(unfiltered)": "mcpwm:ntp", "AP TSF via\nESP-IDF API": "mcpwm:tsf", "Live FTM": "mcpwm:ftm"}   # rev10 M2: TSF as exposed by the API
 worst = {k: max(abs(float(r["offset_us"])) for r in rows if CAMPAIGN in r["run"] and r["method"] == m) for k, m in src.items()}
 assert [round(v, 1) for v in worst.values()] == [55503.1, 182.2, 1.7], worst
 
 R4 = next(r for r in json.load((DATA / "tracking/stats.json").open())["recordings"] if r["file"].startswith("tracking-1791273844728"))
 AB = json.load((DATA / "tracking/ab/tracking_ab.stats.json").open())   # same-session A/B, 4 cameras VGA 35 frames/s, 600 s each
-WH = json.load((DATA / "wrap-run/wrap-40min-hw.jsonl.stats.json").open())
-cap = {"software path\ncross-cam. spread, med.": AB["sw"]["spread_us"]["median"],
-       "software path\nspread, p95": AB["sw"]["spread_us"]["p95"],
-       "hardware timing\ncross-cam. spread, med.": AB["hw"]["spread_us"]["median"],
-       "hardware timing\nspread, p95": AB["hw"]["spread_us"]["p95"],
-       "rolling-shutter row\noffset (med.)": R4["C_marker_row_time_us"]["median"]}
-assert [round(v) for v in cap.values()] == [48, 243, 9, 12, 4986], cap
-assert WH["ftm_wraps_crossed"] == 8 and WH["late_frames"] == 0 and R4["duration_s"] > 296
+row = R4["C_marker_row_time_us"]["median"]
+cap = {"software path, delay-\nremoved spread, med.": AB["sw"]["jitter_fixed_removed_us"]["median"],
+       "software path, p95": AB["sw"]["jitter_fixed_removed_us"]["p95"],
+       "hardware timing, delay-\nremoved spread, med.": AB["hw"]["jitter_fixed_removed_us"]["median"],
+       "hardware timing, p95": AB["hw"]["jitter_fixed_removed_us"]["p95"],
+       "row-readout residual after\nhost correction, med. (up to)": row / 2}
+assert [round(v, 1) for v in cap.values()] == [40.7, 236.0, 2.1, 4.1, 2492.9], cap   # rev10 M6: residual = half the corrected row offset
 
 plt.rcParams.update({"font.family": "serif", "font.serif": ["STIXGeneral", "DejaVu Serif"], "mathtext.fontset": "stix", "pdf.fonttype": 42})
 fig = plt.figure(figsize=(6, 3), dpi=200)
@@ -49,10 +48,10 @@ def panel(x0, title, note, items, hi, color):
 
 
 panel(0, "1  Clock layer (GPIO, logic analyzer)",
-      "largest observed follower-to-reference GPIO offset,\n60-s records, cameras idle; not exposure timing",
+      "largest observed follower-to-reference GPIO offset\n(campaign 60-s records), cameras idle; separate build",
       worst, 2, "#1f77b4")
 panel(.5, "2  Capture layer (4-camera tracking)",
-      "frame-start (VSYNC) edge timestamps, not optical exposure;\nspread = max$-$min across 4 cameras per slot, VGA 35 frames/s",
+      "in each node's own clock estimate; trigger + stamp switched together;\nframe-start edges, not exposure; one paired 600-s run, VGA 35 frames/s",
       cap, 2, "#d62728")
 out = Path(__file__).parent / "figures"
 fig.savefig(out / "graphical_abstract.png"); fig.savefig(out / "graphical_abstract.pdf")
