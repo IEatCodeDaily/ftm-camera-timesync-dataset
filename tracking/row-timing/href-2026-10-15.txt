@@ -1,0 +1,10 @@
+# DVP line timing on the wire, node 1 (OV5640, VGA Y8 tracking, FREX hwtrig, hwstamp), firmware d2e6628a47d63d60 `cam href`.
+# GPIO ISR log over 120 ms while tracking ran. V = VSYNC edges (us, level after edge), H = HREF rising-edge runs [start+count@mean gap us].
+# Sensor: HTS 2060, VTS 984, row_period_ns reported 25750 (= HTS/SCLK), 0x3814/0x3815 = 0x31/0x31 (2x subsample), window rows 0..0x79f (1952).
+== 20 fps
+V 22218- 22269+ 47610- 47661+ 72218- 72269+ 97609- 97661+
+H [525+409@51.50] [22689+480@51.50] [48002+458@51.50] [72689+253@51.50]
+== 35 fps
+V 5693- 5744+ 8873- 8924+ 34265- 34316+ 37444- 37495+ 62836- 62887+ 66017- 66068+ 91409- 91460+ 94588- 94639+
+H [2558+57@51.48] [6085+42@51.49] [9344+480@51.50] [34657+42@51.49] [37915+480@51.50] [63228+42@51.49] [66488+457@51.50]
+# Result: output row period 51.50 us = 2 x 25.75 us; 480 rows span 24.72 ms; first row 0.47 ms after the VSYNC falling edge (the hwstamp edge).

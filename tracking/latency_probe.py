@@ -21,7 +21,8 @@ from mcap.reader import make_reader
 B, H = "http://127.0.0.1:3001", {"Content-Type": "application/json", "x-mocap-studio": "1"}
 DUR, OUT = float(sys.argv[1]), sys.argv[2]
 RATES = [int(x) for x in sys.argv[3:]] or [35, 20, 10]
-TAG = "-lowlat" if os.environ.get("LOWLAT") == "on" else ""   # LOWLAT=on: firmware `cam lowlat on`
+TAG = ("-lowlat" if os.environ.get("LOWLAT") == "on" else "") + (f"-vskip{os.environ['VSKIP']}" if os.environ.get("VSKIP") else "")
+# LOWLAT=on: firmware `cam lowlat on`; VSKIP=2|4: firmware `cam vskip` (VGA vertical sampling, 4 = half readout)
 os.makedirs(OUT, exist_ok=True)
 
 
@@ -39,12 +40,14 @@ def q(a):
 def run(fps):
     ns = {n["node_id"]: n["ip_address"] for n in json.loads(req("/api/nodes")) if n.get("online")}
     for ip in ns.values():
-        for c in ("cam hwstamp on", "cam hwtrig on", f"cam lowlat {os.environ.get('LOWLAT', 'off')}"):
-            for attempt in range(3):          # a node command occasionally 400s transiently
+        for c in ("cam hwstamp on", "cam hwtrig on", f"cam lowlat {os.environ.get('LOWLAT', 'off')}",
+                  *([f"cam vskip {os.environ['VSKIP']}"] if os.environ.get("VSKIP") else [])):
+            for attempt in range(6):          # a node command occasionally 400s transiently (Wi-Fi rejoin)
                 try: req(f"/api/nodes/{ip}/command", {"cmd": c}, "POST"); break
-                except Exception:
-                    if attempt == 2: raise
-                    time.sleep(2)
+                except Exception as e:
+                    print("retry", ip, c, e, flush=True)
+                    if attempt == 5: raise
+                    time.sleep(5)
     for attempt in range(3):              # start can 400 while a node is still settling
         try: req("/api/tracking/start", {"target_node_ids": sorted(ns), "resolution": "vga", "fps": fps}, "POST"); break
         except Exception:

@@ -1,0 +1,3 @@
+30 frame_ready med 13231.0 det med 6427.0 deliv excess med/p95/p99 1732.75 12587.637499999975 36458.6725 slot spread med/p95 8575.25 18207.75 capture->last cam at host med/p95/p99 29775.75 41179.3125 68787.75000000016
+20 frame_ready med 13235.0 det med 11427.0 deliv excess med/p95/p99 2187.75 18006.074999999964 41724.549999999894 slot spread med/p95 3798.25 18919.17499999994 capture->last cam at host med/p95/p99 29770.75 52977.674999999996 75581.47
+icmp {0: (1.0, 2.0), 1: (1.0, 1.0), 2: (1.0, 5.0), 3: (1.0, 5.0)}
