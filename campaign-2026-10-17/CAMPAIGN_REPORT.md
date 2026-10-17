@@ -129,11 +129,19 @@ worst measured offset: Live FTM 0.000/0.001 mm, AP TSF 0.024/0.041 mm, FTM + row
 **G2. Long static run**: recording started when F2 ended, but the arm moved during D2 until unix 1792256303. Use only data after that, with the arm parked at home (`tracking-<ts>.mcap`, see `long-run2.started`).
 Needs >= 7.4 h to replace the old claim.
 
-### Still open (needs a human or time)
-1. Calibrator wand run against caliper geometry, 10 min moved + 5 min static (someone has to move the wand).
-2. Dense-scene D0-D3 ablation (needs extra markers placed in view).
-3. G2 has to keep running overnight.
-4. Repoint paper `make_figures.py` and thesis `build.py` to these files (writing work, done after the data is final).
+### Scope decisions (Raisal, 2026-10-18)
+- Calibrator wand run: dropped, not needed for the paper or thesis claims.
+- Dense-scene ablation: dropped. With 4 cameras a dense scene is known to be ambiguous; it only makes
+  sense at 8+ cameras. The thesis states this as a limitation instead of measuring it.
+- Long static run: stopped at 00:56 after 58 min with the arm parked (`long-static2.mcap`,
+  `seg-long-static2.json`, analysis `long_static.py` -> `long-static2.json`). It replaces the old
+  7.4-h claim with a ~1-h one; the old 7.4-h recording stays valid for the old firmware only.
+  Result (dobot-marker-B, 4 LEDs, 120 829 labelled slots over 57.6 min, six 10-min bins):
+  bin-mean centroid range 0.41 / 0.29 / 0.15 mm (x/y/z), max LED-distance drift across bins 0.59 mm,
+  per-slot centroid SD 0.16 / 0.15 / 0.12 mm. No dropouts (each full bin ~21 000 slots = 35 fps).
+
+### Still open
+1. Repoint paper `make_figures.py` and thesis `build.py` to these files.
 
 ## Caveats
 - D/E use the arm (open-loop steppers): at 50 % speed the arm drifted ~0.8 mm per move cycle
