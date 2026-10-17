@@ -1,0 +1,62 @@
+{
+ "duration_s": 2400.0,
+ "period_us": 100000,
+ "slots": 24001,
+ "nodes": [
+  0,
+  1,
+  2,
+  3
+ ],
+ "frames": 95858,
+ "late_frames": 179,
+ "full_on_time_slots": 23741,
+ "full_slot_yield": 0.9891671180367485,
+ "slots_logged": 23999,
+ "full_yield_of_logged": 0.9945831076294845,
+ "frames_per_node": {
+  "0": 23983,
+  "1": 23954,
+  "2": 23966,
+  "3": 23955
+ },
+ "spread_us": {
+  "median": 771,
+  "p95": 816,
+  "p99": 839,
+  "max": 1106
+ },
+ "per_node_median_delay_us": {
+  "0": 1013,
+  "1": 1599,
+  "2": 832,
+  "3": 831.0
+ },
+ "jitter_spread_us": {
+  "median": 35.0,
+  "p95": 79.0,
+  "max": 339
+ },
+ "per_node_1min_median_range_us": {
+  "0": 36,
+  "1": 28,
+  "2": 22,
+  "3": 17.0
+ },
+ "ftm_wraps_crossed": 8,
+ "mac_wrap_s": 4294.967296,
+ "initiators": [
+  1,
+  2,
+  3
+ ],
+ "sync_lost_checks": 0,
+ "sync_checks": 1437,
+ "sync_lost_by_node": {
+  "1": 0,
+  "2": 0,
+  "3": 0
+ },
+ "max_sync_age_ms": 5466,
+ "logger_errors": 0
+}
