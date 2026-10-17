@@ -26,6 +26,11 @@ TAG = ("-lowlat" if os.environ.get("LOWLAT") == "on" else "") + (f"-vskip{os.env
 os.makedirs(OUT, exist_ok=True)
 
 
+# Operator's detector knobs (threshold/min_area/...): a start without them saves nulls as the page defaults.
+KNOBS = {k: v for k, v in json.load(open(os.environ.get("KNOBS", "/mnt/e/Projects/wireless-ir-mocap/mocap/studio/tracking_start.json"))).items()
+         if k in ("min_area", "threshold", "min_cameras", "two_ray_gate_mm") and v is not None}
+
+
 def req(path, body=None, method="GET"):
     r = urllib.request.Request(B + path, json.dumps(body).encode() if body is not None else None, H, method=method)
     return urllib.request.urlopen(r, timeout=120).read().decode()
@@ -49,7 +54,7 @@ def run(fps):
                     if attempt == 5: raise
                     time.sleep(5)
     for attempt in range(3):              # start can 400 while a node is still settling
-        try: req("/api/tracking/start", {"target_node_ids": sorted(ns), "resolution": "vga", "fps": fps}, "POST"); break
+        try: req("/api/tracking/start", {"target_node_ids": sorted(ns), "resolution": "vga", "fps": fps**KNOBS}, "POST"); break
         except Exception:
             if attempt == 2: raise
             req("/api/tracking/stop", {}, "POST"); time.sleep(10)

@@ -18,6 +18,11 @@ FPS = 35
 os.makedirs(OUT, exist_ok=True)
 
 
+# Operator's detector knobs (threshold/min_area/...): a start without them saves nulls as the page defaults.
+KNOBS = {k: v for k, v in json.load(open(os.environ.get("KNOBS", "/mnt/e/Projects/wireless-ir-mocap/mocap/studio/tracking_start.json"))).items()
+         if k in ("min_area", "threshold", "min_cameras", "two_ray_gate_mm") and v is not None}
+
+
 def req(path, body=None, method="GET"):
     r = urllib.request.Request(B + path, json.dumps(body).encode() if body is not None else None, H, method=method)
     return urllib.request.urlopen(r, timeout=120).read().decode()
@@ -32,7 +37,7 @@ def session(tag, on):
     ns = {n["node_id"]: n["ip_address"] for n in json.loads(req("/api/nodes")) if n.get("online")}
     for ip in ns.values():
         for c in (f"cam hwstamp {on}", f"cam hwtrig {on}"): node_cmd(ip, c)
-    req("/api/tracking/start", {"target_node_ids": sorted(ns), "resolution": "vga", "fps": FPS}, "POST")
+    req("/api/tracking/start", {"target_node_ids": sorted(ns), "resolution": "vga", "fps": FPS**KNOBS}, "POST")
     time.sleep(20)                                       # start-up + heal window
     for ip in ns.values():
         for c in ("cam hwstamp stats", "cam hwtrig stats"): node_cmd(ip, c)   # reset counters

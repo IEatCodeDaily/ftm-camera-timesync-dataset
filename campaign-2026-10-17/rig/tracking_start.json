@@ -1,0 +1,9 @@
+{
+  "target_node_ids": [],
+  "resolution": "vga",
+  "fps": 35,
+  "min_area": 1,
+  "threshold": 107,
+  "min_cameras": 2,
+  "two_ray_gate_mm": 5.0
+}

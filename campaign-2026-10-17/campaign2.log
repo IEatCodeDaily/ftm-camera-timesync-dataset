@@ -1,0 +1,155 @@
+=== 19:59:00 D arm static reference, speed 15
+tracking started on 4 nodes
+speed 15.0 homed at [249.9791717529297, -1.982519097509794e-05, 0.0990447998046875]
+rep 0 pose  0 n 19 |err|   7.05 mm  ir sd 0.14
+rep 0 pose  1 n 19 |err|   5.66 mm  ir sd 0.50
+rep 0 pose  2 n 19 |err|   7.50 mm  ir sd 0.12
+rep 0 pose  3 n 20 |err|   7.34 mm  ir sd 0.14
+rep 0 pose  4 n 19 |err|   6.66 mm  ir sd 0.43
+rep 0 pose  5 n 20 |err|   7.18 mm  ir sd 0.21
+rep 0 pose  6 n 19 |err|   6.93 mm  ir sd 0.12
+rep 0 pose  7 n 19 |err|   6.34 mm  ir sd 0.29
+rep 0 pose  8 n 20 |err|   4.73 mm  ir sd 0.21
+rep 0 pose  9 n 19 |err|   6.65 mm  ir sd 0.10
+rep 0 pose 10 n 20 |err|   5.90 mm  ir sd 0.40
+rep 0 pose 11 n 20 |err|   4.54 mm  ir sd 0.11
+rep 0 pose 12 n 19 |err|   6.94 mm  ir sd 0.11
+rep 0 pose 13 n 19 |err|   6.49 mm  ir sd 0.08
+rep 0 pose 14 n 19 |err|   5.99 mm  ir sd 0.09
+rep 0 pose 15 n 19 |err|   3.83 mm  ir sd 0.08
+rep 0 pose 16 n 19 |err|   2.68 mm  ir sd 0.32
+rep 0 pose 17 n 19 |err|   3.52 mm  ir sd 0.17
+rep 1 pose  0 n 19 |err|   3.28 mm  ir sd 0.20
+rep 1 pose  1 n 19 |err|   1.14 mm  ir sd 0.33
+rep 1 pose  2 n 19 |err|   2.49 mm  ir sd 0.09
+rep 1 pose  3 n 19 |err|   2.10 mm  ir sd 0.14
+rep 1 pose  4 n 19 |err|   2.11 mm  ir sd 0.12
+rep 1 pose  5 n 19 |err|   2.18 mm  ir sd 0.10
+rep 1 pose  6 n 19 |err|   2.08 mm  ir sd 0.14
+rep 1 pose  7 n 19 |err|   3.15 mm  ir sd 0.18
+rep 1 pose  8 n 19 |err|   3.60 mm  ir sd 0.10
+rep 1 pose  9 n 20 |err|   1.90 mm  ir sd 0.28
+rep 1 pose 10 n 20 |err|   3.07 mm  ir sd 0.25
+rep 1 pose 11 n 20 |err|   3.60 mm  ir sd 0.12
+rep 1 pose 12 n 19 |err|   3.21 mm  ir sd 0.23
+rep 1 pose 13 n 19 |err|   2.10 mm  ir sd 0.18
+rep 1 pose 14 n 19 |err|   3.02 mm  ir sd 0.13
+rep 1 pose 15 n 19 |err|   3.24 mm  ir sd 0.12
+rep 1 pose 16 n 19 |err|   2.64 mm  ir sd 0.41
+rep 1 pose 17 n 19 |err|   5.53 mm  ir sd 0.09
+{
+ "n_poses": 18,
+ "repeats": 2,
+ "n_ok": 36,
+ "n_fail": 0,
+ "err_median_mm": 3.600672375625739,
+ "err_rms_mm": 4.759408905737873,
+ "err_max_mm": 7.498544864938104,
+ "err_p95_mm": 7.176089511228493,
+ "per_axis_rms_mm": [
+  0.9614808022617488,
+  3.072070028662249,
+  3.505697296957369
+ ],
+ "static_ir_sd_median_mm": 0.13909386171310306,
+ "ee_body": "dobot-marker-B",
+ "t_unix": 1792242111.772942,
+ "repeat_ir_dist_median_mm": 3.442711211211289
+}
+=== 20:01:51 E arm dynamic sweeps
+speed 15.0 homed at [249.92800903320312, -1.982113280973863e-05, 0.0066375732421875]
+speed15 yaw 0 -> [196.6, 137.7, 50] 3.65s
+speed15 yaw 0 -> [196.6, -137.7, 50] 3.65s
+speed15 yaw 1 -> [196.6, 137.7, 50] 3.66s
+speed15 yaw 1 -> [196.6, -137.7, 50] 3.65s
+speed15 yaw 2 -> [196.6, 137.7, 50] 3.66s
+speed15 yaw 2 -> [196.6, -137.7, 50] 3.66s
+speed15 yaw 3 -> [196.6, 137.7, 50] 3.66s
+speed15 yaw 3 -> [196.6, -137.7, 50] 3.65s
+speed15 radial 0 -> [275.0, 0.0, 50] 2.45s
+speed15 radial 0 -> [175.0, 0.0, 50] 2.44s
+speed15 radial 1 -> [275.0, 0.0, 50] 2.45s
+speed15 radial 1 -> [175.0, 0.0, 50] 2.44s
+speed15 radial 2 -> [275.0, 0.0, 50] 2.44s
+speed15 radial 2 -> [175.0, 0.0, 50] 2.44s
+speed15 radial 3 -> [275.0, 0.0, 50] 2.44s
+speed15 radial 3 -> [175.0, 0.0, 50] 2.44s
+speed15 vert 0 -> [222.2, 59.5, 105] 2.64s
+speed15 vert 0 -> [222.2, 59.5, -5] 2.64s
+speed15 vert 1 -> [222.2, 59.5, 105] 2.85s
+speed15 vert 1 -> [222.2, 59.5, -5] 2.64s
+speed15 vert 2 -> [222.2, 59.5, 105] 2.64s
+speed15 vert 2 -> [222.2, 59.5, -5] 2.65s
+speed15 vert 3 -> [222.2, 59.5, 105] 2.64s
+speed15 vert 3 -> [222.2, 59.5, -5] 2.65s
+after-speed15 [200.0, 0.0, 50] n 20 err [1.18, 2.76, -4.39] ir [-192.1, 59.1, 1.7]
+after-speed15 [250.0, 0.0, 50] n 20 err [0.87, 2.51, -4.56] ir [-146.9, 79.2, 5.5]
+speed 15.0 homed at [250.12989807128906, -1.983714355446864e-05, 0.04105377197265625]
+rehomed-after-speed15 [200.0, 0.0, 50] n 20 err [0.71, 2.09, -3.96] ir [-192.6, 58.4, 2.1]
+rehomed-after-speed15 [250.0, 0.0, 50] n 20 err [0.38, 1.87, -4.32] ir [-147.4, 78.5, 5.8]
+speed 50.0 homed at [249.9143524169922, -1.982005051104352e-05, -0.06293487548828125]
+speed50 yaw 0 -> [196.6, 137.7, 50] 2.04s
+speed50 yaw 0 -> [196.6, -137.7, 50] 2.03s
+speed50 yaw 1 -> [196.6, 137.7, 50] 2.03s
+speed50 yaw 1 -> [196.6, -137.7, 50] 2.03s
+speed50 yaw 2 -> [196.6, 137.7, 50] 2.03s
+speed50 yaw 2 -> [196.6, -137.7, 50] 2.04s
+speed50 yaw 3 -> [196.6, 137.7, 50] 2.03s
+speed50 yaw 3 -> [196.6, -137.7, 50] 2.03s
+speed50 radial 0 -> [275.0, 0.0, 50] 1.63s
+speed50 radial 0 -> [175.0, 0.0, 50] 1.63s
+speed50 radial 1 -> [275.0, 0.0, 50] 1.63s
+speed50 radial 1 -> [175.0, 0.0, 50] 1.63s
+speed50 radial 2 -> [275.0, 0.0, 50] 1.63s
+speed50 radial 2 -> [175.0, 0.0, 50] 1.63s
+speed50 radial 3 -> [275.0, 0.0, 50] 1.63s
+speed50 radial 3 -> [175.0, 0.0, 50] 1.63s
+speed50 vert 0 -> [222.2, 59.5, 105] 1.63s
+speed50 vert 0 -> [222.2, 59.5, -5] 1.63s
+speed50 vert 1 -> [222.2, 59.5, 105] 1.63s
+speed50 vert 1 -> [222.2, 59.5, -5] 1.62s
+speed50 vert 2 -> [222.2, 59.5, 105] 1.62s
+speed50 vert 2 -> [222.2, 59.5, -5] 1.66s
+speed50 vert 3 -> [222.2, 59.5, 105] 1.63s
+speed50 vert 3 -> [222.2, 59.5, -5] 1.63s
+after-speed50 [200.0, 0.0, 50] n 20 err [1.38, 2.92, -4.42] ir [-191.9, 59.2, 1.7]
+after-speed50 [250.0, 0.0, 50] n 20 err [1.14, 2.57, -4.58] ir [-146.7, 79.2, 5.5]
+speed 15.0 homed at [249.87841796875, -1.9817200154648162e-05, -0.046966552734375]
+rehomed-after-speed50 [200.0, 0.0, 50] n 20 err [1.49, 2.34, -3.01] ir [-191.8, 58.7, 3.1]
+rehomed-after-speed50 [250.0, 0.0, 50] n 20 err [0.07, 1.25, -3.37] ir [-147.7, 77.9, 6.7]
+speed 100.0 homed at [249.9913787841797, -1.9826158677460626e-05, -0.0811614990234375]
+speed100 yaw 0 -> [196.6, 137.7, 50] 1.63s
+speed100 yaw 0 -> [196.6, -137.7, 50] 1.63s
+speed100 yaw 1 -> [196.6, 137.7, 50] 1.63s
+speed100 yaw 1 -> [196.6, -137.7, 50] 1.63s
+speed100 yaw 2 -> [196.6, 137.7, 50] 1.63s
+speed100 yaw 2 -> [196.6, -137.7, 50] 1.63s
+speed100 yaw 3 -> [196.6, 137.7, 50] 1.63s
+speed100 yaw 3 -> [196.6, -137.7, 50] 1.63s
+speed100 radial 0 -> [275.0, 0.0, 50] 1.22s
+speed100 radial 0 -> [175.0, 0.0, 50] 1.22s
+speed100 radial 1 -> [275.0, 0.0, 50] 1.22s
+speed100 radial 1 -> [175.0, 0.0, 50] 1.22s
+speed100 radial 2 -> [275.0, 0.0, 50] 1.22s
+speed100 radial 2 -> [175.0, 0.0, 50] 1.22s
+speed100 radial 3 -> [275.0, 0.0, 50] 1.22s
+speed100 radial 3 -> [175.0, 0.0, 50] 1.22s
+speed100 vert 0 -> [222.2, 59.5, 105] 1.22s
+speed100 vert 0 -> [222.2, 59.5, -5] 1.42s
+speed100 vert 1 -> [222.2, 59.5, 105] 1.43s
+speed100 vert 1 -> [222.2, 59.5, -5] 1.22s
+speed100 vert 2 -> [222.2, 59.5, 105] 1.22s
+speed100 vert 2 -> [222.2, 59.5, -5] 1.42s
+speed100 vert 3 -> [222.2, 59.5, 105] 1.22s
+speed100 vert 3 -> [222.2, 59.5, -5] 1.43s
+after-speed100 [200.0, 0.0, 50] n 20 err [1.08, 2.89, -4.94] ir [-192.2, 59.2, 1.2]
+after-speed100 [250.0, 0.0, 50] n 20 err [1.06, 2.7, -4.88] ir [-146.7, 79.4, 5.2]
+speed 15.0 homed at [249.93206787109375, -1.9821454770863056e-05, -0.0537109375]
+rehomed-after-speed100 [200.0, 0.0, 50] n 20 err [0.78, 2.17, -3.89] ir [-192.5, 58.5, 2.2]
+rehomed-after-speed100 [250.0, 0.0, 50] n 20 err [0.67, 1.98, -3.96] ir [-147.1, 78.7, 6.2]
+tracking stopped on 4 nodes
+copied /mnt/e/Projects/wireless-ir-mocap/mocap/studio/recordings/tracking-1792241569443532900.mcap -> /mnt/e/Projects/ftm-camera-timesync-dataset/campaign-2026-10-17/arm-session.mcap
+=== 20:09:06 F wrap run 40 min
+=== 20:49:52 G long static run
+tracking started on 4 nodes
+=== 20:50:03 DONE

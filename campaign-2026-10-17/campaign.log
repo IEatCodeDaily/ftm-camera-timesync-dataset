@@ -1,0 +1,209 @@
+=== 19:25:19 A ablation firmware ladder
+F0_vskip2: fps={'1': 35.0, '2': 34.9, '3': 35.0, '0': 35.0} full_slots=2094 det_med=126us send_med=28.7ms e2e_med=37.8ms mk/pkt=4.99
+F1_vskip4: fps={'1': 23.7, '2': 34.0, '0': 28.3, '3': 30.8} full_slots=924 det_med=6518us send_med=20.2ms e2e_med=44.9ms mk/pkt=4.99
+F2_fast: fps={'1': 35.0, '0': 35.0, '2': 35.0, '3': 35.0} full_slots=2100 det_med=105us send_med=18.6ms e2e_med=29.8ms mk/pkt=5.14
+F2_fast30: fps={'1': 30.0, '2': 30.0, '0': 30.0, '3': 30.0} full_slots=1800 det_med=105us send_med=18.4ms e2e_med=29.2ms mk/pkt=5.21
+F2_fast20: fps={'2': 20.0, '3': 20.0, '1': 20.0, '0': 20.0} full_slots=1200 det_med=81us send_med=18.4ms e2e_med=30.9ms mk/pkt=3.30
+F0_vskip2_20: fps={'0': 20.0, '2': 20.0, '3': 20.0, '1': 20.0} full_slots=1199 det_med=69us send_med=26.7ms e2e_med=37.5ms mk/pkt=2.41
+done
+=== 19:34:15 B capture-path hw timing A/B
+sw {
+ "cameras": [
+  0,
+  1,
+  2,
+  3
+ ],
+ "packets": 12586,
+ "slots": 3150,
+ "full_slots": 3136,
+ "full_yield": 0.9955555555555555,
+ "per_camera_fps": {
+  "0": 34.84444444444444,
+  "1": 35.0,
+  "2": 35.0,
+  "3": 35.0
+ },
+ "spread_us": {
+  "median": 540.0,
+  "p95": 573.0,
+  "p99": 767.3000000000002,
+  "max": 925.0
+ },
+ "jitter_fixed_removed_us": {
+  "median": 13.71429443359375,
+  "p95": 197.75000762939453,
+  "p99": 318.04285583496096,
+  "max": 428.8571472167969
+ },
+ "per_camera_offset_from_slot_us": {
+  "0": 1352.7142791748047,
+  "1": 1766.5714263916016,
+  "2": 1228.4285736083984,
+  "3": 1228.8571319580078
+ }
+}
+hw {
+ "cameras": [
+  0,
+  1,
+  2,
+  3
+ ],
+ "packets": 12601,
+ "slots": 3151,
+ "full_slots": 3150,
+ "full_yield": 1.0,
+ "per_camera_fps": {
+  "0": 35.0,
+  "1": 35.0,
+  "2": 35.0,
+  "3": 35.01111111111111
+ },
+ "spread_us": {
+  "median": 538.0,
+  "p95": 540.0,
+  "p99": 541.0,
+  "max": 543.0
+ },
+ "jitter_fixed_removed_us": {
+  "median": 1.4285736083984375,
+  "p95": 2.8571319580078125,
+  "p99": 3.71429443359375,
+  "max": 5.4285736083984375
+ },
+ "per_camera_offset_from_slot_us": {
+  "0": 750.5714263916016,
+  "1": 1178.8571319580078,
+  "2": 640.8571319580078,
+  "3": 641.0
+ }
+}
+=== 19:38:15 C latency probe
+35 frame_ready med 18218.0 det med 105.0 deliv excess med/p95/p99 2698.125 25161.462499999972 54439.60999999999 slot spread med/p95 9246.25 30811.625 capture->last cam at host med/p95/p99 29121.25 60616.125 96887.375
+30 frame_ready med 18136.0 det med 105.0 deliv excess med/p95/p99 2750.25 26054.0 55350.25 slot spread med/p95 8757.75 27961.38749999999 capture->last cam at host med/p95/p99 29363.125 54465.92499999998 86921.30999999988
+20 frame_ready med 18352.0 det med 86.0 deliv excess med/p95/p99 3795.75 32385.0 56462.25 slot spread med/p95 11272.5 36829.57499999998 capture->last cam at host med/p95/p99 32075.625 65263.9125 106906.245
+icmp {0: (1.0, 3.5), 1: (1.0, 1.0), 2: (1.0, 4.0), 3: (1.0, 14.0)}
+=== 19:47:16 D arm static reference
+tracking started on 4 nodes
+rep 0 pose  0 n 19 |err|   7.52 mm  ir sd 2.56
+rep 0 pose  1 n 19 |err|   9.02 mm  ir sd 0.65
+rep 0 pose  2 n 19 |err|  10.40 mm  ir sd 0.59
+rep 0 pose  3 n 19 |err|  10.56 mm  ir sd 0.65
+rep 0 pose  4 n 19 |err|  10.57 mm  ir sd 0.53
+rep 0 pose  5 n 19 |err|  11.81 mm  ir sd 0.63
+rep 0 pose  6 n 19 |err|  12.11 mm  ir sd 0.71
+rep 0 pose  7 n 20 |err|  11.18 mm  ir sd 1.24
+rep 0 pose  9 n 19 |err|  10.74 mm  ir sd 0.80
+rep 0 pose 10 n 19 |err|  12.34 mm  ir sd 1.03
+rep 0 pose 11 n 19 |err|  12.93 mm  ir sd 0.56
+rep 0 pose 12 n 16 |err|  12.45 mm  ir sd 1.47
+rep 0 pose 13 n 18 |err|  12.24 mm  ir sd 1.62
+rep 0 pose 14 n 19 |err|  12.38 mm  ir sd 1.12
+rep 0 pose 15 n 19 |err|  13.41 mm  ir sd 1.88
+rep 0 pose 16 n 19 |err|  13.80 mm  ir sd 0.71
+rep 0 pose 17 n 17 |err|  12.97 mm  ir sd 1.67
+rep 1 pose  0 n 20 |err|  12.99 mm  ir sd 1.70
+rep 1 pose  1 n 20 |err|  13.90 mm  ir sd 0.71
+rep 1 pose  2 n 19 |err|  13.80 mm  ir sd 1.46
+rep 1 pose  3 n 19 |err|  13.13 mm  ir sd 0.83
+rep 1 pose  4 n 19 |err|  13.31 mm  ir sd 0.71
+rep 1 pose  5 n 19 |err|  13.77 mm  ir sd 0.98
+rep 1 pose  6 n 19 |err|  14.17 mm  ir sd 1.26
+rep 1 pose  7 n 19 |err|  13.57 mm  ir sd 0.70
+rep 1 pose  8 n 19 |err|  12.31 mm  ir sd 0.51
+rep 1 pose 10 n 19 |err|  13.85 mm  ir sd 0.94
+rep 1 pose 11 n 20 |err|  13.61 mm  ir sd 0.35
+rep 1 pose 12 n 20 |err|  15.29 mm  ir sd 0.77
+rep 1 pose 13 n 19 |err|  13.99 mm  ir sd 0.52
+rep 1 pose 14 n 19 |err|  14.07 mm  ir sd 0.58
+rep 1 pose 15 n 19 |err|  15.80 mm  ir sd 0.56
+rep 1 pose 16 n 17 |err|  14.26 mm  ir sd 0.68
+rep 1 pose 17 n 19 |err|  13.22 mm  ir sd 2.60
+{
+ "n_poses": 18,
+ "repeats": 2,
+ "n_ok": 34,
+ "n_fail": 2,
+ "err_median_mm": 13.058374007603007,
+ "err_rms_mm": 12.802280117711769,
+ "err_max_mm": 15.801992240747946,
+ "err_p95_mm": 14.260205220011349,
+ "per_axis_rms_mm": [
+  4.976150008777323,
+  8.91759324935269,
+  7.720935043218719
+ ],
+ "static_ir_sd_median_mm": 0.7387634515456352,
+ "ee_body": "dobot-marker-B",
+ "t_unix": 1792241352.1177242,
+ "repeat_ir_dist_median_mm": 3.5006045693995365
+}
+=== 19:49:12 E arm dynamic sweeps
+b'{"follow":{"distance_mm":300.0,"max_speed_mm_s":300.0,"max_accel_mm_s2":3000.0,"drift_gain":0.1,"stiffness":4.0,"lead_s"'
+speed15 yaw 0 -> [196.6, 137.7, 50] 2.04s
+speed15 yaw 0 -> [196.6, -137.7, 50] 2.03s
+speed15 yaw 1 -> [196.6, 137.7, 50] 2.03s
+speed15 yaw 1 -> [196.6, -137.7, 50] 2.03s
+speed15 yaw 2 -> [196.6, 137.7, 50] 2.03s
+speed15 yaw 2 -> [196.6, -137.7, 50] 2.04s
+speed15 yaw 3 -> [196.6, 137.7, 50] 2.03s
+speed15 yaw 3 -> [196.6, -137.7, 50] 2.03s
+speed15 radial 0 -> [275.0, 0.0, 50] 1.63s
+speed15 radial 0 -> [175.0, 0.0, 50] 1.64s
+speed15 radial 1 -> [275.0, 0.0, 50] 1.63s
+speed15 radial 1 -> [175.0, 0.0, 50] 1.63s
+speed15 radial 2 -> [275.0, 0.0, 50] 1.63s
+speed15 radial 2 -> [175.0, 0.0, 50] 1.62s
+speed15 radial 3 -> [275.0, 0.0, 50] 1.62s
+speed15 radial 3 -> [175.0, 0.0, 50] 1.62s
+speed15 vert 0 -> [222.2, 59.5, 105] 1.63s
+speed15 vert 0 -> [222.2, 59.5, -5] 1.63s
+speed15 vert 1 -> [222.2, 59.5, 105] 1.63s
+speed15 vert 1 -> [222.2, 59.5, -5] 1.63s
+speed15 vert 2 -> [222.2, 59.5, 105] 1.63s
+speed15 vert 2 -> [222.2, 59.5, -5] 1.63s
+speed15 vert 3 -> [222.2, 59.5, 105] 1.63s
+speed15 vert 3 -> [222.2, 59.5, -5] 1.63s
+b'{"follow":{"distance_mm":300.0,"max_speed_mm_s":300.0,"max_accel_mm_s2":3000.0,"drift_gain":0.1,"stiffness":4.0,"lead_s"'
+speed50 yaw 0 -> [196.6, 137.7, 50] 2.03s
+speed50 yaw 0 -> [196.6, -137.7, 50] 2.03s
+speed50 yaw 1 -> [196.6, 137.7, 50] 2.03s
+speed50 yaw 1 -> [196.6, -137.7, 50] 2.03s
+speed50 yaw 2 -> [196.6, 137.7, 50] 2.03s
+speed50 yaw 2 -> [196.6, -137.7, 50] 2.03s
+speed50 yaw 3 -> [196.6, 137.7, 50] 2.04s
+speed50 yaw 3 -> [196.6, -137.7, 50] 2.04s
+speed50 radial 0 -> [275.0, 0.0, 50] 1.63s
+speed50 radial 0 -> [175.0, 0.0, 50] 1.63s
+speed50 radial 1 -> [275.0, 0.0, 50] 1.63s
+speed50 radial 1 -> [175.0, 0.0, 50] 1.63s
+speed50 radial 2 -> [275.0, 0.0, 50] 1.62s
+speed50 radial 2 -> [175.0, 0.0, 50] 1.63s
+speed50 radial 3 -> [275.0, 0.0, 50] 1.63s
+speed50 radial 3 -> [175.0, 0.0, 50] 1.63s
+speed50 vert 0 -> [222.2, 59.5, 105] 1.63s
+speed50 vert 0 -> [222.2, 59.5, -5] 1.63s
+speed50 vert 1 -> [222.2, 59.5, 105] 1.63s
+speed50 vert 1 -> [222.2, 59.5, -5] 1.63s
+speed50 vert 2 -> [222.2, 59.5, 105] 1.63s
+speed50 vert 2 -> [222.2, 59.5, -5] 1.63s
+speed50 vert 3 -> [222.2, 59.5, 105] 1.63s
+speed50 vert 3 -> [222.2, 59.5, -5] 1.63s
+b'{"follow":{"distance_mm":300.0,"max_speed_mm_s":300.0,"max_accel_mm_s2":3000.0,"drift_gain":0.1,"stiffness":4.0,"lead_s"'
+speed100 yaw 0 -> [196.6, 137.7, 50] 2.03s
+speed100 yaw 0 -> [196.6, -137.7, 50] 2.03s
+speed100 yaw 1 -> [196.6, 137.7, 50] 2.04s
+speed100 yaw 1 -> [196.6, -137.7, 50] 2.03s
+speed100 yaw 2 -> [196.6, 137.7, 50] 2.03s
+speed100 yaw 2 -> [196.6, -137.7, 50] 2.03s
+speed100 yaw 3 -> [196.6, 137.7, 50] 2.03s
+speed100 yaw 3 -> [196.6, -137.7, 50] 2.03s
+speed100 radial 0 -> [275.0, 0.0, 50] 1.63s
+speed100 radial 0 -> [175.0, 0.0, 50] 1.63s
+speed100 radial 1 -> [275.0, 0.0, 50] 1.63s
+speed100 radial 1 -> [175.0, 0.0, 50] 1.62s
+speed100 radial 2 -> [275.0, 0.0, 50] 1.62s
+speed100 radial 2 -> [175.0, 0.0, 50] 1.63s
+speed100 radial 3 -> [275.0, 0.0, 50] 1.63s
+speed100 radial 3 -> [175.0, 0.0, 50] 1.63s

@@ -1,0 +1,69 @@
+{
+ "tag": "sw",
+ "hw": "off",
+ "t0": 1792240479.6362,
+ "dur": 90.0,
+ "node_stats": {
+  "192.168.137.172": [
+   "hwstamp on=0 hits=0 misses=0 rise=0 fall=0 sw_lag_us=2147483647..-2147483648 mean=0 isr_lag_us=2147483647..-2147483648",
+   "hwtrig on=0 ok=0 late=0 nack=0 timeout=0 busy=0 fire_us=2147483647..-2147483648 done_us=2147483647..-2147483648"
+  ],
+  "192.168.137.197": [
+   "hwstamp on=0 hits=0 misses=0 rise=0 fall=0 sw_lag_us=2147483647..-2147483648 mean=0 isr_lag_us=2147483647..-2147483648",
+   "hwtrig on=0 ok=0 late=0 nack=0 timeout=0 busy=0 fire_us=2147483647..-2147483648 done_us=2147483647..-2147483648"
+  ],
+  "192.168.137.230": [
+   "hwstamp on=0 hits=0 misses=0 rise=0 fall=0 sw_lag_us=2147483647..-2147483648 mean=0 isr_lag_us=2147483647..-2147483648",
+   "hwtrig on=0 ok=0 late=0 nack=0 timeout=0 busy=0 fire_us=2147483647..-2147483648 done_us=2147483647..-2147483648"
+  ],
+  "192.168.137.31": [
+   "hwstamp on=0 hits=0 misses=0 rise=0 fall=0 sw_lag_us=2147483647..-2147483648 mean=0 isr_lag_us=2147483647..-2147483648",
+   "hwtrig on=0 ok=0 late=0 nack=0 timeout=0 busy=0 fire_us=2147483647..-2147483648 done_us=2147483647..-2147483648"
+  ]
+ },
+ "status": {
+  "running": true,
+  "resolution": "vga",
+  "phase": "running",
+  "generation": 27,
+  "active_node_ids": [
+   0,
+   1,
+   2,
+   3
+  ],
+  "last_error": null,
+  "recording": {
+   "active": true,
+   "path": "E:\\Projects\\wireless-ir-mocap\\mocap\\studio\\recordings\\tracking-1792240457022685100.mcap",
+   "enqueued": 40,
+   "written": 40,
+   "dropped": 0,
+   "write_errors": 0
+  },
+  "detect": {
+   "pose_hz": 34.999999475,
+   "quorum_yield": 0.999744,
+   "late_observations": 0,
+   "rig_ready": true,
+   "pixel_bias": {
+    "0": [
+     0.5031331666416019,
+     -0.03910011188637315
+    ],
+    "1": [
+     0.699655431520601,
+     0.5677975890763451
+    ],
+    "2": [
+     -0.6899616018810637,
+     -0.08215066388418363
+    ],
+    "3": [
+     -0.5128269962811389,
+     -0.44654681330578827
+    ]
+   }
+  }
+ }
+}
