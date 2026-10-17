@@ -1,0 +1,16 @@
+D0_scalar: fps={'3': 17.5, '0': 17.5, '1': 17.5, '2': 17.5} full_slots=0 det_med=47736us send_med=104.7ms e2e_med=nanms mk/pkt=5.95
+D1_swar: fps={'1': 34.5, '2': 34.9, '0': 34.5, '3': 34.5} full_slots=2008 det_med=22779us send_med=51.0ms e2e_med=59.7ms mk/pkt=5.10
+D2_pieprefix: FAILED HTTP Error 400: Bad Request
+D3_piefull: fps={'2': 35.0, '1': 35.0, '3': 35.0, '0': 35.0} full_slots=2099 det_med=8822us send_med=37.3ms e2e_med=57.5ms mk/pkt=5.11
+L0_naive10: fps={'1': 10.0, '2': 10.0, '3': 10.0, '0': 10.0} full_slots=600 det_med=46600us send_med=72.5ms e2e_med=88.3ms mk/pkt=4.91
+L0_naive: fps={'1': 11.2, '3': 11.2, '2': 11.2, '0': 11.2} full_slots=0 det_med=46592us send_med=74.8ms e2e_med=nanms mk/pkt=5.94
+L1_simd: fps={'1': 16.7, '3': 16.8, '2': 16.7, '0': 16.6} full_slots=1 det_med=6568us send_med=34.7ms e2e_med=75.9ms mk/pkt=5.09
+L1_simd20: fps={'3': 9.5, '0': 9.5, '1': 9.5, '2': 9.5} full_slots=0 det_med=6598us send_med=56.2ms e2e_med=nanms mk/pkt=2.82
+L2_syncbufs: fps={'1': 35.0, '2': 35.0, '0': 35.0, '3': 35.0} full_slots=2099 det_med=8764us send_med=37.0ms e2e_med=44.3ms mk/pkt=5.08
+L3_rowstream: fps={'1': 35.0, '3': 35.0, '0': 35.0, '2': 35.0} full_slots=2098 det_med=127us send_med=28.6ms e2e_med=39.0ms mk/pkt=5.07
+L4_hwtiming: fps={'2': 35.0, '1': 34.9, '3': 34.9, '0': 35.0} full_slots=2090 det_med=127us send_med=28.7ms e2e_med=36.1ms mk/pkt=5.10
+W10_default: fps={'1': 10.0, '0': 10.0, '2': 10.0, '3': 10.0} full_slots=599 det_med=120us send_med=26.8ms e2e_med=37.9ms mk/pkt=4.93
+W10_lowlat: fps={'3': 10.0, '0': 10.0, '1': 10.0, '2': 10.0} full_slots=600 det_med=120us send_med=26.8ms e2e_med=48.5ms mk/pkt=4.92
+W30_default: fps={'1': 30.0, '0': 30.0, '2': 30.0, '3': 30.0} full_slots=1799 det_med=120us send_med=26.8ms e2e_med=35.6ms mk/pkt=6.00
+W30_lowlat: fps={'2': 30.0, '0': 30.0, '1': 30.0, '3': 30.0} full_slots=1799 det_med=120us send_med=26.7ms e2e_med=36.0ms mk/pkt=6.00
+done

@@ -37,7 +37,7 @@ def session(tag, on):
     ns = {n["node_id"]: n["ip_address"] for n in json.loads(req("/api/nodes")) if n.get("online")}
     for ip in ns.values():
         for c in (f"cam hwstamp {on}", f"cam hwtrig {on}"): node_cmd(ip, c)
-    req("/api/tracking/start", {"target_node_ids": sorted(ns), "resolution": "vga", "fps": FPS**KNOBS}, "POST")
+    req("/api/tracking/start", {"target_node_ids": sorted(ns), "resolution": "vga", "fps": FPS, **KNOBS}, "POST")
     time.sleep(20)                                       # start-up + heal window
     for ip in ns.values():
         for c in ("cam hwstamp stats", "cam hwtrig stats"): node_cmd(ip, c)   # reset counters

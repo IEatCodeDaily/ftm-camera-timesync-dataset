@@ -54,7 +54,7 @@ def run(fps):
                     if attempt == 5: raise
                     time.sleep(5)
     for attempt in range(3):              # start can 400 while a node is still settling
-        try: req("/api/tracking/start", {"target_node_ids": sorted(ns), "resolution": "vga", "fps": fps**KNOBS}, "POST"); break
+        try: req("/api/tracking/start", {"target_node_ids": sorted(ns), "resolution": "vga", "fps": fps, **KNOBS}, "POST"); break
         except Exception:
             if attempt == 2: raise
             req("/api/tracking/stop", {}, "POST"); time.sleep(10)

@@ -1,0 +1,9 @@
+{"t": 1792252829.9610238, "kind": "start", "nodes": {"0": "192.168.137.172", "1": "192.168.137.197", "2": "192.168.137.230", "3": "192.168.137.31"}, "dur": 2400.0}
+{"t": 1792252844.4584386, "kind": "frex", "addr": "192.168.137.172", "reply": "via Wi-Fi 192.168.137.172\ncam syncfrex on: OK"}
+{"t": 1792252844.5963972, "kind": "frex", "addr": "192.168.137.197", "reply": "via Wi-Fi 192.168.137.197\ncam syncfrex on: OK"}
+{"t": 1792252844.809637, "kind": "frex", "addr": "192.168.137.230", "reply": "via Wi-Fi 192.168.137.230\ncam syncfrex on: OK"}
+{"t": 1792252844.9930909, "kind": "frex", "addr": "192.168.137.31", "reply": "via Wi-Fi 192.168.137.31\ncam syncfrex on: OK"}
+{"t": 1792252846.602937, "kind": "mode", "addr": "192.168.137.172", "reply": "via Wi-Fi 192.168.137.172\nI (124722762) strobe_gpio: mode: OFF -> FRAME_SYNC\nI (124723526) camera_capture: sensor orientation: hmirror=0 vflip=1; night_mode=off\nI (124723537) camera_capture: tuning: q"}
+{"t": 1792252848.195703, "kind": "mode", "addr": "192.168.137.197", "reply": "via Wi-Fi 192.168.137.197\nI (124643823) strobe_gpio: mode: OFF -> FRAME_SYNC\nI (124644586) camera_capture: sensor orientation: hmirror=0 vflip=1; night_mode=off\nI (124644594) camera_capture: tuning: q"}
+{"t": 1792252849.8475938, "kind": "mode", "addr": "192.168.137.230", "reply": "via Wi-Fi 192.168.137.230\nI (124579384) strobe_gpio: mode: OFF -> FRAME_SYNC\nI (124580144) camera_capture: sensor orientation: hmirror=0 vflip=1; night_mode=off\nI (124580153) camera_capture: tuning: q"}
+{"t": 1792252851.4717438, "kind": "mode", "addr": "192.168.137.31", "reply": "via Wi-Fi 192.168.137.31\nI (124498515) strobe_gpio: mode: OFF -> FRAME_SYNC\nI (124499275) camera_capture: sensor orientation: hmirror=0 vflip=1; night_mode=off\nI (124499284) camera_capture: tuning: q="}

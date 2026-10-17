@@ -1,0 +1,2276 @@
+{
+ "runs-fw2610-full/D0_scalar": {
+  "config": {
+   "algo": 0,
+   "rowstream": "off",
+   "syncbufs": 2,
+   "hwtrig": "on",
+   "hwstamp": "on",
+   "lowlat": "off",
+   "vskip": 2,
+   "fps": 35
+  },
+  "thresh": null,
+  "fps_target": 35,
+  "fps_min": 17.50000004170639,
+  "fps_max": 17.50000004170639,
+  "packets": 4200,
+  "slots_total": 2099,
+  "slots_full": 0,
+  "full_pct": 0.0,
+  "drift_ppm": -40.144627246481214,
+  "markers_per_packet": 5.950714285714286,
+  "truncated_packets": 0,
+  "frame_ready_us": {
+   "median": 56772.0,
+   "p95": 56787.0,
+   "p99": 56871.01,
+   "max": 56962.0,
+   "n": 4200
+  },
+  "detection_us": {
+   "median": 47735.5,
+   "p95": 49094.299999999996,
+   "p99": 50252.22,
+   "max": 52907.0,
+   "n": 4200
+  },
+  "send_us": {
+   "median": 104668.0,
+   "p95": 106017.5,
+   "p99": 107228.06,
+   "max": 110058.0,
+   "n": 4200
+  },
+  "spread_us": null,
+  "jitter_us": null,
+  "network_excess_us": {
+   "median": 2920.75,
+   "p95": 23436.687499999985,
+   "p99": 63922.40500000007,
+   "max": 202895.75,
+   "n": 4200
+  },
+  "packet_latency_us": {
+   "median": 107826.75,
+   "p95": 128208.93749999994,
+   "p99": 168501.26500000013,
+   "max": 307878.75,
+   "n": 4200
+  },
+  "slot_latency_us": null,
+  "skipped_per_node": {
+   "0": 1056,
+   "1": 1056,
+   "2": 1064,
+   "3": 1064
+  },
+  "capture_fail_per_node": {
+   "0": 0,
+   "1": 0,
+   "2": 0,
+   "3": 0
+  },
+  "truncated_per_node": {
+   "0": 0,
+   "1": 0,
+   "2": 0,
+   "3": 0
+  }
+ },
+ "runs-fw2610-full/D1_swar": {
+  "config": {
+   "algo": 1,
+   "rowstream": "off",
+   "syncbufs": 2,
+   "hwtrig": "on",
+   "hwstamp": "on",
+   "lowlat": "off",
+   "vskip": 2,
+   "fps": 35
+  },
+  "thresh": null,
+  "fps_target": 35,
+  "fps_min": 34.49976154478493,
+  "fps_max": 34.899950944975785,
+  "packets": 8307,
+  "slots_total": 2100,
+  "slots_full": 2008,
+  "full_pct": 95.61904761904762,
+  "drift_ppm": -38.64040428466453,
+  "markers_per_packet": 5.104490188997231,
+  "truncated_packets": 0,
+  "frame_ready_us": {
+   "median": 28202.0,
+   "p95": 28250.0,
+   "p99": 56236.94,
+   "max": 56904.0,
+   "n": 8307
+  },
+  "detection_us": {
+   "median": 22779.0,
+   "p95": 23905.1,
+   "p99": 25313.58,
+   "max": 29037.0,
+   "n": 8307
+  },
+  "send_us": {
+   "median": 51029.0,
+   "p95": 52463.5,
+   "p99": 79215.66000000002,
+   "max": 83208.0,
+   "n": 8307
+  },
+  "spread_us": {
+   "median": 538.0,
+   "p95": 540.0,
+   "p99": 541.0,
+   "max": 575.0,
+   "n": 2008
+  },
+  "jitter_us": {
+   "median": 1.142852783203125,
+   "p95": 3.0,
+   "p99": 4.857147216796875,
+   "max": 57.0,
+   "n": 2008
+  },
+  "network_excess_us": {
+   "median": 2675.0,
+   "p95": 22901.774999999998,
+   "p99": 61910.67500000016,
+   "max": 235301.0,
+   "n": 8307
+  },
+  "packet_latency_us": {
+   "median": 53857.25,
+   "p95": 79375.875,
+   "p99": 113204.04000000015,
+   "max": 285945.0,
+   "n": 8307
+  },
+  "slot_latency_us": {
+   "median": 59662.375,
+   "p95": 100245.17499999976,
+   "p99": 168047.3575000003,
+   "max": 285945.0,
+   "n": 2008
+  },
+  "skipped_per_node": {
+   "0": 5,
+   "1": 11,
+   "2": 4,
+   "3": 11
+  },
+  "capture_fail_per_node": {
+   "0": 0,
+   "1": 0,
+   "2": 0,
+   "3": 0
+  },
+  "truncated_per_node": {
+   "0": 0,
+   "1": 0,
+   "2": 0,
+   "3": 0
+  }
+ },
+ "runs-fw2610-full/D2_pieprefix": {
+  "config": {
+   "algo": 2,
+   "rowstream": "off",
+   "syncbufs": 2,
+   "hwtrig": "on",
+   "hwstamp": "on",
+   "lowlat": "off",
+   "vskip": 2,
+   "fps": 35
+  },
+  "thresh": null,
+  "fps_target": 35,
+  "fps_min": 34.999999416666675,
+  "fps_max": 35.00000058333334,
+  "packets": 8404,
+  "slots_total": 2100,
+  "slots_full": 2101,
+  "full_pct": 100.04761904761905,
+  "drift_ppm": -37.273074671719804,
+  "markers_per_packet": 5.080080913850547,
+  "truncated_packets": 0,
+  "frame_ready_us": {
+   "median": 28201.0,
+   "p95": 28217.0,
+   "p99": 28313.0,
+   "max": 28413.0,
+   "n": 8404
+  },
+  "detection_us": {
+   "median": 9465.0,
+   "p95": 10938.0,
+   "p99": 12680.939999999999,
+   "max": 17059.0,
+   "n": 8404
+  },
+  "send_us": {
+   "median": 37571.0,
+   "p95": 39390.0,
+   "p99": 41106.66999999999,
+   "max": 45115.0,
+   "n": 8404
+  },
+  "spread_us": {
+   "median": 538.0,
+   "p95": 540.0,
+   "p99": 541.0,
+   "max": 542.0,
+   "n": 2101
+  },
+  "jitter_us": {
+   "median": 1.5714263916015625,
+   "p95": 2.857147216796875,
+   "p99": 3.7142791748046875,
+   "max": 6.5714263916015625,
+   "n": 2101
+  },
+  "network_excess_us": {
+   "median": 1733.0,
+   "p95": 16273.587499999998,
+   "p99": 38400.159999999945,
+   "max": 166962.0,
+   "n": 8404
+  },
+  "packet_latency_us": {
+   "median": 39733.875,
+   "p95": 54395.31249999999,
+   "p99": 76513.20999999967,
+   "max": 204297.0,
+   "n": 8404
+  },
+  "slot_latency_us": {
+   "median": 42075.75,
+   "p95": 62466.0,
+   "p99": 89782.0,
+   "max": 204297.0,
+   "n": 2101
+  },
+  "skipped_per_node": {
+   "0": 0,
+   "1": 0,
+   "2": 0,
+   "3": 0
+  },
+  "capture_fail_per_node": {
+   "0": 0,
+   "1": 0,
+   "2": 0,
+   "3": 0
+  },
+  "truncated_per_node": {
+   "0": 0,
+   "1": 0,
+   "2": 0,
+   "3": 0
+  }
+ },
+ "runs-fw2610-full/D3_piefull": {
+  "config": {
+   "algo": 3,
+   "rowstream": "off",
+   "syncbufs": 2,
+   "hwtrig": "on",
+   "hwstamp": "on",
+   "lowlat": "off",
+   "vskip": 2,
+   "fps": 35
+  },
+  "thresh": null,
+  "fps_target": 35,
+  "fps_min": 34.99999799904728,
+  "fps_max": 34.9999997498809,
+  "packets": 8400,
+  "slots_total": 2100,
+  "slots_full": 2099,
+  "full_pct": 99.95238095238095,
+  "drift_ppm": -19.062399675435227,
+  "markers_per_packet": 5.111547619047619,
+  "truncated_packets": 0,
+  "frame_ready_us": {
+   "median": 28200.0,
+   "p95": 28219.0,
+   "p99": 28321.02,
+   "max": 28414.0,
+   "n": 8400
+  },
+  "detection_us": {
+   "median": 8821.5,
+   "p95": 10395.0,
+   "p99": 11824.300000000007,
+   "max": 16103.0,
+   "n": 8400
+  },
+  "send_us": {
+   "median": 37293.0,
+   "p95": 38792.05,
+   "p99": 40369.100000000006,
+   "max": 44834.0,
+   "n": 8400
+  },
+  "spread_us": {
+   "median": 538.0,
+   "p95": 540.0,
+   "p99": 541.0,
+   "max": 543.0,
+   "n": 2099
+  },
+  "jitter_us": {
+   "median": 1.571441650390625,
+   "p95": 3.0,
+   "p99": 3.8571319580078125,
+   "max": 5.571441650390625,
+   "n": 2099
+  },
+  "network_excess_us": {
+   "median": 4686.875,
+   "p95": 78444.46249999988,
+   "p99": 283718.5625000001,
+   "max": 544541.5,
+   "n": 8400
+  },
+  "packet_latency_us": {
+   "median": 42284.0,
+   "p95": 115665.4499999999,
+   "p99": 320949.33250000037,
+   "max": 582027.5,
+   "n": 8400
+  },
+  "slot_latency_us": {
+   "median": 57467.75,
+   "p95": 294076.2,
+   "p99": 439620.73999999976,
+   "max": 582027.5,
+   "n": 2099
+  },
+  "skipped_per_node": {
+   "0": 0,
+   "1": 0,
+   "2": 0,
+   "3": 0
+  },
+  "capture_fail_per_node": {
+   "0": 0,
+   "1": 0,
+   "2": 0,
+   "3": 0
+  },
+  "truncated_per_node": {
+   "0": 0,
+   "1": 0,
+   "2": 0,
+   "3": 0
+  }
+ },
+ "runs-fw2610-full/L0_naive": {
+  "config": {
+   "algo": 0,
+   "rowstream": "off",
+   "syncbufs": 1,
+   "hwtrig": "off",
+   "hwstamp": "off",
+   "lowlat": "off",
+   "vskip": 2,
+   "fps": 35
+  },
+  "thresh": null,
+  "fps_target": 35,
+  "fps_min": 11.177315854346896,
+  "fps_max": 11.182649281775156,
+  "packets": 2684,
+  "slots_total": 2099,
+  "slots_full": 0,
+  "full_pct": 0.0,
+  "drift_ppm": -38.383901805168826,
+  "markers_per_packet": 5.9355439642324885,
+  "truncated_packets": 0,
+  "frame_ready_us": {
+   "median": 28003.0,
+   "p95": 28161.0,
+   "p99": 58900.22000000006,
+   "max": 65535.0,
+   "n": 2684
+  },
+  "detection_us": {
+   "median": 46591.5,
+   "p95": 47902.0,
+   "p99": 49135.840000000004,
+   "max": 51904.0,
+   "n": 2684
+  },
+  "send_us": {
+   "median": 74820.0,
+   "p95": 76457.25,
+   "p99": 106684.09000000001,
+   "max": 113932.0,
+   "n": 2684
+  },
+  "spread_us": null,
+  "jitter_us": null,
+  "network_excess_us": {
+   "median": 3903.75,
+   "p95": 28291.999999999996,
+   "p99": 137048.1350000003,
+   "max": 1122071.5,
+   "n": 2684
+  },
+  "packet_latency_us": {
+   "median": 78998.125,
+   "p95": 111457.54999999999,
+   "p99": 211706.81500000032,
+   "max": 1196928.5,
+   "n": 2684
+  },
+  "slot_latency_us": null,
+  "skipped_per_node": {
+   "0": 34,
+   "1": 35,
+   "2": 26,
+   "3": 34
+  },
+  "capture_fail_per_node": {
+   "0": 32,
+   "1": 32,
+   "2": 24,
+   "3": 32
+  },
+  "truncated_per_node": {
+   "0": 0,
+   "1": 0,
+   "2": 0,
+   "3": 0
+  }
+ },
+ "runs-fw2610-full/L0_naive10": {
+  "config": {
+   "algo": 0,
+   "rowstream": "off",
+   "syncbufs": 1,
+   "hwtrig": "off",
+   "hwstamp": "off",
+   "lowlat": "off",
+   "vskip": 2,
+   "fps": 10
+  },
+  "thresh": null,
+  "fps_target": 10,
+  "fps_min": 9.999994657765791,
+  "fps_max": 9.9999994991653,
+  "packets": 2400,
+  "slots_total": 599,
+  "slots_full": 600,
+  "full_pct": 100.1669449081803,
+  "drift_ppm": -40.84461810281295,
+  "markers_per_packet": 4.907916666666667,
+  "truncated_packets": 0,
+  "frame_ready_us": {
+   "median": 25591.0,
+   "p95": 25641.05,
+   "p99": 25681.01,
+   "max": 25824.0,
+   "n": 2400
+  },
+  "detection_us": {
+   "median": 46599.5,
+   "p95": 52123.0,
+   "p99": 53067.159999999996,
+   "max": 54775.0,
+   "n": 2400
+  },
+  "send_us": {
+   "median": 72481.5,
+   "p95": 77751.05,
+   "p99": 78671.22,
+   "max": 80490.0,
+   "n": 2400
+  },
+  "spread_us": {
+   "median": 541.0,
+   "p95": 596.05,
+   "p99": 757.2199999999998,
+   "max": 890.0,
+   "n": 600
+  },
+  "jitter_us": {
+   "median": 29.5,
+   "p95": 166.67499999999984,
+   "p99": 264.515,
+   "max": 386.0,
+   "n": 600
+  },
+  "network_excess_us": {
+   "median": 3642.875,
+   "p95": 36794.91249999999,
+   "p99": 90022.1574999996,
+   "max": 652198.75,
+   "n": 2400
+  },
+  "packet_latency_us": {
+   "median": 78243.875,
+   "p95": 109492.16249999999,
+   "p99": 162312.38749999952,
+   "max": 724570.75,
+   "n": 2400
+  },
+  "slot_latency_us": {
+   "median": 88323.125,
+   "p95": 145054.9874999998,
+   "p99": 316940.8049999993,
+   "max": 724570.75,
+   "n": 600
+  },
+  "skipped_per_node": {
+   "0": 0,
+   "1": 0,
+   "2": 0,
+   "3": 0
+  },
+  "capture_fail_per_node": {
+   "0": 0,
+   "1": 0,
+   "2": 0,
+   "3": 0
+  },
+  "truncated_per_node": {
+   "0": 0,
+   "1": 0,
+   "2": 0,
+   "3": 0
+  }
+ },
+ "runs-fw2610-full/L1_simd": {
+  "config": {
+   "algo": 3,
+   "rowstream": "off",
+   "syncbufs": 1,
+   "hwtrig": "off",
+   "hwstamp": "off",
+   "lowlat": "off",
+   "vskip": 2,
+   "fps": 35
+  },
+  "thresh": null,
+  "fps_target": 35,
+  "fps_min": 16.63250857666899,
+  "fps_max": 16.750004187501045,
+  "packets": 4012,
+  "slots_total": 2100,
+  "slots_full": 1,
+  "full_pct": 0.047619047619047616,
+  "drift_ppm": -38.506831521513675,
+  "markers_per_packet": 5.094217347956132,
+  "truncated_packets": 0,
+  "frame_ready_us": {
+   "median": 27998.0,
+   "p95": 28146.0,
+   "p99": 28591.34,
+   "max": 65535.0,
+   "n": 4012
+  },
+  "detection_us": {
+   "median": 6568.0,
+   "p95": 7474.9,
+   "p99": 8481.23,
+   "max": 11733.0,
+   "n": 4012
+  },
+  "send_us": {
+   "median": 34726.5,
+   "p95": 35822.8,
+   "p99": 40303.40999999994,
+   "max": 72688.0,
+   "n": 4012
+  },
+  "spread_us": {
+   "median": 543.0,
+   "p95": 543.0,
+   "p99": 543.0,
+   "max": 543.0,
+   "n": 1
+  },
+  "jitter_us": {
+   "median": 0.0,
+   "p95": 0.0,
+   "p99": 0.0,
+   "max": 0.0,
+   "n": 1
+  },
+  "network_excess_us": {
+   "median": 3860.875,
+   "p95": 28134.35,
+   "p99": 77558.70999999998,
+   "max": 361588.5,
+   "n": 4012
+  },
+  "packet_latency_us": {
+   "median": 38845.125,
+   "p95": 68073.775,
+   "p99": 113174.3525,
+   "max": 396255.5,
+   "n": 4012
+  },
+  "slot_latency_us": {
+   "median": 75864.0,
+   "p95": 75864.0,
+   "p99": 75864.0,
+   "max": 75864.0,
+   "n": 1
+  },
+  "skipped_per_node": {
+   "0": 0,
+   "1": 0,
+   "2": 0,
+   "3": 0
+  },
+  "capture_fail_per_node": {
+   "0": 56,
+   "1": 48,
+   "2": 55,
+   "3": 56
+  },
+  "truncated_per_node": {
+   "0": 0,
+   "1": 0,
+   "2": 0,
+   "3": 0
+  }
+ },
+ "runs-fw2610-full/L1_simd20": {
+  "config": {
+   "algo": 3,
+   "rowstream": "off",
+   "syncbufs": 1,
+   "hwtrig": "off",
+   "hwstamp": "off",
+   "lowlat": "off",
+   "vskip": 2,
+   "fps": 20
+  },
+  "thresh": null,
+  "fps_target": 20,
+  "fps_min": 9.482473159216985,
+  "fps_max": 9.532575263771868,
+  "packets": 2284,
+  "slots_total": 1199,
+  "slots_full": 0,
+  "full_pct": 0.0,
+  "drift_ppm": -37.52958479586994,
+  "markers_per_packet": 2.81523642732049,
+  "truncated_packets": 0,
+  "frame_ready_us": {
+   "median": 49443.0,
+   "p95": 49609.85,
+   "p99": 65535.0,
+   "max": 65535.0,
+   "n": 2284
+  },
+  "detection_us": {
+   "median": 6597.5,
+   "p95": 11472.55,
+   "p99": 12315.87,
+   "max": 14970.0,
+   "n": 2284
+  },
+  "send_us": {
+   "median": 56154.0,
+   "p95": 61237.65,
+   "p99": 72129.0,
+   "max": 77830.0,
+   "n": 2284
+  },
+  "spread_us": null,
+  "jitter_us": null,
+  "network_excess_us": {
+   "median": 3332.0,
+   "p95": 29119.762499999993,
+   "p99": 46736.50250000003,
+   "max": 102816.0,
+   "n": 2284
+  },
+  "packet_latency_us": {
+   "median": 61542.5,
+   "p95": 86075.43749999999,
+   "p99": 113939.53500000002,
+   "max": 163512.0,
+   "n": 2284
+  },
+  "slot_latency_us": null,
+  "skipped_per_node": {
+   "0": 0,
+   "1": 0,
+   "2": 0,
+   "3": 0
+  },
+  "capture_fail_per_node": {
+   "0": -8,
+   "1": -8,
+   "2": 0,
+   "3": -8
+  },
+  "truncated_per_node": {
+   "0": 0,
+   "1": 0,
+   "2": 0,
+   "3": 0
+  }
+ },
+ "runs-fw2610-full/L2_syncbufs": {
+  "config": {
+   "algo": 3,
+   "rowstream": "off",
+   "syncbufs": 2,
+   "hwtrig": "off",
+   "hwstamp": "off",
+   "lowlat": "off",
+   "vskip": 2,
+   "fps": 35
+  },
+  "thresh": null,
+  "fps_target": 35,
+  "fps_min": 34.98334439305032,
+  "fps_max": 35.00011121998182,
+  "packets": 8399,
+  "slots_total": 2099,
+  "slots_full": 2099,
+  "full_pct": 100.0,
+  "drift_ppm": -38.703386222022345,
+  "markers_per_packet": 5.0778664126681745,
+  "truncated_packets": 0,
+  "frame_ready_us": {
+   "median": 28046.0,
+   "p95": 28116.0,
+   "p99": 28322.08,
+   "max": 28579.0,
+   "n": 8399
+  },
+  "detection_us": {
+   "median": 8764.0,
+   "p95": 10311.0,
+   "p99": 11811.02,
+   "max": 16456.0,
+   "n": 8399
+  },
+  "send_us": {
+   "median": 37000.0,
+   "p95": 38593.6,
+   "p99": 40169.90000000002,
+   "max": 44363.0,
+   "n": 8399
+  },
+  "spread_us": {
+   "median": 551.0,
+   "p95": 583.0,
+   "p99": 824.0,
+   "max": 949.0,
+   "n": 2099
+  },
+  "jitter_us": {
+   "median": 18.28570556640625,
+   "p95": 236.82857360839807,
+   "p99": 333.0142855834961,
+   "max": 408.57142639160156,
+   "n": 2099
+  },
+  "network_excess_us": {
+   "median": 2422.25,
+   "p95": 20366.8,
+   "p99": 50695.490000000034,
+   "max": 339733.25,
+   "n": 8399
+  },
+  "packet_latency_us": {
+   "median": 39663.5,
+   "p95": 58192.09999999998,
+   "p99": 88378.91500000004,
+   "max": 376886.25,
+   "n": 8399
+  },
+  "slot_latency_us": {
+   "median": 44345.75,
+   "p95": 77573.22499999998,
+   "p99": 130473.96499999994,
+   "max": 376886.25,
+   "n": 2099
+  },
+  "skipped_per_node": {
+   "0": 0,
+   "1": 0,
+   "2": 0,
+   "3": 0
+  },
+  "capture_fail_per_node": {
+   "0": 0,
+   "1": 0,
+   "2": 0,
+   "3": 0
+  },
+  "truncated_per_node": {
+   "0": 0,
+   "1": 0,
+   "2": 0,
+   "3": 0
+  }
+ },
+ "runs-fw2610-full/L3_rowstream": {
+  "config": {
+   "algo": 3,
+   "rowstream": "on",
+   "syncbufs": 2,
+   "hwtrig": "off",
+   "hwstamp": "off",
+   "lowlat": "off",
+   "vskip": 2,
+   "fps": 35
+  },
+  "thresh": null,
+  "fps_target": 35,
+  "fps_min": 34.98332864304387,
+  "fps_max": 35.0000166746149,
+  "packets": 8398,
+  "slots_total": 2099,
+  "slots_full": 2098,
+  "full_pct": 99.95235826584087,
+  "drift_ppm": -41.80404380052389,
+  "markers_per_packet": 5.0728744939271255,
+  "truncated_packets": 0,
+  "frame_ready_us": {
+   "median": 28182.0,
+   "p95": 28316.0,
+   "p99": 28576.0,
+   "max": 57027.0,
+   "n": 8398
+  },
+  "detection_us": {
+   "median": 127.0,
+   "p95": 147.0,
+   "p99": 246.03000000000065,
+   "max": 313.0,
+   "n": 8398
+  },
+  "send_us": {
+   "median": 28569.0,
+   "p95": 28824.15,
+   "p99": 29137.300000000007,
+   "max": 57428.0,
+   "n": 8398
+  },
+  "spread_us": {
+   "median": 536.5,
+   "p95": 595.0,
+   "p99": 766.0300000000002,
+   "max": 909.0,
+   "n": 2098
+  },
+  "jitter_us": {
+   "median": 47.78571319580078,
+   "p95": 275.72858085632316,
+   "p99": 354.2207156372071,
+   "max": 449.42858123779297,
+   "n": 2098
+  },
+  "network_excess_us": {
+   "median": 3507.5,
+   "p95": 35442.58749999997,
+   "p99": 107281.70000000007,
+   "max": 665480.0,
+   "n": 8398
+  },
+  "packet_latency_us": {
+   "median": 32107.75,
+   "p95": 64016.299999999996,
+   "p99": 135903.91000000015,
+   "max": 694003.0,
+   "n": 8398
+  },
+  "slot_latency_us": {
+   "median": 39009.5,
+   "p95": 122980.11249999997,
+   "p99": 313722.84750000184,
+   "max": 694003.0,
+   "n": 2098
+  },
+  "skipped_per_node": {
+   "0": 1,
+   "1": 0,
+   "2": 0,
+   "3": 1
+  },
+  "capture_fail_per_node": {
+   "0": 0,
+   "1": 0,
+   "2": 0,
+   "3": 0
+  },
+  "truncated_per_node": {
+   "0": 0,
+   "1": 0,
+   "2": 0,
+   "3": 0
+  }
+ },
+ "runs-fw2610-full/L4_hwtiming": {
+  "config": {
+   "algo": 3,
+   "rowstream": "on",
+   "syncbufs": 2,
+   "hwtrig": "on",
+   "hwstamp": "on",
+   "lowlat": "off",
+   "vskip": 2,
+   "fps": 35
+  },
+  "thresh": null,
+  "fps_target": 35,
+  "fps_min": 34.899951526918734,
+  "fps_max": 35.00000024988101,
+  "packets": 8392,
+  "slots_total": 2101,
+  "slots_full": 2090,
+  "full_pct": 99.47643979057591,
+  "drift_ppm": -36.56483335037421,
+  "markers_per_packet": 5.098188751191611,
+  "truncated_packets": 0,
+  "frame_ready_us": {
+   "median": 28283.5,
+   "p95": 28407.0,
+   "p99": 28540.0,
+   "max": 57293.0,
+   "n": 8392
+  },
+  "detection_us": {
+   "median": 127.0,
+   "p95": 141.0,
+   "p99": 241.0,
+   "max": 309.0,
+   "n": 8392
+  },
+  "send_us": {
+   "median": 28695.0,
+   "p95": 28966.0,
+   "p99": 29151.09,
+   "max": 57785.0,
+   "n": 8392
+  },
+  "spread_us": {
+   "median": 537.0,
+   "p95": 539.0,
+   "p99": 541.0,
+   "max": 595.0,
+   "n": 2090
+  },
+  "jitter_us": {
+   "median": 1.5714263916015625,
+   "p95": 3.5714263916015625,
+   "p99": 4.5714263916015625,
+   "max": 58.57142639160156,
+   "n": 2090
+  },
+  "network_excess_us": {
+   "median": 2375.0,
+   "p95": 20390.899999999998,
+   "p99": 56092.02250000001,
+   "max": 193715.0,
+   "n": 8392
+  },
+  "packet_latency_us": {
+   "median": 31060.0,
+   "p95": 49300.34999999999,
+   "p99": 84839.0225,
+   "max": 222162.0,
+   "n": 8392
+  },
+  "slot_latency_us": {
+   "median": 36073.5,
+   "p95": 76007.91249999998,
+   "p99": 125060.79000000004,
+   "max": 222162.0,
+   "n": 2090
+  },
+  "skipped_per_node": {
+   "0": 0,
+   "1": 0,
+   "2": 0,
+   "3": 0
+  },
+  "capture_fail_per_node": {
+   "0": 0,
+   "1": 0,
+   "2": 0,
+   "3": 0
+  },
+  "truncated_per_node": {
+   "0": 0,
+   "1": 0,
+   "2": 0,
+   "3": 0
+  }
+ },
+ "runs-fw2610-full/W10_default": {
+  "config": {
+   "algo": 3,
+   "rowstream": "on",
+   "syncbufs": 2,
+   "hwtrig": "on",
+   "hwstamp": "on",
+   "lowlat": "off",
+   "vskip": 2,
+   "fps": 10
+  },
+  "thresh": null,
+  "fps_target": 10,
+  "fps_min": 9.983305675848175,
+  "fps_max": 10.000000166944911,
+  "packets": 2399,
+  "slots_total": 599,
+  "slots_full": 599,
+  "full_pct": 100.0,
+  "drift_ppm": -39.45891537929905,
+  "markers_per_packet": 4.9312213422259275,
+  "truncated_packets": 0,
+  "frame_ready_us": {
+   "median": 26485.0,
+   "p95": 26805.0,
+   "p99": 26861.08,
+   "max": 26980.0,
+   "n": 2399
+  },
+  "detection_us": {
+   "median": 120.0,
+   "p95": 142.0,
+   "p99": 192.03999999999996,
+   "max": 317.0,
+   "n": 2399
+  },
+  "send_us": {
+   "median": 26827.0,
+   "p95": 27165.1,
+   "p99": 27227.02,
+   "max": 27665.0,
+   "n": 2399
+  },
+  "spread_us": {
+   "median": 538.0,
+   "p95": 539.0,
+   "p99": 540.0,
+   "max": 541.0,
+   "n": 599
+  },
+  "jitter_us": {
+   "median": 1.0,
+   "p95": 3.0,
+   "p99": 3.0,
+   "max": 5.0,
+   "n": 599
+  },
+  "network_excess_us": {
+   "median": 2296.25,
+   "p95": 27885.54999999998,
+   "p99": 51179.345,
+   "max": 84996.25,
+   "n": 2399
+  },
+  "packet_latency_us": {
+   "median": 28934.5,
+   "p95": 54242.94999999998,
+   "p99": 77789.58,
+   "max": 111314.25,
+   "n": 2399
+  },
+  "slot_latency_us": {
+   "median": 37927.25,
+   "p95": 72938.075,
+   "p99": 99008.56499999997,
+   "max": 111314.25,
+   "n": 599
+  },
+  "skipped_per_node": {
+   "0": 0,
+   "1": 0,
+   "2": 0,
+   "3": 0
+  },
+  "capture_fail_per_node": {
+   "0": 0,
+   "1": 0,
+   "2": 0,
+   "3": 0
+  },
+  "truncated_per_node": {
+   "0": 0,
+   "1": 0,
+   "2": 0,
+   "3": 0
+  }
+ },
+ "runs-fw2610-full/W10_lowlat": {
+  "config": {
+   "algo": 3,
+   "rowstream": "on",
+   "syncbufs": 2,
+   "hwtrig": "on",
+   "hwstamp": "on",
+   "lowlat": "on",
+   "vskip": 2,
+   "fps": 10
+  },
+  "thresh": null,
+  "fps_target": 10,
+  "fps_min": 9.999999833055094,
+  "fps_max": 10.000000166944911,
+  "packets": 2400,
+  "slots_total": 599,
+  "slots_full": 600,
+  "full_pct": 100.1669449081803,
+  "drift_ppm": -43.394223640308674,
+  "markers_per_packet": 4.9191666666666665,
+  "truncated_packets": 0,
+  "frame_ready_us": {
+   "median": 26385.0,
+   "p95": 26815.0,
+   "p99": 26865.01,
+   "max": 27034.0,
+   "n": 2400
+  },
+  "detection_us": {
+   "median": 120.0,
+   "p95": 141.04999999999973,
+   "p99": 203.01999999999953,
+   "max": 324.0,
+   "n": 2400
+  },
+  "send_us": {
+   "median": 26800.0,
+   "p95": 27178.0,
+   "p99": 27235.01,
+   "max": 27721.0,
+   "n": 2400
+  },
+  "spread_us": {
+   "median": 538.0,
+   "p95": 540.0,
+   "p99": 541.0,
+   "max": 542.0,
+   "n": 600
+  },
+  "jitter_us": {
+   "median": 2.0,
+   "p95": 3.0,
+   "p99": 4.0,
+   "max": 5.0,
+   "n": 600
+  },
+  "network_excess_us": {
+   "median": 4062.5,
+   "p95": 43607.82499999997,
+   "p99": 86301.25499999993,
+   "max": 363472.75,
+   "n": 2400
+  },
+  "packet_latency_us": {
+   "median": 30823.375,
+   "p95": 70207.83749999989,
+   "p99": 113470.20499999993,
+   "max": 391193.75,
+   "n": 2400
+  },
+  "slot_latency_us": {
+   "median": 48538.5,
+   "p95": 101372.41249999993,
+   "p99": 191304.42999999993,
+   "max": 391193.75,
+   "n": 600
+  },
+  "skipped_per_node": {
+   "0": 0,
+   "1": 0,
+   "2": 0,
+   "3": 0
+  },
+  "capture_fail_per_node": {
+   "0": 0,
+   "1": 0,
+   "2": 0,
+   "3": 0
+  },
+  "truncated_per_node": {
+   "0": 0,
+   "1": 0,
+   "2": 0,
+   "3": 0
+  }
+ },
+ "runs-fw2610-full/W30_default": {
+  "config": {
+   "algo": 3,
+   "rowstream": "on",
+   "syncbufs": 2,
+   "hwtrig": "on",
+   "hwstamp": "on",
+   "lowlat": "off",
+   "vskip": 2,
+   "fps": 30
+  },
+  "thresh": null,
+  "fps_target": 30,
+  "fps_min": 29.983323902260565,
+  "fps_max": 29.99999983324069,
+  "packets": 7199,
+  "slots_total": 1799,
+  "slots_full": 1799,
+  "full_pct": 100.0,
+  "drift_ppm": -40.14838847998446,
+  "markers_per_packet": 5.999444367273233,
+  "truncated_packets": 0,
+  "frame_ready_us": {
+   "median": 26395.0,
+   "p95": 26789.0,
+   "p99": 26827.02,
+   "max": 27019.0,
+   "n": 7199
+  },
+  "detection_us": {
+   "median": 120.0,
+   "p95": 140.0,
+   "p99": 208.0,
+   "max": 317.0,
+   "n": 7199
+  },
+  "send_us": {
+   "median": 26770.0,
+   "p95": 27166.0,
+   "p99": 27248.02,
+   "max": 27759.0,
+   "n": 7199
+  },
+  "spread_us": {
+   "median": 538.0,
+   "p95": 540.0,
+   "p99": 540.0,
+   "max": 541.0,
+   "n": 1799
+  },
+  "jitter_us": {
+   "median": 1.333343505859375,
+   "p95": 2.666656494140625,
+   "p99": 3.333343505859375,
+   "max": 5.333343505859375,
+   "n": 1799
+  },
+  "network_excess_us": {
+   "median": 2610.5,
+   "p95": 23477.07499999998,
+   "p99": 87298.99499999982,
+   "max": 394726.0,
+   "n": 7199
+  },
+  "packet_latency_us": {
+   "median": 29422.25,
+   "p95": 50309.69999999995,
+   "p99": 114099.57499999969,
+   "max": 421478.0,
+   "n": 7199
+  },
+  "slot_latency_us": {
+   "median": 35649.0,
+   "p95": 99735.99999999996,
+   "p99": 213795.8899999999,
+   "max": 421478.0,
+   "n": 1799
+  },
+  "skipped_per_node": {
+   "0": 0,
+   "1": 1,
+   "2": 0,
+   "3": 0
+  },
+  "capture_fail_per_node": {
+   "0": 0,
+   "1": 0,
+   "2": 0,
+   "3": 0
+  },
+  "truncated_per_node": {
+   "0": 0,
+   "1": 0,
+   "2": 0,
+   "3": 0
+  }
+ },
+ "runs-fw2610-full/W30_lowlat": {
+  "config": {
+   "algo": 3,
+   "rowstream": "on",
+   "syncbufs": 2,
+   "hwtrig": "on",
+   "hwstamp": "on",
+   "lowlat": "on",
+   "vskip": 2,
+   "fps": 30
+  },
+  "thresh": null,
+  "fps_target": 30,
+  "fps_min": 29.983323902260565,
+  "fps_max": 30.000001000000033,
+  "packets": 7201,
+  "slots_total": 1800,
+  "slots_full": 1799,
+  "full_pct": 99.94444444444444,
+  "drift_ppm": -37.035273289084415,
+  "markers_per_packet": 5.999722260797111,
+  "truncated_packets": 0,
+  "frame_ready_us": {
+   "median": 26334.0,
+   "p95": 26790.0,
+   "p99": 26826.0,
+   "max": 26986.0,
+   "n": 7201
+  },
+  "detection_us": {
+   "median": 120.0,
+   "p95": 139.0,
+   "p99": 212.0,
+   "max": 308.0,
+   "n": 7201
+  },
+  "send_us": {
+   "median": 26738.0,
+   "p95": 27171.0,
+   "p99": 27256.0,
+   "max": 27662.0,
+   "n": 7201
+  },
+  "spread_us": {
+   "median": 538.0,
+   "p95": 540.0,
+   "p99": 541.0,
+   "max": 542.0,
+   "n": 1799
+  },
+  "jitter_us": {
+   "median": 1.666656494140625,
+   "p95": 2.6666717529296875,
+   "p99": 3.6666717529296875,
+   "max": 5.666656494140625,
+   "n": 1799
+  },
+  "network_excess_us": {
+   "median": 3276.25,
+   "p95": 23153.5,
+   "p99": 59833.5,
+   "max": 184618.25,
+   "n": 7201
+  },
+  "packet_latency_us": {
+   "median": 30008.25,
+   "p95": 49871.0,
+   "p99": 86504.5,
+   "max": 210915.25,
+   "n": 7201
+  },
+  "slot_latency_us": {
+   "median": 35956.75,
+   "p95": 78031.075,
+   "p99": 127499.65,
+   "max": 210915.25,
+   "n": 1799
+  },
+  "skipped_per_node": {
+   "0": 0,
+   "1": 0,
+   "2": 0,
+   "3": 0
+  },
+  "capture_fail_per_node": {
+   "0": 0,
+   "1": 0,
+   "2": 0,
+   "3": 0
+  },
+  "truncated_per_node": {
+   "0": 0,
+   "1": 0,
+   "2": 0,
+   "3": 0
+  }
+ },
+ "runs-fw2610-t40/D0_scalar": {
+  "config": {
+   "algo": 0,
+   "rowstream": "off",
+   "syncbufs": 2,
+   "hwtrig": "on",
+   "hwstamp": "on",
+   "lowlat": "off",
+   "vskip": 2,
+   "fps": 35
+  },
+  "thresh": null,
+  "fps_target": 35,
+  "fps_min": 11.666666805754254,
+  "fps_max": 17.50000004170639,
+  "packets": 3850,
+  "slots_total": 2098,
+  "slots_full": 350,
+  "full_pct": 16.682554814108673,
+  "drift_ppm": -42.1231002927124,
+  "markers_per_packet": 11.265194805194804,
+  "truncated_packets": 700,
+  "frame_ready_us": {
+   "median": 56779.0,
+   "p95": 65535.0,
+   "p99": 65535.0,
+   "max": 65535.0,
+   "n": 3850
+  },
+  "detection_us": {
+   "median": 47996.0,
+   "p95": 57811.55,
+   "p99": 59036.689999999995,
+   "max": 64065.0,
+   "n": 3850
+  },
+  "send_us": {
+   "median": 105026.5,
+   "p95": 123827.1,
+   "p99": 125075.79,
+   "max": 130161.0,
+   "n": 3850
+  },
+  "spread_us": {
+   "median": 538.0,
+   "p95": 540.0,
+   "p99": 540.0,
+   "max": 541.0,
+   "n": 350
+  },
+  "jitter_us": {
+   "median": 1.71429443359375,
+   "p95": 3.0,
+   "p99": 3.4678584289550747,
+   "max": 4.28570556640625,
+   "n": 350
+  },
+  "network_excess_us": {
+   "median": 5193.25,
+   "p95": 23400.162499999977,
+   "p99": 73097.90249999988,
+   "max": 277012.25,
+   "n": 3850
+  },
+  "packet_latency_us": {
+   "median": 110280.125,
+   "p95": 145131.84999999998,
+   "p99": 178712.8424999999,
+   "max": 381497.25,
+   "n": 3850
+  },
+  "slot_latency_us": {
+   "median": 143207.625,
+   "p95": 177448.45,
+   "p99": 245179.2249999999,
+   "max": 295946.5,
+   "n": 350
+  },
+  "skipped_per_node": {
+   "0": 1056,
+   "1": 1405,
+   "2": 1048,
+   "3": 1056
+  },
+  "capture_fail_per_node": {
+   "0": 0,
+   "1": 0,
+   "2": 0,
+   "3": 0
+  },
+  "truncated_per_node": {
+   "0": 0,
+   "1": 704,
+   "2": 0,
+   "3": 0
+  }
+ },
+ "runs-fw2610-t40/D3_piefull": {
+  "config": {
+   "algo": 3,
+   "rowstream": "off",
+   "syncbufs": 2,
+   "hwtrig": "on",
+   "hwstamp": "on",
+   "lowlat": "off",
+   "vskip": 2,
+   "fps": 35
+  },
+  "thresh": null,
+  "fps_target": 35,
+  "fps_min": 34.98332514304437,
+  "fps_max": 35.00000091710341,
+  "packets": 8399,
+  "slots_total": 2099,
+  "slots_full": 2099,
+  "full_pct": 100.0,
+  "drift_ppm": -39.893322771263485,
+  "markers_per_packet": 12.55625669722586,
+  "truncated_packets": 2099,
+  "frame_ready_us": {
+   "median": 28202.0,
+   "p95": 28217.0,
+   "p99": 28323.02,
+   "max": 56242.0,
+   "n": 8399
+  },
+  "detection_us": {
+   "median": 9127.0,
+   "p95": 15098.099999999999,
+   "p99": 16578.96000000002,
+   "max": 24228.0,
+   "n": 8399
+  },
+  "send_us": {
+   "median": 37603.0,
+   "p95": 43336.1,
+   "p99": 44859.08,
+   "max": 73757.0,
+   "n": 8399
+  },
+  "spread_us": {
+   "median": 538.0,
+   "p95": 540.0,
+   "p99": 541.0,
+   "max": 543.0,
+   "n": 2099
+  },
+  "jitter_us": {
+   "median": 1.1428680419921875,
+   "p95": 3.0,
+   "p99": 4.0,
+   "max": 6.0,
+   "n": 2099
+  },
+  "network_excess_us": {
+   "median": 1675.75,
+   "p95": 11944.399999999987,
+   "p99": 42387.28500000029,
+   "max": 159385.5,
+   "n": 8399
+  },
+  "packet_latency_us": {
+   "median": 41003.0,
+   "p95": 50554.47499999999,
+   "p99": 82177.46000000014,
+   "max": 196565.5,
+   "n": 8399
+  },
+  "slot_latency_us": {
+   "median": 43752.5,
+   "p95": 57359.899999999994,
+   "p99": 96876.69,
+   "max": 196565.5,
+   "n": 2099
+  },
+  "skipped_per_node": {
+   "0": 0,
+   "1": 2,
+   "2": 0,
+   "3": 0
+  },
+  "capture_fail_per_node": {
+   "0": 0,
+   "1": 0,
+   "2": 0,
+   "3": 0
+  },
+  "truncated_per_node": {
+   "0": 0,
+   "1": 2112,
+   "2": 0,
+   "3": 0
+  }
+ },
+ "runs-fw2610-t40/L3_rowstream": {
+  "config": {
+   "algo": 3,
+   "rowstream": "on",
+   "syncbufs": 2,
+   "hwtrig": "off",
+   "hwstamp": "off",
+   "lowlat": "off",
+   "vskip": 2,
+   "fps": 35
+  },
+  "thresh": null,
+  "fps_target": 35,
+  "fps_min": 20.019068830363217,
+  "fps_max": 34.99999858265846,
+  "packets": 7499,
+  "slots_total": 2099,
+  "slots_full": 1201,
+  "full_pct": 57.217722725107194,
+  "drift_ppm": -39.21008631995824,
+  "markers_per_packet": 10.340312041605548,
+  "truncated_packets": 1201,
+  "frame_ready_us": {
+   "median": 28214.0,
+   "p95": 60324.1,
+   "p99": 62598.299999999996,
+   "max": 65535.0,
+   "n": 7499
+  },
+  "detection_us": {
+   "median": 131.0,
+   "p95": 4068.0,
+   "p99": 4902.059999999999,
+   "max": 6318.0,
+   "n": 7499
+  },
+  "send_us": {
+   "median": 28741.0,
+   "p95": 64385.0,
+   "p99": 67409.54,
+   "max": 71575.0,
+   "n": 7499
+  },
+  "spread_us": {
+   "median": 499.0,
+   "p95": 547.0,
+   "p99": 764.0,
+   "max": 854.0,
+   "n": 1201
+  },
+  "jitter_us": {
+   "median": 26.857147216796875,
+   "p95": 254.0,
+   "p99": 343.0,
+   "max": 384.0,
+   "n": 1201
+  },
+  "network_excess_us": {
+   "median": 1664.5,
+   "p95": 12166.224999999993,
+   "p99": 36683.054999999644,
+   "max": 76733.75,
+   "n": 7499
+  },
+  "packet_latency_us": {
+   "median": 31090.5,
+   "p95": 66417.5,
+   "p99": 73612.85499999998,
+   "max": 109836.75,
+   "n": 7499
+  },
+  "slot_latency_us": {
+   "median": 63985.5,
+   "p95": 72222.75,
+   "p99": 87720.0,
+   "max": 109836.75,
+   "n": 1201
+  },
+  "skipped_per_node": {
+   "0": 1,
+   "1": 904,
+   "2": 0,
+   "3": 1
+  },
+  "capture_fail_per_node": {
+   "0": 0,
+   "1": 0,
+   "2": 0,
+   "3": 0
+  },
+  "truncated_per_node": {
+   "0": 0,
+   "1": 1208,
+   "2": 0,
+   "3": 0
+  }
+ },
+ "runs-fw2610/F0_vskip2": {
+  "config": {
+   "algo": 3,
+   "rowstream": "on",
+   "syncbufs": 2,
+   "hwtrig": "on",
+   "hwstamp": "on",
+   "lowlat": "off",
+   "vskip": 2,
+   "fps": 35
+  },
+  "thresh": null,
+  "fps_target": 35,
+  "fps_min": 34.94999941750001,
+  "fps_max": 34.983333333333334,
+  "packets": 8397,
+  "slots_total": 2100,
+  "slots_full": 2094,
+  "full_pct": 99.71428571428571,
+  "drift_ppm": -38.058926574305296,
+  "markers_per_packet": 4.986542812909373,
+  "truncated_packets": 0,
+  "frame_ready_us": {
+   "median": 28283.0,
+   "p95": 28407.2,
+   "p99": 28535.079999999998,
+   "max": 57246.0,
+   "n": 8397
+  },
+  "detection_us": {
+   "median": 126.0,
+   "p95": 143.0,
+   "p99": 248.0,
+   "max": 9596.0,
+   "n": 8397
+  },
+  "send_us": {
+   "median": 28693.0,
+   "p95": 28968.0,
+   "p99": 29141.04,
+   "max": 57631.0,
+   "n": 8397
+  },
+  "spread_us": {
+   "median": 537.0,
+   "p95": 540.0,
+   "p99": 541.0,
+   "max": 546.0,
+   "n": 2094
+  },
+  "jitter_us": {
+   "median": 1.71429443359375,
+   "p95": 3.8571319580078125,
+   "p99": 5.0,
+   "max": 9.142868041992188,
+   "n": 2094
+  },
+  "network_excess_us": {
+   "median": 3260.25,
+   "p95": 37414.14999999998,
+   "p99": 84341.0999999999,
+   "max": 282863.0,
+   "n": 8397
+  },
+  "packet_latency_us": {
+   "median": 31853.75,
+   "p95": 66133.55,
+   "p99": 113218.32999999989,
+   "max": 311317.0,
+   "n": 8397
+  },
+  "slot_latency_us": {
+   "median": 37752.0,
+   "p95": 101778.025,
+   "p99": 180423.12250000017,
+   "max": 311317.0,
+   "n": 2094
+  },
+  "skipped_per_node": {
+   "0": 1,
+   "1": 0,
+   "2": 1,
+   "3": 0
+  },
+  "capture_fail_per_node": {
+   "0": 0,
+   "1": 1,
+   "2": 1,
+   "3": 0
+  },
+  "truncated_per_node": {
+   "0": 0,
+   "1": 0,
+   "2": 0,
+   "3": 0
+  }
+ },
+ "runs-fw2610/F0_vskip2_20": {
+  "config": {
+   "algo": 3,
+   "rowstream": "on",
+   "syncbufs": 2,
+   "hwtrig": "on",
+   "hwstamp": "on",
+   "lowlat": "off",
+   "vskip": 2,
+   "fps": 20
+  },
+  "thresh": null,
+  "fps_target": 20,
+  "fps_min": 19.98331909952762,
+  "fps_max": 20.0,
+  "packets": 4799,
+  "slots_total": 1199,
+  "slots_full": 1199,
+  "full_pct": 100.0,
+  "drift_ppm": -42.06498231093611,
+  "markers_per_packet": 2.409460304230048,
+  "truncated_packets": 0,
+  "frame_ready_us": {
+   "median": 26392.0,
+   "p95": 26797.0,
+   "p99": 26843.0,
+   "max": 49541.0,
+   "n": 4799
+  },
+  "detection_us": {
+   "median": 69.0,
+   "p95": 127.0,
+   "p99": 146.01999999999953,
+   "max": 9799.0,
+   "n": 4799
+  },
+  "send_us": {
+   "median": 26723.0,
+   "p95": 27100.1,
+   "p99": 27225.04,
+   "max": 59611.0,
+   "n": 4799
+  },
+  "spread_us": {
+   "median": 538.0,
+   "p95": 539.0,
+   "p99": 540.0,
+   "max": 541.0,
+   "n": 1199
+  },
+  "jitter_us": {
+   "median": 1.0,
+   "p95": 3.0,
+   "p99": 3.0,
+   "max": 121.0,
+   "n": 1199
+  },
+  "network_excess_us": {
+   "median": 2785.5,
+   "p95": 25583.999999999978,
+   "p99": 46764.869999999806,
+   "max": 101578.75,
+   "n": 4799
+  },
+  "packet_latency_us": {
+   "median": 29438.0,
+   "p95": 52277.774999999994,
+   "p99": 73311.28499999996,
+   "max": 127721.75,
+   "n": 4799
+  },
+  "slot_latency_us": {
+   "median": 37459.0,
+   "p95": 58831.875,
+   "p99": 85583.90499999997,
+   "max": 127721.75,
+   "n": 1199
+  },
+  "skipped_per_node": {
+   "0": 0,
+   "1": 0,
+   "2": 0,
+   "3": 0
+  },
+  "capture_fail_per_node": {
+   "0": 1,
+   "1": 0,
+   "2": 0,
+   "3": 0
+  },
+  "truncated_per_node": {
+   "0": 0,
+   "1": 0,
+   "2": 0,
+   "3": 0
+  }
+ },
+ "runs-fw2610/F1_vskip4": {
+  "config": {
+   "algo": 3,
+   "rowstream": "on",
+   "syncbufs": 2,
+   "hwtrig": "on",
+   "hwstamp": "on",
+   "lowlat": "off",
+   "vskip": 4,
+   "fps": 35
+  },
+  "thresh": null,
+  "fps_target": 35,
+  "fps_min": 23.72796552838519,
+  "fps_max": 33.998091765258074,
+  "packets": 7006,
+  "slots_total": 2099,
+  "slots_full": 924,
+  "full_pct": 44.020962363030016,
+  "drift_ppm": -39.98493360893695,
+  "markers_per_packet": 4.992577790465315,
+  "truncated_packets": 0,
+  "frame_ready_us": {
+   "median": 13296.0,
+   "p95": 28102.0,
+   "p99": 28208.95,
+   "max": 65535.0,
+   "n": 7006
+  },
+  "detection_us": {
+   "median": 6518.0,
+   "p95": 13337.0,
+   "p99": 13880.849999999999,
+   "max": 15572.0,
+   "n": 7006
+  },
+  "send_us": {
+   "median": 20155.0,
+   "p95": 41788.0,
+   "p99": 42346.299999999996,
+   "max": 72384.0,
+   "n": 7006
+  },
+  "spread_us": {
+   "median": 539.0,
+   "p95": 540.0,
+   "p99": 541.0,
+   "max": 6521.0,
+   "n": 924
+  },
+  "jitter_us": {
+   "median": 1.4285736083984375,
+   "p95": 2.857147216796875,
+   "p99": 4.142852783203125,
+   "max": 6412.0,
+   "n": 924
+  },
+  "network_excess_us": {
+   "median": 3694.75,
+   "p95": 89398.75,
+   "p99": 279751.54999999993,
+   "max": 995707.5,
+   "n": 7006
+  },
+  "packet_latency_us": {
+   "median": 26050.625,
+   "p95": 109710.5,
+   "p99": 299952.5,
+   "max": 1016189.5,
+   "n": 7006
+  },
+  "slot_latency_us": {
+   "median": 44943.375,
+   "p95": 246036.5374999999,
+   "p99": 609785.1274999995,
+   "max": 1016189.5,
+   "n": 924
+  },
+  "skipped_per_node": {
+   "0": 0,
+   "1": 1,
+   "2": -2,
+   "3": 0
+  },
+  "capture_fail_per_node": {
+   "0": 11,
+   "1": 24,
+   "2": -18,
+   "3": -5
+  },
+  "truncated_per_node": {
+   "0": 0,
+   "1": 0,
+   "2": 0,
+   "3": 0
+  }
+ },
+ "runs-fw2610/F2_fast": {
+  "config": {
+   "algo": 3,
+   "rowstream": "on",
+   "syncbufs": 2,
+   "hwtrig": "on",
+   "hwstamp": "on",
+   "lowlat": "on",
+   "vskip": 4,
+   "fps": 35
+  },
+  "thresh": null,
+  "fps_target": 35,
+  "fps_min": 34.999999666825325,
+  "fps_max": 35.00000033349214,
+  "packets": 8404,
+  "slots_total": 2101,
+  "slots_full": 2100,
+  "full_pct": 99.95240361732509,
+  "drift_ppm": -36.869685374560156,
+  "markers_per_packet": 5.13886244645407,
+  "truncated_packets": 0,
+  "frame_ready_us": {
+   "median": 18230.0,
+   "p95": 19386.85,
+   "p99": 20320.97,
+   "max": 23320.0,
+   "n": 8404
+  },
+  "detection_us": {
+   "median": 105.0,
+   "p95": 123.0,
+   "p99": 172.96999999999935,
+   "max": 259.0,
+   "n": 8404
+  },
+  "send_us": {
+   "median": 18589.0,
+   "p95": 19769.0,
+   "p99": 20706.94,
+   "max": 23671.0,
+   "n": 8404
+  },
+  "spread_us": {
+   "median": 538.0,
+   "p95": 540.0,
+   "p99": 541.0,
+   "max": 543.0,
+   "n": 2100
+  },
+  "jitter_us": {
+   "median": 1.4285736083984375,
+   "p95": 2.857147216796875,
+   "p99": 3.8571321105957033,
+   "max": 6.1428680419921875,
+   "n": 2100
+  },
+  "network_excess_us": {
+   "median": 4456.5,
+   "p95": 26120.04999999999,
+   "p99": 63914.36999999987,
+   "max": 211422.25,
+   "n": 8404
+  },
+  "packet_latency_us": {
+   "median": 23316.5,
+   "p95": 44764.274999999994,
+   "p99": 82219.88249999992,
+   "max": 229377.25,
+   "n": 8404
+  },
+  "slot_latency_us": {
+   "median": 29823.625,
+   "p95": 73444.4,
+   "p99": 122098.6749999996,
+   "max": 229377.25,
+   "n": 2100
+  },
+  "skipped_per_node": {
+   "0": 0,
+   "1": 0,
+   "2": 0,
+   "3": 0
+  },
+  "capture_fail_per_node": {
+   "0": 0,
+   "1": 0,
+   "2": 0,
+   "3": 0
+  },
+  "truncated_per_node": {
+   "0": 0,
+   "1": 0,
+   "2": 0,
+   "3": 0
+  }
+ },
+ "runs-fw2610/F2_fast20": {
+  "config": {
+   "algo": 3,
+   "rowstream": "on",
+   "syncbufs": 2,
+   "hwtrig": "on",
+   "hwstamp": "on",
+   "lowlat": "on",
+   "vskip": 4,
+   "fps": 20
+  },
+  "thresh": null,
+  "fps_target": 20,
+  "fps_min": 20.0,
+  "fps_max": 20.000000667222707,
+  "packets": 4801,
+  "slots_total": 1200,
+  "slots_full": 1200,
+  "full_pct": 100.0,
+  "drift_ppm": -11.84143640955655,
+  "markers_per_packet": 3.297229743803374,
+  "truncated_packets": 0,
+  "frame_ready_us": {
+   "median": 18175.0,
+   "p95": 19129.0,
+   "p99": 20038.0,
+   "max": 23270.0,
+   "n": 4801
+  },
+  "detection_us": {
+   "median": 81.0,
+   "p95": 113.0,
+   "p99": 142.0,
+   "max": 225.0,
+   "n": 4801
+  },
+  "send_us": {
+   "median": 18433.0,
+   "p95": 19509.0,
+   "p99": 20440.0,
+   "max": 23701.0,
+   "n": 4801
+  },
+  "spread_us": {
+   "median": 538.0,
+   "p95": 539.0,
+   "p99": 540.0,
+   "max": 543.0,
+   "n": 1200
+  },
+  "jitter_us": {
+   "median": 1.0,
+   "p95": 3.0,
+   "p99": 3.0,
+   "max": 6.0,
+   "n": 1200
+  },
+  "network_excess_us": {
+   "median": 3340.5,
+   "p95": 29095.5,
+   "p99": 48134.25,
+   "max": 127308.75,
+   "n": 4801
+  },
+  "packet_latency_us": {
+   "median": 22134.75,
+   "p95": 47427.5,
+   "p99": 66216.25,
+   "max": 145455.75,
+   "n": 4801
+  },
+  "slot_latency_us": {
+   "median": 30877.375,
+   "p95": 54887.112499999996,
+   "p99": 89539.01499999997,
+   "max": 145455.75,
+   "n": 1200
+  },
+  "skipped_per_node": {
+   "0": 0,
+   "1": 0,
+   "2": 0,
+   "3": 0
+  },
+  "capture_fail_per_node": {
+   "0": 0,
+   "1": 0,
+   "2": 0,
+   "3": 0
+  },
+  "truncated_per_node": {
+   "0": 0,
+   "1": 0,
+   "2": 0,
+   "3": 0
+  }
+ },
+ "runs-fw2610/F2_fast30": {
+  "config": {
+   "algo": 3,
+   "rowstream": "on",
+   "syncbufs": 2,
+   "hwtrig": "on",
+   "hwstamp": "on",
+   "lowlat": "on",
+   "vskip": 4,
+   "fps": 30
+  },
+  "thresh": null,
+  "fps_target": 30,
+  "fps_min": 29.999999332962773,
+  "fps_max": 30.000000833796577,
+  "packets": 7201,
+  "slots_total": 1800,
+  "slots_full": 1800,
+  "full_pct": 100.0,
+  "drift_ppm": -22.90325484188591,
+  "markers_per_packet": 5.210665185390918,
+  "truncated_packets": 0,
+  "frame_ready_us": {
+   "median": 18098.0,
+   "p95": 19344.0,
+   "p99": 20226.0,
+   "max": 23091.0,
+   "n": 7201
+  },
+  "detection_us": {
+   "median": 105.0,
+   "p95": 123.0,
+   "p99": 174.0,
+   "max": 269.0,
+   "n": 7201
+  },
+  "send_us": {
+   "median": 18449.0,
+   "p95": 19720.0,
+   "p99": 20638.0,
+   "max": 23445.0,
+   "n": 7201
+  },
+  "spread_us": {
+   "median": 538.0,
+   "p95": 540.0,
+   "p99": 540.0,
+   "max": 544.0,
+   "n": 1800
+  },
+  "jitter_us": {
+   "median": 1.666656494140625,
+   "p95": 2.6666717529296875,
+   "p99": 3.6666717529296875,
+   "max": 6.3333282470703125,
+   "n": 1800
+  },
+  "network_excess_us": {
+   "median": 2774.75,
+   "p95": 19540.25,
+   "p99": 43026.25,
+   "max": 90227.5,
+   "n": 7201
+  },
+  "packet_latency_us": {
+   "median": 21531.75,
+   "p95": 37766.25,
+   "p99": 61861.25,
+   "max": 108427.5,
+   "n": 7201
+  },
+  "slot_latency_us": {
+   "median": 29181.375,
+   "p95": 45478.12499999999,
+   "p99": 77156.32249999998,
+   "max": 108427.5,
+   "n": 1800
+  },
+  "skipped_per_node": {
+   "0": 0,
+   "1": 0,
+   "2": 0,
+   "3": 0
+  },
+  "capture_fail_per_node": {
+   "0": 0,
+   "1": 0,
+   "2": 0,
+   "3": 0
+  },
+  "truncated_per_node": {
+   "0": 0,
+   "1": 0,
+   "2": 0,
+   "3": 0
+  }
+ }
+}

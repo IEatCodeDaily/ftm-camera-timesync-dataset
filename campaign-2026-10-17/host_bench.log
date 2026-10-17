@@ -1,0 +1,11 @@
+running 1 test
+| markers | packets | parse us/pkt | handle us/pkt | ingest us/pkt | RMS mm | RMS clear mm | yield | ID switches (clear) | latency p50/p95 ms | poses | late obs |
+pixel | 1 | 752 | 0.13 | 7.99 | 3.57 | 3.71 | 3.56 | 0.995 | 0 (0) | 26.4/48.4 | 173 | 2 |
+pixel | 4 | 757 | 0.16 | 29.61 | 22.54 | 4.29 | 4.02 | 1.002 | 2 (2) | 14.0/37.4 | 715 | 4 |
+pixel | 8 | 763 | 0.24 | 82.13 | 71.12 | 5.48 | 5.52 | 1.000 | 2 (2) | 14.0/38.2 | 1416 | 4 |
+point | 1 | 752 | 0.13 | 7.02 | 2.91 | 2.05 | 0.66 | 0.995 | 0 (0) | 26.4/48.4 | 173 | 2 |
+point | 4 | 757 | 0.18 | 31.18 | 22.81 | 1.75 | 0.68 | 1.003 | 0 (0) | 14.0/37.4 | 715 | 4 |
+point | 8 | 763 | 0.19 | 83.89 | 72.08 | 1.17 | 0.80 | 1.003 | 0 (0) | 14.0/38.2 | 1416 | 4 |
+test response_tests::tracking_benchmark ... ok
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 177 filtered out; finished in 0.29s
+studio source a2b163a 2026-10-17 18:52:27 +0700

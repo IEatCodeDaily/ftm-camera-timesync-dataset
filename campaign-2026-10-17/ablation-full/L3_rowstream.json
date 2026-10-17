@@ -1,0 +1,236 @@
+{
+ "name": "L3_rowstream",
+ "config": {
+  "algo": 3,
+  "rowstream": "on",
+  "syncbufs": 2,
+  "hwtrig": "off",
+  "hwstamp": "off",
+  "lowlat": "off",
+  "vskip": 2,
+  "fps": 35
+ },
+ "t0": 1792251932.7934184,
+ "dur": 60.0,
+ "nodes": [
+  0,
+  1,
+  2,
+  3
+ ],
+ "applied": {
+  "0": [
+   "cam algo 3: OK (volatile)",
+   "cam rowstream on: OK (volatile)",
+   "cam syncbufs 2: OK (volatile)",
+   "cam hwtrig off: OK",
+   "cam hwstamp off: OK",
+   "cam lowlat off: OK",
+   "cam vskip 2: OK"
+  ],
+  "1": [
+   "cam algo 3: OK (volatile)",
+   "cam rowstream on: OK (volatile)",
+   "cam syncbufs 2: OK (volatile)",
+   "cam hwtrig off: OK",
+   "cam hwstamp off: OK",
+   "cam lowlat off: OK",
+   "cam vskip 2: OK"
+  ],
+  "2": [
+   "cam algo 3: OK (volatile)",
+   "cam rowstream on: OK (volatile)",
+   "cam syncbufs 2: OK (volatile)",
+   "cam hwtrig off: OK",
+   "cam hwstamp off: OK",
+   "cam lowlat off: OK",
+   "cam vskip 2: OK"
+  ],
+  "3": [
+   "cam algo 3: OK (volatile)",
+   "cam rowstream on: OK (volatile)",
+   "cam syncbufs 2: OK (volatile)",
+   "cam hwtrig off: OK",
+   "cam hwstamp off: OK",
+   "cam lowlat off: OK",
+   "cam vskip 2: OK"
+  ]
+ },
+ "stats_before": {
+  "0": [
+   "camera profile: initialized=1 pending=0 buffers=2 raw_buffers_requested=2 perf=1 raw_vco=0 jpeg_vco=0 qvga_div=8 jpeg_buffers_requested=0 task_core=0 dma_buffer=46080 dma_chunk=15360 direct_dma=0 jpeg_hts_requested=0 preview_hts=2060 psram_mhz=80 raw_ring_kib=0 raw_chunk_requested=0",
+   "track: running=1 format=Y8 target=35 measured=34.79 frames=456 acquired=455 markers=2280 capture_fail=0 slots=456 skipped=1 trigger_fail=0 detector_overflow=0 truncated=0 tx_drop=0 peak=242 peak_last=215 bright_frames=456/456 heals=27 rephases=29",
+   "track source: fps=34.81 interval=28538/25359/74372 cadence_phase=27184/72998 us (last/min/max; phase last/max; timestamp is software capture-start, not exposure)",
+   "track rowstream: on streamed=454 fallback=0 verified=0 mismatch=0 lowlat=off stale_dropped=0 early_sent=454 row_arrival_us=2723/13518/28151",
+   "track timing us: grab=0/108 detect=118/9846 correct=295/476 send=1102/5755 (last/max)",
+   "track age us: ready=28143/73792/28414.01 send_start=28680/84161/29011.21 samples=456 invalid=0 (last/max/mean; software capture-start to task milestones, not exposure or delivery)"
+  ],
+  "1": [
+   "camera profile: initialized=1 pending=0 buffers=2 raw_buffers_requested=2 perf=1 raw_vco=0 jpeg_vco=0 qvga_div=8 jpeg_buffers_requested=0 task_core=0 dma_buffer=46080 dma_chunk=15360 direct_dma=0 jpeg_hts_requested=0 preview_hts=2060 psram_mhz=80 raw_ring_kib=0 raw_chunk_requested=0",
+   "track: running=1 format=Y8 target=35 measured=34.50 frames=464 acquired=463 markers=3248 capture_fail=0 slots=464 skipped=0 trigger_fail=0 detector_overflow=0 truncated=0 tx_drop=0 peak=255 peak_last=253 bright_frames=464/464 heals=27 rephases=30",
+   "track source: fps=34.88 interval=28620/25305/76476 cadence_phase=26734/74703 us (last/min/max; phase last/max; timestamp is software capture-start, not exposure)",
+   "track rowstream: on streamed=462 fallback=0 verified=0 mismatch=0 lowlat=off stale_dropped=0 early_sent=462 row_arrival_us=2678/13667/27518",
+   "track timing us: grab=0/90 detect=130/8577 correct=267/512 send=1090/4147 (last/max)",
+   "track age us: ready=27697/75447/28006.60 send_start=28163/84518/28538.61 samples=464 invalid=0 (last/max/mean; software capture-start to task milestones, not exposure or delivery)"
+  ],
+  "2": [
+   "camera profile: initialized=1 pending=0 buffers=2 raw_buffers_requested=2 perf=1 raw_vco=0 jpeg_vco=0 qvga_div=8 jpeg_buffers_requested=0 task_core=0 dma_buffer=46080 dma_chunk=15360 direct_dma=0 jpeg_hts_requested=0 preview_hts=2060 psram_mhz=80 raw_ring_kib=0 raw_chunk_requested=0",
+   "track: running=1 format=Y8 target=35 measured=34.56 frames=464 acquired=463 markers=577 capture_fail=0 slots=464 skipped=1 trigger_fail=0 detector_overflow=0 truncated=0 tx_drop=0 peak=223 peak_last=190 bright_frames=463/464 heals=22 rephases=29",
+   "track source: fps=34.84 interval=28597/25275/64032 cadence_phase=27261/62818 us (last/min/max; phase last/max; timestamp is software capture-start, not exposure)",
+   "track rowstream: on streamed=462 fallback=0 verified=0 mismatch=0 lowlat=off stale_dropped=0 early_sent=462 row_arrival_us=3285/13307/27957",
+   "track timing us: grab=0/91 detect=78/20197 correct=275/416 send=887/3662 (last/max)",
+   "track age us: ready=28206/63554/28433.61 send_start=28674/83956/28978.02 samples=464 invalid=0 (last/max/mean; software capture-start to task milestones, not exposure or delivery)"
+  ],
+  "3": [
+   "camera profile: initialized=1 pending=0 buffers=2 raw_buffers_requested=2 perf=1 raw_vco=0 jpeg_vco=0 qvga_div=8 jpeg_buffers_requested=0 task_core=0 dma_buffer=46080 dma_chunk=15360 direct_dma=0 jpeg_hts_requested=0 preview_hts=2060 psram_mhz=80 raw_ring_kib=0 raw_chunk_requested=0",
+   "track: running=1 format=Y8 target=35 measured=34.42 frames=464 acquired=463 markers=3246 capture_fail=0 slots=464 skipped=0 trigger_fail=0 detector_overflow=0 truncated=0 tx_drop=0 peak=255 peak_last=253 bright_frames=464/464 heals=24 rephases=29",
+   "track source: fps=34.86 interval=28594/25331/83285 cadence_phase=27270/82071 us (last/min/max; phase last/max; timestamp is software capture-start, not exposure)",
+   "track rowstream: on streamed=462 fallback=0 verified=0 mismatch=0 lowlat=off stale_dropped=0 early_sent=462 row_arrival_us=2425/13451/28022",
+   "track timing us: grab=0/87 detect=129/12888 correct=389/478 send=905/3723 (last/max)",
+   "track age us: ready=28216/82803/28460.71 send_start=28810/96168/29122.38 samples=464 invalid=0 (last/max/mean; software capture-start to task milestones, not exposure or delivery)"
+  ]
+ },
+ "stats_after": {
+  "0": [
+   "camera profile: initialized=1 pending=0 buffers=2 raw_buffers_requested=2 perf=1 raw_vco=0 jpeg_vco=0 qvga_div=8 jpeg_buffers_requested=0 task_core=0 dma_buffer=46080 dma_chunk=15360 direct_dma=0 jpeg_hts_requested=0 preview_hts=2060 psram_mhz=80 raw_ring_kib=0 raw_chunk_requested=0",
+   "track: running=1 format=Y8 target=35 measured=34.96 frames=2568 acquired=2567 markers=12840 capture_fail=0 slots=2568 skipped=2 trigger_fail=0 detector_overflow=0 truncated=0 tx_drop=0 peak=243 peak_last=218 bright_frames=2568/2568 heals=27 rephases=29",
+   "track source: fps=34.95 interval=28538/25359/74372 cadence_phase=27197/72998 us (last/min/max; phase last/max; timestamp is software capture-start, not exposure)",
+   "track rowstream: on streamed=2566 fallback=0 verified=0 mismatch=0 lowlat=off stale_dropped=0 early_sent=2566 row_arrival_us=3193/13337/27938",
+   "track timing us: grab=0/108 detect=137/9846 correct=376/482 send=720/5755 (last/max)",
+   "track age us: ready=28592/73792/28210.21 send_start=29213/84161/28773.04 samples=2568 invalid=0 (last/max/mean; software capture-start to task milestones, not exposure or delivery)"
+  ],
+  "1": [
+   "camera profile: initialized=1 pending=0 buffers=2 raw_buffers_requested=2 perf=1 raw_vco=0 jpeg_vco=0 qvga_div=8 jpeg_buffers_requested=0 task_core=0 dma_buffer=46080 dma_chunk=15360 direct_dma=0 jpeg_hts_requested=0 preview_hts=2060 psram_mhz=80 raw_ring_kib=0 raw_chunk_requested=0",
+   "track: running=1 format=Y8 target=35 measured=34.91 frames=2576 acquired=2575 markers=18032 capture_fail=0 slots=2576 skipped=0 trigger_fail=0 detector_overflow=0 truncated=0 tx_drop=0 peak=255 peak_last=253 bright_frames=2576/2576 heals=27 rephases=30",
+   "track source: fps=34.98 interval=28507/25305/76476 cadence_phase=26780/74703 us (last/min/max; phase last/max; timestamp is software capture-start, not exposure)",
+   "track rowstream: on streamed=2574 fallback=0 verified=0 mismatch=0 lowlat=off stale_dropped=0 early_sent=2574 row_arrival_us=2700/14050/27679",
+   "track timing us: grab=0/90 detect=128/8577 correct=285/514 send=1085/4816 (last/max)",
+   "track age us: ready=27642/75447/27841.90 send_start=28123/84518/28343.13 samples=2576 invalid=0 (last/max/mean; software capture-start to task milestones, not exposure or delivery)"
+  ],
+  "2": [
+   "camera profile: initialized=1 pending=0 buffers=2 raw_buffers_requested=2 perf=1 raw_vco=0 jpeg_vco=0 qvga_div=8 jpeg_buffers_requested=0 task_core=0 dma_buffer=46080 dma_chunk=15360 direct_dma=0 jpeg_hts_requested=0 preview_hts=2060 psram_mhz=80 raw_ring_kib=0 raw_chunk_requested=0",
+   "track: running=1 format=Y8 target=35 measured=34.93 frames=2576 acquired=2575 markers=3308 capture_fail=0 slots=2576 skipped=1 trigger_fail=0 detector_overflow=0 truncated=0 tx_drop=0 peak=223 peak_last=187 bright_frames=2575/2576 heals=22 rephases=29",
+   "track source: fps=34.97 interval=28602/25275/64032 cadence_phase=27258/62818 us (last/min/max; phase last/max; timestamp is software capture-start, not exposure)",
+   "track rowstream: on streamed=2574 fallback=0 verified=0 mismatch=0 lowlat=off stale_dropped=0 early_sent=2574 row_arrival_us=2850/13848/28170",
+   "track timing us: grab=0/91 detect=146/20197 correct=356/417 send=1695/3848 (last/max)",
+   "track age us: ready=28429/63554/28257.52 send_start=29079/83956/28755.26 samples=2576 invalid=0 (last/max/mean; software capture-start to task milestones, not exposure or delivery)"
+  ],
+  "3": [
+   "camera profile: initialized=1 pending=0 buffers=2 raw_buffers_requested=2 perf=1 raw_vco=0 jpeg_vco=0 qvga_div=8 jpeg_buffers_requested=0 task_core=0 dma_buffer=46080 dma_chunk=15360 direct_dma=0 jpeg_hts_requested=0 preview_hts=2060 psram_mhz=80 raw_ring_kib=0 raw_chunk_requested=0",
+   "track: running=1 format=Y8 target=35 measured=34.91 frames=2576 acquired=2575 markers=18029 capture_fail=0 slots=2576 skipped=1 trigger_fail=0 detector_overflow=0 truncated=0 tx_drop=0 peak=255 peak_last=253 bright_frames=2576/2576 heals=24 rephases=29",
+   "track source: fps=34.96 interval=28603/25331/83285 cadence_phase=27269/82071 us (last/min/max; phase last/max; timestamp is software capture-start, not exposure)",
+   "track rowstream: on streamed=2574 fallback=0 verified=0 mismatch=0 lowlat=off stale_dropped=0 early_sent=2574 row_arrival_us=2826/13464/28395",
+   "track timing us: grab=0/87 detect=133/12888 correct=389/505 send=879/4599 (last/max)",
+   "track age us: ready=27990/82803/28275.61 send_start=28590/96168/28901.47 samples=2576 invalid=0 (last/max/mean; software capture-start to task milestones, not exposure or delivery)"
+  ]
+ },
+ "hw_stats": {
+  "0": [
+   "hwtrig on=0 ok=0 late=0 nack=0 timeout=0 busy=0 fire_us=2147483647..-2147483648 done_us=2147483647..-2147483648",
+   "hwstamp on=0 hits=0 misses=0 rise=0 fall=0 sw_lag_us=2147483647..-2147483648 mean=0 isr_lag_us=2147483647..-2147483648"
+  ],
+  "1": [
+   "hwtrig on=0 ok=0 late=0 nack=0 timeout=0 busy=0 fire_us=2147483647..-2147483648 done_us=2147483647..-2147483648",
+   "hwstamp on=0 hits=0 misses=0 rise=0 fall=0 sw_lag_us=2147483647..-2147483648 mean=0 isr_lag_us=2147483647..-2147483648"
+  ],
+  "2": [
+   "hwtrig on=0 ok=0 late=0 nack=0 timeout=0 busy=0 fire_us=2147483647..-2147483648 done_us=2147483647..-2147483648",
+   "hwstamp on=0 hits=0 misses=0 rise=0 fall=0 sw_lag_us=2147483647..-2147483648 mean=0 isr_lag_us=2147483647..-2147483648"
+  ],
+  "3": [
+   "hwtrig on=0 ok=0 late=0 nack=0 timeout=0 busy=0 fire_us=2147483647..-2147483648 done_us=2147483647..-2147483648",
+   "hwstamp on=0 hits=0 misses=0 rise=0 fall=0 sw_lag_us=2147483647..-2147483648 mean=0 isr_lag_us=2147483647..-2147483648"
+  ]
+ },
+ "detect_status": {
+  "pose_hz": 34.999999475,
+  "quorum_yield": 0.998853,
+  "late_observations": 71,
+  "rig_ready": true,
+  "pixel_bias": {
+   "0": [
+    0.6418080768753298,
+    -0.22067758233790566
+   ],
+   "1": [
+    2.7946369258930246,
+    0.3341873128664349
+   ],
+   "2": [
+    -0.17035050573722943,
+    1.200537555782522
+   ],
+   "3": [
+    -3.266094497031125,
+    -1.314047286311051
+   ]
+  }
+ },
+ "analysis": {
+  "fps_target": 35,
+  "packets": 8398,
+  "full_slots": 2098,
+  "host_vs_hub_drift_ppm": -41.80404380052389,
+  "per_camera_fps": {
+   "1": 35.00000616960566,
+   "3": 34.983483810392386,
+   "0": 34.98332864304387,
+   "2": 35.0000166746149
+  },
+  "markers_per_packet": 5.0728744939271255,
+  "frame_ready_us": {
+   "p5": 27642.0,
+   "median": 28182.0,
+   "mean": 28106.287925696593,
+   "p95": 28316.0,
+   "p99": 28576.0,
+   "max": 57027.0,
+   "n": 8398
+  },
+  "detection_us": {
+   "p5": 74.0,
+   "median": 127.0,
+   "mean": 117.24184329602286,
+   "p95": 147.0,
+   "p99": 246.03000000000065,
+   "max": 313.0,
+   "n": 8398
+  },
+  "preprocess_us": {
+   "p5": 266.0,
+   "median": 300.0,
+   "mean": 322.21993331745654,
+   "p95": 408.0,
+   "p99": 463.0,
+   "max": 514.0,
+   "n": 8398
+  },
+  "send_after_capture_us": {
+   "p5": 28046.0,
+   "median": 28569.0,
+   "mean": 28545.749702310073,
+   "p95": 28824.15,
+   "p99": 29137.300000000007,
+   "max": 57428.0,
+   "n": 8398
+  },
+  "delivery_excess_us": {
+   "p5": 293.925,
+   "median": 3507.5,
+   "mean": 10078.254763038818,
+   "p95": 35442.58749999997,
+   "p99": 107281.70000000007,
+   "max": 665480.0,
+   "n": 8398
+  },
+  "capture_to_last_camera_at_host_us": {
+   "p5": 30335.4875,
+   "median": 39009.5,
+   "mean": 53921.96353670162,
+   "p95": 122980.11249999997,
+   "p99": 313722.84750000184,
+   "max": 694003.0,
+   "n": 2098
+  }
+ }
+}

@@ -1,0 +1,4 @@
+D0_scalar: fps={'0': 17.5, '3': 17.5, '2': 17.5, '1': 11.7} full_slots=350 det_med=47996us send_med=105.0ms e2e_med=143.2ms mk/pkt=11.27
+D3_piefull: fps={'2': 35.0, '0': 35.0, '3': 35.0, '1': 35.0} full_slots=2099 det_med=9127us send_med=37.6ms e2e_med=43.8ms mk/pkt=12.56
+L3_rowstream: fps={'3': 35.0, '0': 35.0, '2': 35.0, '1': 20.0} full_slots=1201 det_med=131us send_med=28.7ms e2e_med=64.0ms mk/pkt=10.34
+done
