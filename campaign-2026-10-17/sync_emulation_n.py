@@ -18,6 +18,8 @@ SOURCES = [("Live FTM", ST["Live FTM, camera tracking load"]["max"]), ("AP TSF",
            ("FTM + row-readout residual", None), ("NTP-style UDP", ST["NTP-style UDP"]["max"]),
            ("No synchronization", ST["No sync (local MAC)"]["max"])]
 SKEW_CAM, SLOPE, RESID_PX = 1, 0.5, 3.0
+CS = json.load(open(os.path.join(HERE, "capture.stats.json")))["hw"]
+XROW_HALF = CS["C_cross_camera_row_time_diff_us"]["median"] / 2      # residual cross-camera row offset, current row period
 
 
 def main():
@@ -98,10 +100,10 @@ def main():
     speed = {k: float(np.linalg.norm(np.mean(ref[k + 1], 0) - np.mean(ref[k - 1], 0)) / (2 * period / 1e6)) for k in ref if k - 1 in ref and k + 1 in ref}
     pairs = list(itertools.combinations(range(N), 2))
     static = np.median([[np.linalg.norm(ref[k][i] - ref[k][j]) for i, j in pairs] for k in speed if speed[k] < 2.0], 0)
-    out = {"period_us": period, "t_row_us": t_row, "skew_camera": SKEW_CAM, "slots": len(ref), "xrow_half_us": xrow_half,
+    out = {"period_us": period, "t_row_us": t_row, "skew_camera": SKEW_CAM, "slots": len(ref), "xrow_half_us": XROW_HALF, "xrow_half_this_body_us": xrow_half,
            "static_d_mm": static.tolist(), "sources": []}
     for name, dt in SOURCES:
-        if dt is None: dt = ST["Live FTM, camera tracking load"]["max"] + xrow_half
+        if dt is None: dt = ST["Live FTM, camera tracking load"]["max"] + XROW_HALF   # paper \\XrowHalf (capture.stats.json)
         R = []
         for k, v in speed.items():
             if not (20 <= v <= 800): continue
@@ -110,9 +112,15 @@ def main():
             R.append((v, float(np.linalg.norm(np.mean(x, 0) - np.mean(ref[k], 0))),
                       float(np.abs([np.linalg.norm(x[i] - x[j]) for i, j in pairs] - static).max())))
         R = np.array(R)
+        bins = []
+        for lo, hi in [(20, 100), (100, 200), (200, 300), (300, 400), (400, 600), (600, 800)]:
+            m = (R[:, 0] >= lo) & (R[:, 0] < hi)
+            if m.sum() >= 10:
+                bins.append({"lo": lo, "hi": hi, "n": int(m.sum()), "speed_med": float(np.median(R[m, 0])),
+                             "pos_med_mm": float(np.median(R[m, 1])), "pos_p95_mm": float(np.percentile(R[m, 1], 95)), "dist_med_mm": float(np.median(R[m, 2]))})
         out["sources"].append({"name": name, "dt_us": dt, "n": len(R), "pos_med_mm": float(np.median(R[:, 1])), "pos_p95_mm": float(np.percentile(R[:, 1], 95)),
                                "pos_max_mm": float(R[:, 1].max()), "dist_med_mm": float(np.median(R[:, 2])), "dist_p95_mm": float(np.percentile(R[:, 2], 95)),
-                               "speed_max_mm_s": float(R[:, 0].max())})
+                               "speed_max_mm_s": float(R[:, 0].max()), "bins": bins})
         print(f"{name:26s} dt={dt/1000:9.3f} ms n={len(R):5d} centroid shift med {np.median(R[:,1]):8.3f} p95 {np.percentile(R[:,1],95):8.3f} mm  LED-dist med {np.median(R[:,2]):7.3f} mm")
     k0 = next(iter(speed)); assert np.allclose(solve(k0, 0.0)[0], ref[k0][0])   # zero offset reproduces the reference
     json.dump(out, open(out_p, "w"), indent=1)

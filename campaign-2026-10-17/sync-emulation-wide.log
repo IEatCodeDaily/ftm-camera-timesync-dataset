@@ -1,0 +1,5 @@
+Live FTM                   dt=    0.003 ms n=  662 centroid shift med    0.000 p95    0.001 mm  LED-dist med   1.143 mm
+AP TSF                     dt=    0.182 ms n=  662 centroid shift med    0.024 p95    0.041 mm  LED-dist med   1.143 mm
+FTM + row-readout residual dt=    1.208 ms n=  662 centroid shift med    0.158 p95    0.274 mm  LED-dist med   1.152 mm
+NTP-style UDP              dt=   55.503 ms n=  653 centroid shift med    7.366 p95   12.675 mm  LED-dist med   2.004 mm
+No synchronization         dt=  186.896 ms n=  596 centroid shift med   24.744 p95   47.022 mm  LED-dist med   9.110 mm

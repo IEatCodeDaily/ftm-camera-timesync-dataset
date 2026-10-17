@@ -1,0 +1,222 @@
+{
+ "hw": {
+  "file": "tracking-hw.mcap",
+  "duration_s": 111.906859008,
+  "cameras": [
+   0,
+   1,
+   2,
+   3
+  ],
+  "resolution": [
+   640,
+   480
+  ],
+  "row_period_ns": 25750,
+  "inferred_fps": 35,
+  "period_ps": 28571428571,
+  "per_camera": {
+   "0": {
+    "packets": 3915,
+    "fps": 35.00000076009199,
+    "interval_median_us": 28571.0,
+    "interval_sd_us": 1.1319966197815736,
+    "paced_at_P": true,
+    "detection_us_median": 97.0,
+    "packets_off_grid_gt500us": 0,
+    "duplicate_slot_packets_dropped": 0
+   },
+   "1": {
+    "packets": 3918,
+    "fps": 35.00000084886395,
+    "interval_median_us": 28571.0,
+    "interval_sd_us": 1.0792020836825948,
+    "paced_at_P": true,
+    "detection_us_median": 109.0,
+    "packets_off_grid_gt500us": 0,
+    "duplicate_slot_packets_dropped": 0
+   },
+   "2": {
+    "packets": 3889,
+    "fps": 34.758620645263576,
+    "interval_median_us": 28571.0,
+    "interval_sd_us": 3454.18283493153,
+    "paced_at_P": true,
+    "detection_us_median": 77.0,
+    "packets_off_grid_gt500us": 0,
+    "duplicate_slot_packets_dropped": 0
+   },
+   "3": {
+    "packets": 3914,
+    "fps": 34.99999968694097,
+    "interval_median_us": 28571.0,
+    "interval_sd_us": 1.1611498597938723,
+    "paced_at_P": true,
+    "detection_us_median": 115.0,
+    "packets_off_grid_gt500us": 0,
+    "duplicate_slot_packets_dropped": 0
+   }
+  },
+  "paced_cameras": [
+   0,
+   1,
+   2,
+   3
+  ],
+  "slots_spanned": 3918,
+  "slots_all_paced_cams": 3887,
+  "frac_slots_all_paced_cams": 0.9920877998979071,
+  "B_trigger_to_capture_us_median": {
+   "0": 752.259052,
+   "1": 1180.5454639999998,
+   "2": 642.54412,
+   "3": 642.6883625
+  },
+  "B_trigger_to_capture_jitter_sd_us": {
+   "0": 0.7723611668590961,
+   "1": 0.7501762712973011,
+   "2": 0.8383173117769801,
+   "3": 0.7950135127425728
+  },
+  "B_capture_spread_raw_us": {
+   "n": 3887,
+   "median": 538.0,
+   "p95": 540.0,
+   "p99": 541.0,
+   "max": 543.0
+  },
+  "B_capture_spread_after_fixed_offset_us": {
+   "n": 3887,
+   "median": 1.4293212890625,
+   "p95": 2.8571014404296875,
+   "p99": 3.714935302734375,
+   "max": 5.4293212890625
+  },
+  "C_marker_row_time_us": {
+   "n": 80339,
+   "median": 3196.21875,
+   "p95": 5769.609375,
+   "p99": 6023.890625,
+   "max": 9416.453125
+  },
+  "C_full_frame_row_span_us": 12360.0,
+  "C_cross_camera_row_time_diff_us": {
+   "n": 2081,
+   "median": 2409.5026041666665,
+   "p95": 2410.8437499999995,
+   "p99": 2586.3116071428576,
+   "max": 2587.8750000000005
+  },
+  "D_static_2d": {}
+ },
+ "sw": {
+  "file": "tracking-sw.mcap",
+  "duration_s": 111.982297088,
+  "cameras": [
+   0,
+   1,
+   2,
+   3
+  ],
+  "resolution": [
+   640,
+   480
+  ],
+  "row_period_ns": 25750,
+  "inferred_fps": 35,
+  "period_ps": 28571428571,
+  "per_camera": {
+   "0": {
+    "packets": 3904,
+    "fps": 34.8748156741343,
+    "interval_median_us": 28571.0,
+    "interval_sd_us": 2420.486173492947,
+    "paced_at_P": true,
+    "detection_us_median": 98.0,
+    "packets_off_grid_gt500us": 0,
+    "duplicate_slot_packets_dropped": 0
+   },
+   "1": {
+    "packets": 3888,
+    "fps": 34.71418756431882,
+    "interval_median_us": 28571.0,
+    "interval_sd_us": 3658.582745100878,
+    "paced_at_P": true,
+    "detection_us_median": 111.0,
+    "packets_off_grid_gt500us": 0,
+    "duplicate_slot_packets_dropped": 0
+   },
+   "2": {
+    "packets": 3919,
+    "fps": 35.00005476016735,
+    "interval_median_us": 28572.0,
+    "interval_sd_us": 51.00995477825605,
+    "paced_at_P": true,
+    "detection_us_median": 79.0,
+    "packets_off_grid_gt500us": 0,
+    "duplicate_slot_packets_dropped": 0
+   },
+   "3": {
+    "packets": 3919,
+    "fps": 34.99997346862654,
+    "interval_median_us": 28571.0,
+    "interval_sd_us": 62.06773169318508,
+    "paced_at_P": true,
+    "detection_us_median": 116.0,
+    "packets_off_grid_gt500us": 0,
+    "duplicate_slot_packets_dropped": 0
+   }
+  },
+  "paced_cameras": [
+   0,
+   1,
+   2,
+   3
+  ],
+  "slots_spanned": 3920,
+  "slots_all_paced_cams": 3872,
+  "frac_slots_all_paced_cams": 0.9877551020408163,
+  "B_trigger_to_capture_us_median": {
+   "0": 1354.543466,
+   "1": 1768.2576585,
+   "2": 1230.114274,
+   "3": 1230.543649
+  },
+  "B_trigger_to_capture_jitter_sd_us": {
+   "0": 41.87962116825549,
+   "1": 39.81332508521184,
+   "2": 35.679774367947104,
+   "3": 44.29174420035065
+  },
+  "B_capture_spread_raw_us": {
+   "n": 3872,
+   "median": 540.0,
+   "p95": 583.4499999999998,
+   "p99": 764.5799999999999,
+   "max": 925.0
+  },
+  "B_capture_spread_after_fixed_offset_us": {
+   "n": 3872,
+   "median": 13.99981689453125,
+   "p95": 190.12871627807613,
+   "p99": 320.7367207336426,
+   "max": 428.99981689453125
+  },
+  "C_marker_row_time_us": {
+   "n": 80327,
+   "median": 3197.828125,
+   "p95": 5769.609375,
+   "p99": 6023.890625,
+   "max": 12073.53125
+  },
+  "C_full_frame_row_span_us": 12360.0,
+  "C_cross_camera_row_time_diff_us": {
+   "n": 2099,
+   "median": 2409.2343750000005,
+   "p95": 2410.8437500000005,
+   "p99": 2587.8749999999995,
+   "max": 2590.8638392857147
+  },
+  "D_static_2d": {}
+ }
+}
