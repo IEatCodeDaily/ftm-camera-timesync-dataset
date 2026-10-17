@@ -126,7 +126,7 @@ wide sweep, n=662 slots up to ~710 mm/s): centroid shift median / p95 for one ca
 worst measured offset: Live FTM 0.000/0.001 mm, AP TSF 0.024/0.041 mm, FTM + row residual (612 us)
 0.080/0.139 mm, NTP-style UDP 7.4/12.7 mm, no sync 24.7/47.0 mm. Emulation on real tracks, not a live run.
 
-**G2. Long static run** started 00:40 with the arm parked at home (`tracking-<ts>.mcap`, see `long-run2.started`).
+**G2. Long static run**: recording started when F2 ended, but the arm moved during D2 until unix 1792256303. Use only data after that, with the arm parked at home (`tracking-<ts>.mcap`, see `long-run2.started`).
 Needs >= 7.4 h to replace the old claim.
 
 ### Still open (needs a human or time)
