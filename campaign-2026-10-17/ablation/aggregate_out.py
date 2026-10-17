@@ -55,12 +55,13 @@ def analyse(meta, rows):
     spread = [max(s.values()) - min(s.values()) for s in fulls]
     jit = [max(s[c] - med[c] for c in s) - min(s[c] - med[c] for c in s) for s in fulls]
     span = (cap.max() - cap.min()) / 1e6
+    n_slots = max(slots) - min(slots) + 1      # inclusive scheduled-slot window (rev12: was round(span*fps), one short at the edges)
     per_cam = defaultdict(list)
     for r in rows: per_cam[r["camera_id"]].append(r["capture_us"])
     fps_c = [(len(v) - 1) / ((max(v) - min(v)) / 1e6) for v in per_cam.values()]
     return {
         "fps_target": fps, "fps_min": min(fps_c), "fps_max": max(fps_c), "packets": len(rows),
-        "slots_total": round(span * fps), "slots_full": len(full), "full_pct": 100 * len(full) / max(1, round(span * fps)),
+        "slots_total": n_slots, "slots_full": len(full), "full_pct": 100 * len(full) / max(1, n_slots),
         "drift_ppm": slope * 1e6, "markers_per_packet": float(np.mean([len(r.get("markers", [])) for r in rows])),
         "truncated_packets": int(sum(len(r.get("markers", [])) >= 31 for r in rows)),
         "frame_ready_us": q([r["frame_ready_us"] for r in rows]),
