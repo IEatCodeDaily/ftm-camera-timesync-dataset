@@ -35,3 +35,13 @@ Shortening the frame did not move the cliff, so the sensor frame (25.3 ms at VTS
 | 40 (repeat) | 39.38 / 39.67 / 40.00 / 39.85 | 97.67 % | 18.2 ms | 28.5 / 100.9 ms |
 Detect at 40: pose_hz 40.0, quorum_yield 99.8 %, 0 late observations.
 Studio was only the 38 cap; it keeps up at 40. Remaining loss is per-node frame skips (node 0 worst, ~1.5 %).
+
+## Studio cap removed (nocap/, 60 s per rate, 4 cameras, Studio build after bb0fc2a)
+| target | per-camera fps (n0..n3) | complete 4-cam slots | last packet med / p95 |
+|---|---|---|---|
+| 40 | 39.57 / 39.87 / 39.98 / 39.98 | 98.38 % | 30.5 / 67.3 ms |
+| 42 | 41.08 / 40.38 / 41.47 / 41.37 | 91.71 % | 30.3 / 61.7 ms |
+| 44 | 42.18 / 39.70 / 42.32 / 41.83 | 80.04 % | 30.4 / 67.4 ms |
+40 fps is the stable rate; above it the per-node loop starts missing slots (late hardware triggers, mostly node 0).
+Polling `cam stats` on every node during a run cost 0.5-2.5 fps per node, so probes sample counters only at window edges.
+`cam copycore 1` (frame copy on the detector core) was worse at every rate (40 -> 36-39 fps, 45 -> 22 fps); default `auto` kept.
