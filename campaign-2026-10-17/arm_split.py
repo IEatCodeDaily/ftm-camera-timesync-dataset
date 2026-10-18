@@ -25,8 +25,14 @@ def revisits(path):
                          [x - y for x, y in zip(cen(a["calibrator"]), cen(b["calibrator"]))])
                for a, b in pairs if a["calibrator"] and b["calibrator"]]
         out[ph] = {"pairs": len(pairs), "ee_median_mm": st.median(ee), "cal_median_mm": st.median(cal),
-                   "arm_median_mm": st.median(arm), "arm_p90_mm": sorted(arm)[int(0.9 * (len(arm) - 1))]}
+                   "arm_median_mm": st.median(arm), "arm_max_mm": max(arm), "arm_p90_mm": sorted(arm)[int(0.9 * (len(arm) - 1))]}
     out["visits"] = len(rows); out["unreached"] = len(allrows) - len(rows)
+    # Registration-free pair lengths, grouped by reached pose (accuracy_arm_n.py convention).
+    by = {}
+    for r in allrows: by.setdefault(tuple(round(x, 1) for x in r["pose_xyz"]), []).append(r)
+    P = [([st.mean(r["ir_world"][k] for r in v) for k in range(3)], k) for k, v in by.items()]
+    e = [math.dist(a, b) - math.dist(pa, pb) for i, (a, pa) in enumerate(P) for (b, pb) in P[i + 1:]]
+    out["pairs"] = {"poses": len(P), "n": len(e), "rms_mm": math.sqrt(st.mean(x * x for x in e))}
     err = [r["err_norm"] if "err_norm" in r else math.hypot(*r["err"]) for r in rows if r["phase"] == "B"]
     out["B"]["abs_err_median_mm"] = st.median(err); out["B"]["abs_err_max_mm"] = max(err)
     return out
