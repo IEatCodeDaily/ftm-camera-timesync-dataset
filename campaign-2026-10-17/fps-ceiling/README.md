@@ -26,3 +26,12 @@ Shortening the frame did not move the cliff, so the sensor frame (25.3 ms at VTS
   (exposure + 12.4 ms readout + driver). With a 22.2 ms slot (45 fps) the loop has ~4 ms for detect + send and
   the next FREX arm, and starts missing slots; at 20 ms (50 fps) every other slot is missed.
 - 40-50 fps at VGA needs a shorter frame-ready time: less readout (crop rows/ROI, QVGA) or a faster interface.
+
+## 40 fps through Studio after lifting MAX_VGA_TRACKING_FPS 38 -> 40 (60 s per run, studio40/)
+| target | per-camera fps (n0..n3) | complete 4-cam slots | frame ready | last packet med / p95 |
+|---|---|---|---|---|
+| 38 | 38.00 / 37.97 / 38.00 / 38.02 | 99.78 % | 18.2 ms | 27.9 / 52.1 ms |
+| 40 | 39.43 / 39.78 / 40.02 / 39.95 | 97.83 % | 18.3 ms | 27.0 / 46.5 ms |
+| 40 (repeat) | 39.38 / 39.67 / 40.00 / 39.85 | 97.67 % | 18.2 ms | 28.5 / 100.9 ms |
+Detect at 40: pose_hz 40.0, quorum_yield 99.8 %, 0 late observations.
+Studio was only the 38 cap; it keeps up at 40. Remaining loss is per-node frame skips (node 0 worst, ~1.5 %).
