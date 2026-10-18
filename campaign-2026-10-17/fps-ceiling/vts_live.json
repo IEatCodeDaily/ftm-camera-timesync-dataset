@@ -1,0 +1,32 @@
+{
+ "_note": "Live VTS write on a tracking node (fw 842af0eb, VGA vskip 4, hwtrig, lowlat), 2026-10-18. cam reg 0x380e/0x380f written while mode live ran; readback confirmed the value; rates from cam stats frame-counter deltas over each window.",
+ "node": "192.168.137.31",
+ "target_fps": 44,
+ "window_s": 15,
+ "runs": [
+  {
+   "vts": 640,
+   "readback": [
+    "0x02",
+    "0x80"
+   ],
+   "frames": 632,
+   "slots": 647,
+   "trigger_fail": 14,
+   "capture_fail": 4,
+   "fps": 41.9
+  },
+  {
+   "vts": 984,
+   "readback": [
+    "0x03",
+    "0xd8"
+   ],
+   "frames": 632,
+   "slots": 653,
+   "trigger_fail": 20,
+   "capture_fail": 5,
+   "fps": 41.78
+  }
+ ]
+}

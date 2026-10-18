@@ -36,7 +36,7 @@ Shortening the frame did not move the cliff, so the sensor frame (25.3 ms at VTS
 Detect at 40: pose_hz 40.0, quorum_yield 99.8 %, 0 late observations.
 Studio was only the 38 cap; it keeps up at 40. Remaining loss is per-node frame skips (node 0 worst, ~1.5 %).
 
-## Studio cap removed (nocap/, 60 s per rate, 4 cameras, Studio build after bb0fc2a)
+## Studio cap removed (nocap/, 60 s per rate, 4 cameras, Studio build at a3fb683, cap removed)
 | target | per-camera fps (n0..n3) | complete 4-cam slots | last packet med / p95 |
 |---|---|---|---|
 | 40 | 39.57 / 39.87 / 39.98 / 39.98 | 98.38 % | 30.5 / 67.3 ms |
@@ -45,3 +45,7 @@ Studio was only the 38 cap; it keeps up at 40. Remaining loss is per-node frame 
 40 fps is the stable rate; above it the per-node loop starts missing slots (late hardware triggers, mostly node 0).
 Polling `cam stats` on every node during a run cost 0.5-2.5 fps per node, so probes sample counters only at window edges.
 `cam copycore 1` (frame copy on the detector core) was worse at every rate (40 -> 36-39 fps, 45 -> 22 fps); default `auto` kept.
+
+## Live VTS write on a tracking node (vts_live.json)
+Node .31 at a 44 fps target: VTS 640 (read back 0x0280) -> 41.9 fps, VTS 984 -> 41.78 fps over 15 s each.
+Shortening the frame does not move the rate edge; the frame-ready time binds.
