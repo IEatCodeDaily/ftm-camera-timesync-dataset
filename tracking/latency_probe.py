@@ -62,7 +62,8 @@ def run(fps):
     t0 = time.time(); time.sleep(DUR)
     status = json.loads(req("/api/tracking/status"))
     req("/api/tracking/stop", {}, "POST"); time.sleep(5)
-    src = status["recording"]["path"].replace("E:\\", "/mnt/e/").replace("\\", "/")
+    src = status["recording"]["path"]
+    if os.name != "nt": src = src.replace("E:\\", "/mnt/e/").replace("\\", "/")   # Studio runs on Windows
     dst = os.path.join(OUT, f"latency-{fps}fps{TAG}.mcap"); shutil.copy(src, dst)
     json.dump({"t0": t0, "dur": DUR, "nodes": len(ns)}, open(dst + ".json", "w"))
     return analyse(dst, fps, t0, DUR, len(ns))
@@ -100,7 +101,14 @@ def analyse(dst, fps, t0, dur, n_nodes):
     for r in rows:
         full[round(r["capture_us"] / period)].append(r["host_time_ns"] / 1e3 - r["capture_us"] - r["_env"])
     slot_ready = [max(v) - base for v in full.values() if len(v) == n_nodes]
+    per_cam = defaultdict(set)
+    for r in rows: per_cam[r["camera_id"]].add(round(r["capture_us"] / period))
+    span = (cap.max() - cap.min()) / 1e6
+    n_slots = round(cap.max() / period) - round(cap.min() / period) + 1
+    achieved = {str(k): len(v) / span for k, v in sorted(per_cam.items())}
+    full_yield = sum(1 for v in slots.values() if len(v) == n_nodes) / n_slots
     return {"fps": fps, "slot_period_us": period, "packets": len(rows), "host_vs_hub_drift_ppm": float(slope * 1e6),
+            "per_camera_fps": achieved, "full_slot_yield": full_yield,
             "frame_ready_us": q([r["frame_ready_us"] for r in rows]),
             "detection_us": q([r["detection_us"] for r in rows]),
             "preprocess_us": q([r["preprocess_us"] for r in rows]),

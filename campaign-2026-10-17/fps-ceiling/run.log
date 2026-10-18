@@ -1,0 +1,30 @@
+35 {'packets': 4200, 'error': None}
+38 {'packets': 4557, 'error': None}
+40 {'packets': None, 'error': "<HTTPError 400: 'Bad Request'>"}
+42 {'packets': None, 'error': "<HTTPError 400: 'Bad Request'>"}
+45 {'packets': None, 'error': "<HTTPError 400: 'Bad Request'>"}
+50 {'packets': None, 'error': "<HTTPError 400: 'Bad Request'>"}
+Traceback (most recent call last):
+  File "E:\Projects\ftm-camera-timesync-dataset\tracking\fps_ceiling.py", line 40, in <module>
+    lp.req("/api/tracking/start", {"target_node_ids": sorted(ns), "resolution": "vga", "fps": RATES[-1], **lp.KNOBS}, "POST")
+  File "E:\Projects\ftm-camera-timesync-dataset\tracking\latency_probe.py", line 36, in req
+    return urllib.request.urlopen(r, timeout=120).read().decode()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Compiler\Python311\Lib\urllib\request.py", line 216, in urlopen
+    return opener.open(url, data, timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Compiler\Python311\Lib\urllib\request.py", line 525, in open
+    response = meth(req, response)
+               ^^^^^^^^^^^^^^^^^^^
+  File "C:\Compiler\Python311\Lib\urllib\request.py", line 634, in http_response
+    response = self.parent.error(
+               ^^^^^^^^^^^^^^^^^^
+  File "C:\Compiler\Python311\Lib\urllib\request.py", line 563, in error
+    return self._call_chain(*args)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Compiler\Python311\Lib\urllib\request.py", line 496, in _call_chain
+    result = func(*args)
+             ^^^^^^^^^^^
+  File "C:\Compiler\Python311\Lib\urllib\request.py", line 643, in http_error_default
+    raise HTTPError(req.full_url, code, msg, hdrs, fp)
+urllib.error.HTTPError: HTTP Error 400: Bad Request
