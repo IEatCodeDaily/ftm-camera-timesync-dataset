@@ -133,7 +133,7 @@ Needs >= 7.4 h to replace the old claim.
 - Calibrator wand run: dropped, not needed for the paper or thesis claims.
 - Dense-scene ablation: dropped. With 4 cameras a dense scene is known to be ambiguous; it only makes
   sense at 8+ cameras. The thesis states this as a limitation instead of measuring it.
-- Long static run: stopped at 00:56 after 58 min with the arm parked (`long-static2.mcap`,
+- Long static run: stopped at 00:56 after 58 min with the arm parked (`long-static2.mcap`, labelled slots in `long-static2-dyn.json.gz`,
   `seg-long-static2.json`, analysis `long_static.py` -> `long-static2.json`). It replaces the old
   7.4-h claim with a ~1-h one; the old 7.4-h recording stays valid for the old firmware only.
   Result (dobot-marker-B, 4 LEDs, 120 829 labelled slots over 57.6 min, six 10-min bins):

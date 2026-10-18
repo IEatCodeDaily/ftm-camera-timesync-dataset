@@ -2,10 +2,10 @@
 Reports per-bin centroid and LED-distance means; drift = range across bins.
 Usage: python3 long_static.py <dynamic_n out.json> <out.json>
 """
-import json, sys
+import gzip, json, sys
 import numpy as np
 
-rows = json.load(open(sys.argv[1]))["rows"]["0.0"]
+rows = json.load((gzip.open if sys.argv[1].endswith(".gz") else open)(sys.argv[1], "rt"))["rows"]["0.0"]   # dyn output is stored gzipped (GitHub 100 MB limit)
 t = np.array([r["host_ns"] for r in rows]) / 1e9; t -= t[0]
 C = np.array([r["pos"] for r in rows]); D = np.array([r["d_mm"] for r in rows])
 bins = []
