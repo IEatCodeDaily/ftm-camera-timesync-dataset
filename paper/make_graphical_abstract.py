@@ -1,58 +1,180 @@
-"""Graphical abstract for the IEEE Sensors Letters submission: two panels (clock layer, capture layer).
-Numbers are read from the dataset files and asserted, never typed.
-Output: figures/graphical_abstract.{png,pdf} (1200x600 px at 200 dpi).
-"""
-import csv, json
+"""Graphical abstract (IEEE: 660x295 landscape, labels only, sans-serif). Hand-built SVG in one illustration style,
+read left -> right:
+  (1) wireless IR camera nodes around a tracked LED, Wi-Fi FTM clock alignment to a reference node
+  (2) per-node trigger -> frame-start lanes at a shared slot, software vs hardware path (schematic, not to scale)
+  (3) the real tracked LED path from the robot-arm sweep (dataset arm-reference/dynamic)
+Every printed number is read from figures/numbers.tex (make_figures.py). Drawn in a 1320x590 viewBox (2x IEEE),
+rasterised at 2640x1180. Output: figures/graphical_abstract.{svg,png,pdf}."""
+import json, math, re
 from pathlib import Path
-import matplotlib
-matplotlib.use("Agg")
-import matplotlib.pyplot as plt
+import cairosvg
 
-_here = Path(__file__).resolve().parent
-DATA = next(d for d in (_here.parent, Path("/mnt/e/Projects/ftm-camera-timesync-dataset")) if (d / "timesync-2026-09-09").is_dir())
-rows = list(csv.DictReader((DATA / "timesync-2026-09-09/analysis/offsets.csv").open()))
-CAMPAIGN = "20260909-065110-campaign"
-src = {"NTP-style UDP\n(unfiltered)": "mcpwm:ntp", "AP TSF via\nESP-IDF API": "mcpwm:tsf", "Live FTM": "mcpwm:ftm"}   # rev10 M2: TSF as exposed by the API
-worst = {k: max(abs(float(r["offset_us"])) for r in rows if CAMPAIGN in r["run"] and r["method"] == m) for k, m in src.items()}
-assert [round(v, 1) for v in worst.values()] == [55503.1, 182.2, 1.7], worst
+HERE = Path(__file__).resolve().parent
+DATA = next(d for d in (HERE.parent, Path("/mnt/e/Projects/ftm-camera-timesync-dataset")) if (d / "arm-reference").is_dir())
+N = dict(re.findall(r"\\newcommand\{\\(\w+)\}\{([^}]*)\}", (HERE / "figures/numbers.tex").read_text()))
+SD = f"{N['LiveFourSdLo']}–{N['LiveFourSdHi']}"
+HW, SW, VMAX, LEN, LLO, LHI = N["HwJitMed"], N["SwJitMed"], N["DynVmax"], N["LenRms"], N["LenLo"], N["LenHi"]
 
-R4 = next(r for r in json.load((DATA / "tracking/stats.json").open())["recordings"] if r["file"].startswith("tracking-1791273844728"))
-AB = json.load((DATA / "tracking/ab/tracking_ab.stats.json").open())   # same-session A/B, 4 cameras VGA 35 frames/s, 600 s each
-row = R4["C_marker_row_time_us"]["median"]
-cap = {"software path, delay-\nremoved spread, med.": AB["sw"]["jitter_fixed_removed_us"]["median"],
-       "software path, p95": AB["sw"]["jitter_fixed_removed_us"]["p95"],
-       "hardware timing, delay-\nremoved spread, med.": AB["hw"]["jitter_fixed_removed_us"]["median"],
-       "hardware timing, p95": AB["hw"]["jitter_fixed_removed_us"]["p95"],
-       "row-readout residual after\nhost correction, med. (up to)": row / 2}
-assert [round(v, 1) for v in cap.values()] == [40.7, 236.0, 2.1, 4.1, 2492.9], cap   # rev10 M6: residual = half the corrected row offset
-
-plt.rcParams.update({"font.family": "serif", "font.serif": ["STIXGeneral", "DejaVu Serif"], "mathtext.fontset": "stix", "pdf.fonttype": 42})
-fig = plt.figure(figsize=(6, 3), dpi=200)
-fig.text(.5, .955, "Wi-Fi FTM clock alignment for wireless ESP32-S3 + OV5640 infrared tracking", ha="center", fontsize=10, weight="bold")
+W, H = 1320, 590
+NAVY, BLUE, TEAL, IR, RED, GREY, INK = "#14365d", "#2563a8", "#0f766e", "#f97316", "#c0392b", "#6b7280", "#111827"
+FONT = "DejaVu Sans, Arial, sans-serif"
+S = []
 
 
-def panel(x0, title, note, items, hi, color):
-    fig.text(x0 + .22, .86, title, ha="center", fontsize=9, weight="bold", color=color)
-    ax = fig.add_axes([x0 + .14, .27, .3, .5])
-    names, vals = list(items), list(items.values())
-    ax.hlines(range(len(vals)), .5, vals, color="0.8", lw=1)   # dots, not bars: bar length on a log axis misleads
-    ax.scatter(vals, range(len(vals)), s=[60 if i == hi else 30 for i in range(len(vals))],
-               color=[color if i == hi else "0.5" for i in range(len(vals))], zorder=3)
-    ax.set_xscale("log"); ax.set_xlim(.5, 3e6); ax.set_yticks(range(len(vals)), names, fontsize=7)
-    ax.tick_params(axis="x", labelsize=6.5); ax.spines[["top", "right"]].set_visible(False)
-    for y, v in enumerate(vals):
-        lab = f"{v / 1000:,.1f} ms" if v >= 1000 else (f"{v:.0f} µs" if v > 10 or v == int(v) else f"{v:.1f} µs")
-        ax.text(v * 1.9, y, lab, va="center", fontsize=8, weight="bold" if y == hi else "normal")
-    ax.set_xlabel("µs (log scale)", fontsize=7)
-    fig.text(x0 + .22, .06, note, ha="center", va="center", fontsize=6.8, style="italic")
+def text(x, y, s, size=22, fill=INK, weight="normal", anchor="middle", extra=""):
+    S.append(f'<text x="{x:.1f}" y="{y:.1f}" font-family="{FONT}" font-size="{size}" fill="{fill}" '
+             f'font-weight="{weight}" text-anchor="{anchor}" {extra}>{s}</text>')
 
 
-panel(0, "1  Clock layer (GPIO, logic analyzer)",
-      "largest observed follower-to-reference GPIO offset\n(campaign 60-s records), cameras idle; separate build",
-      worst, 2, "#1f77b4")
-panel(.5, "2  Capture layer (4-camera tracking)",
-      "in each node's own clock estimate; trigger + stamp switched together;\nframe-start edges, not exposure; one paired 600-s run, VGA 35 frames/s",
-      cap, 2, "#d62728")
-out = Path(__file__).parent / "figures"
-fig.savefig(out / "graphical_abstract.png"); fig.savefig(out / "graphical_abstract.pdf")
-print("graphical abstract ->", out)
+def camera(x, y, ang, ref=False):
+    """Node glyph: board + lens with IR-pass (dark red) filter, looking along ang (deg, SVG coords)."""
+    S.append(f'<g transform="translate({x},{y}) rotate({ang:.1f})">'
+             f'<rect x="-26" y="-31" width="42" height="62" rx="7" fill="{NAVY if ref else "#334155"}"/>'
+             f'<rect x="12" y="-17" width="16" height="34" rx="4" fill="#0b0f19"/>'
+             f'<circle cx="27" cy="0" r="11" fill="#4a0e0e" stroke="#cbd5e1" stroke-width="3"/>'
+             f'<circle cx="24" cy="-3" r="3" fill="#fff" opacity=".6"/></g>')
+
+
+def wifi(x, y, col=BLUE):
+    for i in range(3):
+        r = 12 + 11 * i
+        S.append(f'<path d="M{x - r * .7:.1f},{y - r * .7:.1f} A{r},{r} 0 0 1 {x + r * .7:.1f},{y - r * .7:.1f}" '
+                 f'fill="none" stroke="{col}" stroke-width="4.5" stroke-linecap="round"/>')
+    S.append(f'<circle cx="{x}" cy="{y}" r="4.5" fill="{col}"/>')
+
+
+def chevron(x, y):
+    S.append(f'<path d="M{x},{y - 34} L{x + 26},{y} L{x},{y + 34}" fill="none" stroke="#94a3b8" stroke-width="8" '
+             f'stroke-linecap="round" stroke-linejoin="round"/>')
+
+
+def head(x, title, sub):
+    text(x, 96, title, 25, INK, "bold")
+    text(x, 124, sub, 20, GREY)
+
+
+S.append(f'<rect width="{W}" height="{H}" fill="white"/>')
+text(W / 2, 46, "Low-cost wireless infrared motion capture, clock-aligned over Wi-Fi", 32, INK, "bold")
+for x in (470, 925):
+    chevron(x, 330)
+
+# ---------------- (1) scene ------------------------------------------------------------------------------------
+head(235, "Wireless IR camera nodes", "ESP32-S3 + OV5640, on-board detection")
+cx, cy = 235, 330
+nodes = [(95, 232, "N1"), (375, 232, "N2"), (95, 420, "N3"), (375, 420, "N0")]
+for x, y, _ in nodes:                                                       # view cones under everything
+    a = math.atan2(cy - y, cx - x); d = math.hypot(cx - x, cy - y) - 4
+    (x1, y1), (x2, y2) = [(x + d * math.cos(a + s), y + d * math.sin(a + s)) for s in (.2, -.2)]
+    S.append(f'<path d="M{x},{y} L{x1:.1f},{y1:.1f} L{x2:.1f},{y2:.1f} Z" fill="{IR}" opacity=".11"/>')
+rx, ry = nodes[3][:2]
+for x, y, lab in nodes:
+    camera(x, y, math.degrees(math.atan2(cy - y, cx - x)), ref=lab == "N0")
+    ly = y - 50 if y < cy else y + 66
+    text(x, ly, lab, 21, NAVY, "bold")
+    wifi(x + (-44 if x < cx else 44), ly - 6, NAVY if lab == "N0" else BLUE)
+S.append(f'<circle cx="{cx}" cy="{cy}" r="32" fill="{IR}" opacity=".16"/><circle cx="{cx}" cy="{cy}" r="18" fill="{IR}" opacity=".35"/>'
+         f'<circle cx="{cx}" cy="{cy}" r="8.5" fill="{IR}"/>')
+S.append(f'<rect x="{cx - 44}" y="{cy + 40}" width="88" height="28" rx="6" fill="white" opacity=".9"/>')
+text(cx, cy + 61, "IR LED", 20, "#9a3412", "bold")
+text(cx, 534, "802.11 FTM clock alignment to N0", 21, BLUE, "bold")
+text(cx, 562, f"offset SD {SD} µs", 21, BLUE)
+
+# ---------------- (2) timing lanes -----------------------------------------------------------------------------
+X0, X1 = 520, 890
+head((X0 + X1) / 2, "Trigger at a shared slot", "frame start of each node")
+XS = X0 + 165                                                               # slot instant
+
+
+def lanes(y0, offs, col, name, num):
+    text(X0, y0 - 12, name, 20, col, "bold", "start")
+    for i, o in enumerate(offs):
+        yy = y0 + 30 * i
+        e = XS + o
+        S.append(f'<path d="M{X0 + 4},{yy + 20} L{e},{yy + 20} L{e},{yy + 2} L{X0 + 225},{yy + 2}" fill="none" '
+                 f'stroke="{col}" stroke-width="4" stroke-linejoin="round" stroke-linecap="round"/>')
+    lo, hi = XS + min(offs), XS + max(offs)
+    yb = y0 + 134
+    if hi - lo > 10:
+        S.append(f'<path d="M{lo},{yb - 8} L{lo},{yb} L{hi},{yb} L{hi},{yb - 8}" fill="none" stroke="{col}" stroke-width="3"/>')
+    text(X1, y0 + 62, f"{num} µs", 36, col, "bold", "end")
+    text(X1, y0 + 90, "delay spread", 20, "#374151", "normal", "end")
+
+
+S.append(f'<line x1="{XS}" y1="150" x2="{XS}" y2="512" stroke="{INK}" stroke-width="2.5" stroke-dasharray="6 6"/>')
+lanes(166, [-34, 22, -10, 38], RED, "software", SW)
+lanes(358, [-2, 1, 0, 2], TEAL, "hardware", HW)
+text(XS, 534, "slot", 20, INK)
+text((X0 + X1) / 2, 562, "median, per-camera delay removed · not to scale", 18, "#374151", "normal", "middle", 'font-style="italic"')
+
+# ---------------- (3) real tracked LED path --------------------------------------------------------------------
+head(1140, "Robot-arm marker", "tracked sweep, 4 LEDs")
+dyn = json.load((DATA / "campaign-2026-10-17/dynamic-wide.json").open())["rows"]["0.0"]   # rev12: 4-LED marker, wide 100 % sweep
+P = [(r["pos"], r["speed_mm_s"]) for r in dyn]
+az, el = math.radians(-35), math.radians(40)
+
+
+def proj(p):
+    x, y, z = p
+    xr, yr = x * math.cos(az) - y * math.sin(az), x * math.sin(az) + y * math.cos(az)
+    return xr, -(z * math.cos(el) + yr * math.sin(el))
+
+
+segs = [[0]]                                                               # split the recording into sweeps at gaps
+for n in range(1, len(P)):
+    (segs[-1].append(n) if math.dist(P[n - 1][0], P[n][0]) < 40 else segs.append([n]))
+plen = lambda g: sum(math.dist(P[a][0], P[b][0]) for a, b in zip(g, g[1:]))
+clean = sorted((g for g in segs if len(g) > 40 and max(P[n][1] for n in g) <= float(VMAX)), key=plen, reverse=True)
+hero, ghosts = clean[0], clean[1:4]                                         # longest clean sweep + 3 more for context
+Q = {n: proj(P[n][0]) for g in [hero] + ghosts for n in g}
+ux, uy = [q[0] for q in Q.values()], [q[1] for q in Q.values()]
+bx0, bx1, by0, by1 = 990, 1290, 160, 425
+k = min((bx1 - bx0) / (max(ux) - min(ux)), (by1 - by0) / (max(uy) - min(uy)))
+ox = bx0 + ((bx1 - bx0) - k * (max(ux) - min(ux))) / 2 - k * min(ux)
+oy = by0 + ((by1 - by0) - k * (max(uy) - min(uy))) / 2 - k * min(uy)
+VIR = [(0, (68, 1, 84)), (.25, (59, 82, 139)), (.5, (33, 145, 140)), (.75, (94, 201, 98)), (1, (253, 231, 37))]
+
+
+def vcol(t):
+    t = min(max(t, 0), 1)
+    for (t0, c0), (t1, c1) in zip(VIR, VIR[1:]):
+        if t <= t1:
+            f = (t - t0) / (t1 - t0)
+            return "#%02x%02x%02x" % tuple(int(a + (b - a) * f) for a, b in zip(c0, c1))
+
+
+def seg(a, b, stroke, w):
+    qa, qb = Q[a], Q[b]
+    S.append(f'<line x1="{ox + k * qa[0]:.1f}" y1="{oy + k * qa[1]:.1f}" x2="{ox + k * qb[0]:.1f}" y2="{oy + k * qb[1]:.1f}" '
+             f'stroke="{stroke}" stroke-width="{w}" stroke-linecap="round"/>')
+
+
+for g in ghosts:
+    for a, b in zip(g, g[1:]):
+        seg(a, b, "#d1d5db", 2.5)
+for a, b in zip(hero, hero[1:]):
+    seg(a, b, vcol(P[a][1] / float(VMAX)), 6.5)
+gx0, gx1, gy = 1020, 1260, 462
+S.append('<defs><linearGradient id="vir">' + "".join(f'<stop offset="{t}" stop-color="{vcol(t)}"/>' for t, _ in VIR)
+         + "</linearGradient></defs>")
+S.append(f'<rect x="{gx0}" y="{gy}" width="{gx1 - gx0}" height="13" rx="6.5" fill="url(#vir)"/>')
+text(gx0, gy + 36, "0", 19, "#374151")
+text((gx0 + gx1) / 2, gy - 12, "speed", 19, "#374151")
+text(gx1, gy + 36, f"{VMAX} mm/s", 19, "#374151", "normal", "end")
+text(1140, 534, f"{LEN} mm RMS", 26, INK, "bold")
+text(1140, 562, f"lengths vs. arm encoders", 19, "#374151")
+
+from PIL import ImageFont                                                  # self-check: real-font text extents
+_spans = []
+for m in re.finditer(r'<text x="([\d.]+)" y="[\d.]+"[^>]*font-size="([\d.]+)"[^>]*font-weight="(\w+)" text-anchor="(\w+)"[^>]*>([^<]*)</text>', "".join(S)):
+    w = ImageFont.truetype(f"DejaVuSans{'-Bold' if m[3] == 'bold' else ''}.ttf", int(float(m[2]))).getlength(m[5])
+    x0 = float(m[1]) - {"middle": w / 2, "start": 0, "end": w}[m[4]]
+    assert 6 <= x0 and x0 + w <= W - 6, f"text off canvas: {m[5]!r} {x0:.0f}..{x0 + w:.0f}"
+    for y1, a1, b1, t1 in _spans:                                          # same baseline: no two labels may touch
+        assert abs(y1 - float(m.group(0).split('y="')[1].split('"')[0])) > 1 or b1 + 8 <= x0 or x0 + w + 8 <= a1, f"labels collide: {t1!r} / {m[5]!r}"
+    _spans.append((float(m.group(0).split('y="')[1].split('"')[0]), x0, x0 + w, m[5]))
+svg = f'<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="0 0 {W} {H}">' + "".join(S) + "</svg>"
+out = HERE / "figures"
+(out / "graphical_abstract.svg").write_text(svg)
+cairosvg.svg2png(bytestring=svg.encode(), write_to=str(out / "graphical_abstract.png"), output_width=2 * W, output_height=2 * H)
+cairosvg.svg2pdf(bytestring=svg.encode(), write_to=str(out / "graphical_abstract.pdf"))
+print("graphical abstract ->", out / "graphical_abstract.png")
