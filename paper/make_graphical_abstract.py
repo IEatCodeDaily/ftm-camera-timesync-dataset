@@ -15,7 +15,7 @@ N = dict(re.findall(r"\\newcommand\{\\(\w+)\}\{([^}]*)\}", (HERE / "figures/numb
 SD = f"{N['LiveFourSdLo']}–{N['LiveFourSdHi']}"
 HW, SW, VMAX, LEN, LLO, LHI = N["HwJitMed"], N["SwJitMed"], N["DynVmax"], N["LenRms"], N["LenLo"], N["LenHi"]
 
-W, H = 1320, 590
+W, H = 1320, 620
 NAVY, BLUE, TEAL, IR, RED, GREY, INK = "#14365d", "#2563a8", "#0f766e", "#f97316", "#c0392b", "#6b7280", "#111827"
 FONT = "DejaVu Sans, Arial, sans-serif"
 S = []
@@ -50,16 +50,19 @@ def chevron(x, y):
 
 def head(x, title, sub):
     text(x, 96, title, 25, INK, "bold")
-    text(x, 124, sub, 20, GREY)
+    text(x, 124, sub, 21, "#4b5563")                                          # darker grey: legible at 660 px
 
 
 S.append(f'<rect width="{W}" height="{H}" fill="white"/>')
-text(W / 2, 46, "Low-cost wireless infrared motion capture, clock-aligned over Wi-Fi", 32, INK, "bold")
+RATIO = round(float(SW) / float(HW)); assert RATIO == 10                     # headline ratio from the paper's macros
+text(W / 2, 44, "Low-cost wireless infrared motion capture, clock-aligned over Wi-Fi", 32, INK, "bold")
+text(W / 2, 80, f"Hardware path: frame-start delay {RATIO}× more consistent · lengths within {LEN} mm RMS", 23, TEAL)
+S.append('<g transform="translate(0,30)">')
 for x in (470, 925):
     chevron(x, 330)
 
 # ---------------- (1) scene ------------------------------------------------------------------------------------
-head(235, "Wireless IR camera nodes", "ESP32-S3 + OV5640, on-board detection")
+head(235, "Wireless IR camera nodes", "ESP32-S3 + OV5640 per node")
 cx, cy = 235, 330
 nodes = [(95, 232, "N1"), (375, 232, "N2"), (95, 420, "N3"), (375, 420, "N0")]
 for x, y, _ in nodes:                                                       # view cones under everything
@@ -70,8 +73,8 @@ rx, ry = nodes[3][:2]
 for x, y, lab in nodes:
     camera(x, y, math.degrees(math.atan2(cy - y, cx - x)), ref=lab == "N0")
     ly = y - 50 if y < cy else y + 66
-    text(x, ly, lab, 21, NAVY, "bold")
-    wifi(x + (-44 if x < cx else 44), ly - 6, NAVY if lab == "N0" else BLUE)
+    text(x, ly, lab + (" ref." if lab == "N0" else ""), 21, NAVY, "bold")
+    wifi(x + (-44 if x < cx else 44 + 30 * (lab == "N0")), ly - 6, NAVY if lab == "N0" else BLUE)   # clear of "N0 ref."
 S.append(f'<circle cx="{cx}" cy="{cy}" r="32" fill="{IR}" opacity=".16"/><circle cx="{cx}" cy="{cy}" r="18" fill="{IR}" opacity=".35"/>'
          f'<circle cx="{cx}" cy="{cy}" r="8.5" fill="{IR}"/>')
 S.append(f'<rect x="{cx - 44}" y="{cy + 40}" width="88" height="28" rx="6" fill="white" opacity=".9"/>')
@@ -94,78 +97,52 @@ def lanes(y0, offs, col, name, num):
                  f'stroke="{col}" stroke-width="4" stroke-linejoin="round" stroke-linecap="round"/>')
     lo, hi = XS + min(offs), XS + max(offs)
     yb = y0 + 134
-    if hi - lo > 10:
+    if hi - lo > 20:                                                          # a tiny bracket reads as a glyph
         S.append(f'<path d="M{lo},{yb - 8} L{lo},{yb} L{hi},{yb} L{hi},{yb - 8}" fill="none" stroke="{col}" stroke-width="3"/>')
     text(X1, y0 + 62, f"{num} µs", 36, col, "bold", "end")
     text(X1, y0 + 90, "delay spread", 20, "#374151", "normal", "end")
 
 
-S.append(f'<line x1="{XS}" y1="150" x2="{XS}" y2="512" stroke="{INK}" stroke-width="2.5" stroke-dasharray="6 6"/>')
+S.append(f'<line x1="{XS}" y1="150" x2="{XS}" y2="512" stroke="#9ca3af" stroke-width="2.5" stroke-dasharray="6 6"/>')
 lanes(166, [-34, 22, -10, 38], RED, "software", SW)
-lanes(358, [-2, 1, 0, 2], TEAL, "hardware", HW)
+lanes(358, [o * float(HW) / float(SW) for o in (-34, 22, -10, 38)], TEAL, "hardware", HW)   # widths in true ratio
 text(XS, 534, "slot", 20, INK)
-text((X0 + X1) / 2, 562, "median, per-camera delay removed · not to scale", 18, "#374151", "normal", "middle", 'font-style="italic"')
+text((X0 + X1) / 2, 562, "median, per-camera delay removed", 20, "#374151", "normal", "middle", 'font-style="italic"')
 
-# ---------------- (3) real tracked LED path --------------------------------------------------------------------
-head(1140, "Robot-arm marker", "tracked sweep, 4 LEDs")
-dyn = json.load((DATA / "campaign-2026-10-17/dynamic-wide.json").open())["rows"]["0.0"]   # rev12: 4-LED marker, wide 100 % sweep
-P = [(r["pos"], r["speed_mm_s"]) for r in dyn]
-az, el = math.radians(-35), math.radians(40)
+# ---------------- (3) length accuracy vs the robot arm (real data: every pair of reached poses) ----------------
+head(1140, "Robot arm as ruler", f"{N['LenPoses']} poses, {N['LenPairs']} lengths")
+AL = json.load((DATA / "campaign-2026-10-17/arm-length.json").open())["rows"]    # grouping = arm_length_stats.py
+G = {}
+for r in AL:
+    if "pose_xyz" in r: G.setdefault(tuple(round(x) for x in r["pose_xyz"]), []).append(r)
+med = lambda v: sorted(v)[len(v) // 2] if len(v) % 2 else sum(sorted(v)[len(v) // 2 - 1:len(v) // 2 + 1]) / 2
+R = [([med([r["pose_xyz"][k] for r in v]) for k in range(3)], [med([r["ir_world"][k] for r in v]) for k in range(3)]) for v in G.values()]
+PR = [(math.dist(a[0], b[0]), math.dist(a[1], b[1]) - math.dist(a[0], b[0])) for i, a in enumerate(R) for b in R[i + 1:]]
+assert len(PR) == int(N["LenPairs"]) and f"{math.sqrt(sum(e * e for _, e in PR) / len(PR)):.1f}" == LEN   # same data as the paper
+bx0, bx1, by0, by1, LMAX, EMAX = 1010, 1240, 175, 435, 500, 8
+px = lambda l: bx0 + (bx1 - bx0) * l / LMAX
+py = lambda e: (by0 + by1) / 2 - (by1 - by0) / 2 * e / EMAX
+S.append(f'<rect x="{bx0}" y="{py(float(LEN)):.1f}" width="{bx1 - bx0}" height="{py(-float(LEN)) - py(float(LEN)):.1f}" fill="{TEAL}" opacity=".13"/>')
+S.append(f'<line x1="{bx0}" y1="{py(0)}" x2="{bx1}" y2="{py(0)}" stroke="{GREY}" stroke-width="2"/>')
+S.append(f'<path d="M{bx0},{by0} L{bx0},{by1} L{bx1},{by1}" fill="none" stroke="{INK}" stroke-width="2.5"/>')
+S += [f'<circle cx="{px(l):.1f}" cy="{py(e):.1f}" r="2.6" fill="{TEAL}" opacity=".55"/>' for l, e in PR]
+for e in (-EMAX, 0, EMAX):
+    text(bx0 - 12, py(e) + 7, f"{e:+d}".replace("-", "−") if e else "0", 20, "#374151", "normal", "end")
+    S.append(f'<line x1="{bx0 - 7}" y1="{py(e)}" x2="{bx0}" y2="{py(e)}" stroke="{INK}" stroke-width="2.5"/>')
+for l in (0, 250, 500):
+    text(px(l), by1 + 28, str(l), 20, "#374151")
+    S.append(f'<line x1="{px(l)}" y1="{by1}" x2="{px(l)}" y2="{by1 + 7}" stroke="{INK}" stroke-width="2.5"/>')
+text(bx0 + 8, by0 - 8, "length error, mm", 20, "#374151", "normal", "start")
+text(bx1, by1 + 52, "arm distance, mm", 20, "#374151", "normal", "end")
+text(bx1 + 6, py(float(LEN)) + 6, f"±{LEN}", 20, TEAL, "bold", "start")                          # the band IS the RMS
+text(1140, 534, f"{LEN} mm RMS", 28, TEAL, "bold")
+text(1140, 562, "tracked vs. arm encoders", 20, "#374151")
 
-
-def proj(p):
-    x, y, z = p
-    xr, yr = x * math.cos(az) - y * math.sin(az), x * math.sin(az) + y * math.cos(az)
-    return xr, -(z * math.cos(el) + yr * math.sin(el))
-
-
-segs = [[0]]                                                               # split the recording into sweeps at gaps
-for n in range(1, len(P)):
-    (segs[-1].append(n) if math.dist(P[n - 1][0], P[n][0]) < 40 else segs.append([n]))
-plen = lambda g: sum(math.dist(P[a][0], P[b][0]) for a, b in zip(g, g[1:]))
-clean = sorted((g for g in segs if len(g) > 40 and max(P[n][1] for n in g) <= float(VMAX)), key=plen, reverse=True)
-hero, ghosts = clean[0], clean[1:4]                                         # longest clean sweep + 3 more for context
-Q = {n: proj(P[n][0]) for g in [hero] + ghosts for n in g}
-ux, uy = [q[0] for q in Q.values()], [q[1] for q in Q.values()]
-bx0, bx1, by0, by1 = 990, 1290, 160, 425
-k = min((bx1 - bx0) / (max(ux) - min(ux)), (by1 - by0) / (max(uy) - min(uy)))
-ox = bx0 + ((bx1 - bx0) - k * (max(ux) - min(ux))) / 2 - k * min(ux)
-oy = by0 + ((by1 - by0) - k * (max(uy) - min(uy))) / 2 - k * min(uy)
-VIR = [(0, (68, 1, 84)), (.25, (59, 82, 139)), (.5, (33, 145, 140)), (.75, (94, 201, 98)), (1, (253, 231, 37))]
-
-
-def vcol(t):
-    t = min(max(t, 0), 1)
-    for (t0, c0), (t1, c1) in zip(VIR, VIR[1:]):
-        if t <= t1:
-            f = (t - t0) / (t1 - t0)
-            return "#%02x%02x%02x" % tuple(int(a + (b - a) * f) for a, b in zip(c0, c1))
-
-
-def seg(a, b, stroke, w):
-    qa, qb = Q[a], Q[b]
-    S.append(f'<line x1="{ox + k * qa[0]:.1f}" y1="{oy + k * qa[1]:.1f}" x2="{ox + k * qb[0]:.1f}" y2="{oy + k * qb[1]:.1f}" '
-             f'stroke="{stroke}" stroke-width="{w}" stroke-linecap="round"/>')
-
-
-for g in ghosts:
-    for a, b in zip(g, g[1:]):
-        seg(a, b, "#d1d5db", 2.5)
-for a, b in zip(hero, hero[1:]):
-    seg(a, b, vcol(P[a][1] / float(VMAX)), 6.5)
-gx0, gx1, gy = 1020, 1260, 462
-S.append('<defs><linearGradient id="vir">' + "".join(f'<stop offset="{t}" stop-color="{vcol(t)}"/>' for t, _ in VIR)
-         + "</linearGradient></defs>")
-S.append(f'<rect x="{gx0}" y="{gy}" width="{gx1 - gx0}" height="13" rx="6.5" fill="url(#vir)"/>')
-text(gx0, gy + 36, "0", 19, "#374151")
-text((gx0 + gx1) / 2, gy - 12, "speed", 19, "#374151")
-text(gx1, gy + 36, f"{VMAX} mm/s", 19, "#374151", "normal", "end")
-text(1140, 534, f"{LEN} mm RMS", 26, INK, "bold")
-text(1140, 562, f"lengths vs. arm encoders", 19, "#374151")
-
+S.append("</g>")
 from PIL import ImageFont                                                  # self-check: real-font text extents
 _spans = []
 for m in re.finditer(r'<text x="([\d.]+)" y="[\d.]+"[^>]*font-size="([\d.]+)"[^>]*font-weight="(\w+)" text-anchor="(\w+)"[^>]*>([^<]*)</text>', "".join(S)):
+    assert float(m[2]) >= 20, f"text below 20 px (10 px at IEEE 660-px size): {m[5]!r}"
     w = ImageFont.truetype(f"DejaVuSans{'-Bold' if m[3] == 'bold' else ''}.ttf", int(float(m[2]))).getlength(m[5])
     x0 = float(m[1]) - {"middle": w / 2, "start": 0, "end": w}[m[4]]
     assert 6 <= x0 and x0 + w <= W - 6, f"text off canvas: {m[5]!r} {x0:.0f}..{x0 + w:.0f}"
