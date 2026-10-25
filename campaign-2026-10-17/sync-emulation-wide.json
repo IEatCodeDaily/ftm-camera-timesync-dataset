@@ -349,5 +349,33 @@
     }
    ]
   }
+ ],
+ "common_slots": 596,
+ "common": [
+  {
+   "name": "Live FTM",
+   "pos_med_mm": 0.0003701829644895474,
+   "pos_p95_mm": 0.0006254156461359025
+  },
+  {
+   "name": "AP TSF",
+   "pos_med_mm": 0.024524632859954727,
+   "pos_p95_mm": 0.04143536125187903
+  },
+  {
+   "name": "FTM + row-readout residual",
+   "pos_med_mm": 0.1625415644434688,
+   "pos_p95_mm": 0.2746880889846812
+  },
+  {
+   "name": "NTP-style UDP",
+   "pos_med_mm": 7.52936184840655,
+   "pos_p95_mm": 12.917078034434152
+  },
+  {
+   "name": "No synchronization",
+   "pos_med_mm": 24.743506202461155,
+   "pos_p95_mm": 47.02156153227838
+  }
  ]
 }

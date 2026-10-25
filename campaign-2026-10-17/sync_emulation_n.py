@@ -102,8 +102,14 @@ def main():
     static = np.median([[np.linalg.norm(ref[k][i] - ref[k][j]) for i, j in pairs] for k in speed if speed[k] < 2.0], 0)
     out = {"period_us": period, "t_row_us": t_row, "skew_camera": SKEW_CAM, "slots": len(ref), "xrow_half_us": XROW_HALF, "xrow_half_this_body_us": xrow_half,
            "static_d_mm": static.tolist(), "sources": []}
-    for name, dt in SOURCES:
-        if dt is None: dt = ST["Live FTM, camera tracking load"]["max"] + XROW_HALF   # paper \\XrowHalf (capture.stats.json)
+    dts = [(name, dt if dt is not None else ST["Live FTM, camera tracking load"]["max"] + XROW_HALF) for name, dt in SOURCES]   # paper \\XrowHalf (capture.stats.json)
+    # Common support: slots every source can solve, so the medians differ only by the offset, not by the slot population.
+    common = {k for k, v in speed.items() if 20 <= v <= 800 and all(solve(k, dt) is not None for _, dt in dts)}
+    out["common_slots"] = len(common); out["common"] = []
+    for name, dt in dts:
+        c = [float(np.linalg.norm(np.mean(solve(k, dt), 0) - np.mean(ref[k], 0))) for k in sorted(common)]
+        out["common"].append({"name": name, "pos_med_mm": float(np.median(c)), "pos_p95_mm": float(np.percentile(c, 95))})
+    for name, dt in dts:
         R = []
         for k, v in speed.items():
             if not (20 <= v <= 800): continue
