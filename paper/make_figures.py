@@ -406,7 +406,7 @@ _mk = [np.linalg.norm(a - b) for a, b in itertools.combinations(_RB["dobot-marke
 _cal = sorted(np.linalg.norm(a - b) for a, b in itertools.combinations(_RB["Calibrator"], 2))
 assert abs(_cal[0] - 149.5) < 1e-9 and abs(_cal[1] - 196.5) < 1e-9
 N.update({"MkLo": f"{min(_mk):.0f}", "MkHi": f"{max(_mk):.0f}", "MkLeds": str(len(_RB["dobot-marker-B"]))})
-# Length accuracy vs the Dobot's encoders (2026-10-19, arm_length.py + arm_length_stats.py): every pair of
+# Length accuracy vs the Dobot's step-count kinematics (2026-10-19, arm_length.py + arm_length_stats.py): every pair of
 # reached poses, tracked distance minus arm distance; no registration or scale fit enters.
 LA = json.load((CAMP / "arm-length.stats.json").open())
 N.update({"LenRms": f"{LA['rms_mm']:.1f}", "LenRel": f"{LA['rel_rms_pct']:.1f}", "LenPairs": str(LA["pairs"]),

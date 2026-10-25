@@ -136,7 +136,7 @@ text(bx0 + 8, by0 - 8, "length error, mm", 20, "#374151", "normal", "start")
 text(bx1, by1 + 52, "arm distance, mm", 20, "#374151", "normal", "end")
 text(bx1 + 6, py(float(LEN)) + 6, f"±{LEN}", 20, TEAL, "bold", "start")                          # the band IS the RMS
 text(1140, 534, f"{LEN} mm RMS", 28, TEAL, "bold")
-text(1140, 562, "tracked vs. arm encoders", 20, "#374151")
+text(1140, 562, "tracked vs. arm step counts", 20, "#374151")
 
 S.append("</g>")
 from PIL import ImageFont                                                  # self-check: real-font text extents
